@@ -35,12 +35,12 @@ const { title = 'Arızayı yazın, biz arayalım', presetDistrict } = Astro.prop
     </label>
     <label class="field">
       <span>Mahalle</span>
-      <input type="text" name="hood" maxlength="60" placeholder="Mahalle adı" />
+      <input type="text" name="hood" maxlength="60" autocomplete="off" placeholder="Mahalle adı…" />
     </label>
   </div>
   <label class="field">
     <span>Kısaca ne oluyor? <em>(isteğe bağlı)</em></span>
-    <textarea name="note" maxlength="600" placeholder="Örn. Mutfak sigortası kaldırınca hemen atıyor, bulaşık makinesi fişteyken oluyor."></textarea>
+    <textarea name="note" maxlength="600" autocomplete="off" placeholder="Örn. Mutfak sigortası kaldırınca hemen atıyor, bulaşık makinesi fişteyken oluyor…"></textarea>
   </label>
   <div class="rf__two">
     <label class="field">
