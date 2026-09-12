@@ -29,11 +29,11 @@ export const site = {
   },
 
   address: {
-    street: 'Menderes Mahallesi, Alparslan Caddesi No:24',
+    street: 'Melih Gökçek Bulvarı No:19/A',
     district: 'Sincan',
     city: 'Ankara',
     countryCode: 'TR',
-    full: 'Menderes Mahallesi, Alparslan Caddesi No:24, Sincan / Ankara',
+    full: 'Melih Gökçek Bulvarı No:19/A, Sincan / Ankara',
   },
 
   hours: {
@@ -48,7 +48,7 @@ export const site = {
 
   maps: {
     get directionsHref() {
-      return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent('Menderes Mahallesi, Alparslan Caddesi No:24, Sincan, Ankara')}`;
+      return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent('Melih Gökçek Bulvarı No:19/A, Sincan, Ankara')}`;
     },
   },
 } as const;

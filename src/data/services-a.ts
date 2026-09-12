@@ -9,7 +9,7 @@ export const servicesA: Service[] = [
     group: 'acil',
     excerpt: 'Elektrik gitti, sigorta atıyor, bir yerden yanık kokusu geliyor. Arayın, telefonda ön teşhis koyalım, aynı gün gelelim.',
     description: [
-      'Elektrik arızası saat sormaz. Akşam yemeği hazırlanırken sigorta düşer, sabah çocuk okula giderken banyo lambası yanmaz. Biz Sincan Menderes Mahallesi\'nden çıkıp Ankara\'nın 25 ilçesine gidiyoruz; 08:00–23:00 arası, haftanın 7 günü telefon açık.',
+      'Elektrik arızası saat sormaz. Akşam yemeği hazırlanırken sigorta düşer, sabah çocuk okula giderken banyo lambası yanmaz. Biz Sincan Melih Gökçek Bulvarı\'nden çıkıp Ankara\'nın 25 ilçesine gidiyoruz; 08:00–23:00 arası, haftanın 7 günü telefon açık.',
       'Ne acil sayılır? Kablodan duman ya da yanık kokusu geliyorsa, bir cihaza dokununca çarpıyorsa, sigorta kaldırılınca hemen düşüyorsa, prizden kıvılcım çıkıyorsa ya da evin tamamı karanlıksa bu acildir. Bekleyince ya tehlike büyür ya da arıza başka bir noktaya sıçrar.',
       'Aradığınızda önce birkaç soru sorarız: elektrik tamamen mi yok, yoksa bir bölümde mi? Sigortalardan hangisi düşmüş? Yeni bir cihaz mı takıldı? Bu cevaplarla çoğu zaman arızayı telefonda daraltırız, doğru parçayla yola çıkarız ve işe başlamadan fiyatı söyleriz.',
     ],

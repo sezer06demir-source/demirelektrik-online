@@ -14,9 +14,9 @@ export const districts: District[] = [
     featured: true,
     content: {
       h1: 'Sincan Acil Elektrikçi',
-      subtitle: 'Merkezimiz Menderes Mahallesi\'nde; Sincan içinde çoğu çağrıya 10–20 dakikada varıyoruz.',
+      subtitle: 'Merkezimiz Melih Gökçek Bulvarı\'nda; Sincan içinde çoğu çağrıya 10–20 dakikada varıyoruz.',
       intro: [
-        'Sincan\'da sigorta attı, evin yarısı karanlık kaldı ya da prizden yanık kokusu geliyorsa arayın. Aracımız Menderes Mahallesi\'nden çıkıyor; Fatih, Törekent, Plevne ve Pınarbaşı tarafına çoğu zaman çeyrek saatte ulaşıyoruz. Trafik en yoğun saatte bile Sincan sınırları içinde yarım saati geçmiyoruz.',
+        'Sincan\'da sigorta attı, evin yarısı karanlık kaldı ya da prizden yanık kokusu geliyorsa arayın. Aracımız Melih Gökçek Bulvarı\'ndan çıkıyor; Fatih, Törekent, Plevne ve Pınarbaşı tarafına çoğu zaman çeyrek saatte ulaşıyoruz. Trafik en yoğun saatte bile Sincan sınırları içinde yarım saati geçmiyoruz.',
         'Sincan acil elektrikçi çağrılarının büyük kısmı akşam 18:00 sonrası geliyor: kombi devreye giriyor, fırın ve çamaşır makinesi aynı anda çalışıyor, eski apartmanlarda kolon sigortası dayanamıyor. Telefonda hangi sigortanın düştüğünü, hangi cihazın devrede olduğunu soruyoruz; bazen sorunu telefonda çözüyoruz, o zaman çıkış ücreti almıyoruz.',
         'Sincan elektrik arıza servisimiz 08:00–23:00 arası haftanın her günü açık. 30 yılı aşkın süredir bu ilçedeyiz; mahallelerin hangi yıllarda yapıldığını, hangi sitelerde hangi pano tipinin olduğunu biliyoruz. Bu yüzden çoğu arıza tek gelişte bitiyor.',
       ],
@@ -35,7 +35,7 @@ export const districts: District[] = [
           text: 'Sincan Organize Sanayi ve sanayi sitesindeki fabrikalarda kumanda panosu arızalarına gün içinde bakıyoruz: yanan kontaktör, düşen termik, gevşeyen şalter bağlantısı, faz kaybı. Esnaf dükkânları için öğle arasına ya da mesai sonuna randevu veriyoruz.',
         },
       ],
-      arrival: 'Menderes Mahallesi\'ndeki merkezimizden Sincan\'ın her mahallesine 10–20 dakika; Temelli ve Yenikent yönü akşam trafiğinde 25 dakikayı bulabilir.',
+      arrival: 'Melih Gökçek Bulvarı\'ndaki merkezimizden Sincan\'ın her mahallesine 10–20 dakika; Temelli ve Yenikent yönü akşam trafiğinde 25 dakikayı bulabilir.',
       neighborhoods: ['Menderes', 'Fatih', 'Törekent', 'Ahi Evran', 'Plevne', 'Pınarbaşı', 'Tandoğan', 'Osmanlı', 'Ertuğrulgazi', 'Akşemsettin', 'Yunus Emre', 'Mareşal Çakmak'],
       faq: [
         {
@@ -117,7 +117,7 @@ export const districts: District[] = [
       h1: 'Etimesgut Acil Elektrikçi',
       subtitle: 'Sincan\'a komşuyuz; Elvankent, Bağlıca ve Etimesgut merkeze 15–25 dakikada varıyoruz.',
       intro: [
-        'Etimesgut\'ta elektrik arızası için en yakın ekiplerden biriyiz. Merkezimiz Sincan Menderes\'te; İstanbul Yolu ya da Eryaman hattı üzerinden Etimesgut merkez, Elvankent ve Ahimesut\'a 15–20 dakikada, Bağlıca ve Göksu tarafına 25 dakikada ulaşıyoruz.',
+        'Etimesgut\'ta elektrik arızası için en yakın ekiplerden biriyiz. Merkezimiz Sincan Melih Gökçek Bulvarı\'nda; İstanbul Yolu ya da Eryaman hattı üzerinden Etimesgut merkez, Elvankent ve Ahimesut\'a 15–20 dakikada, Bağlıca ve Göksu tarafına 25 dakikada ulaşıyoruz.',
         'Etimesgut acil elektrikçi çağrılarının çoğu yeni sitelerden geliyor: klima hattı olmayan daireler, teslimde eksik bırakılan ankastre hattı, ilk kışta düşen kaçak akım rölesi. Eski Etimesgut merkezde ise askeri lojman dönemi binalarının panoları ve kolon hatları öne çıkıyor.',
         'Etimesgut elektrik arıza servisimiz 08:00–23:00 arası açık. Telefonda birkaç soruyla sorunu daraltıyor, aynı gün geliyor, standart parçayı aracımızdan takıyoruz.',
       ],
