@@ -1,0 +1,60 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Icon from '@components/Icon.astro';
+import CallPanel from '@components/CallPanel.astro';
+import StatusScript from '@components/StatusScript.astro';
+import { servicesByGroup } from '@data/services';
+import { breadcrumbSchema } from '@utils/seo';
+const crumbs = [
+  { name: 'Ana sayfa', href: '/' },
+  { name: 'Arıza türleri', href: '/hizmetler' },
+];
+---
+
+<BaseLayout
+  title="Arıza Türleri | Ankara Acil Elektrik Servisi | Demir Elektrik"
+  rawTitle
+  description="Sigorta atması, elektrik kesintisi, kaçak akım, priz ve pano arızaları, avize montajı, ev, villa, iş yeri ve fabrika kumanda panoları. Ankara'da aynı gün servis: 0506 092 58 16."
+  schema={[breadcrumbSchema(crumbs)]}
+>
+  <StatusScript />
+  <section class="section">
+    <div class="container ledger">
+      <div>
+        <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
+        <h1>Baktığımız arızalar</h1>
+        <p class="lead">Belirtinizi bulun; sayfada "gelene kadar ne yapmalı" bölümü var. Listede yoksa arayın, telefonda yönlendirelim.</p>
+        {
+          servicesByGroup().map((g) => (
+            <section class="grp" aria-labelledby={`g-${g.group}`}>
+              <h2 id={`g-${g.group}`} class="grp__title">{g.label}</h2>
+              <div class="rows">
+                {g.items.map((s) => (
+                  <a href={`/hizmetler/${s.slug}`} class="row">
+                    <span class="row__icon"><Icon name={s.icon} size={22} /></span>
+                    <span>
+                      <span class="row__title">{s.title}</span>
+                      <p class="row__text">{s.excerpt}</p>
+                    </span>
+                    <span class="row__go">Ayrıntı</span>
+                  </a>
+                ))}
+              </div>
+            </section>
+          ))
+        }
+      </div>
+      <div class="ledger__rail"><CallPanel /></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .grp {
+    margin-top: 2.5rem;
+  }
+  .grp__title {
+    font-size: var(--fs-lg);
+    margin-bottom: 0.75rem;
+  }
+</style>

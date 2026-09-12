@@ -1,0 +1,165 @@
+---
+/**
+ * Arıza bildirimi formu — doldurulan bilgiler WhatsApp mesajına dönüştürülür; sunucu yok.
+ */
+import Icon from './Icon.astro';
+import { site, formProblems } from '@data/site';
+import { allDistricts } from '@data/districts';
+interface Props {
+  title?: string;
+  /** Bölge sayfalarında ilçe önceden seçili */
+  presetDistrict?: string;
+}
+const { title = 'Arızayı yazın, biz arayalım', presetDistrict } = Astro.props;
+---
+
+<form class="rf" id="request-form" novalidate data-wa={site.whatsapp.number}>
+  <h2 class="rf__title">{title}</h2>
+  <p class="rf__lead">Bilgileri WhatsApp mesajı olarak hazırlarız, siz yalnızca gönderirsiniz. Acilse doğrudan arayın: <a href={site.phone.href}>{site.phone.display}</a></p>
+
+  <label class="field">
+    <span>Sorun</span>
+    <select name="problem" required>
+      <option value="">Seçin</option>
+      {formProblems.map((p) => <option value={p}>{p}</option>)}
+    </select>
+  </label>
+  <div class="rf__two">
+    <label class="field">
+      <span>İlçe</span>
+      <select name="district" required>
+        <option value="">Seçin</option>
+        {allDistricts.map((d) => <option value={d.name} selected={d.name === presetDistrict}>{d.name}</option>)}
+        <option value="Ankara dışı">Ankara dışı</option>
+      </select>
+    </label>
+    <label class="field">
+      <span>Mahalle</span>
+      <input type="text" name="hood" maxlength="60" placeholder="Mahalle adı" />
+    </label>
+  </div>
+  <label class="field">
+    <span>Kısaca ne oluyor? <em>(isteğe bağlı)</em></span>
+    <textarea name="note" maxlength="600" placeholder="Örn. Mutfak sigortası kaldırınca hemen atıyor, bulaşık makinesi fişteyken oluyor."></textarea>
+  </label>
+  <div class="rf__two">
+    <label class="field">
+      <span>Adınız</span>
+      <input type="text" name="name" required minlength="3" maxlength="80" autocomplete="name" placeholder="Ad Soyad" />
+    </label>
+    <label class="field">
+      <span>Telefon</span>
+      <input type="tel" name="phone" required inputmode="tel" autocomplete="tel" pattern="^[0-9+()\s-]{10,20}$" placeholder="05xx xxx xx xx" />
+    </label>
+  </div>
+  <label class="rf__consent">
+    <input type="checkbox" name="consent" required />
+    <span>Bilgilerimin talebimi yanıtlamak için kullanılmasını kabul ediyorum. <a href="/kvkk-aydinlatma-metni">Aydınlatma metni</a></span>
+  </label>
+  <button type="submit" class="btn btn--wa rf__send"><Icon name="whatsapp" size={20} /> WhatsApp ile gönder</button>
+  <p class="rf__status" data-status role="status" aria-live="polite"></p>
+</form>
+
+<style>
+  .rf {
+    border: 1.5px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 1.5rem;
+    background: var(--paper);
+  }
+  .rf__title {
+    font-size: var(--fs-lg);
+    margin-bottom: 0.35rem;
+  }
+  .rf__lead {
+    font-size: var(--fs-sm);
+    color: var(--steel);
+    margin-bottom: 1.25rem;
+  }
+  .rf__lead a {
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .rf__two {
+    display: grid;
+    gap: 0 1rem;
+  }
+  @media (min-width: 640px) {
+    .rf__two {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .field em {
+    font-style: normal;
+    font-weight: 500;
+    color: var(--mist);
+  }
+  .rf__consent {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    font-size: var(--fs-sm);
+    color: var(--steel);
+    margin: 0.25rem 0 1rem;
+  }
+  .rf__consent input {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    accent-color: var(--red);
+  }
+  .rf__consent a {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .rf__send {
+    width: 100%;
+  }
+  .rf__status {
+    margin: 0.75rem 0 0;
+    font-size: var(--fs-sm);
+    color: var(--red);
+    min-height: 1.2em;
+  }
+</style>
+
+<script>
+  const form = document.getElementById('request-form') as HTMLFormElement | null;
+  if (form) {
+    const status = form.querySelector<HTMLElement>('[data-status]');
+    const say = (m: string) => {
+      if (status) status.textContent = m;
+    };
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      say('');
+      form.querySelectorAll('.is-invalid').forEach((el) => el.classList.remove('is-invalid'));
+      const f = (n: string) => form.querySelector<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>(`[name="${n}"]`)!;
+      const v = (n: string) => f(n).value.trim();
+      const bad = (n: string, msg: string) => {
+        f(n).classList.add('is-invalid');
+        f(n).focus();
+        say(msg);
+      };
+      if (!v('problem')) return bad('problem', 'Sorun türünü seçin.');
+      if (!v('district')) return bad('district', 'İlçe seçin.');
+      if (v('name').length < 3) return bad('name', 'Adınızı yazın.');
+      if (!/^[0-9+()\s-]{10,20}$/.test(v('phone'))) return bad('phone', 'Geçerli bir telefon numarası girin.');
+      if (!(f('consent') as HTMLInputElement).checked) return say('Devam etmek için onay kutusunu işaretleyin.');
+      const lines = [
+        'Merhaba, web sitesinden arıza bildiriyorum.',
+        '',
+        `Sorun: ${v('problem')}`,
+        v('note') ? `Açıklama: ${v('note')}` : '',
+        `İlçe: ${v('district')}${v('hood') ? ` / ${v('hood')}` : ''}`,
+        '',
+        `Ad Soyad: ${v('name')}`,
+        `Telefon: ${v('phone')}`,
+      ].filter((l) => l !== '');
+      const url = `https://wa.me/${form.dataset.wa}?text=${encodeURIComponent(lines.join('\n'))}`;
+      window.open(url, '_blank', 'noopener');
+      say('Mesajınız hazırlandı; açılan WhatsApp penceresinde Gönder’e basın.');
+      form.reset();
+    });
+  }
+</script>

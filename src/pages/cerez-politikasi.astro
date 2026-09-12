@@ -1,0 +1,53 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { breadcrumbSchema } from '@utils/seo';
+const crumbs = [
+  { name: 'Ana sayfa', href: '/' },
+  { name: 'Çerez Politikası', href: '/cerez-politikasi' },
+];
+---
+
+<BaseLayout title="Çerez Politikası" description="Demir Elektrik acil servis web sitesinde kullanılan çerezler ve tarayıcı depolama alanları." schema={[breadcrumbSchema(crumbs)]}>
+  <section class="section">
+    <div class="container prose legal">
+      <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
+      <h1>Çerez Politikası</h1>
+      <p>Bu site reklam, analitik ya da pazarlama amaçlı çerez kullanmaz. Kullanılanlar yalnızca sitenin çalışması ve güvenliği için gereklidir; bu nedenle onay kutusu gösterilmez.</p>
+      <h2>Kullanılan teknik çerezler ve depolama</h2>
+      <table>
+        <thead><tr><th>Ad</th><th>Amaç</th><th>Süre</th></tr></thead>
+        <tbody>
+          <tr><td>de_chk</td><td>Güvenlik doğrulaması: tarayıcının otomatik bir program olmadığını anlamak için</td><td>12 saat</td></tr>
+          <tr><td>de_ip (oturum depolama)</td><td>Sayfa üstünde gösterilen kendi IP bilginizin her sayfada yeniden istenmemesi</td><td>Tarayıcı sekmesi kapanana kadar</td></tr>
+          <tr><td>Cloudflare çerezleri (__cf_bm vb.)</td><td>Bot koruması ve trafik yönetimi; Cloudflare tarafından yerleştirilir</td><td>30 dakikaya kadar</td></tr>
+        </tbody>
+      </table>
+      <h2>Çerezleri yönetme</h2>
+      <p>Tarayıcı ayarlarınızdan çerezleri silebilir ya da engelleyebilirsiniz. Güvenlik çerezi engellenirse site yine açılır; yalnızca ilk girişte kısa bir doğrulama sayfası görebilirsiniz.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal h2 {
+    font-size: var(--fs-lg);
+    margin: 1.75rem 0 0.5rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--fs-sm);
+    margin: 0.5rem 0 1rem;
+  }
+  th,
+  td {
+    text-align: left;
+    padding: 0.6rem 0.5rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th {
+    color: var(--steel);
+    font-weight: 600;
+  }
+</style>

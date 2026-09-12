@@ -1,0 +1,179 @@
+---
+import Icon from './Icon.astro';
+import { site, nav } from '@data/site';
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+
+<header class="hdr" id="site-header">
+  <div class="container hdr__in">
+    <a href="/" class="hdr__brand" aria-label="Demir Elektrik Acil Servis ana sayfa">
+      <span class="hdr__mark" aria-hidden="true"><Icon name="zap" size={20} /></span>
+      <span class="hdr__name">Demir Elektrik<small>Acil elektrik servisi</small></span>
+    </a>
+
+    <nav class="hdr__nav" aria-label="Ana menü">
+      <ul>
+        {
+          nav.map((n) => (
+            <li>
+              <a href={n.href} aria-current={path === (n.href as string) || path.startsWith(`${n.href}/`) ? 'page' : undefined}>
+                {n.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <a href={site.phone.href} class="hdr__phone">
+      <span class="dot" data-status-dot></span>
+      <span class="hdr__phone-text">
+        <small data-status-text>Her gün {site.hours.display}</small>
+        <strong>{site.phone.display}</strong>
+      </span>
+    </a>
+
+    <button type="button" class="hdr__menu js-only" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menüyü aç">
+      <Icon name="menu" size={24} />
+    </button>
+  </div>
+
+  <div class="hdr__mobile" id="mobile-nav" hidden>
+    <ul>
+      {nav.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
+      <li><a href="/hakkimizda">Hakkımızda</a></li>
+    </ul>
+  </div>
+</header>
+
+<style>
+  .hdr {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+  .hdr__in {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: var(--header-h);
+  }
+  .hdr__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-right: auto;
+  }
+  .hdr__mark {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    background: var(--red);
+    color: #fff;
+  }
+  .hdr__name {
+    display: grid;
+    line-height: 1.05;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: -0.01em;
+  }
+  .hdr__name small {
+    font-weight: 500;
+    font-size: 0.72rem;
+    color: var(--steel);
+    letter-spacing: 0;
+  }
+  .hdr__nav {
+    display: none;
+  }
+  .hdr__nav ul {
+    display: flex;
+    gap: 1.4rem;
+  }
+  .hdr__nav a {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--ink-2);
+    padding-block: 0.25rem;
+    border-bottom: 2px solid transparent;
+  }
+  .hdr__nav a:hover,
+  .hdr__nav a[aria-current='page'] {
+    border-color: var(--red);
+    color: var(--ink);
+  }
+  .hdr__phone {
+    display: none;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .hdr__phone-text {
+    display: grid;
+    line-height: 1.1;
+  }
+  .hdr__phone-text small {
+    font-size: 0.72rem;
+    color: var(--steel);
+    font-weight: 500;
+  }
+  .hdr__phone-text strong {
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    font-variant-numeric: tabular-nums;
+  }
+  .hdr__phone:hover strong {
+    color: var(--red);
+  }
+  .hdr__menu {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1.5px solid var(--line);
+    border-radius: var(--r);
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .hdr__mobile {
+    border-top: 1px solid var(--line);
+    background: var(--paper);
+  }
+  .hdr__mobile ul {
+    padding: 0.5rem var(--gutter) 1rem;
+  }
+  .hdr__mobile a {
+    display: block;
+    padding: 0.8rem 0;
+    font-weight: 700;
+    border-bottom: 1px solid var(--line);
+  }
+  @media (min-width: 900px) {
+    .hdr__nav {
+      display: block;
+    }
+    .hdr__phone {
+      display: flex;
+    }
+    .hdr__menu,
+    .hdr__mobile {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('.hdr__menu');
+  const panel = document.getElementById('mobile-nav');
+  btn?.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    btn.setAttribute('aria-label', open ? 'Menüyü aç' : 'Menüyü kapat');
+    if (panel) panel.hidden = open;
+  });
+</script>

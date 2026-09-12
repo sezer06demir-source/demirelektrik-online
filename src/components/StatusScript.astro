@@ -1,0 +1,28 @@
+---
+/**
+ * Sayfadaki tüm [data-status-dot] ve [data-status-text] öğelerini yerel saate göre günceller.
+ * 08:00–23:00 arası "Şu an açık", dışında "Şu an kapalı, 08:00'da açılıyor".
+ */
+import { site } from '@data/site';
+const open = Number(site.hours.opens.split(':')[0]);
+const close = Number(site.hours.closes.split(':')[0]);
+---
+
+<script is:inline define:vars={{ open, close, display: site.hours.display }}>
+  (function () {
+    function paint() {
+      var d = new Date();
+      var h = d.getHours() + d.getMinutes() / 60;
+      var isOpen = h >= open && h < close;
+      document.querySelectorAll('[data-status-dot]').forEach(function (el) {
+        el.classList.toggle('is-open', isOpen);
+        el.classList.toggle('is-closed', !isOpen);
+      });
+      document.querySelectorAll('[data-status-text]').forEach(function (el) {
+        el.textContent = isOpen ? 'Şu an açığız, ' + display : 'Şu an kapalıyız, sabah ' + String(open).padStart(2, '0') + ':00’da açılıyoruz';
+      });
+    }
+    paint();
+    setInterval(paint, 60000);
+  })();
+</script>

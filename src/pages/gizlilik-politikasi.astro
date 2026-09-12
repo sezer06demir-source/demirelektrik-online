@@ -1,0 +1,35 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { site } from '@data/site';
+import { breadcrumbSchema } from '@utils/seo';
+const crumbs = [
+  { name: 'Ana sayfa', href: '/' },
+  { name: 'Gizlilik Politikası', href: '/gizlilik-politikasi' },
+];
+---
+
+<BaseLayout title="Gizlilik Politikası" description="Demir Elektrik acil servis web sitesinde hangi bilgilerin toplandığı, nasıl kullanıldığı ve nasıl korunduğu." schema={[breadcrumbSchema(crumbs)]}>
+  <section class="section">
+    <div class="container prose legal">
+      <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
+      <h1>Gizlilik Politikası</h1>
+      <p>{site.brand} olarak bu sitede topladığımız bilgiyi en azda tutarız. Sitede üyelik, hesap ya da ödeme yoktur.</p>
+      <h2>Ne topluyoruz</h2>
+      <p>Siteyi gezdiğinizde ad, e-posta gibi kişisel bilgi istemeyiz. Güvenlik altyapımız, ziyaretinize ait IP adresi, ülke, tarayıcı türü ve erişim zamanını sunucu günlüklerinde tutar; bu veriler yalnızca kötüye kullanımı ve bot trafiğini önlemek için işlenir ve sınırlı süre saklanır. Sayfanın üst kısmında gördüğünüz IP adresi yalnızca size gösterilir.</p>
+      <p>Arıza formunu doldurduğunuzda paylaştığınız bilgiler sunucumuza kaydedilmez; tarayıcınızda bir WhatsApp mesajına dönüştürülür ve ancak siz Gönder'e bastığınızda bize ulaşır.</p>
+      <h2>Çerezler</h2>
+      <p>Site reklam ya da takip çerezi kullanmaz. Güvenlik doğrulaması için kısa ömürlü teknik bir çerez ve tarayıcınızda tutulan oturum bilgisi kullanılabilir. Ayrıntı için <a href="/cerez-politikasi">çerez politikasına</a> bakın.</p>
+      <h2>Üçüncü taraflar</h2>
+      <p>Site Vercel üzerinde barındırılır ve Cloudflare üzerinden sunulur. Telefon ve WhatsApp bağlantıları sizi ilgili uygulamaya yönlendirir; bu uygulamaların kendi gizlilik koşulları geçerlidir.</p>
+      <h2>Değişiklikler ve iletişim</h2>
+      <p>Bu politika gerektiğinde güncellenir. Sorularınız için {site.phone.display} numarasını arayabilir ya da {site.address.full} adresine yazabilirsiniz.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal h2 {
+    font-size: var(--fs-lg);
+    margin: 1.75rem 0 0.5rem;
+  }
+</style>

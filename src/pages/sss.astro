@@ -1,0 +1,70 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import CallPanel from '@components/CallPanel.astro';
+import StatusScript from '@components/StatusScript.astro';
+import { breadcrumbSchema, faqSchema } from '@utils/seo';
+const crumbs = [
+  { name: 'Ana sayfa', href: '/' },
+  { name: 'Sorular', href: '/sss' },
+];
+const groups = [
+  {
+    t: 'Arıza anında',
+    items: [
+      { q: 'Sigorta attı ve kaldırınca yine atıyor, ne yapayım?', a: 'Kaldırmayı bırakın. Prizlerdeki cihazları çıkarıp bir kez daha deneyin; yine atıyorsa hatta ya da bir cihazda kaçak vardır. Tekrar tekrar zorlamak kabloyu ısıtır. Bizi arayın, telefonda hangi sigorta olduğunu sorup yönlendirelim.' },
+      { q: 'Evin yarısında elektrik yok, sigortalar sağlam görünüyor. Sorun nedir?', a: 'Sık nedenler: bir sigortanın içten arızalanması, nötr kopması ya da bir kutu içindeki gevşek bağlantı. Nötr kopmasında cihazlar zarar görebilir; bu durumda ana şalteri kapatıp bizi aramanız en doğrusu.' },
+      { q: 'Prizden yanık kokusu geliyor ama çalışıyor. Acil mi?', a: 'Evet. Koku, ısınan bir bağlantı demektir; bugün çalışan priz yarın erir. O hattın sigortasını indirin ve prizi kullanmayın. Aynı gün geliriz.' },
+      { q: 'Musluğa ya da çamaşır makinesine dokununca çarpıyor.', a: 'Kaçak akım ya da topraklama eksikliği. Cihazı fişten çekin, kaçak akım röleniz varsa test tuşuna basın. Röle yoksa ya da atmıyorsa acil kontrol gerekir.' },
+    ],
+  },
+  {
+    t: 'Gelme ve ücret',
+    items: [
+      { q: 'Ne kadar sürede gelirsiniz?', a: 'Sincan, Etimesgut ve Yenimahalle tarafında çoğunlukla bir saat içinde; Çankaya, Keçiören, Mamak ve daha uzak ilçelerde aynı gün. Aradığınızda o anki işe göre net saat veririz.' },
+      { q: 'Telefonda fiyat söyler misiniz?', a: 'Tespit ücretini telefonda söyleriz. İşin tam ücretini arızayı gördükten sonra, işe başlamadan önce söyleriz; onaylamazsanız yalnızca tespit ücreti ödersiniz.' },
+      { q: 'Akşam ya da hafta sonu ek ücret var mı?', a: 'Haftanın 7 günü 08:00–23:00 arası çalışıyoruz. Akşam ve hafta sonu için bir fark uygulanacaksa bunu telefonda, siz gelmemizi istemeden önce söyleriz.' },
+      { q: 'Parça getirmem gerekir mi?', a: 'Hayır. Sigorta, kaçak akım rölesi, priz, anahtar, klemens ve kablo aracımızda bulunur. Özel bir avize ya da armatür sizde varsa onu monte ederiz.' },
+    ],
+  },
+  {
+    t: 'Kapsam',
+    items: [
+      { q: 'Hangi işlere bakıyorsunuz?', a: 'Ev, villa, mağaza, ofis ve apartman ortak alanlarındaki tüm elektrik arızaları; sigorta kutusu ve pano yenileme; avize, spot ve LED montajı; ev ve iş yeri tesisatı; fabrika ve atölyelerde kumanda panoları.' },
+      { q: 'İş makinesi ya da otomasyon işi yapıyor musunuz?', a: 'Bu serviste hayır. Bu site acil arıza ve tesisat işlerine ayrılmıştır.' },
+      { q: 'Dağıtım şirketinden kaynaklı kesintiye de bakar mısınız?', a: 'Sayaçtan önceki hat dağıtım şirketinin sorumluluğundadır. Sorunun sizde mi, şebekede mi olduğunu telefonda ayırt etmenize yardım ederiz; şebekedeyse 186 Alo Elektrik hattını arayın.' },
+      { q: 'Fatura ya da belge veriyor musunuz?', a: 'Evet. Yapılan iş, değişen parçalar ve ücret yazılı olarak bırakılır.' },
+    ],
+  },
+];
+const all = groups.flatMap((g) => g.items);
+---
+
+<BaseLayout title="Sık Sorulan Sorular | Ankara Acil Elektrikçi | Demir Elektrik" rawTitle description="Sigorta attı ne yapmalı, ne kadar sürede gelirsiniz, ücret nasıl belirlenir, akşam ek ücret var mı? Ankara acil elektrik servisi hakkında sorular ve kısa cevaplar. 0506 092 58 16." schema={[breadcrumbSchema(crumbs), faqSchema(all)]}>
+  <StatusScript />
+  <section class="section">
+    <div class="container ledger">
+      <div>
+        <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
+        <h1>Sık sorulanlar</h1>
+        <p class="lead">Telefonda en çok duyduğumuz sorular. Sizinki yoksa arayın, kısa keseriz.</p>
+        {groups.map((g) => (
+          <section class="grp">
+            <h2>{g.t}</h2>
+            <div class="faq">{g.items.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}</div>
+          </section>
+        ))}
+      </div>
+      <div class="ledger__rail"><CallPanel /></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .grp {
+    margin-top: 2rem;
+  }
+  .grp h2 {
+    font-size: var(--fs-lg);
+    margin-bottom: 0.5rem;
+  }
+</style>

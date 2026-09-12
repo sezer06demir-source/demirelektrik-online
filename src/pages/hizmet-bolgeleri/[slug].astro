@@ -1,0 +1,176 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Icon from '@components/Icon.astro';
+import CallPanel from '@components/CallPanel.astro';
+import StatusScript from '@components/StatusScript.astro';
+import RequestForm from '@components/RequestForm.astro';
+import { landingDistricts } from '@data/districts';
+import type { District, DistrictContent } from '@data/types';
+import { getService } from '@data/services';
+import { getNeighborhoodsOf } from '@data/neighborhoods';
+import { breadcrumbSchema, faqSchema, serviceSchema } from '@utils/seo';
+import { locative, arrivalShort } from '@utils/tr';
+
+export function getStaticPaths() {
+  return landingDistricts.map((d) => ({ params: { slug: d.slug }, props: { district: d } }));
+}
+interface Props {
+  district: District & { content: DistrictContent };
+}
+const { district: d } = Astro.props;
+const c = d.content;
+const path = `/hizmet-bolgeleri/${d.slug}`;
+const inD = locative(d.name, d.locative);
+const crumbs = [
+  { name: 'Ana sayfa', href: '/' },
+  { name: 'Bölgeler', href: '/hizmet-bolgeleri' },
+  { name: d.name, href: path },
+];
+const svc = c.highlightedServices.map(getService).filter((s): s is NonNullable<typeof s> => Boolean(s));
+const hoods = getNeighborhoodsOf(d.slug);
+const others = landingDistricts.filter((x) => x.slug !== d.slug);
+---
+
+<BaseLayout title={c.seoTitle} rawTitle description={c.seoDescription} schema={[breadcrumbSchema(crumbs), serviceSchema({ name: `${d.name} Acil Elektrikçi`, description: c.seoDescription, path, areaName: d.name }), faqSchema(c.faq)]}>
+  <StatusScript />
+  <article class="section">
+    <div class="container ledger">
+      <div>
+        <ol class="crumbs">{crumbs.map((x) => <li><a href={x.href}>{x.name}</a></li>)}</ol>
+        <p class="kicker"><Icon name="map-pin" size={18} /> {d.type === 'semt' ? `${d.parent}, Ankara` : 'Ankara'}</p>
+        <h1>{c.h1}</h1>
+        <p class="lead">{c.subtitle}</p>
+        <p class="arrive"><Icon name="navigation" size={18} /> {c.arrival}</p>
+        <div class="prose">{c.intro.map((p) => <p>{p}</p>)}</div>
+
+        <section aria-labelledby="s1">
+          <h2 id="s1" class="h">{inD} en çok gelen çağrılar</h2>
+          <div class="rows">
+            {svc.map((s) => (
+              <a href={`/hizmetler/${s.slug}`} class="row">
+                <span class="row__icon"><Icon name={s.icon} size={22} /></span>
+                <span><span class="row__title">{s.title}</span><p class="row__text">{s.excerpt}</p></span>
+                <span class="row__go">Ayrıntı</span>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section aria-labelledby="s2">
+          <h2 id="s2" class="h">{inD} bildiklerimiz</h2>
+          <ul class="notes">
+            {c.localNotes.map((n) => (
+              <li><h3>{n.title}</h3><p>{n.text}</p></li>
+            ))}
+          </ul>
+        </section>
+
+        {
+          hoods.length > 0 && (
+            <section aria-labelledby="s3">
+              <h2 id="s3" class="h">{inD} mahalle mahalle</h2>
+              <p class="lead">Mahallenizin sayfasında o bölgeye özgü arızaları ve varış süresini görürsünüz.</p>
+              <ul class="hoods">
+                {hoods.map((n) => (
+                  <li><a href={`${path}/${n.slug}`} class="hood"><span>{n.content.h1}</span><small>Varış {arrivalShort(n.content.arrival)}</small></a></li>
+                ))}
+              </ul>
+            </section>
+          )
+        }
+
+        <section aria-labelledby="s4">
+          <h2 id="s4" class="h">{inD} hizmet verdiğimiz yerler</h2>
+          <ul class="tags">{c.neighborhoods.map((n) => <li><span class="tag tag--muted">{n}</span></li>)}</ul>
+        </section>
+
+        <section aria-labelledby="s5">
+          <h2 id="s5" class="h">Sorular</h2>
+          <div class="faq">{c.faq.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}</div>
+        </section>
+
+        <section class="form">
+          <RequestForm title={`${inD} arıza bildirin`} presetDistrict={d.type === 'semt' ? d.parent : d.name} />
+        </section>
+
+        <section aria-labelledby="s6">
+          <h2 id="s6" class="h">Diğer bölgeler</h2>
+          <ul class="tags">{others.map((o) => <li><a class="tag" href={`/hizmet-bolgeleri/${o.slug}`}>{o.name}</a></li>)}</ul>
+        </section>
+      </div>
+      <div class="ledger__rail"><CallPanel note={`${inD} elektrik arızası için arayın; ${c.arrival.toLocaleLowerCase('tr')}.`} /></div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--red);
+    font-weight: 700;
+    font-size: var(--fs-sm);
+    margin-bottom: 0.6rem;
+  }
+  .arrive {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: var(--r);
+    background: var(--green-tint);
+    color: #14532d;
+    font-weight: 700;
+    font-size: var(--fs-sm);
+    margin: 0 0 1.5rem;
+  }
+  .h {
+    font-size: var(--fs-lg);
+    margin: 2.25rem 0 0.75rem;
+  }
+  .notes {
+    display: grid;
+    gap: 1rem;
+  }
+  .notes li {
+    border-left: 4px solid var(--red);
+    padding-left: 1rem;
+  }
+  .notes h3 {
+    font-size: var(--fs-base);
+    margin-bottom: 0.25rem;
+  }
+  .notes p {
+    margin: 0;
+    color: var(--ink-2);
+  }
+  .hoods {
+    display: grid;
+    gap: 0.5rem;
+  }
+  @media (min-width: 640px) {
+    .hoods {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .hood {
+    display: grid;
+    gap: 0.15rem;
+    padding: 0.8rem 1rem;
+    border: 1.5px solid var(--line);
+    border-radius: var(--r);
+    font-weight: 800;
+  }
+  .hood small {
+    font-weight: 500;
+    color: var(--steel);
+    font-size: 0.8rem;
+  }
+  .hood:hover {
+    border-color: var(--red);
+  }
+  .form {
+    margin-top: 2.5rem;
+  }
+</style>

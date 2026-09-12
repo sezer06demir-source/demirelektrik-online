@@ -1,0 +1,442 @@
+/* ==========================================================================
+   Demir Elektrik Acil Servis — global stiller
+   Beyaz zemin, mürekkep metin, tek vurgu: sinyal kırmızısı. Tek yazı ailesi: Manrope.
+   Breakpoint'ler: 640 / 900 / 1180
+   ========================================================================== */
+
+:root {
+  --ink: #16181d;
+  --ink-2: #2b2f36;
+  --steel: #5f6b7a;
+  --mist: #98a2ae;
+  --line: #dde2e8;
+  --fog: #f1f3f6;
+  --paper: #ffffff;
+  --red: #d62828;
+  --red-dark: #b51f1f;
+  --red-tint: #fdeaea;
+  --green: #1f9d55;
+  --green-tint: #e6f6ec;
+  --wa: #128c4b;
+
+  --font: 'Manrope Variable', Manrope, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fs-sm: 0.875rem;
+  --fs-base: 1.0625rem;
+  --fs-md: 1.1875rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: clamp(1.625rem, 1.2rem + 1.6vw, 2.25rem);
+  --fs-2xl: clamp(2rem, 1.3rem + 2.8vw, 3.25rem);
+  --fs-hero: clamp(2.25rem, 1.4rem + 4vw, 4.25rem);
+
+  --container: 1120px;
+  --gutter: clamp(1rem, 3vw, 2rem);
+  --section: clamp(3rem, 6vw, 5.5rem);
+  --rail: 340px;
+
+  --r: 10px;
+  --r-lg: 16px;
+  --header-h: 64px;
+  --mobile-bar-h: 62px;
+  --dur: 160ms;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+@media (max-width: 899px) {
+  body {
+    padding-bottom: calc(var(--mobile-bar-h) + env(safe-area-inset-bottom));
+  }
+}
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+p a,
+li a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--mist);
+}
+p a:hover,
+li a:hover {
+  text-decoration-color: var(--red);
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+  color: var(--ink);
+}
+h1 {
+  font-size: var(--fs-2xl);
+}
+h2 {
+  font-size: var(--fs-xl);
+}
+h3 {
+  font-size: var(--fs-lg);
+  letter-spacing: -0.01em;
+}
+p {
+  margin: 0 0 1em;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+strong {
+  font-weight: 700;
+}
+:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+::selection {
+  background: var(--red-tint);
+}
+
+/* --- düzen --- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.section {
+  padding-block: var(--section);
+}
+.section + .section {
+  border-top: 1px solid var(--line);
+}
+.section--fog {
+  background: var(--fog);
+}
+.prose {
+  max-width: 68ch;
+  color: var(--ink-2);
+}
+.prose p {
+  margin-bottom: 1.1em;
+}
+.lead {
+  font-size: var(--fs-md);
+  color: var(--steel);
+  max-width: 60ch;
+}
+
+/* Sayfa gövdesi + sağ ray (masaüstü) */
+.ledger {
+  display: grid;
+  gap: var(--section);
+}
+@media (min-width: 900px) {
+  .ledger {
+    grid-template-columns: minmax(0, 1fr) var(--rail);
+    gap: clamp(2rem, 5vw, 4.5rem);
+    align-items: start;
+  }
+  .ledger__rail {
+    position: sticky;
+    top: calc(var(--header-h) + 1.25rem);
+  }
+}
+
+/* --- satırlar (kart yerine) --- */
+.rows {
+  border-top: 1px solid var(--line);
+}
+.row {
+  display: grid;
+  gap: 0.35rem 1.25rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 640px) {
+  .row {
+    grid-template-columns: 44px minmax(0, 1fr) auto;
+    align-items: start;
+  }
+}
+.row__icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r);
+  background: var(--red-tint);
+  color: var(--red);
+}
+.row__title {
+  font-size: var(--fs-md);
+  font-weight: 800;
+}
+.row__text {
+  margin: 0.15rem 0 0;
+  color: var(--steel);
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+}
+.row__go {
+  align-self: center;
+  color: var(--red);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  white-space: nowrap;
+}
+a.row:hover .row__title {
+  color: var(--red);
+}
+
+/* --- düğmeler --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 52px;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--r);
+  border: 1.5px solid transparent;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1.2;
+  transition: background-color var(--dur), border-color var(--dur), color var(--dur);
+}
+.btn--red {
+  background: var(--red);
+  color: #fff;
+}
+.btn--red:hover {
+  background: var(--red-dark);
+}
+.btn--wa {
+  background: var(--wa);
+  color: #fff;
+}
+.btn--wa:hover {
+  background: #0f7a41;
+}
+.btn--line {
+  border-color: var(--line);
+  color: var(--ink);
+  background: var(--paper);
+}
+.btn--line:hover {
+  border-color: var(--ink);
+}
+.btn--ink {
+  background: var(--ink);
+  color: #fff;
+}
+.btn--ink:hover {
+  background: #000;
+}
+
+/* --- form --- */
+.field {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 0.9rem;
+}
+.field > span {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--ink-2);
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 50px;
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid var(--line);
+  border-radius: var(--r);
+  background: var(--paper);
+  font: inherit;
+  color: var(--ink);
+}
+.field textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px var(--red-tint);
+}
+.field .is-invalid {
+  border-color: var(--red);
+}
+
+/* --- durum noktası --- */
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--mist);
+  vertical-align: middle;
+  margin-right: 0.45rem;
+}
+.dot.is-open {
+  background: var(--green);
+  box-shadow: 0 0 0 0 rgba(31, 157, 85, 0.5);
+  animation: dot-pulse 2.4s ease-out infinite;
+}
+.dot.is-closed {
+  background: var(--red);
+}
+@keyframes dot-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(31, 157, 85, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 9px rgba(31, 157, 85, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(31, 157, 85, 0);
+  }
+}
+
+/* --- ekmek kırıntısı --- */
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  font-size: var(--fs-sm);
+  color: var(--steel);
+  margin-bottom: 1rem;
+}
+.crumbs li + li::before {
+  content: '/';
+  margin-right: 0.35rem;
+  color: var(--mist);
+}
+.crumbs a:hover {
+  color: var(--red);
+}
+
+/* --- SSS (native details) --- */
+.faq details {
+  border-bottom: 1px solid var(--line);
+}
+.faq summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  font-weight: 700;
+  font-size: var(--fs-base);
+}
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq summary::after {
+  content: '+';
+  color: var(--red);
+  font-weight: 800;
+  flex: none;
+}
+.faq details[open] summary::after {
+  content: '–';
+}
+.faq details p {
+  margin: 0 0 1.1rem;
+  color: var(--ink-2);
+  max-width: 68ch;
+}
+
+/* --- etiketler --- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--ink-2);
+}
+a.tag:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+.tag--muted {
+  color: var(--steel);
+  background: var(--fog);
+  border-color: transparent;
+}
+
+/* --- yardımcılar --- */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--r);
+}
+.skip-link:focus {
+  top: 1rem;
+}
+.no-js .js-only {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .dot.is-open {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

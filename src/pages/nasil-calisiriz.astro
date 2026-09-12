@@ -1,0 +1,95 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import CallPanel from '@components/CallPanel.astro';
+import StatusScript from '@components/StatusScript.astro';
+import { site } from '@data/site';
+import { breadcrumbSchema } from '@utils/seo';
+const crumbs = [
+  { name: 'Ana sayfa', href: '/' },
+  { name: 'Nasıl çalışırız', href: '/nasil-calisiriz' },
+];
+const steps = [
+  { t: 'Arıyorsunuz', p: 'Telefonu açan kişi elektrikçi. Ne oldu, ne zaman başladı, sigorta kutusunda ne görüyorsunuz; bu üç soruyla sorunu daraltıyoruz. Bazı arızalar bu aşamada çözülür, ücret almayız.' },
+  { t: 'Saat veriyoruz', p: 'Bulunduğunuz ilçeye ve o anki işe göre gerçekçi bir varış saati söyleriz. Yolda gecikirsek haber veririz; sizi kapıda bekletmeyiz.' },
+  { t: 'Tespit ediyoruz', p: 'Geldiğimizde önce güvenlik: panoyu kapatır, kaçak ve kısa devre ölçümü yaparız. Arızanın yerini bulmadan hiçbir şey sökmeyiz.' },
+  { t: 'Fiyatı söylüyoruz', p: 'Ne yapılacağını ve ücretini net söyleriz. Onaylarsanız başlarız, onaylamazsanız yalnızca tespit ücreti ödersiniz; o da telefonda baştan bellidir.' },
+  { t: 'Onarıyor, test ediyoruz', p: 'Standart parçalar araçta olduğu için çoğu iş tek gelişte biter. Bittiğinde tüm hatları yükle test eder, sigorta kutusunu etiketleriz.' },
+  { t: 'Belge bırakıyoruz', p: 'Yapılan işi, değişen parçaları ve ücreti yazılı bırakırız. Aynı arıza kısa sürede tekrarlarsa yeniden gelir, bakarız.' },
+];
+---
+
+<BaseLayout title="Nasıl Çalışırız | Aradığınızda Ne Olur | Demir Elektrik" rawTitle description="Aradığınız andan işin bitimine kadar altı adım: telefonda ön teşhis, gerçekçi varış saati, güvenli tespit, işe başlamadan fiyat, onarım ve test, yazılı belge. 0506 092 58 16." schema={[breadcrumbSchema(crumbs)]}>
+  <StatusScript />
+  <section class="section">
+    <div class="container ledger">
+      <div>
+        <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
+        <h1>Aradığınız andan işin bitimine</h1>
+        <p class="lead">Acil bir arızada en çok belirsizlik yorar. Bu yüzden süreç baştan bellidir; her adımda ne olacağını biliyorsunuz.</p>
+        <ol class="flow">
+          {steps.map((s, i) => (
+            <li>
+              <span class="flow__n">{i + 1}</span>
+              <div><h2>{s.t}</h2><p>{s.p}</p></div>
+            </li>
+          ))}
+        </ol>
+        <section class="note">
+          <h2>Ücret nasıl belirlenir</h2>
+          <p>Ankara'da elektrik arızası için sabit liste fiyatı vermek dürüst olmaz; aynı belirti bir evde 20 dakikalık bir bağlantı sıkma, başka evde kolon hattı yenileme çıkabilir. Bu yüzden telefonda tespit ücretini, yerinde de işin tam ücretini söyleriz. Onay vermeden hiçbir işe başlamayız. {site.hours.daysText} {site.hours.display} arası aynı ücret politikası geçerlidir; akşam ve hafta sonu farkı varsa onu da baştan söyleriz.</p>
+        </section>
+      </div>
+      <div class="ledger__rail"><CallPanel /></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .flow {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .flow li {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .flow__n {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--red);
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.1rem;
+  }
+  .flow h2 {
+    font-size: var(--fs-lg);
+    margin-bottom: 0.35rem;
+  }
+  .flow p {
+    margin: 0;
+    color: var(--ink-2);
+    max-width: 62ch;
+  }
+  .note {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    background: var(--fog);
+    border-radius: var(--r-lg);
+  }
+  .note h2 {
+    font-size: var(--fs-lg);
+    margin-bottom: 0.5rem;
+  }
+  .note p {
+    margin: 0;
+    color: var(--ink-2);
+    max-width: 68ch;
+  }
+</style>

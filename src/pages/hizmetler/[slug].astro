@@ -1,0 +1,180 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Icon from '@components/Icon.astro';
+import CallPanel from '@components/CallPanel.astro';
+import StatusScript from '@components/StatusScript.astro';
+import { servicesSorted, type Service } from '@data/services';
+import { landingDistricts } from '@data/districts';
+import { site } from '@data/site';
+import { breadcrumbSchema, faqSchema, serviceSchema } from '@utils/seo';
+
+export function getStaticPaths() {
+  return servicesSorted.map((s) => ({ params: { slug: s.slug }, props: { service: s } }));
+}
+interface Props {
+  service: Service;
+}
+const { service: s } = Astro.props;
+const path = `/hizmetler/${s.slug}`;
+const crumbs = [
+  { name: 'Ana sayfa', href: '/' },
+  { name: 'Arıza türleri', href: '/hizmetler' },
+  { name: s.shortTitle, href: path },
+];
+const others = servicesSorted.filter((x) => x.slug !== s.slug && x.group === s.group).slice(0, 4);
+const areas = landingDistricts.filter((d) => d.content.highlightedServices.includes(s.slug)).slice(0, 8);
+---
+
+<BaseLayout title={s.seoTitle} rawTitle description={s.seoDescription} schema={[breadcrumbSchema(crumbs), serviceSchema({ name: s.title, description: s.seoDescription, path }), faqSchema(s.faq)]}>
+  <StatusScript />
+  <article class="section">
+    <div class="container ledger">
+      <div class="body">
+        <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
+        <p class="kicker"><Icon name={s.icon} size={18} /> {s.group === 'acil' ? 'Acil arıza' : s.group === 'tamir' ? 'Tamir ve bakım' : 'Kurulum ve yenileme'}</p>
+        <h1>{s.title}</h1>
+        <div class="prose intro">{s.description.map((p) => <p>{p}</p>)}</div>
+
+        <div class="split">
+          <section aria-labelledby="sym">
+            <h2 id="sym" class="h">Şu belirtiler varsa arayın</h2>
+            <ul class="ticks">{s.symptoms.map((x) => <li><Icon name="alert-triangle" size={16} /> {x}</li>)}</ul>
+          </section>
+          <section aria-labelledby="pre" class="pre">
+            <h2 id="pre" class="h">Biz gelene kadar</h2>
+            <ol class="pre__list">{s.beforeWeArrive.map((x) => <li>{x}</li>)}</ol>
+          </section>
+        </div>
+
+        <section aria-labelledby="do">
+          <h2 id="do" class="h">Yerinde ne yapıyoruz</h2>
+          <ul class="ticks ticks--ok">{s.whatWeDo.map((x) => <li><Icon name="check" size={16} /> {x}</li>)}</ul>
+        </section>
+
+        <dl class="facts">
+          {s.practical.map((p) => <div><dt>{p.label}</dt><dd>{p.value}</dd></div>)}
+          <div><dt>Çalışma saati</dt><dd>{site.hours.daysText} {site.hours.display}</dd></div>
+        </dl>
+
+        <section aria-labelledby="faq" class="faqsec">
+          <h2 id="faq" class="h">Sorular</h2>
+          <div class="faq">{s.faq.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}</div>
+        </section>
+
+        {
+          areas.length > 0 && (
+            <section aria-labelledby="ar" class="areasec">
+              <h2 id="ar" class="h">Bu arızaya en sık çıktığımız bölgeler</h2>
+              <ul class="tags">{areas.map((d) => <li><a class="tag" href={`/hizmet-bolgeleri/${d.slug}`}><Icon name="map-pin" size={14} /> {d.name}</a></li>)}</ul>
+            </section>
+          )
+        }
+
+        {
+          others.length > 0 && (
+            <section aria-labelledby="ot" class="areasec">
+              <h2 id="ot" class="h">Benzer arızalar</h2>
+              <ul class="tags">{others.map((o) => <li><a class="tag" href={`/hizmetler/${o.slug}`}>{o.shortTitle}</a></li>)}</ul>
+            </section>
+          )
+        }
+      </div>
+      <div class="ledger__rail"><CallPanel note={`${s.shortTitle} için arayın; telefonda ön teşhis yapar, gerekiyorsa aynı gün geliriz.`} /></div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--red);
+    font-weight: 700;
+    font-size: var(--fs-sm);
+    margin-bottom: 0.6rem;
+  }
+  .intro {
+    margin-top: 1rem;
+    font-size: var(--fs-md);
+  }
+  .h {
+    font-size: var(--fs-lg);
+    margin: 2.25rem 0 0.75rem;
+  }
+  .split {
+    display: grid;
+    gap: 1.5rem;
+  }
+  @media (min-width: 760px) {
+    .split {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+  }
+  .ticks {
+    display: grid;
+    gap: 0.55rem;
+    color: var(--ink-2);
+  }
+  .ticks li {
+    display: flex;
+    gap: 0.55rem;
+    align-items: flex-start;
+  }
+  .ticks svg {
+    flex: none;
+    margin-top: 5px;
+    color: var(--red);
+  }
+  .ticks--ok svg {
+    color: var(--green);
+  }
+  .pre {
+    background: var(--red-tint);
+    border-left: 4px solid var(--red);
+    padding: 0.25rem 1.1rem 1.1rem;
+    border-radius: 0 var(--r) var(--r) 0;
+    align-self: start;
+  }
+  .pre .h {
+    margin-top: 1rem;
+  }
+  .pre__list {
+    display: grid;
+    gap: 0.5rem;
+    list-style: decimal;
+    padding-left: 1.2rem;
+    color: var(--ink-2);
+  }
+  .facts {
+    display: grid;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    margin: 2.25rem 0 0;
+  }
+  @media (min-width: 640px) {
+    .facts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .facts div {
+    background: var(--paper);
+    padding: 0.9rem 1rem;
+  }
+  .facts dt {
+    font-size: 0.78rem;
+    color: var(--steel);
+    font-weight: 600;
+  }
+  .facts dd {
+    margin: 0.1rem 0 0;
+    font-weight: 700;
+  }
+  .areasec {
+    margin-top: 0.5rem;
+  }
+</style>

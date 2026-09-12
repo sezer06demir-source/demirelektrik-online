@@ -1,0 +1,47 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { site } from '@data/site';
+import { breadcrumbSchema } from '@utils/seo';
+const crumbs = [
+  { name: 'Ana sayfa', href: '/' },
+  { name: 'KVKK Aydınlatma Metni', href: '/kvkk-aydinlatma-metni' },
+];
+---
+
+<BaseLayout title="KVKK Aydınlatma Metni" description="Demir Elektrik acil servis web sitesi kişisel verilerin korunması aydınlatma metni: hangi veriler, hangi amaçla, ne kadar süre işlenir ve haklarınız." schema={[breadcrumbSchema(crumbs)]}>
+  <section class="section">
+    <div class="container prose legal">
+      <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
+      <h1>Kişisel Verilerin Korunması Aydınlatma Metni</h1>
+      <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 10. maddesi uyarınca veri sorumlusu sıfatıyla {site.legalName} ({site.address.full}) tarafından hazırlanmıştır ve {site.url} adresli web sitesini kapsar.</p>
+      <h2>İşlenen veriler ve amaçlar</h2>
+      <ul>
+        <li><strong>Talep bilgileri:</strong> Arıza formunu doldurduğunuzda ya da bizi aradığınızda paylaştığınız ad, telefon, ilçe, mahalle ve arıza açıklaması; yalnızca talebinizi değerlendirmek, size dönmek ve servisi planlamak için işlenir.</li>
+        <li><strong>Teknik veriler:</strong> IP adresi, ülke bilgisi, tarayıcı türü, erişim zamanı ve istenen sayfa; sitenin güvenliğini sağlamak, bot trafiğini ve saldırıları önlemek amacıyla barındırma altyapımız (Vercel ve Cloudflare) tarafından sunucu günlüklerinde tutulur.</li>
+        <li><strong>WhatsApp iletişimi:</strong> Form verileri sunucumuza kaydedilmez; tarayıcınızda WhatsApp mesajına dönüştürülür ve gönderim sizin onayınızla WhatsApp üzerinden yapılır. WhatsApp'ın kendi gizlilik koşulları ayrıca geçerlidir.</li>
+      </ul>
+      <h2>Hukuki sebep</h2>
+      <p>Talep bilgileri, sözleşmenin kurulması ve ifası için gerekli olması (KVKK m. 5/2-c) ve açık rızanız; teknik veriler ise veri sorumlusunun meşru menfaati (KVKK m. 5/2-f) hukuki sebeplerine dayanılarak işlenir.</p>
+      <h2>Aktarım</h2>
+      <p>Verileriniz yalnızca yasal zorunluluk hâlinde yetkili kurumlarla paylaşılır. Barındırma ve güvenlik altyapısı yurt dışında sunucuları bulunan hizmet sağlayıcılar tarafından sağlanmaktadır; bu kapsamda teknik veriler bu sağlayıcıların sistemlerinde işlenir.</p>
+      <h2>Saklama süresi</h2>
+      <p>Talep bilgileri, işin tamamlanmasının ardından yasal süreler boyunca; teknik günlükler ise güvenlik amacının gerektirdiği sınırlı süreyle saklanır ve sonrasında silinir.</p>
+      <h2>Haklarınız</h2>
+      <p>KVKK'nın 11. maddesi kapsamında verilerinizin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini veya silinmesini isteme ve işlemeye itiraz etme haklarına sahipsiniz. Başvurularınızı {site.address.full} adresine yazılı olarak ya da {site.phone.display} numaralı telefondan iletebilirsiniz.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal h2 {
+    font-size: var(--fs-lg);
+    margin: 1.75rem 0 0.5rem;
+  }
+  .legal ul {
+    display: grid;
+    gap: 0.6rem;
+    list-style: disc;
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+  }
+</style>

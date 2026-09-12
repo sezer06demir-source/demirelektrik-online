@@ -1,0 +1,72 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Icon from '@components/Icon.astro';
+import CallPanel from '@components/CallPanel.astro';
+import StatusScript from '@components/StatusScript.astro';
+import RequestForm from '@components/RequestForm.astro';
+import { site } from '@data/site';
+import { breadcrumbSchema } from '@utils/seo';
+const crumbs = [
+  { name: 'Ana sayfa', href: '/' },
+  { name: 'İletişim', href: '/iletisim' },
+];
+---
+
+<BaseLayout title="İletişim | Ankara Acil Elektrikçi 0506 092 58 16 | Demir Elektrik" rawTitle description="Ankara acil elektrik arıza servisi: 0506 092 58 16, WhatsApp, Sincan Menderes Mahallesi. Haftanın 7 günü 08:00–23:00. Arıza formuyla bildirin, biz arayalım." schema={[breadcrumbSchema(crumbs)]}>
+  <StatusScript />
+  <section class="section">
+    <div class="container ledger">
+      <div>
+        <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
+        <h1>Bize ulaşın</h1>
+        <p class="lead">Acilse arayın; telefonu elektrikçi açar. Acil değilse formu doldurun, uygun saatte biz arayalım.</p>
+        <ul class="ways">
+          <li><Icon name="phone" size={20} /><div><strong>Telefon</strong><a href={site.phone.href}>{site.phone.display}</a></div></li>
+          <li><Icon name="whatsapp" size={20} /><div><strong>WhatsApp</strong><a href={site.whatsapp.href} target="_blank" rel="noopener">Fotoğraf ve kısa video gönderebilirsiniz</a></div></li>
+          <li><Icon name="clock" size={20} /><div><strong>Saatler</strong><span>{site.hours.daysText} {site.hours.display}</span></div></li>
+          <li><Icon name="map-pin" size={20} /><div><strong>Adres</strong><span>{site.address.full}</span> <a href={site.maps.directionsHref} target="_blank" rel="noopener">Yol tarifi</a></div></li>
+        </ul>
+        <div class="formwrap"><RequestForm /></div>
+      </div>
+      <div class="ledger__rail"><CallPanel /></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .ways {
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0 2.5rem;
+  }
+  .ways li {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 0.8rem;
+    align-items: start;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .ways svg {
+    color: var(--red);
+    margin-top: 2px;
+  }
+  .ways div {
+    display: grid;
+    gap: 0.1rem;
+  }
+  .ways strong {
+    font-size: var(--fs-sm);
+    color: var(--steel);
+    font-weight: 600;
+  }
+  .ways a {
+    font-weight: 700;
+  }
+  .ways a:hover {
+    color: var(--red);
+  }
+  .formwrap {
+    max-width: 640px;
+  }
+</style>

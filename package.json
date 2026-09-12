@@ -1,0 +1,28 @@
+{
+  "name": "demir-elektrik-online",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Demir Elektrik - Ankara acil elektrik arıza servisi (demirelektrikankara.online)",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/generate-images.mjs && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "images": "node scripts/generate-images.mjs",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
+    "@fontsource-variable/manrope": "^5.1.0",
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "sharp": "^0.33.5",
+    "typescript": "^5.9.3"
+  }
+}

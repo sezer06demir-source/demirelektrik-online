@@ -1,0 +1,34 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import CallPanel from '@components/CallPanel.astro';
+import StatusScript from '@components/StatusScript.astro';
+---
+
+<BaseLayout title="Sayfa bulunamadı" description="Aradığınız sayfa yok. Arıza için arayın ya da ana sayfaya dönün." noindex>
+  <StatusScript />
+  <section class="section">
+    <div class="container ledger">
+      <div>
+        <p class="code">404</p>
+        <h1>Bu sayfa yok</h1>
+        <p class="lead">Bağlantı eski ya da yanlış yazılmış olabilir. Elektrik arızanız varsa sağdaki numarayı arayın; sayfa aramakla vakit kaybetmeyin.</p>
+        <p><a href="/" class="btn btn--ink">Ana sayfa</a> <a href="/hizmetler" class="btn btn--line">Arıza türleri</a></p>
+      </div>
+      <div class="ledger__rail"><CallPanel /></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .code {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--red);
+    letter-spacing: -0.05em;
+    line-height: 1;
+    margin: 0 0 0.5rem;
+  }
+  p .btn + .btn {
+    margin-left: 0.5rem;
+  }
+</style>

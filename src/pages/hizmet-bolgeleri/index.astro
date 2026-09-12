@@ -1,0 +1,85 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Icon from '@components/Icon.astro';
+import CallPanel from '@components/CallPanel.astro';
+import StatusScript from '@components/StatusScript.astro';
+import { landingDistricts, allDistricts } from '@data/districts';
+import { getNeighborhoodsOf } from '@data/neighborhoods';
+import { breadcrumbSchema } from '@utils/seo';
+const crumbs = [
+  { name: 'Ana sayfa', href: '/' },
+  { name: 'Bölgeler', href: '/hizmet-bolgeleri' },
+];
+const others = allDistricts.filter((d) => !d.content);
+---
+
+<BaseLayout
+  title="Ankara Acil Elektrikçi Bölgeleri | 25 İlçe, Aynı Gün | Demir Elektrik"
+  rawTitle
+  description="Sincan, Etimesgut, Yenimahalle, Çankaya, Keçiören, Mamak ve Ankara'nın tüm ilçelerine acil elektrik arıza servisi. İlçenize varış süresi ve mahalle sayfaları. 0506 092 58 16."
+  schema={[breadcrumbSchema(crumbs)]}
+>
+  <StatusScript />
+  <section class="section">
+    <div class="container ledger">
+      <div>
+        <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
+        <h1>Nereye, ne kadar sürede</h1>
+        <p class="lead">Merkezimiz Sincan Menderes Mahallesi'nde. Aşağıdaki süreler normal trafik içindir; aradığınızda o anki konuma göre net saat veririz.</p>
+        <div class="rows">
+          {
+            landingDistricts.map((d) => {
+              const hoods = getNeighborhoodsOf(d.slug);
+              return (
+                <div class="row row--area">
+                  <span class="row__icon"><Icon name="map-pin" size={20} /></span>
+                  <span>
+                    <a href={`/hizmet-bolgeleri/${d.slug}`} class="row__title">{d.content.h1}</a>
+                    <p class="row__text">{d.content.arrival}</p>
+                    {hoods.length > 0 && (
+                      <p class="row__hoods">
+                        {hoods.map((n, i) => (
+                          <>
+                            <a href={`/hizmet-bolgeleri/${d.slug}/${n.slug}`}>{n.name}</a>
+                            {i < hoods.length - 1 ? ', ' : ''}
+                          </>
+                        ))}
+                      </p>
+                    )}
+                  </span>
+                  <a href={`/hizmet-bolgeleri/${d.slug}`} class="row__go">Bölge sayfası</a>
+                </div>
+              );
+            })
+          }
+        </div>
+        <h2 class="h2">Diğer ilçeler</h2>
+        <p class="lead">Bu ilçelere de çıkıyoruz; sayfası olmayan ilçeler için doğrudan arayın, varış süresini telefonda söyleyelim.</p>
+        <ul class="tags">{others.map((d) => <li><span class="tag tag--muted">{d.name}</span></li>)}</ul>
+      </div>
+      <div class="ledger__rail"><CallPanel /></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .row--area .row__title {
+    display: inline-block;
+  }
+  .row--area .row__title:hover {
+    color: var(--red);
+  }
+  .row__hoods {
+    margin: 0.4rem 0 0;
+    font-size: 0.85rem;
+    color: var(--steel);
+    line-height: 1.6;
+  }
+  .row__hoods a:hover {
+    color: var(--red);
+  }
+  .h2 {
+    margin-top: 2.5rem;
+    font-size: var(--fs-lg);
+  }
+</style>

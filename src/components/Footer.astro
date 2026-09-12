@@ -1,0 +1,134 @@
+---
+import Icon from './Icon.astro';
+import { site } from '@data/site';
+import { featuredDistricts } from '@data/districts';
+import { servicesSorted } from '@data/services';
+const year = new Date().getFullYear();
+const areas = featuredDistricts.slice(0, 8);
+const svc = servicesSorted.filter((s) => s.featured).slice(0, 6);
+---
+
+<footer class="ftr">
+  <div class="container">
+    <div class="ftr__top">
+      <div class="ftr__brand">
+        <p class="ftr__name">Demir Elektrik</p>
+        <p class="ftr__desc">Ankara acil elektrik arıza servisi. Sincan merkezli ekip, haftanın 7 günü {site.hours.display} arası 25 ilçenin tamamına çıkar.</p>
+        <a href={site.phone.href} class="ftr__phone">{site.phone.display}</a>
+        <p class="ftr__addr"><Icon name="map-pin" size={16} /> {site.address.full}</p>
+      </div>
+      <nav aria-label="Arıza türleri">
+        <h2 class="ftr__h">Arıza türleri</h2>
+        <ul>
+          {svc.map((s) => <li><a href={`/hizmetler/${s.slug}`}>{s.shortTitle}</a></li>)}
+          <li><a href="/hizmetler">Tümü</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Bölgeler">
+        <h2 class="ftr__h">Bölgeler</h2>
+        <ul>
+          {areas.map((d) => <li><a href={`/hizmet-bolgeleri/${d.slug}`}>{d.name}</a></li>)}
+          <li><a href="/hizmet-bolgeleri">Tüm ilçeler</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Kurumsal">
+        <h2 class="ftr__h">Demir Elektrik</h2>
+        <ul>
+          <li><a href="/nasil-calisiriz">Nasıl çalışırız</a></li>
+          <li><a href="/hakkimizda">Hakkımızda</a></li>
+          <li><a href="/sss">Sık sorulan sorular</a></li>
+          <li><a href="/iletisim">İletişim</a></li>
+          <li><a href="https://www.demirelektrikankara.com.tr" rel="noopener">Kurumsal sitemiz</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="ftr__bottom">
+      <p>© {year} {site.legalName}. Tüm hakları saklıdır.</p>
+      <ul>
+        <li><a href="/kvkk-aydinlatma-metni">KVKK</a></li>
+        <li><a href="/gizlilik-politikasi">Gizlilik</a></li>
+        <li><a href="/cerez-politikasi">Çerezler</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .ftr {
+    border-top: 1px solid var(--line);
+    background: var(--fog);
+    padding-block: 3rem 2rem;
+    font-size: var(--fs-sm);
+  }
+  .ftr__top {
+    display: grid;
+    gap: 2rem;
+  }
+  @media (min-width: 640px) {
+    .ftr__top {
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    }
+  }
+  .ftr__name {
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem;
+  }
+  .ftr__desc {
+    color: var(--steel);
+    max-width: 40ch;
+  }
+  .ftr__phone {
+    display: inline-block;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+  }
+  .ftr__phone:hover {
+    color: var(--red);
+  }
+  .ftr__addr {
+    display: flex;
+    gap: 0.4rem;
+    align-items: flex-start;
+    color: var(--steel);
+    margin: 0;
+  }
+  .ftr__addr svg {
+    flex: none;
+    margin-top: 3px;
+    color: var(--red);
+  }
+  .ftr__h {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+  .ftr nav ul {
+    display: grid;
+    gap: 0.4rem;
+  }
+  .ftr nav a {
+    color: var(--ink-2);
+  }
+  .ftr nav a:hover {
+    color: var(--red);
+  }
+  .ftr__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    color: var(--steel);
+  }
+  .ftr__bottom p {
+    margin: 0;
+  }
+  .ftr__bottom ul {
+    display: flex;
+    gap: 1rem;
+  }
+</style>

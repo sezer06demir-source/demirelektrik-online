@@ -1,0 +1,50 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import CallPanel from '@components/CallPanel.astro';
+import StatusScript from '@components/StatusScript.astro';
+import { site } from '@data/site';
+import { breadcrumbSchema } from '@utils/seo';
+const crumbs = [
+  { name: 'Ana sayfa', href: '/' },
+  { name: 'Hakkımızda', href: '/hakkimizda' },
+];
+---
+
+<BaseLayout title="Hakkımızda | Demir Elektrik Acil Servis, Sincan Ankara" rawTitle description="Demir Elektrik'in acil arıza ekibi: Sincan Menderes Mahallesi merkezli, 30 yılı aşkın saha tecrübesi, Ankara'nın 25 ilçesine haftanın 7 günü 08:00–23:00 servis. 0506 092 58 16." schema={[breadcrumbSchema(crumbs)]}>
+  <StatusScript />
+  <section class="section">
+    <div class="container ledger">
+      <div class="prose">
+        <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
+        <h1>Arızaya giden ekip</h1>
+        <p class="lead">Bu site Demir Elektrik'in acil arıza servisine ayrılmıştır. Tesisat projeleri, pano imalatı ve kurumsal işler için <a href="https://www.demirelektrikankara.com.tr" rel="noopener">kurumsal sitemize</a> bakabilirsiniz.</p>
+        <p>Demir Elektrik, Sincan Menderes Mahallesi'ndeki dükkânından otuz yılı aşkın süredir Ankara'da elektrik işi yapıyor. Yıllar içinde en çok şunu öğrendik: insanlar bir elektrikçiyi genellikle işler yolunda giderken değil, sigorta attığında, mutfak karanlık kaldığında ya da prizden yanık kokusu geldiğinde ararlar. O anda istedikleri şey de bellidir: telefonu açan biri, gerçekçi bir saat ve işe başlamadan söylenmiş bir fiyat.</p>
+        <p>Bu siteyi o an için kurduk. Acil çağrılara giden ekibimiz sigorta, kaçak akım rölesi, priz, anahtar ve kablo gibi standart parçaları araçta taşır; çoğu arıza tek gelişte biter. Uzmanlık alanımız ev, villa, mağaza ve iş yeri tesisatları ile fabrika ve atölyelerdeki kumanda panolarıdır. İş makinesi ve otomasyon programlama işleri bu servisin kapsamı dışındadır.</p>
+        <h2>Neye söz veriyoruz</h2>
+        <ul class="list">
+          <li>Telefonu elektrikçi açar, ön teşhisi telefonda yapar.</li>
+          <li>{site.hours.daysText} {site.hours.display} arası Ankara'nın 25 ilçesine çıkarız.</li>
+          <li>Tespit sonrası fiyatı söyler, onay almadan işe başlamayız.</li>
+          <li>Yapılan işi ve değişen parçaları yazılı bırakırız.</li>
+          <li>Aynı arıza kısa sürede tekrarlarsa yeniden gelir, bakarız.</li>
+        </ul>
+        <h2>Adres ve saatler</h2>
+        <p>{site.address.full}. {site.hours.daysText} {site.hours.display}. Telefon ve WhatsApp: <a href={site.phone.href}>{site.phone.display}</a>.</p>
+      </div>
+      <div class="ledger__rail"><CallPanel /></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .prose h2 {
+    font-size: var(--fs-lg);
+    margin: 2rem 0 0.6rem;
+  }
+  .list {
+    display: grid;
+    gap: 0.5rem;
+    list-style: disc;
+    padding-left: 1.2rem;
+  }
+</style>
