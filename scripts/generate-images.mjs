@@ -37,8 +37,30 @@ const og = `
 await mkdir(resolve(pub, 'icons'), { recursive: true });
 const png = (svg, size) => sharp(Buffer.from(svg)).resize(size, size).png().toBuffer();
 
-await writeFile(resolve(pub, 'favicon.svg'), mark(64));
-await writeFile(resolve(pub, 'favicon.ico'), await png(mark(64), 32));
+/**
+ * Gerçek ICO dosyası üretir (6 bayt başlık + 16 bayt dizin + PNG verisi).
+ * Sunucu `image/vnd.microsoft.icon` içerik tipiyle ve `nosniff` başlığıyla servis ettiği
+ * için dosyanın gerçekten ICO olması gerekir; ham PNG'yi .ico adıyla koymak yetmez.
+ */
+function icoFromPng(pngBuf, size) {
+  const header = Buffer.alloc(6);
+  header.writeUInt16LE(0, 0); // rezerve
+  header.writeUInt16LE(1, 2); // tip: ikon
+  header.writeUInt16LE(1, 4); // görsel sayısı
+  const entry = Buffer.alloc(16);
+  entry.writeUInt8(size >= 256 ? 0 : size, 0); // genişlik
+  entry.writeUInt8(size >= 256 ? 0 : size, 1); // yükseklik
+  entry.writeUInt8(0, 2); // palet yok
+  entry.writeUInt8(0, 3); // rezerve
+  entry.writeUInt16LE(1, 4); // renk düzlemi
+  entry.writeUInt16LE(32, 6); // bit derinliği
+  entry.writeUInt32LE(pngBuf.length, 8); // veri boyutu
+  entry.writeUInt32LE(22, 12); // veri başlangıcı
+  return Buffer.concat([header, entry, pngBuf]);
+}
+
+await writeFile(resolve(pub, 'favicon.svg'), mark(64).trimStart());
+await writeFile(resolve(pub, 'favicon.ico'), icoFromPng(await png(mark(64), 32), 32));
 await writeFile(resolve(pub, 'icons/icon-192.png'), await png(mark(192), 192));
 await writeFile(resolve(pub, 'icons/icon-512.png'), await png(mark(512), 512));
 await writeFile(resolve(pub, 'icons/apple-touch-icon.png'), await png(mark(180), 180));
