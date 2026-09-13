@@ -1,0 +1,49 @@
+---
+/**
+ * Sayfa üst bandı — koyu blok: ekmek kırıntısı, başlık, tek satır bağlam ve
+ * duruma göre bilgi çipleri (varış süresi, çalışma saati, kapsam).
+ */
+import Icon from './Icon.astro';
+
+interface Crumb {
+  name: string;
+  href: string;
+}
+interface Chip {
+  icon: string;
+  text: string;
+  /** Yeşil vurgulu çip: varış süresi gibi "iyi haber" bilgileri */
+  go?: boolean;
+}
+interface Props {
+  crumbs: Crumb[];
+  title: string;
+  lead?: string;
+  eyebrow?: string;
+  eyebrowIcon?: string;
+  chips?: Chip[];
+}
+const { crumbs, title, lead, eyebrow, eyebrowIcon = 'map-pin', chips = [] } = Astro.props;
+---
+
+<section class="night pagehead">
+  <div class="container">
+    <ol class="crumbs">
+      {crumbs.map((c, i) => <li>{i === crumbs.length - 1 ? <span>{c.name}</span> : <a href={c.href}>{c.name}</a>}</li>)}
+    </ol>
+    {eyebrow && <p class="pagehead__eyebrow"><Icon name={eyebrowIcon} size={16} /> {eyebrow}</p>}
+    <h1>{title}</h1>
+    {lead && <p class="pagehead__lead">{lead}</p>}
+    {
+      chips.length > 0 && (
+        <div class="pagehead__meta">
+          {chips.map((c) => (
+            <span class:list={['chipline', { 'chipline--go': c.go }]}>
+              <Icon name={c.icon} size={15} /> {c.text}
+            </span>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</section>

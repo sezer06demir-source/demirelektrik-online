@@ -82,6 +82,31 @@ export const stats = [
   { value: '08–23', label: 'her gün' },
 ] as const;
 
+/**
+ * Ziyaretçilerin Google'da kullandığı arama ifadeleri. Ana sayfanın altında
+ * etiket olarak gösterilir; her biri konuyu gerçekten anlatan sayfaya gider.
+ */
+export const searchTags = [
+  { label: 'Ankara acil elektrikçi', href: '/hizmetler/acil-elektrikci' },
+  { label: 'En yakın elektrikçi', href: '/hizmetler/nobetci-elektrikci' },
+  { label: 'Nöbetçi elektrikçi', href: '/hizmetler/nobetci-elektrikci' },
+  { label: '7/24 elektrikçi', href: '/hizmetler/nobetci-elektrikci' },
+  { label: 'Gece elektrikçi', href: '/hizmetler/nobetci-elektrikci' },
+  { label: 'Hafta sonu elektrikçi', href: '/hizmetler/nobetci-elektrikci' },
+  { label: 'Sigorta atıyor', href: '/hizmetler/sigorta-atmasi' },
+  { label: 'Kaçak akım rölesi atıyor', href: '/hizmetler/kacak-akim-rolesi-atiyor' },
+  { label: 'Kaçak akım rölesi montajı', href: '/hizmetler/kacak-akim-rolesi-montaji' },
+  { label: 'Elektrik kesildi', href: '/hizmetler/elektrik-kesintisi' },
+  { label: 'Priz yanığı, kıvılcım', href: '/hizmetler/priz-anahtar-tamiri' },
+  { label: 'Sigorta kutusu yenileme', href: '/hizmetler/elektrik-panosu-yenileme' },
+  { label: 'Avize montajı', href: '/hizmetler/avize-spot-montaji' },
+  { label: 'Elektrik tesisat ustası', href: '/hizmetler/ev-elektrik-tesisati' },
+  { label: 'Mağaza elektrikçisi', href: '/hizmetler/isyeri-elektrik-servisi' },
+  { label: 'Villa elektrikçisi', href: '/hizmetler/villa-elektrik-servisi' },
+  { label: 'Apartman elektrikçisi', href: '/hizmetler/bina-ortak-alan-elektrigi' },
+  { label: 'Fabrika kumanda panosu', href: '/hizmetler/fabrika-kumanda-panosu' },
+] as const;
+
 export const formProblems = [
   'Sigorta atıyor',
   'Elektrik yok',

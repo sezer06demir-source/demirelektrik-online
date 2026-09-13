@@ -2,10 +2,13 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Icon from '@components/Icon.astro';
 import CallPanel from '@components/CallPanel.astro';
+import PageHead from '@components/PageHead.astro';
 import StatusScript from '@components/StatusScript.astro';
 import { landingDistricts, allDistricts } from '@data/districts';
-import { getNeighborhoodsOf } from '@data/neighborhoods';
+import { getNeighborhoodsOf, neighborhoods } from '@data/neighborhoods';
+import { site } from '@data/site';
 import { breadcrumbSchema } from '@utils/seo';
+import { arrivalShort } from '@utils/tr';
 const crumbs = [
   { name: 'Ana sayfa', href: '/' },
   { name: 'Bölgeler', href: '/hizmet-bolgeleri' },
@@ -20,19 +23,27 @@ const others = allDistricts.filter((d) => !d.content);
   schema={[breadcrumbSchema(crumbs)]}
 >
   <StatusScript />
+  <PageHead
+    crumbs={crumbs}
+    title="Nereye, ne kadar sürede"
+    eyebrow="Ankara'nın 25 ilçesi"
+    lead="Merkezimiz Sincan Melih Gökçek Bulvarı'nda. Süreler normal trafik içindir; aradığınızda o anki konuma göre net saat veririz."
+    chips={[
+      { icon: 'map-pin', text: `${landingDistricts.length} bölge sayfası` },
+      { icon: 'home', text: `${neighborhoods.length} mahalle sayfası` },
+      { icon: 'clock', text: `${site.hours.daysText} ${site.hours.display}` },
+    ]}
+  />
   <section class="section">
     <div class="container ledger">
       <div>
-        <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
-        <h1>Nereye, ne kadar sürede</h1>
-        <p class="lead">Merkezimiz Sincan Melih Gökçek Bulvarı'nda. Aşağıdaki süreler normal trafik içindir; aradığınızda o anki konuma göre net saat veririz.</p>
         <div class="rows">
           {
             landingDistricts.map((d) => {
               const hoods = getNeighborhoodsOf(d.slug);
               return (
                 <div class="row row--area">
-                  <span class="row__icon"><Icon name="map-pin" size={20} /></span>
+                  <span class="row__time metric">{arrivalShort(d.content.arrival)}</span>
                   <span>
                     <a href={`/hizmet-bolgeleri/${d.slug}`} class="row__title">{d.content.h1}</a>
                     <p class="row__text">{d.content.arrival}</p>
@@ -63,6 +74,16 @@ const others = allDistricts.filter((d) => !d.content);
 </BaseLayout>
 
 <style>
+  .row__time {
+    display: grid;
+    place-items: center;
+    min-width: 62px;
+    padding: 0.35rem 0.5rem;
+    border-radius: var(--r);
+    background: var(--green-tint);
+    color: #14532d;
+    font-size: 0.95rem;
+  }
   .row--area .row__title {
     display: inline-block;
   }

@@ -2,8 +2,10 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Icon from '@components/Icon.astro';
 import CallPanel from '@components/CallPanel.astro';
+import PageHead from '@components/PageHead.astro';
 import StatusScript from '@components/StatusScript.astro';
-import { servicesByGroup } from '@data/services';
+import { servicesByGroup, services } from '@data/services';
+import { site, searchTags } from '@data/site';
 import { breadcrumbSchema } from '@utils/seo';
 const crumbs = [
   { name: 'Ana sayfa', href: '/' },
@@ -18,19 +20,31 @@ const crumbs = [
   schema={[breadcrumbSchema(crumbs)]}
 >
   <StatusScript />
+  <PageHead
+    crumbs={crumbs}
+    title="Baktığımız arızalar"
+    eyebrow="Ankara acil elektrik servisi"
+    eyebrowIcon="zap"
+    lead="Belirtinizi bulun; her sayfada biz gelene kadar ne yapacağınız yazıyor. Listede yoksa arayın, telefonda yönlendirelim."
+    chips={[
+      { icon: 'layers', text: `${services.length} arıza türü` },
+      { icon: 'clock', text: `${site.hours.daysText} ${site.hours.display}` },
+      { icon: 'phone', text: site.phone.display },
+    ]}
+  />
   <section class="section">
     <div class="container ledger">
       <div>
-        <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
-        <h1>Baktığımız arızalar</h1>
-        <p class="lead">Belirtinizi bulun; sayfada "gelene kadar ne yapmalı" bölümü var. Listede yoksa arayın, telefonda yönlendirelim.</p>
         {
           servicesByGroup().map((g) => (
             <section class="grp" aria-labelledby={`g-${g.group}`}>
-              <h2 id={`g-${g.group}`} class="grp__title">{g.label}</h2>
+              <h2 id={`g-${g.group}`} class="grp__title">
+                <span class="grp__dot" data-group={g.group} aria-hidden="true"></span>
+                {g.label}
+              </h2>
               <div class="rows">
                 {g.items.map((s) => (
-                  <a href={`/hizmetler/${s.slug}`} class="row">
+                  <a href={`/hizmetler/${s.slug}`} class="row" data-group={s.group}>
                     <span class="row__icon"><Icon name={s.icon} size={22} /></span>
                     <span>
                       <span class="row__title">{s.title}</span>
@@ -43,6 +57,10 @@ const crumbs = [
             </section>
           ))
         }
+        <section class="grp" aria-labelledby="tag-title">
+          <h2 id="tag-title" class="grp__title">Aramada sık yazılanlar</h2>
+          <ul class="tags">{searchTags.map((t) => <li><a class="tag" href={t.href}>{t.label}</a></li>)}</ul>
+        </section>
       </div>
       <div class="ledger__rail"><CallPanel /></div>
     </div>
@@ -53,8 +71,29 @@ const crumbs = [
   .grp {
     margin-top: 2.5rem;
   }
+  .grp:first-child {
+    margin-top: 0;
+  }
   .grp__title {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
     font-size: var(--fs-lg);
     margin-bottom: 0.75rem;
+  }
+  .grp__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background: var(--line);
+  }
+  .grp__dot[data-group='acil'] {
+    background: var(--red);
+  }
+  .grp__dot[data-group='tamir'] {
+    background: var(--amber);
+  }
+  .grp__dot[data-group='kurulum'] {
+    background: var(--steel);
   }
 </style>

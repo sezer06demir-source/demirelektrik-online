@@ -1,4 +1,236 @@
 import type { Neighborhood } from './types';
 
-/** Geçici: içerik ajan tarafından doldurulacak. */
-export const mamakNeighborhoods: Neighborhood[] = [];
+export const mamakNeighborhoods: Neighborhood[] = [
+  {
+    name: 'Abidinpaşa',
+    slug: 'abidinpasa-elektrikci',
+    districtSlug: 'mamak-elektrikci',
+    content: {
+      h1: 'Abidinpaşa Acil Elektrikçi',
+      subtitle: 'Mamak\'ın çarşı merkezinde aynı gün elektrik arıza servisi.',
+      intro: [
+        'Abidinpaşa, Mamak\'ın en eski ve en yoğun yerleşimlerinden biri. Çarşı esnafı, pazar yeri ve onlarca yıllık apartmanlar aynı sokaklarda iç içe. Bu yoğunluk elektrik tesisatına da yansıyor: eski kolon hatları, kalabalık sayaç panoları, gün boyu çalışan dükkan vitrinleri.',
+        'Abidinpaşa\'da acil elektrikçi aradığınızda önce telefonda dinliyoruz. Sigorta sık atıyor mu, ışıklar titriyor mu, kesinti tek daireyle mi sınırlı yoksa bina genelinde mi — bu sorulara verdiğiniz cevap bize ön bir fikir veriyor. Sonra yerinde bakıp gerçek nedeni buluyoruz.',
+        'Samsun Yolu\'na yakınlığı sayesinde Abidinpaşa\'ya aynı gün ulaşıyoruz. İşe başlamadan önce ne yapacağımızı ve fiyatı söylüyoruz, sürprizle karşılaşmazsınız.',
+      ],
+      highlightedServices: ['acil-elektrikci', 'sigorta-atmasi', 'isyeri-elektrik-servisi', 'elektrik-panosu-yenileme'],
+      localNotes: [
+        { title: 'Yoğun çarşı hattı', text: 'Çarşı esnafının aynı hatta çok sayıda cihaz çalıştırması sigortaları zorluyor. Yükü doğru dağıtıp panoyu buna göre düzenliyoruz.' },
+        { title: 'Eski bina tesisatı', text: 'Onlarca yıllık binalarda kablo yalıtımı zamanla zayıflıyor. Kaçak akım rölesi sık atıyorsa önce bu ihtimali kontrol ediyoruz.' },
+        { title: 'Kalabalık sayaç panosu', text: 'Çok daireli apartmanlarda sayaç panosu karışık olabiliyor. Arızalı hattı bulmak için önce panoyu düzenli biçimde kontrol ediyoruz.' },
+      ],
+      arrival: 'Sincan\'daki merkezimizden Samsun Yolu üzerinden Abidinpaşa\'ya yaklaşık 45 dakikada ulaşıyoruz.',
+      landmarks: ['Abidinpaşa Merkez', 'Abidinpaşa Çarşısı', 'Abidinpaşa Pazar Yeri', 'Samsun Yolu bağlantısı', 'Mamak Belediyesi çevresi', 'Cami çevresi', 'İlkokul çevresi'],
+      faq: [
+        { q: 'Abidinpaşa\'ya ne kadar sürede geliyorsunuz?', a: 'Samsun Yolu üzerinden ortalama 45 dakikada Abidinpaşa\'ya ulaşıyoruz. Arızanın türünü telefonda öğrenip yola göre en hızlı planı yapıyoruz.' },
+        { q: 'Fiyatı ne zaman söylüyorsunuz?', a: 'Yerinde tespit yapmadan fiyat söylemiyoruz. Arızayı gördükten sonra, işe başlamadan önce net fiyatı bildiriyoruz.' },
+        { q: 'Gece geç saatte de geliyor musunuz?', a: 'Evet, haftanın her günü 08:00–23:00 arası Abidinpaşa\'da acil elektrik arızalarına bakıyoruz.' },
+      ],
+      seoTitle: 'Abidinpaşa Acil Elektrikçi | Aynı Gün Arıza Servisi | Demir Elektrik',
+      seoDescription: 'Abidinpaşa\'da sigorta attı, kaçak akım var, elektrik kesintisi mi oldu? Aynı gün geliyoruz, tespit sonrası fiyat söylüyoruz. 08:00–23:00 hat: 0506 092 58 16',
+    },
+  },
+  {
+    name: 'Akdere',
+    slug: 'akdere-elektrikci',
+    districtSlug: 'mamak-elektrikci',
+    content: {
+      h1: 'Akdere Acil Elektrikçi',
+      subtitle: 'Kentsel dönüşümün başladığı Akdere\'de aynı gün arıza servisi.',
+      intro: [
+        'Akdere, Mamak merkezine yakın ve orta yaşlı bina stoğuyla dikkat çeken bir mahalle. Bazı sokaklarda kentsel dönüşüm çalışmaları başlamış durumda; eski bloklarla yeni inşaatlar yan yana duruyor. Bu geçiş dönemi elektrik altyapısında da kendini gösteriyor.',
+        'Akdere\'de elektrik arıza çağrılarının çoğu priz ve anahtar arızası, sık sigorta atması ya da ortak alan aydınlatmasıyla ilgili. Kolon hattından daireye kadar sistemli şekilde bakıyoruz, sorunu tahminle değil ölçümle buluyoruz.',
+        'Akdere\'de acil elektrikçi ihtiyacınız olduğunda aynı gün geliyoruz. Kentsel dönüşüm nedeniyle boşalan ya da yeni taşınılan dairelerde de tesisat kontrolü yapıyoruz.',
+      ],
+      highlightedServices: ['acil-elektrikci', 'kacak-akim-tespiti', 'priz-anahtar-tamiri', 'bina-ortak-alan-elektrigi'],
+      localNotes: [
+        { title: 'Kentsel dönüşüm geçişi', text: 'Yıkılan ve yeni yapılan binalar arasında kalan sokaklarda ortak hatlar bazen geçici bağlanmış oluyor. Böyle durumlarda önce hattın güvenli olup olmadığını kontrol ediyoruz.' },
+        { title: 'Orta yaşlı bina tesisatı', text: '20-30 yıllık binalarda otomat sigortalar yetersiz kalabiliyor. Yük hesabını yeniden yapıp panoyu güncelliyoruz.' },
+        { title: 'Ortak alan aydınlatması', text: 'Merdiven ve giriş aydınlatmasında zamanlayıcı arızaları sık görülüyor. Yerinde kontrol edip düzenliyoruz.' },
+      ],
+      arrival: 'Sincan\'dan çevre yolu bağlantısıyla Akdere\'ye yaklaşık 45-50 dakikada varıyoruz.',
+      landmarks: ['Akdere Merkez', 'Akdere Pazar Yeri', 'Kentsel dönüşüm alanı çevresi', 'Samsun Yolu bağlantısı', 'Cami çevresi', 'Sağlık ocağı çevresi'],
+      faq: [
+        { q: 'Akdere\'de kentsel dönüşüm alanına da geliyor musunuz?', a: 'Evet, yıkım ve yeni yapım alanlarına yakın binalarda da hizmet veriyoruz. Hat güvenliğini önce biz kontrol ediyoruz.' },
+        { q: 'Yeni taşındığım dairede tesisat kontrolü yapıyor musunuz?', a: 'Evet, taşınma sonrası genel kontrol talep edebilirsiniz. Panoyu ve prizleri kontrol edip riskli noktaları bildiriyoruz.' },
+        { q: 'Akdere\'ye ne zaman gelebilirsiniz?', a: '08:00–23:00 arası her gün Akdere\'de acil elektrik arızalarına bakıyoruz, aynı gün içinde geliyoruz.' },
+      ],
+      seoTitle: 'Akdere Acil Elektrikçi | Kentsel Dönüşüm Bölgesi | Demir Elektrik',
+      seoDescription: 'Akdere\'de elektrik kesintisi, priz arızası, kaçak akım şüphesi mi? Kolon hattından daireye kadar bakıyoruz, aynı gün geliriz. 08:00–23:00 hat: 0506 092 58 16',
+    },
+  },
+  {
+    name: 'Tuzluçayır',
+    slug: 'tuzlucayir-elektrikci',
+    districtSlug: 'mamak-elektrikci',
+    content: {
+      h1: 'Tuzluçayır Acil Elektrikçi',
+      subtitle: 'Eski tesisatlı, kalabalık Tuzluçayır\'da aynı gün arıza servisi.',
+      intro: [
+        'Tuzluçayır, Mamak\'ın en kalabalık mahallelerinden biri. Gecekondudan apartmana dönüşüm süreci burada uzun sürdü, bu yüzden yapı stoğu oldukça karma: yan yana eski ve yeni binalar var. Tesisatın yaşı da binaya göre büyük farklılık gösteriyor.',
+        'Tuzluçayır\'da elektrik arıza çağrılarının önemli bir kısmı eski tesisattan kaynaklanıyor: nötr kopması, aşınmış kablo, yetersiz kalan otomat sigorta. Kat panosundan daireye kadar sistemli kontrol yapıp gerçek arızayı buluyoruz.',
+        'Sigorta atması sık tekrarlıyorsa geçiştirmiyoruz, kaçak akım rölesini ve hat yalıtımını birlikte kontrol ediyoruz. Tuzluçayır\'da acil elektrikçi ihtiyacınızda aynı gün geliyoruz.',
+      ],
+      highlightedServices: ['acil-elektrikci', 'sigorta-atmasi', 'ev-elektrik-tesisati', 'elektrik-kesintisi'],
+      localNotes: [
+        { title: 'Karma yapı stoğu', text: 'Eski ve yeni binalar aynı sokakta olduğu için tesisat standardı da değişkenlik gösteriyor. Her binaya göre ayrı değerlendirme yapıyoruz.' },
+        { title: 'Eski tesisat riski', text: 'Nötr kopması ve aşınmış kablo bu mahallede sık karşılaştığımız arızalar arasında. Ölçüm yapmadan parça değiştirmiyoruz.' },
+        { title: 'Tekrarlayan sigorta atması', text: 'Aynı sigorta kısa aralıklarla atıyorsa nedenini bulana kadar aramaya devam ediyoruz, geçici çözümle bırakmıyoruz.' },
+      ],
+      arrival: 'Sincan\'dan Samsun Yolu ve çevre yolu üzerinden Tuzluçayır\'a yaklaşık 45 dakikada ulaşıyoruz.',
+      landmarks: ['Tuzluçayır Merkez', 'Tuzluçayır Pazar Yeri', 'Eski mahalle sokakları', 'Yeni apartman blokları çevresi', 'Cami çevresi', 'İlkokul çevresi', 'Otobüs durağı çevresi'],
+      faq: [
+        { q: 'Eski binalarda tesisat yenileme yapıyor musunuz?', a: 'Evet, kolon hattından daire içi tesisata kadar yenileme yapıyoruz. Önce durumu tespit edip fiyatı söylüyoruz.' },
+        { q: 'Sigorta sürekli atıyor, ne yapmalıyım?', a: 'Bizi arayın, telefonda birkaç soru sorup olası nedeni tahmin ediyoruz. Sonra yerinde ölçüm yapıp kesin nedeni buluyoruz.' },
+        { q: 'Tuzluçayır\'a hangi saatlerde geliyorsunuz?', a: '08:00–23:00 arası haftanın her günü, aynı gün içinde Tuzluçayır\'a geliyoruz.' },
+      ],
+      seoTitle: 'Tuzluçayır Acil Elektrikçi | Eski Tesisat Uzmanı | Demir Elektrik',
+      seoDescription: 'Tuzluçayır\'da eski tesisat, sık sigorta atması, nötr kopması mı? Kat panosundan daireye kadar kontrol ediyoruz, aynı gün geliyoruz. 08:00–23:00: 0506 092 58 16',
+    },
+  },
+  {
+    name: 'Kayaş',
+    slug: 'kayas-elektrikci',
+    districtSlug: 'mamak-elektrikci',
+    content: {
+      h1: 'Kayaş Acil Elektrikçi',
+      subtitle: 'Başkentray\'a yakın Kayaş\'ta aynı gün arıza servisi.',
+      intro: [
+        'Kayaş, Mamak\'ın doğu ucunda, Başkentray istasyonuyla anılan bir mahalle. Son yıllarda yükselen TOKİ siteleri eski yerleşimle yan yana duruyor. Yeni sitelerde ortak alan elektriği, eski kesimde ise daire içi tesisat arızaları öne çıkıyor.',
+        'TOKİ sitelerinde kat panosu arızaları, asansör aydınlatması ve ortak alan sigortası sık gelen çağrılar arasında. Site yönetimiyle koordineli çalışıp arızayı hızlı buluyoruz.',
+        'Kayaş\'ta acil elektrikçi ihtiyacınızda telefonda ön teşhis yapıp aynı gün geliyoruz. İşe başlamadan önce fiyatı söylüyoruz, ne site yönetimini ne de daire sahibini sürprizle karşı karşıya bırakmıyoruz.',
+      ],
+      highlightedServices: ['acil-elektrikci', 'bina-ortak-alan-elektrigi', 'elektrik-panosu-yenileme', 'kacak-akim-tespiti'],
+      localNotes: [
+        { title: 'TOKİ sitesi ortak alan', text: 'Yeni sitelerde kat panosu ve ortak alan aydınlatması sık arıza kaynağı. Site yönetimiyle birlikte hızlı müdahale ediyoruz.' },
+        { title: 'Eski-yeni geçiş bölgesi', text: 'Eski yerleşimdeki binalarla yeni siteler arasında tesisat standardı farklı. Her yapıya uygun ayrı yaklaşım uyguluyoruz.' },
+        { title: 'İstasyon çevresi yoğunluğu', text: 'Başkentray istasyonu çevresindeki işyerlerinde de acil çağrılara bakıyoruz, vardiya saatlerine göre planlama yapıyoruz.' },
+      ],
+      arrival: 'Sincan\'dan Mamak\'ın doğusundaki Kayaş\'a yaklaşık 50 dakikada ulaşıyoruz.',
+      landmarks: ['Kayaş Merkez', 'Kayaş Başkentray İstasyonu çevresi', 'TOKİ siteleri girişi', 'Kayaş Pazar Yeri', 'Cami çevresi', 'İlkokul çevresi'],
+      faq: [
+        { q: 'TOKİ sitesinde ortak alan arızasına bakıyor musunuz?', a: 'Evet, site yönetimiyle görüşüp kat panosu ve ortak alan aydınlatması arızalarına aynı gün müdahale ediyoruz.' },
+        { q: 'Kayaş\'a ne kadar sürede ulaşırsınız?', a: 'Sincan\'dan yaklaşık 50 dakikada Kayaş\'a ulaşıyoruz. Arızanın aciliyetine göre planlamayı öne alıyoruz.' },
+        { q: 'Fiyat site yönetimine mi yoksa daireye mi bildirilir?', a: 'Arızanın ortak alanda mı daire içinde mi olduğunu tespit ettikten sonra fiyatı ilgili tarafa net şekilde söylüyoruz.' },
+      ],
+      seoTitle: 'Kayaş Acil Elektrikçi | Başkentray ve TOKİ Sitesi | Demir Elektrik',
+      seoDescription: 'Kayaş\'ta elektrik arızası, TOKİ sitesinde ortak alan veya kat panosu sorunu mu? Aynı gün geliyoruz, tespit sonrası fiyat söylüyoruz. 08:00–23:00: 0506 092 58 16',
+    },
+  },
+  {
+    name: 'Mutlu',
+    slug: 'mutlu-elektrikci',
+    districtSlug: 'mamak-elektrikci',
+    content: {
+      h1: 'Mutlu Acil Elektrikçi',
+      subtitle: 'Apartman yoğun Mutlu Mahallesi\'nde aynı gün arıza servisi.',
+      intro: [
+        'Mutlu, Mamak\'ın büyük konut mahallelerinden biri. Sokaklar büyük ölçüde apartmanlardan oluşuyor, bu yüzden gelen çağrıların çoğu bina ortak alanından değil doğrudan daire içinden geliyor: priz arızası, anahtar arızası, avize ve spot montajı.',
+        'Mutlu\'da elektrik arıza dediğinizde aklımıza önce daire içi tesisat geliyor. Telefonda hangi oda, hangi hat, ne zaman başladı diye sorup önce bir tahmin oluşturuyoruz, sonra yerinde kesin nedeni buluyoruz.',
+        'Aynı gün geliyoruz, işe başlamadan önce fiyatı söylüyoruz. Mutlu\'da acil elektrikçi aradığınızda 08:00–23:00 arası her gün ulaşabilirsiniz.',
+      ],
+      highlightedServices: ['acil-elektrikci', 'priz-anahtar-tamiri', 'avize-spot-montaji', 'sigorta-atmasi'],
+      localNotes: [
+        { title: 'Daire içi arıza yoğunluğu', text: 'Bu mahallede çağrıların büyük kısmı priz, anahtar ve aydınlatma arızası. Küçük görünen arızaları da ölçümle kontrol ediyoruz.' },
+        { title: 'Avize ve spot montajı', text: 'Yeni taşınan veya yenileme yapan dairelerde avize ve spot montajı sık talep ediliyor. Mevcut hattın yükünü kontrol ederek bağlıyoruz.' },
+        { title: 'Apartman elektrik panosu', text: 'Yoğun apartman dokusunda kat panoları bazen karışık etiketlenmiş oluyor. Arızayı bulmadan önce panoyu düzenli şekilde kontrol ediyoruz.' },
+      ],
+      arrival: 'Sincan\'dan Mutlu Mahallesi\'ne yaklaşık 45 dakikada ulaşıyoruz.',
+      landmarks: ['Mutlu Merkez', 'Mutlu Pazar Yeri', 'Apartman siteleri girişi', 'Cami çevresi', 'İlkokul çevresi', 'Otobüs durağı çevresi'],
+      faq: [
+        { q: 'Priz ve anahtar arızasına aynı gün bakıyor musunuz?', a: 'Evet, Mutlu\'da bu tür çağrılara aynı gün müdahale ediyoruz. Telefonda ön bilgi alıp gerekli malzemeyle geliyoruz.' },
+        { q: 'Avize ve spot montajı için ayrıca mı aramalıyım?', a: 'Hayır, aynı ziyarette hem arıza tespiti hem montaj yapabiliyoruz. Talebinizi çağrı sırasında belirtmeniz yeterli.' },
+        { q: 'Mutlu\'ya hangi saatlerde gelebilirsiniz?', a: 'Haftanın her günü 08:00–23:00 arası Mutlu\'da acil elektrik arızalarına bakıyoruz.' },
+      ],
+      seoTitle: 'Mutlu Acil Elektrikçi | Daire İçi Arıza Servisi | Demir Elektrik',
+      seoDescription: 'Mutlu\'da priz, anahtar, avize arızası veya sigorta atması mı? Mamak\'ın bu mahallesinde aynı gün geliyoruz, işe başlamadan fiyat söylüyoruz. 0506 092 58 16',
+    },
+  },
+  {
+    name: 'Demirlibahçe',
+    slug: 'demirlibahce-elektrikci',
+    districtSlug: 'mamak-elektrikci',
+    content: {
+      h1: 'Demirlibahçe Acil Elektrikçi',
+      subtitle: 'Cebeci\'ye komşu Demirlibahçe\'de aynı gün arıza servisi.',
+      intro: [
+        'Demirlibahçe, Cebeci\'ye komşu olması nedeniyle hem eski yerleşimi hem öğrenci nüfusunu bir arada barındırıyor. Binaların bir kısmı eski, bir kısmı öğrencilere kiralanan küçük dairelerden oluşuyor. Bu da farklı türde elektrik arızalarını beraberinde getiriyor.',
+        'Öğrenci dairelerinde en sık gördüğümüz durum, taşınma sonrası yapılmayan tesisat kontrolü. Önceki kiracıdan kalan yüklü prizler, uygun olmayan uzatma kabloları sigorta atmasına yol açabiliyor. Taşınmadan önce ya da hemen sonra kontrol istenmesini öneriyoruz.',
+        'Demirlibahçe\'de elektrik kesintisi ya da sigorta atması yaşadığınızda aynı gün geliyoruz. Öğrenci dairesi olsun, eski aile konutu olsun, işe başlamadan önce fiyatı söylüyoruz.',
+      ],
+      highlightedServices: ['acil-elektrikci', 'ev-elektrik-tesisati', 'priz-anahtar-tamiri', 'elektrik-kesintisi'],
+      localNotes: [
+        { title: 'Öğrenci dairesi kontrolü', text: 'Taşınma sonrası tesisat kontrolü öğrenci dairelerinde arızaları önceden fark etmemizi sağlıyor. Kısa sürede tüm daireyi gözden geçiriyoruz.' },
+        { title: 'Eski yerleşim tesisatı', text: 'Cebeci sınırına yakın eski binalarda kolon hattı yaşlanmış olabiliyor. Sık sigorta atması varsa önce bu hattı kontrol ediyoruz.' },
+        { title: 'Yoğun cihaz kullanımı', text: 'Küçük dairelerde çok sayıda cihazın aynı prize bağlanması sigortaları zorluyor. Yükü doğru dağıtacak çözümü öneriyoruz.' },
+      ],
+      arrival: 'Sincan\'dan şehir merkezine yakın Demirlibahçe\'ye yaklaşık 45-50 dakikada ulaşıyoruz.',
+      landmarks: ['Demirlibahçe Merkez', 'Cebeci sınırı çevresi', 'Öğrenci apartmanları çevresi', 'Demirlibahçe Pazar Yeri', 'Cami çevresi', 'Durak çevresi'],
+      faq: [
+        { q: 'Öğrenci dairesinde taşınma sonrası kontrol yapıyor musunuz?', a: 'Evet, taşınmadan önce ya da hemen sonra tesisatı kontrol edip riskli noktaları bildiriyoruz.' },
+        { q: 'Demirlibahçe\'ye aynı gün gelir misiniz?', a: 'Evet, 08:00–23:00 arası aradığınızda aynı gün Demirlibahçe\'ye geliyoruz.' },
+        { q: 'Kiracıysam da hizmet alabilir miyim?', a: 'Evet, ev sahibi ya da kiracı fark etmeksizin hizmet veriyoruz. Gerekirse ev sahibiyle de bilgi paylaşıyoruz.' },
+      ],
+      seoTitle: 'Demirlibahçe Acil Elektrikçi | Öğrenci Evi Uzmanı | Demir Elektrik',
+      seoDescription: 'Demirlibahçe\'de elektrik kesintisi, sigorta atması, taşınma sonrası kontrol mü? Öğrenci dairesinde de aynı gün geliyoruz. 08:00–23:00 hat: 0506 092 58 16',
+    },
+  },
+  {
+    name: 'Fahri Korutürk',
+    slug: 'fahri-koruturk-elektrikci',
+    districtSlug: 'mamak-elektrikci',
+    content: {
+      h1: 'Fahri Korutürk Acil Elektrikçi',
+      subtitle: 'Mamak merkezindeki dükkan ve dairelerde aynı gün arıza servisi.',
+      intro: [
+        'Fahri Korutürk, Mamak\'ın merkez mahallelerinden biri. Orta yaşlı apartmanların yanı sıra zemin katlarda çok sayıda dükkan ve küçük ofis bulunuyor. Bu karışık kullanım, elektrik yükünün de karışık dağılmasına neden olabiliyor.',
+        'Dükkan sahiplerinin en çok karşılaştığı sorun, vitrin aydınlatması ya da soğutucu cihazların aynı hatta bağlı olmasından kaynaklanan sigorta atması. Dairelerde ise klasik priz ve anahtar arızaları öne çıkıyor.',
+        'Fahri Korutürk\'te acil elektrikçi aradığınızda önce telefonda durumu dinliyoruz, sonra aynı gün geliyoruz. İşe başlamadan önce fiyatı söylüyoruz, ister dükkan ister daire olsun.',
+      ],
+      highlightedServices: ['acil-elektrikci', 'isyeri-elektrik-servisi', 'elektrik-panosu-yenileme', 'sigorta-atmasi'],
+      localNotes: [
+        { title: 'Dükkan ve ofis hattı', text: 'Zemin kattaki işyerlerinde vitrin ve cihaz yükü aynı hatta toplanmış olabiliyor. Yükü ayırıp panoyu buna göre düzenliyoruz.' },
+        { title: 'Orta yaşlı apartman tesisatı', text: 'Bu yaştaki binalarda otomat sigortalar güncel ihtiyacı karşılamayabiliyor. Gerekirse panoyu güncel standarda taşıyoruz.' },
+        { title: 'Karma kullanım yoğunluğu', text: 'Aynı binada hem konut hem işyeri olması ortak sayaç ve kolon hattını zorlayabiliyor. Arızayı bulurken bu ayrımı dikkate alıyoruz.' },
+      ],
+      arrival: 'Sincan\'dan Fahri Korutürk Mahallesi\'ne yaklaşık 45 dakikada ulaşıyoruz.',
+      landmarks: ['Fahri Korutürk Merkez', 'Dükkan ve ofis hattı', 'Fahri Korutürk Pazar Yeri', 'Cami çevresi', 'İlkokul çevresi', 'Ana cadde bağlantısı'],
+      faq: [
+        { q: 'İşyerine de aynı gün geliyor musunuz?', a: 'Evet, dükkan ve ofislerde de aynı gün müdahale ediyoruz. Çalışma saatlerinizi bozmamaya özen gösteriyoruz.' },
+        { q: 'Vitrin sigortası sık atıyor, nedeni ne olabilir?', a: 'Genelde aynı hatta bağlı çok sayıda cihaz neden oluyor. Yerinde ölçüm yapıp yükü doğru şekilde dağıtıyoruz.' },
+        { q: 'Fahri Korutürk\'e hangi saatlerde ulaşabilirsiniz?', a: '08:00–23:00 arası haftanın her günü ulaşabiliyoruz, aynı gün içinde geliyoruz.' },
+      ],
+      seoTitle: 'Fahri Korutürk Acil Elektrikçi | Dükkan-Ofis Servisi | Demir Elektrik',
+      seoDescription: 'Fahri Korutürk\'te dükkan, ofis veya dairede elektrik arızası, sigorta atması mı? Aynı gün geliriz, işe başlamadan fiyat söyleriz. 08:00–23:00: 0506 092 58 16',
+    },
+  },
+  {
+    name: 'Şahintepe',
+    slug: 'sahintepe-elektrikci',
+    districtSlug: 'mamak-elektrikci',
+    content: {
+      h1: 'Şahintepe Acil Elektrikçi',
+      subtitle: 'Yamaç yerleşimli Şahintepe\'de aynı gün arıza servisi.',
+      intro: [
+        'Şahintepe, Mamak\'ın yamaca kurulmuş mahallelerinden biri. Eğimli sokaklarda hem eski konutlar hem kentsel dönüşümle yükselen yeni siteler var. Yeni sitelerde kat panoları ve ortak alan elektriği öne çıkan konular.',
+        'Şahintepe\'de kaçak akım şüphesi ya da kat panosu arızası bildiren çağrılar sık geliyor. Yamaç yerleşimde bina girişleri farklı seviyelerde olabildiği için önce panonun yerini ve hattın güzergahını netleştiriyoruz.',
+        'Aynı gün geliyoruz, işe başlamadan önce fiyatı söylüyoruz. Şahintepe\'de acil elektrikçi ihtiyacınızda 08:00–23:00 arası bize ulaşabilirsiniz.',
+      ],
+      highlightedServices: ['acil-elektrikci', 'bina-ortak-alan-elektrigi', 'elektrik-panosu-yenileme', 'kacak-akim-tespiti'],
+      localNotes: [
+        { title: 'Yeni site kat panoları', text: 'Kentsel dönüşümle yükselen sitelerde kat panosu arızaları sık görülüyor. Site yönetimiyle koordineli çalışıp hızlı çözüyoruz.' },
+        { title: 'Yamaç yerleşim hattı', text: 'Eğimli sokaklarda kolon hattı uzun mesafeler kat edebiliyor. Arızayı bulmak için hattı baştan sona takip ediyoruz.' },
+        { title: 'Kaçak akım şüphesi', text: 'Islak zeminli bodrum ve giriş katlarında kaçak akım rölesi sık atıyor. 30 mA rölenin doğru çalışıp çalışmadığını kontrol ediyoruz.' },
+      ],
+      arrival: 'Sincan\'dan yamaçtaki Şahintepe\'ye yaklaşık 45-50 dakikada ulaşıyoruz.',
+      landmarks: ['Şahintepe Merkez', 'Yamaç sokaklar', 'Kentsel dönüşüm siteleri girişi', 'Şahintepe Pazar Yeri', 'Cami çevresi', 'İlkokul çevresi'],
+      faq: [
+        { q: 'Kentsel dönüşüm sitesinde kat panosuna bakıyor musunuz?', a: 'Evet, site yönetimiyle görüşüp kat panosu arızalarına aynı gün müdahale ediyoruz.' },
+        { q: 'Kaçak akım rölesi sık atıyor, nedeni ne olabilir?', a: 'Nemli zemin, eskimiş kablo ya da arızalı cihaz olabilir. Yerinde ölçüm yapmadan kesin neden söylemiyoruz.' },
+        { q: 'Şahintepe\'ye ulaşım ne kadar sürüyor?', a: 'Sincan\'dan yaklaşık 45-50 dakikada Şahintepe\'ye ulaşıyoruz, aynı gün içinde geliyoruz.' },
+      ],
+      seoTitle: 'Şahintepe Acil Elektrikçi | Kentsel Dönüşüm Sitesi | Demir Elektrik',
+      seoDescription: 'Şahintepe\'de kat panosu arızası, kaçak akım şüphesi, elektrik kesintisi mi? Aynı gün geliyoruz, tespit sonrası fiyat söylüyoruz. 08:00–23:00: 0506 092 58 16',
+    },
+  },
+];

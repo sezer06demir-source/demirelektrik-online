@@ -2,6 +2,7 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Icon from '@components/Icon.astro';
 import CallPanel from '@components/CallPanel.astro';
+import PageHead from '@components/PageHead.astro';
 import StatusScript from '@components/StatusScript.astro';
 import RequestForm from '@components/RequestForm.astro';
 import { site } from '@data/site';
@@ -14,12 +15,20 @@ const crumbs = [
 
 <BaseLayout title="İletişim | Ankara Acil Elektrikçi 0506 092 58 16 | Demir Elektrik" rawTitle description="Ankara acil elektrik arıza servisi: 0506 092 58 16, WhatsApp, Sincan Melih Gökçek Bulvarı. Haftanın 7 günü 08:00–23:00. Arıza formuyla bildirin, biz arayalım." schema={[breadcrumbSchema(crumbs)]}>
   <StatusScript />
+  <PageHead
+    crumbs={crumbs}
+    title="Bize ulaşın"
+    eyebrow={site.address.full}
+    lead="Acilse arayın; telefonu elektrikçi açar. Acil değilse formu doldurun, uygun saatte biz arayalım."
+    chips={[
+      { icon: 'phone', text: site.phone.display },
+      { icon: 'clock', text: `${site.hours.daysText} ${site.hours.display}` },
+      { icon: 'whatsapp', text: 'WhatsApp açık' },
+    ]}
+  />
   <section class="section">
     <div class="container ledger">
       <div>
-        <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
-        <h1>Bize ulaşın</h1>
-        <p class="lead">Acilse arayın; telefonu elektrikçi açar. Acil değilse formu doldurun, uygun saatte biz arayalım.</p>
         <ul class="ways">
           <li><Icon name="phone" size={20} /><div><strong>Telefon</strong><a href={site.phone.href}>{site.phone.display}</a></div></li>
           <li><Icon name="whatsapp" size={20} /><div><strong>WhatsApp</strong><a href={site.whatsapp.href} target="_blank" rel="noopener">Fotoğraf ve kısa video gönderebilirsiniz</a></div></li>
@@ -37,7 +46,7 @@ const crumbs = [
   .ways {
     display: grid;
     gap: 1rem;
-    margin: 1.5rem 0 2.5rem;
+    margin: 0 0 2.5rem;
   }
   .ways li {
     display: grid;

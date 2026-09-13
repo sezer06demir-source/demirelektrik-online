@@ -19,6 +19,15 @@
   --green-tint: #e6f6ec;
   --wa: #128c4b;
 
+  /* Gece nöbeti: arıza karanlıkta çıkar. Koyu bloklar bu paletten. */
+  --night: #101319;
+  --night-2: #191d26;
+  --night-line: rgba(255, 255, 255, 0.12);
+  --on-night: #d9dee6;
+  --on-night-dim: #8c95a3;
+  --amber: #f0a202;
+  --amber-tint: #fdf3e0;
+
   --font: 'Manrope Variable', Manrope, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --fs-sm: 0.875rem;
   --fs-base: 1.0625rem;
@@ -422,6 +431,123 @@ a.tag:hover {
   color: var(--steel);
   background: var(--fog);
   border-color: transparent;
+}
+
+/* --- koyu bloklar (gece nöbeti) --- */
+.night {
+  position: relative;
+  background: var(--night);
+  color: var(--on-night);
+  isolation: isolate;
+}
+/* Pano etiket şeridi: koyu bloğun üstünde ince renk dizisi */
+.night::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red) 0 34%, var(--amber) 34% 62%, var(--green) 62% 100%);
+}
+.night h1,
+.night h2,
+.night h3 {
+  color: #fff;
+}
+.night a:not(.btn) {
+  color: #fff;
+}
+
+/* Sayfa üst bandı: kırıntı + başlık + tek satır bağlam */
+.pagehead {
+  padding-block: clamp(1.5rem, 3vw, 2.5rem) clamp(1.75rem, 4vw, 3rem);
+}
+.pagehead .crumbs {
+  color: var(--on-night-dim);
+  margin-bottom: 1.25rem;
+}
+.pagehead .crumbs a:hover {
+  color: #fff;
+}
+.pagehead__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.75rem;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--amber);
+}
+.pagehead h1 {
+  font-size: var(--fs-2xl);
+  max-width: 22ch;
+}
+.pagehead__lead {
+  margin: 0.75rem 0 0;
+  color: var(--on-night);
+  font-size: var(--fs-md);
+  max-width: 56ch;
+}
+.pagehead__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  margin-top: 1.5rem;
+}
+.chipline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--night-line);
+  background: var(--night-2);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--on-night);
+}
+.chipline svg {
+  color: var(--amber);
+  flex: none;
+}
+.chipline--go {
+  color: var(--green);
+  border-color: rgba(31, 157, 85, 0.35);
+}
+.chipline--go svg {
+  color: var(--green);
+}
+
+/* Büyük sayı: varış süresi, saat, telefon gibi tek bakışta okunan değerler */
+.metric {
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+/* Arıza grubuna göre satır şeridi: bilgi taşır, süs değil */
+.row[data-group] {
+  position: relative;
+  padding-left: 0.9rem;
+}
+.row[data-group]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1.1rem;
+  bottom: 1.1rem;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--line);
+}
+.row[data-group='acil']::before {
+  background: var(--red);
+}
+.row[data-group='tamir']::before {
+  background: var(--amber);
+}
+.row[data-group='kurulum']::before {
+  background: var(--steel);
 }
 
 /* --- yardımcılar --- */

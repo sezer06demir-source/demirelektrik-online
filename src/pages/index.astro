@@ -4,7 +4,7 @@ import Icon from '@components/Icon.astro';
 import CallPanel from '@components/CallPanel.astro';
 import StatusScript from '@components/StatusScript.astro';
 import RequestForm from '@components/RequestForm.astro';
-import { site, situations, promises, stats } from '@data/site';
+import { site, situations, promises, stats, searchTags } from '@data/site';
 import { featuredServices } from '@data/services';
 import { landingDistricts, allDistricts } from '@data/districts';
 import { faqSchema } from '@utils/seo';
@@ -16,74 +16,79 @@ const homeFaq = [
   { q: 'Akşam saatlerinde de geliyor musunuz?', a: 'Evet, haftanın 7 günü 08:00–23:00 arası çıkıyoruz. Akşam ve hafta sonu çağrılarında varsa fiyat farkını telefonda baştan söyleriz.' },
   { q: 'Sigorta attı, ne yapmalıyım?', a: 'Önce prizlerdeki cihazları çıkarıp sigortayı bir kez kaldırın. Yine atıyorsa kaldırmayı bırakın ve bizi arayın; tekrar tekrar zorlamak kabloyu ısıtır.' },
 ];
+const nearest = landingDistricts.slice(0, 6);
 ---
 
 <BaseLayout
-  title="Ankara Acil Elektrikçi | Aynı Gün Elektrik Arıza Servisi"
+  title="Ankara Elektrikçi | Acil Elektrik Arıza Servisi | Demir Elektrik"
   rawTitle
   description={site.description}
   schema={[faqSchema(homeFaq)]}
 >
   <StatusScript />
 
-  <section class="hero">
-    <div class="container ledger">
-      <div>
-        <p class="hero__kicker"><span class="dot" data-status-dot></span><span data-status-text>Her gün {site.hours.display}</span></p>
-        <h1 class="hero__title">Ankara'da elektrik arızası. Şimdi arayın, aynı gün gelelim.</h1>
+  <section class="night hero">
+    <div class="container hero__in">
+      <div class="hero__main">
+        <p class="hero__live"><span class="dot" data-status-dot></span><span data-status-text>Her gün {site.hours.display}</span></p>
+        <h1 class="hero__title">Elektriğiniz gitti mi? Aynı gün gelip bulalım.</h1>
         <p class="hero__lead">
-          Sigorta atması, elektrik kesintisi, kaçak akım, priz ve pano arızaları için Sincan merkezli acil servis. Telefonda birkaç soruyla
-          sorunu daraltırız; gerekiyorsa {site.responseText.toLocaleLowerCase('tr')}.
+          Sigorta atması, kaçak akım rölesi, priz ve pano arızaları için Sincan merkezli acil servis. Telefonda birkaç soruyla sorunu
+          daraltır, gerekiyorsa yola çıkarız.
         </p>
-        <a href={site.phone.href} class="hero__phone">{site.phone.display}</a>
+        <a href={site.phone.href} class="hero__phone metric">{site.phone.display}</a>
+        <p class="hero__sub">Aramak için dokunun. WhatsApp'tan fotoğraf da gönderebilirsiniz.</p>
         <ul class="hero__stats">
-          {stats.map((s) => <li><strong>{s.value}</strong><span>{s.label}</span></li>)}
+          {stats.map((s) => <li><strong class="metric">{s.value}</strong><span>{s.label}</span></li>)}
         </ul>
       </div>
-      <div class="ledger__rail">
-        <CallPanel />
-      </div>
+      <div class="hero__rail"><CallPanel /></div>
     </div>
   </section>
 
   <section class="section" aria-labelledby="sit-title">
     <div class="container">
-      <h2 id="sit-title">Şu an ne oluyor?</h2>
-      <p class="lead">En sık gelen dört çağrı. Kendinizinkini bulun, gelene kadar ne yapacağınızı okuyun.</p>
-      <div class="rows">
+      <div class="head">
+        <h2 id="sit-title">Şu an ne oluyor?</h2>
+        <p class="lead">En sık gelen dört çağrı. Kendinizinkini bulun; biz gelene kadar ne yapacağınız sayfasında yazıyor.</p>
+      </div>
+      <ul class="sit">
         {
           situations.map((s) => (
-            <a href={`/hizmetler/${s.slug}`} class="row">
-              <span class="row__icon"><Icon name={s.icon} size={22} /></span>
-              <span>
-                <span class="row__title">{s.title}</span>
-                <p class="row__text">{s.text}</p>
-              </span>
-              <span class="row__go">Ne yapmalı</span>
-            </a>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--fog" aria-labelledby="svc-title">
-    <div class="container">
-      <h2 id="svc-title">Baktığımız arızalar</h2>
-      <p class="lead">Ev, villa, mağaza ve iş yeri; fabrikada kumanda panoları. İş makinesi ve otomasyon işleri bu serviste yok.</p>
-      <ul class="svcgrid">
-        {
-          featuredServices.map((s) => (
             <li>
-              <a href={`/hizmetler/${s.slug}`} class="svc">
-                <span class="svc__icon"><Icon name={s.icon} size={22} /></span>
-                <span class="svc__title">{s.shortTitle}</span>
-                <span class="svc__text">{s.excerpt}</span>
+              <a href={`/hizmetler/${s.slug}`} class="sit__item">
+                <span class="sit__icon"><Icon name={s.icon} size={24} /></span>
+                <span class="sit__title">{s.title}</span>
+                <span class="sit__text">{s.text}</span>
+                <span class="sit__go">Ne yapmalı</span>
               </a>
             </li>
           ))
         }
       </ul>
+    </div>
+  </section>
+
+  <section class="section section--fog" aria-labelledby="svc-title">
+    <div class="container">
+      <div class="head">
+        <h2 id="svc-title">Baktığımız arızalar</h2>
+        <p class="lead">Ev, villa, mağaza ve iş yeri; fabrikada kumanda panoları. Şeridin rengi işin aciliyetini gösterir.</p>
+      </div>
+      <div class="rows rows--white">
+        {
+          featuredServices.map((s) => (
+            <a href={`/hizmetler/${s.slug}`} class="row" data-group={s.group}>
+              <span class="row__icon"><Icon name={s.icon} size={22} /></span>
+              <span>
+                <span class="row__title">{s.title}</span>
+                <p class="row__text">{s.excerpt}</p>
+              </span>
+              <span class="row__go">Ayrıntı</span>
+            </a>
+          ))
+        }
+      </div>
       <p class="more"><a href="/hizmetler" class="btn btn--line">Tüm arıza türleri</a></p>
     </div>
   </section>
@@ -91,12 +96,14 @@ const homeFaq = [
   <section class="section" aria-labelledby="prom-title">
     <div class="container ledger">
       <div>
-        <h2 id="prom-title">Aradığınızda ne olur</h2>
+        <div class="head">
+          <h2 id="prom-title">Aradığınızda ne olur</h2>
+        </div>
         <ol class="steps">
           {
             promises.map((p, i) => (
               <li>
-                <span class="steps__n">{i + 1}</span>
+                <span class="steps__n metric">{i + 1}</span>
                 <div>
                   <h3>{p.title}</h3>
                   <p>{p.text}</p>
@@ -113,107 +120,169 @@ const homeFaq = [
     </div>
   </section>
 
-  <section class="section section--fog" aria-labelledby="area-title">
+  <section class="night arrive" aria-labelledby="area-title">
     <div class="container">
-      <h2 id="area-title">Ankara'nın her ilçesine</h2>
-      <p class="lead">Merkezimiz Sincan'da. Yakın ilçelere daha hızlı, uzak ilçelere aynı gün. Bölgenizin sayfasında varış süresini görürsünüz.</p>
-      <ul class="areas">
+      <div class="head head--night">
+        <h2 id="area-title">Nereye, ne kadar sürede</h2>
+        <p class="lead">Merkezimiz Sincan'da. Süreler normal trafik içindir; aradığınızda o anki konuma göre net saat veririz.</p>
+      </div>
+      <ul class="arrive__grid">
         {
-          landingDistricts.map((d) => (
+          nearest.map((d) => (
             <li>
-              <a href={`/hizmet-bolgeleri/${d.slug}`} class="areas__item">
-                <span class="areas__name">{d.name}</span>
-                <span class="areas__arr">{arrivalShort(d.content.arrival)}</span>
+              <a href={`/hizmet-bolgeleri/${d.slug}`} class="arrive__item">
+                <span class="arrive__time metric">{arrivalShort(d.content.arrival)}</span>
+                <span class="arrive__name">{d.name}</span>
               </a>
             </li>
           ))
         }
       </ul>
-      <p class="areas__all">
-        Diğer ilçeler: {allDistricts.filter((d) => !d.content).map((d) => d.name).join(', ')}. <a href="/hizmet-bolgeleri">Tüm bölgeler</a>
+      <p class="arrive__rest">
+        {landingDistricts.slice(6).map((d, i) => (
+          <>
+            {i > 0 ? ', ' : ''}
+            <a href={`/hizmet-bolgeleri/${d.slug}`}>{d.name}</a>
+          </>
+        ))}
+        {' '}ve {allDistricts.filter((d) => !d.content).length} ilçe daha. <a href="/hizmet-bolgeleri" class="arrive__all">Tüm bölgeler ve mahalleler</a>
       </p>
     </div>
   </section>
 
   <section class="section" aria-labelledby="faq-title">
-    <div class="container">
-      <h2 id="faq-title">Sık sorulanlar</h2>
-      <div class="faq faq--home">
-        {
-          homeFaq.map((f) => (
-            <details>
-              <summary>{f.q}</summary>
-              <p>{f.a}</p>
-            </details>
-          ))
-        }
+    <div class="container ledger">
+      <div>
+        <div class="head">
+          <h2 id="faq-title">Sık sorulanlar</h2>
+        </div>
+        <div class="faq">
+          {
+            homeFaq.map((f) => (
+              <details>
+                <summary>{f.q}</summary>
+                <p>{f.a}</p>
+              </details>
+            ))
+          }
+        </div>
+        <p class="more"><a href="/sss" class="btn btn--line">Tüm sorular</a></p>
       </div>
-      <p class="more"><a href="/sss" class="btn btn--line">Tüm sorular</a></p>
+      <div class="ledger__rail">
+        <nav class="tagbox" aria-labelledby="tag-title">
+          <h2 id="tag-title" class="tagbox__title">Ne arıyorsunuz?</h2>
+          <ul class="tags">
+            {searchTags.map((t) => <li><a class="tag" href={t.href}>{t.label}</a></li>)}
+          </ul>
+        </nav>
+      </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
+  /* --- hero --- */
   .hero {
-    padding-block: clamp(2rem, 5vw, 4.5rem) var(--section);
-    border-bottom: 1px solid var(--line);
+    padding-block: clamp(2.25rem, 5vw, 4rem) clamp(2.5rem, 6vw, 4.5rem);
   }
-  .hero__kicker {
-    margin: 0 0 1rem;
-    font-weight: 700;
-    color: var(--steel);
+  /* Pano ray deseni: ince dikey çizgiler, sağ üstte sönümlenir */
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 64px);
+    mask-image: radial-gradient(120% 90% at 100% 0%, #000 20%, transparent 72%);
+  }
+  .hero__in {
+    display: grid;
+    gap: clamp(2rem, 4vw, 3.5rem);
+  }
+  @media (min-width: 900px) {
+    .hero__in {
+      grid-template-columns: minmax(0, 1fr) var(--rail);
+      align-items: start;
+    }
+  }
+  .hero__live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.15rem;
+    margin: 0 0 1.25rem;
+    padding: 0.35rem 0.85rem 0.35rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid var(--night-line);
+    background: var(--night-2);
     font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--on-night);
   }
   .hero__title {
     font-size: var(--fs-hero);
-    max-width: 16ch;
-    margin-bottom: 1.25rem;
+    max-width: 15ch;
+    margin-bottom: 1.1rem;
   }
   .hero__lead {
     font-size: var(--fs-md);
-    color: var(--ink-2);
-    max-width: 56ch;
-    margin-bottom: 1.5rem;
+    color: var(--on-night);
+    max-width: 52ch;
+    margin-bottom: 1.75rem;
   }
   .hero__phone {
     display: inline-block;
-    font-size: clamp(2rem, 1.2rem + 3.6vw, 3.6rem);
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    line-height: 1;
-    font-variant-numeric: tabular-nums;
-    padding-bottom: 0.2em;
-    border-bottom: 6px solid var(--red);
-    margin-bottom: 1.75rem;
+    font-size: clamp(2.1rem, 1.1rem + 4.2vw, 3.9rem);
+    color: #fff;
+    padding-bottom: 0.15em;
+    border-bottom: 5px solid var(--red);
   }
   .hero__phone:hover {
     color: var(--red);
+    border-color: #fff;
+  }
+  .hero__sub {
+    margin: 0.75rem 0 2rem;
+    font-size: var(--fs-sm);
+    color: var(--on-night-dim);
   }
   .hero__stats {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem 2.5rem;
+    gap: 1.25rem 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--night-line);
   }
   .hero__stats li {
     display: grid;
-    line-height: 1.1;
+    gap: 0.15rem;
   }
   .hero__stats strong {
-    font-size: 1.6rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
+    font-size: 1.7rem;
+    color: #fff;
   }
   .hero__stats span {
-    color: var(--steel);
+    color: var(--on-night-dim);
     font-size: var(--fs-sm);
   }
   @media (max-width: 899px) {
-    .hero .ledger__rail {
+    .hero__rail {
       display: none;
     }
   }
 
-  .svcgrid {
+  /* --- bölüm başlıkları --- */
+  .head {
+    margin-bottom: 1.75rem;
+    max-width: 62ch;
+  }
+  .head .lead {
+    margin: 0.6rem 0 0;
+  }
+  .head--night .lead {
+    color: var(--on-night-dim);
+  }
+
+  /* --- durum kartları --- */
+  .sit {
     display: grid;
     gap: 1px;
     background: var(--line);
@@ -221,64 +290,87 @@ const homeFaq = [
     border-radius: var(--r-lg);
     overflow: hidden;
   }
-  @media (min-width: 640px) {
-    .svcgrid {
+  @media (min-width: 700px) {
+    .sit {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  @media (min-width: 1000px) {
-    .svcgrid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  .svc {
+  .sit__item {
     display: grid;
-    gap: 0.4rem;
-    padding: 1.25rem;
-    background: var(--paper);
+    gap: 0.45rem;
     height: 100%;
+    padding: 1.35rem 1.4rem 1.5rem;
+    background: var(--paper);
+    border-top: 3px solid transparent;
+    transition: border-color var(--dur), background-color var(--dur);
   }
-  .svc:hover .svc__title {
+  .sit__item:hover {
+    border-top-color: var(--red);
+    background: #fff;
+  }
+  .sit__icon {
     color: var(--red);
   }
-  .svc__icon {
-    color: var(--red);
-  }
-  .svc__title {
+  .sit__title {
     font-weight: 800;
     font-size: var(--fs-md);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
   }
-  .svc__text {
+  .sit__text {
     color: var(--steel);
     font-size: var(--fs-sm);
-    line-height: 1.5;
+    line-height: 1.55;
+  }
+  .sit__go {
+    margin-top: 0.35rem;
+    font-weight: 700;
+    font-size: var(--fs-sm);
+    color: var(--red);
+  }
+
+  .rows--white .row {
+    background: var(--paper);
+    padding-inline: 1rem;
+    border-bottom-color: var(--line);
+  }
+  .rows--white {
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    border-top: 1px solid var(--line);
+  }
+  .rows--white .row:last-child {
+    border-bottom: 0;
   }
   .more {
     margin: 1.5rem 0 0;
   }
 
+  /* --- adımlar --- */
   .steps {
     display: grid;
     gap: 1.25rem;
-    counter-reset: none;
   }
   .steps li {
     display: grid;
-    grid-template-columns: 40px minmax(0, 1fr);
+    grid-template-columns: 42px minmax(0, 1fr);
     gap: 1rem;
     padding-bottom: 1.25rem;
     border-bottom: 1px solid var(--line);
   }
+  .steps li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
   .steps__n {
     display: grid;
     place-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
     background: var(--ink);
     color: #fff;
-    font-weight: 800;
+    font-size: 1.1rem;
   }
   .steps h3 {
     margin-bottom: 0.3rem;
@@ -288,50 +380,75 @@ const homeFaq = [
     color: var(--ink-2);
   }
 
-  .areas {
+  /* --- varış süreleri --- */
+  .arrive {
+    padding-block: var(--section);
+  }
+  .arrive__grid {
     display: grid;
-    gap: 0.5rem;
+    gap: 0.75rem;
+    grid-template-columns: repeat(2, 1fr);
   }
-  @media (min-width: 640px) {
-    .areas {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (min-width: 1000px) {
-    .areas {
+  @media (min-width: 700px) {
+    .arrive__grid {
       grid-template-columns: repeat(3, 1fr);
     }
   }
-  .areas__item {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    align-items: baseline;
-    padding: 0.85rem 1rem;
-    border: 1.5px solid var(--line);
+  @media (min-width: 1000px) {
+    .arrive__grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  .arrive__item {
+    display: grid;
+    gap: 0.25rem;
+    padding: 1rem 1rem 1.1rem;
+    border: 1px solid var(--night-line);
     border-radius: var(--r);
-    background: var(--paper);
+    background: var(--night-2);
+    transition: border-color var(--dur), background-color var(--dur);
   }
-  .areas__item:hover {
-    border-color: var(--red);
+  .arrive__item:hover {
+    border-color: var(--green);
+    background: #1d2230;
   }
-  .areas__name {
-    font-weight: 800;
-    min-width: 0;
-  }
-  .areas__arr {
-    font-size: 0.8rem;
-    font-weight: 700;
+  .arrive__time {
+    font-size: 1.5rem;
     color: var(--green);
-    white-space: nowrap;
   }
-  .areas__all {
-    margin: 1.25rem 0 0;
-    color: var(--steel);
+  .arrive__name {
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--on-night);
+  }
+  .arrive__rest {
+    margin: 1.5rem 0 0;
+    color: var(--on-night-dim);
     font-size: var(--fs-sm);
     max-width: 80ch;
   }
-  .faq--home {
-    max-width: 760px;
+  .arrive__rest a {
+    color: var(--on-night);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(255, 255, 255, 0.25);
+  }
+  .arrive__rest a:hover {
+    color: #fff;
+    text-decoration-color: var(--red);
+  }
+  .arrive__all {
+    font-weight: 700;
+  }
+
+  /* --- arama etiketleri --- */
+  .tagbox {
+    border: 1.5px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 1.25rem;
+  }
+  .tagbox__title {
+    font-size: var(--fs-base);
+    margin-bottom: 0.85rem;
   }
 </style>

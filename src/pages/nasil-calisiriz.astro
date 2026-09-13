@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import CallPanel from '@components/CallPanel.astro';
+import PageHead from '@components/PageHead.astro';
 import StatusScript from '@components/StatusScript.astro';
 import { site } from '@data/site';
 import { breadcrumbSchema } from '@utils/seo';
@@ -20,12 +21,21 @@ const steps = [
 
 <BaseLayout title="Nasıl Çalışırız | Aradığınızda Ne Olur | Demir Elektrik" rawTitle description="Aradığınız andan işin bitimine kadar altı adım: telefonda ön teşhis, gerçekçi varış saati, güvenli tespit, işe başlamadan fiyat, onarım ve test, yazılı belge. 0506 092 58 16." schema={[breadcrumbSchema(crumbs)]}>
   <StatusScript />
+  <PageHead
+    crumbs={crumbs}
+    title="Aradığınız andan işin bitimine"
+    eyebrow="Altı adım"
+    eyebrowIcon="clipboard-list"
+    lead="Acil bir arızada en çok belirsizlik yorar. Bu yüzden süreç baştan bellidir; her adımda ne olacağını biliyorsunuz."
+    chips={[
+      { icon: 'phone', text: 'Telefonu elektrikçi açar' },
+      { icon: 'check-circle', text: 'Fiyat işe başlamadan söylenir', go: true },
+      { icon: 'clock', text: `${site.hours.daysText} ${site.hours.display}` },
+    ]}
+  />
   <section class="section">
     <div class="container ledger">
       <div>
-        <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
-        <h1>Aradığınız andan işin bitimine</h1>
-        <p class="lead">Acil bir arızada en çok belirsizlik yorar. Bu yüzden süreç baştan bellidir; her adımda ne olacağını biliyorsunuz.</p>
         <ol class="flow">
           {steps.map((s, i) => (
             <li>
@@ -48,7 +58,6 @@ const steps = [
   .flow {
     display: grid;
     gap: 1.5rem;
-    margin-top: 2rem;
   }
   .flow li {
     display: grid;

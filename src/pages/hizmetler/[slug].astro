@@ -2,8 +2,9 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Icon from '@components/Icon.astro';
 import CallPanel from '@components/CallPanel.astro';
+import PageHead from '@components/PageHead.astro';
 import StatusScript from '@components/StatusScript.astro';
-import { servicesSorted, type Service } from '@data/services';
+import { servicesSorted, groupLabels, type Service } from '@data/services';
 import { landingDistricts } from '@data/districts';
 import { site } from '@data/site';
 import { breadcrumbSchema, faqSchema, serviceSchema } from '@utils/seo';
@@ -27,12 +28,17 @@ const areas = landingDistricts.filter((d) => d.content.highlightedServices.inclu
 
 <BaseLayout title={s.seoTitle} rawTitle description={s.seoDescription} schema={[breadcrumbSchema(crumbs), serviceSchema({ name: s.title, description: s.seoDescription, path }), faqSchema(s.faq)]}>
   <StatusScript />
+  <PageHead
+    crumbs={crumbs}
+    title={s.title}
+    eyebrow={groupLabels[s.group]}
+    eyebrowIcon={s.icon}
+    lead={s.excerpt}
+    chips={[{ icon: 'clock', text: `${site.hours.daysText} ${site.hours.display}` }, ...s.practical.slice(0, 2).map((p) => ({ icon: 'check-circle', text: `${p.label}: ${p.value}` }))]}
+  />
   <article class="section">
     <div class="container ledger">
       <div class="body">
-        <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
-        <p class="kicker"><Icon name={s.icon} size={18} /> {s.group === 'acil' ? 'Acil arıza' : s.group === 'tamir' ? 'Tamir ve bakım' : 'Kurulum ve yenileme'}</p>
-        <h1>{s.title}</h1>
         <div class="prose intro">{s.description.map((p) => <p>{p}</p>)}</div>
 
         <div class="split">
@@ -85,22 +91,19 @@ const areas = landingDistricts.filter((d) => d.content.highlightedServices.inclu
 </BaseLayout>
 
 <style>
-  .kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    color: var(--red);
-    font-weight: 700;
-    font-size: var(--fs-sm);
-    margin-bottom: 0.6rem;
-  }
   .intro {
-    margin-top: 1rem;
     font-size: var(--fs-md);
+  }
+  .intro p:first-child::first-letter {
+    font-size: 1.15em;
+    font-weight: 700;
   }
   .h {
     font-size: var(--fs-lg);
     margin: 2.25rem 0 0.75rem;
+  }
+  .body > section:first-of-type .h {
+    margin-top: 1.5rem;
   }
   .split {
     display: grid;

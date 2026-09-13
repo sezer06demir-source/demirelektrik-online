@@ -1,10 +1,11 @@
 import type { Service, ServiceGroup } from './types';
 import { servicesA } from './services-a';
 import { servicesB } from './services-b';
+import { servicesC } from './services-c';
 
 export type { Service, ServiceGroup } from './types';
 
-export const services: Service[] = [...servicesA, ...servicesB];
+export const services: Service[] = [...servicesA, ...servicesB, ...servicesC];
 export const servicesSorted = [...services].sort((a, b) => a.order - b.order);
 export const featuredServices = servicesSorted.filter((s) => s.featured);
 

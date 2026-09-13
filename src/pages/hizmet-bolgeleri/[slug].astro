@@ -2,8 +2,10 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import Icon from '@components/Icon.astro';
 import CallPanel from '@components/CallPanel.astro';
+import PageHead from '@components/PageHead.astro';
 import StatusScript from '@components/StatusScript.astro';
 import RequestForm from '@components/RequestForm.astro';
+import { site } from '@data/site';
 import { landingDistricts } from '@data/districts';
 import type { District, DistrictContent } from '@data/types';
 import { getService } from '@data/services';
@@ -33,13 +35,20 @@ const others = landingDistricts.filter((x) => x.slug !== d.slug);
 
 <BaseLayout title={c.seoTitle} rawTitle description={c.seoDescription} schema={[breadcrumbSchema(crumbs), serviceSchema({ name: `${d.name} Acil Elektrikçi`, description: c.seoDescription, path, areaName: d.name }), faqSchema(c.faq)]}>
   <StatusScript />
+  <PageHead
+    crumbs={crumbs}
+    title={c.h1}
+    eyebrow={d.type === 'semt' ? `${d.parent}, Ankara` : 'Ankara'}
+    lead={c.subtitle}
+    chips={[
+      { icon: 'navigation', text: `Varış ${arrivalShort(c.arrival)}`, go: true },
+      { icon: 'clock', text: `${site.hours.daysText} ${site.hours.display}` },
+      ...(hoods.length ? [{ icon: 'map-pin', text: `${hoods.length} mahalle sayfası` }] : []),
+    ]}
+  />
   <article class="section">
     <div class="container ledger">
       <div>
-        <ol class="crumbs">{crumbs.map((x) => <li><a href={x.href}>{x.name}</a></li>)}</ol>
-        <p class="kicker"><Icon name="map-pin" size={18} /> {d.type === 'semt' ? `${d.parent}, Ankara` : 'Ankara'}</p>
-        <h1>{c.h1}</h1>
-        <p class="lead">{c.subtitle}</p>
         <p class="arrive"><Icon name="navigation" size={18} /> {c.arrival}</p>
         <div class="prose">{c.intro.map((p) => <p>{p}</p>)}</div>
 
@@ -47,7 +56,7 @@ const others = landingDistricts.filter((x) => x.slug !== d.slug);
           <h2 id="s1" class="h">{inD} en çok gelen çağrılar</h2>
           <div class="rows">
             {svc.map((s) => (
-              <a href={`/hizmetler/${s.slug}`} class="row">
+              <a href={`/hizmetler/${s.slug}`} class="row" data-group={s.group}>
                 <span class="row__icon"><Icon name={s.icon} size={22} /></span>
                 <span><span class="row__title">{s.title}</span><p class="row__text">{s.excerpt}</p></span>
                 <span class="row__go">Ayrıntı</span>
@@ -104,26 +113,23 @@ const others = landingDistricts.filter((x) => x.slug !== d.slug);
 </BaseLayout>
 
 <style>
-  .kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    color: var(--red);
-    font-weight: 700;
-    font-size: var(--fs-sm);
-    margin-bottom: 0.6rem;
-  }
   .arrive {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 0.9rem;
-    border-radius: var(--r);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.85rem 1rem;
+    border-left: 4px solid var(--green);
+    border-radius: 0 var(--r) var(--r) 0;
     background: var(--green-tint);
     color: #14532d;
-    font-weight: 700;
+    font-weight: 600;
     font-size: var(--fs-sm);
-    margin: 0 0 1.5rem;
+    margin: 0 0 1.75rem;
+    max-width: 62ch;
+  }
+  .arrive svg {
+    flex: none;
+    margin-top: 3px;
   }
   .h {
     font-size: var(--fs-lg);
