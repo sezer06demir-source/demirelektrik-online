@@ -76,6 +76,9 @@ function readBlockedIps() {
   });
 }
 
+/** İzin verilen ülkeler — middleware.ts içindeki ALLOWED_COUNTRIES varsayılanıyla aynı. */
+const ALLOWED_COUNTRIES = (process.env.ALLOWED_COUNTRIES ?? 'TR,DZ').split(',').map((c) => c.trim().toUpperCase());
+
 const BAD_UA = [
   'ahrefsbot', 'semrushbot', 'siteauditbot', 'mj12bot', 'dotbot', 'blexbot', 'dataforseobot', 'serpstatbot',
   'petalbot', 'bytespider', 'gptbot', 'ccbot', 'claudebot', 'python-requests', 'python-urllib', 'go-http-client',
@@ -91,7 +94,11 @@ function buildRules() {
     'or (http.request.uri.path contains "phpmyadmin") or (ends_with(http.request.uri.path, ".php")) or (ends_with(http.request.uri.path, ".asp")) or (ends_with(http.request.uri.path, ".aspx")) ' +
     'or (not http.request.method in {"GET" "HEAD" "OPTIONS"}) or (http.user_agent eq "")';
   const ua = BAD_UA.map((u) => `(lower(http.user_agent) contains "${u}")`).join(' or ');
+  // Ülke filtresi: TR ve DZ dışı engellenir; Cloudflare'in doğrulanmış botları (Googlebot,
+  // Bingbot, WhatsApp önizleme) muaf — sahte Googlebot kimliği burada elenir.
+  const geo = `(not ip.src.country in {${ALLOWED_COUNTRIES.map((c) => `"${c}"`).join(' ')}} and not cf.client.bot)`;
   const rules = [
+    { description: 'DE-Ülke filtresi (TR, DZ ve doğrulanmış botlar hariç)', expression: geo, action: 'block', enabled: true },
     { description: 'DE-IP engel listesi 1/2 (rakip/şüpheli adresler)', expression: ipExpr(ips.slice(0, half)), action: 'block', enabled: true },
     { description: 'DE-IP engel listesi 2/2 (rakip/şüpheli adresler)', expression: ipExpr(ips.slice(half)), action: 'block', enabled: true },
     { description: 'DE-Tarama yolları, yazma metotları ve scraper kimlikleri', expression: `${scan} or ${ua}`, action: 'block', enabled: true },
