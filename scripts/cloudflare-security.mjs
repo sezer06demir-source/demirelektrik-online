@@ -4,12 +4,13 @@
  *
  * Kullanım (PowerShell):
  *   $env:CF_API_TOKEN = "<token>"
- *   node scripts/cloudflare-security.mjs            # uygula
+ *   node scripts/cloudflare-security.mjs            # DNS + ayarlar + Bot Fight Mode + WAF + rate limit
+ *   node scripts/cloudflare-security.mjs --dns      # yalnızca DNS'i Vercel'e çevir
  *   node scripts/cloudflare-security.mjs --status   # yalnızca mevcut durumu göster
  *   node scripts/cloudflare-security.mjs --under-attack on|off
  *
- * Gerekli token izinleri (yalnızca bu zone): Zone:Read, Zone Settings:Edit, Zone WAF:Edit,
- * Bot Management:Edit, Firewall Services:Edit.
+ * Gerekli token izinleri (yalnızca bu zone): Zone:Read, DNS:Edit, Zone Settings:Edit,
+ * Zone WAF:Edit, Bot Management:Edit, Firewall Services:Edit.
  *
  * Ücretsiz plan sınırları: 5 özel WAF kuralı, 1 rate limit kuralı (engel süresi 10 sn sabit),
  * kural ifadesi en fazla 4096 karakter. Kural düzeni (5 slot):
@@ -30,8 +31,12 @@ const API = 'https://api.cloudflare.com/client/v4';
 const args = process.argv.slice(2);
 const STATUS_ONLY = args.includes('--status');
 const UA_IDX = args.indexOf('--under-attack');
+const DNS_ONLY = args.includes('--dns');
 const MAX_EXPR = 4096;
 const MAX_CUSTOM_RULES = 5;
+
+/** Vercel'in bu proje için verdiği A kayıtları (v6/domains/<d>/config → recommendedIPv4). */
+const VERCEL_IPS = ['216.198.79.1', '64.29.17.1'];
 
 if (!TOKEN) {
   console.error('CF_API_TOKEN ortam değişkeni gerekli.');
@@ -136,6 +141,34 @@ function stripRule(r) {
 const zoneId = await getZoneId();
 console.log(`Zone: ${ZONE_NAME} (${zoneId})`);
 
+/** www ve kök kayıtlarını Vercel'e çevirir; proxy (turuncu bulut) açık kalır. */
+async function pointToVercel() {
+  const records = await cf('GET', `/zones/${zoneId}/dns_records?per_page=200`);
+  for (const host of [ZONE_NAME, `www.${ZONE_NAME}`]) {
+    const existing = records.filter((r) => r.name === host && ['A', 'AAAA', 'CNAME'].includes(r.type));
+    const already = existing.length === VERCEL_IPS.length && existing.every((r) => r.type === 'A' && VERCEL_IPS.includes(r.content) && r.proxied);
+    if (already) {
+      ok(`${host} zaten Vercel'e bakıyor`);
+      continue;
+    }
+    for (const r of existing) {
+      await cf('DELETE', `/zones/${zoneId}/dns_records/${r.id}`);
+      ok(`silindi: ${r.type} ${r.name} → ${r.content}`);
+    }
+    for (const ip of VERCEL_IPS) {
+      await cf('POST', `/zones/${zoneId}/dns_records`, { type: 'A', name: host, content: ip, ttl: 1, proxied: true });
+      ok(`eklendi: A ${host} → ${ip} (proxy açık)`);
+    }
+  }
+}
+
+if (DNS_ONLY) {
+  console.log("\nDNS kayıtları Vercel'e çevriliyor:");
+  await pointToVercel();
+  console.log('\nBitti. Yayılma birkaç dakika sürebilir.');
+  process.exit(0);
+}
+
 if (UA_IDX !== -1) {
   const on = args[UA_IDX + 1] === 'on';
   await cf('PATCH', `/zones/${zoneId}/settings/security_level`, { value: on ? 'under_attack' : 'high' });
@@ -164,6 +197,13 @@ if (STATUS_ONLY) {
     }
   }
   process.exit(0);
+}
+
+console.log("\nDNS (www ve kök → Vercel):");
+try {
+  await pointToVercel();
+} catch (e) {
+  warn(`DNS -> ${e.message}`);
 }
 
 console.log('\nZone ayarlari:');
