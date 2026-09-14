@@ -6,7 +6,7 @@ import { SITE_URL } from './site-url.mjs';
  */
 export const site = {
   name: 'Demir Elektrik',
-  brand: 'Demir Elektrik Acil Servis',
+  brand: 'Demir Elektrik',
   legalName: 'Demir Elektrik',
   url: SITE_URL,
   tagline: 'Ankara Acil Elektrik Arıza Servisi',
