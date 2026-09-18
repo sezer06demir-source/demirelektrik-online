@@ -49,6 +49,11 @@ const svc = servicesSorted.filter((s) => s.featured).slice(0, 6);
         <li><a href="/gizlilik-politikasi">Gizlilik</a></li>
         <li><a href="/cerez-politikasi">Çerezler</a></li>
       </ul>
+      <div class="ftr__credit">
+        <span class="ftr__credit-ic"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>
+        <span class="ftr__credit-label">Tasarım · SEO · Güvenlik</span>
+        <span class="ftr__credit-name">Sezer Demir</span>
+      </div>
     </div>
   </div>
 </footer>
@@ -130,5 +135,34 @@ const svc = servicesSorted.filter((s) => s.featured).slice(0, 6);
   .ftr__bottom ul {
     display: flex;
     gap: 1rem;
+  }
+  .ftr__credit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.9rem 0.35rem 0.4rem;
+    border-radius: 999px;
+    background: linear-gradient(120deg, color-mix(in srgb, var(--red) 12%, transparent), transparent);
+    border: 1px solid color-mix(in srgb, var(--red) 28%, transparent);
+    box-shadow: 0 8px 22px -14px rgba(0, 0, 0, 0.35);
+  }
+  .ftr__credit-ic {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--red);
+    color: #fff;
+    flex: none;
+    box-shadow: 0 0 10px color-mix(in srgb, var(--red) 45%, transparent);
+  }
+  .ftr__credit-label {
+    color: var(--steel);
+  }
+  .ftr__credit-name {
+    font-weight: 800;
+    color: var(--red);
+    letter-spacing: -0.01em;
   }
 </style>
