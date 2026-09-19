@@ -1,0 +1,158 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Icon from '@components/Icon.astro';
+import CallPanel from '@components/CallPanel.astro';
+import PageHead from '@components/PageHead.astro';
+import StatusScript from '@components/StatusScript.astro';
+import { postsSorted } from '@data/blog';
+import { site } from '@data/site';
+import { breadcrumbSchema } from '@utils/seo';
+
+const crumbs = [
+  { name: 'Ana sayfa', href: '/' },
+  { name: 'Rehber', href: '/rehber' },
+];
+
+const aylar = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+const fmtDate = (d: string) => {
+  const [y, m, day] = d.split('-');
+  return `${Number(day)} ${aylar[Number(m) - 1]} ${y}`;
+};
+---
+
+<BaseLayout
+  title="Elektrik Arıza Rehberi | Ankara | Demir Elektrik"
+  rawTitle
+  description="Sigorta neden atar, elektrik kesintisi mi arıza mı, kaçak akım rölesi ne işe yarar? Ankara'da sahadan yazılmış, sade ve doğru elektrik rehberi."
+  schema={[breadcrumbSchema(crumbs)]}
+>
+  <StatusScript />
+  <PageHead
+    crumbs={crumbs}
+    title="Arıza rehberi"
+    eyebrow="Sahadan notlar"
+    eyebrowIcon="clipboard-list"
+    lead="Çağrılarda en sık anlattığımız şeyleri buraya yazıyoruz. Amaç iş almak değil; elektrik gittiğinde ne olduğunu anlamanız ve doğru adımı atmanız."
+    chips={[
+      { icon: 'layers', text: `${postsSorted.length} yazı` },
+      { icon: 'clock', text: `${site.hours.daysText} ${site.hours.display}` },
+      { icon: 'phone', text: site.phone.display },
+    ]}
+  />
+
+  <section class="section">
+    <div class="container ledger">
+      <div>
+        <div class="posts">
+          {
+            postsSorted.map((p) => (
+              <a href={`/rehber/${p.slug}`} class="post">
+                <img
+                  class="post__cover"
+                  src={p.image ?? `/rehber/kapak/${p.slug}.png`}
+                  alt={p.imageAlt ?? p.title}
+                  width="1200"
+                  height="630"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="post__body">
+                  <span class="post__meta">
+                    <span class="post__kw">{p.keyword}</span>
+                    <span class="post__date">
+                      {fmtDate(p.date)} · {p.readingMin} dk
+                    </span>
+                  </span>
+                  <span class="post__title">{p.title}</span>
+                  <span class="post__excerpt">{p.excerpt}</span>
+                  <span class="post__go">
+                    Yazıyı oku <Icon name="arrow-right" size={16} />
+                  </span>
+                </span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+      <div class="ledger__rail">
+        <CallPanel note="Yazıyı okumaya vaktiniz yoksa arayın; durumu telefonda birlikte daraltalım." />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .posts {
+    display: grid;
+    gap: 1.25rem;
+  }
+  .post {
+    display: block;
+    border: 1.5px solid var(--line);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    background: var(--paper);
+    color: inherit;
+    transition:
+      border-color var(--dur),
+      transform var(--dur);
+  }
+  .post:hover {
+    border-color: var(--red);
+    transform: translateY(-2px);
+  }
+  .post__cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-bottom: 1.5px solid var(--line);
+  }
+  .post__body {
+    display: block;
+    padding: 1.1rem 1.25rem 1.35rem;
+  }
+  .post__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+  .post__kw {
+    font-size: var(--fs-sm);
+    font-weight: 800;
+    color: var(--red);
+    background: var(--red-tint);
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+  }
+  .post__date {
+    font-size: var(--fs-sm);
+    color: var(--mist);
+  }
+  .post__title {
+    display: block;
+    font-size: var(--fs-lg);
+    font-weight: 800;
+    line-height: 1.3;
+  }
+  .post__excerpt {
+    display: block;
+    margin-top: 0.45rem;
+    color: var(--ink-2);
+  }
+  .post__go {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.9rem;
+    font-weight: 800;
+    font-size: var(--fs-sm);
+    color: var(--red);
+  }
+  @media (min-width: 760px) {
+    .posts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

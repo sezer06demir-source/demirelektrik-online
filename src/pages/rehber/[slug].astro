@@ -1,0 +1,195 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Icon from '@components/Icon.astro';
+import CallPanel from '@components/CallPanel.astro';
+import PageHead from '@components/PageHead.astro';
+import StatusScript from '@components/StatusScript.astro';
+import { posts, postsSorted, type BlogPost } from '@data/blog';
+import { site } from '@data/site';
+import { absoluteUrl, breadcrumbSchema, faqSchema } from '@utils/seo';
+
+export function getStaticPaths() {
+  return posts.map((p) => ({ params: { slug: p.slug }, props: { post: p } }));
+}
+interface Props {
+  post: BlogPost;
+}
+const { post } = Astro.props;
+const others = postsSorted.filter((p) => p.slug !== post.slug).slice(0, 2);
+
+const aylar = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+const fmtDate = (d: string) => {
+  const [y, m, day] = d.split('-');
+  return `${Number(day)} ${aylar[Number(m) - 1]} ${y}`;
+};
+
+const path = `/rehber/${post.slug}`;
+const crumbs = [
+  { name: 'Ana sayfa', href: '/' },
+  { name: 'Rehber', href: '/rehber' },
+  { name: post.title, href: path },
+];
+
+const cover = post.image ?? `/rehber/kapak/${post.slug}.png`;
+const coverAlt = post.imageAlt ?? post.title;
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.title,
+  description: post.description,
+  inLanguage: 'tr-TR',
+  datePublished: post.date,
+  dateModified: post.updated ?? post.date,
+  image: absoluteUrl(cover),
+  mainEntityOfPage: absoluteUrl(path),
+  author: { '@type': 'Organization', name: site.name, url: absoluteUrl('/') },
+  publisher: {
+    '@type': 'Organization',
+    name: site.name,
+    logo: { '@type': 'ImageObject', url: absoluteUrl('/icons/icon-512.png') },
+  },
+};
+---
+
+<BaseLayout
+  title={post.title}
+  rawTitle
+  description={post.description}
+  schema={[breadcrumbSchema(crumbs), articleSchema, faqSchema(post.faq)]}
+>
+  <StatusScript />
+  <PageHead
+    crumbs={crumbs}
+    title={post.title}
+    eyebrow="Rehber"
+    eyebrowIcon="clipboard-list"
+    lead={post.excerpt}
+    chips={[
+      { icon: 'clock', text: `${fmtDate(post.date)} · ${post.readingMin} dakika` },
+      { icon: 'phone', text: site.phone.display },
+    ]}
+  />
+
+  <article class="section">
+    <div class="container ledger">
+      <div class="body">
+        <img class="cover" src={cover} alt={coverAlt} width="1200" height="630" loading="eager" decoding="async" />
+
+        <div class="prose intro"><p>{post.intro}</p></div>
+
+        {
+          post.sections.map((s) => (
+            <section class="sec">
+              <h2 class="h">{s.h}</h2>
+              <div class="prose">{s.p.map((para) => <p>{para}</p>)}</div>
+            </section>
+          ))
+        }
+
+        <section class="sec" aria-labelledby="faq">
+          <h2 id="faq" class="h">Sorular</h2>
+          <div class="faq">
+            {post.faq.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
+          </div>
+        </section>
+
+        {
+          post.related.length > 0 && (
+            <section class="sec" aria-labelledby="ilgili">
+              <h2 id="ilgili" class="h">İlgili sayfalar</h2>
+              <ul class="tags">
+                {post.related.map((r) => (
+                  <li>
+                    <a class="tag" href={r.href}>
+                      <Icon name="chevron-right" size={14} /> {r.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )
+        }
+
+        {
+          others.length > 0 && (
+            <section class="sec" aria-labelledby="digerleri">
+              <h2 id="digerleri" class="h">Rehberden diğer yazılar</h2>
+              <div class="more">
+                {others.map((p) => (
+                  <a class="more__card" href={`/rehber/${p.slug}`}>
+                    <span class="more__kw">{p.keyword}</span>
+                    <strong>{p.title}</strong>
+                    <span class="more__excerpt">{p.excerpt}</span>
+                  </a>
+                ))}
+              </div>
+            </section>
+          )
+        }
+      </div>
+      <div class="ledger__rail">
+        <CallPanel note="Belirti sizde de varsa okumakla vakit kaybetmeyin; telefonda ön teşhis yapıyoruz." />
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1.5px solid var(--line);
+    border-radius: var(--r-lg);
+    margin-bottom: 1.75rem;
+  }
+  .intro p {
+    font-size: var(--fs-md);
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .h {
+    font-size: var(--fs-lg);
+    margin: 2.25rem 0 0.75rem;
+  }
+  .sec:first-of-type .h {
+    margin-top: 1.75rem;
+  }
+  .prose p {
+    max-width: 68ch;
+  }
+  .more {
+    display: grid;
+    gap: 1rem;
+  }
+  .more__card {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1.1rem 1.2rem;
+    border: 1.5px solid var(--line);
+    border-radius: var(--r-lg);
+    color: inherit;
+    transition:
+      border-color var(--dur),
+      transform var(--dur);
+  }
+  .more__card:hover {
+    border-color: var(--red);
+    transform: translateY(-2px);
+  }
+  .more__kw {
+    font-size: var(--fs-sm);
+    font-weight: 800;
+    color: var(--red);
+  }
+  .more__excerpt {
+    color: var(--ink-2);
+    font-size: var(--fs-sm);
+  }
+  @media (min-width: 760px) {
+    .more {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
