@@ -33,7 +33,7 @@ const hoods = getNeighborhoodsOf(d.slug);
 const others = landingDistricts.filter((x) => x.slug !== d.slug);
 ---
 
-<BaseLayout title={c.seoTitle} rawTitle description={c.seoDescription} schema={[breadcrumbSchema(crumbs), serviceSchema({ name: `${d.name} Acil Elektrikçi`, description: c.seoDescription, path, areaName: d.name }), faqSchema(c.faq)]}>
+<BaseLayout title={c.seoTitle} rawTitle seoArea={d.name} description={c.seoDescription} schema={[breadcrumbSchema(crumbs), serviceSchema({ name: `${d.name} Acil Elektrikçi`, description: c.seoDescription, path, areaName: d.name }), faqSchema(c.faq)]}>
   <StatusScript />
   <PageHead
     crumbs={crumbs}
