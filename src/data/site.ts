@@ -47,6 +47,8 @@ export const site = {
   responseText: 'Çoğu çağrıda 60 dakika içinde kapınızdayız',
 
   maps: {
+    /** Demir Elektrik Google İşletme Profili — yorum bağlantısı (kısa adres: /yorum) */
+    reviewHref: 'https://g.page/r/Cbwpl4e7j6dbEBM/review',
     get directionsHref() {
       return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent('Melih Gökçek Bulvarı No:19/A, Sincan, Ankara')}`;
     },

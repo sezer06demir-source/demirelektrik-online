@@ -16,6 +16,7 @@ const svc = servicesSorted.filter((s) => s.featured).slice(0, 6);
         <p class="ftr__desc">Ankara acil elektrik arıza servisi. Sincan merkezli ekip, haftanın 7 günü {site.hours.display} arası 25 ilçenin tamamına çıkar.</p>
         <a href={site.phone.href} class="ftr__phone">{site.phone.display}</a>
         <p class="ftr__addr"><Icon name="map-pin" size={16} /> {site.address.full}</p>
+        <a href={site.maps.reviewHref} class="ftr__review" target="_blank" rel="noopener"><Icon name="star" size={16} /> Google'da bizi değerlendirin</a>
       </div>
       <nav aria-label="Arıza türleri">
         <h2 class="ftr__h">Arıza türleri</h2>
@@ -105,6 +106,19 @@ const svc = servicesSorted.filter((s) => s.featured).slice(0, 6);
     flex: none;
     margin-top: 3px;
     color: var(--red);
+  }
+  .ftr__review {
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: center;
+    margin-top: 0.6rem;
+    font-weight: 600;
+  }
+  .ftr__review svg {
+    color: var(--red);
+  }
+  .ftr__review:hover {
+    text-decoration: underline;
   }
   .ftr__h {
     font-size: 0.95rem;
