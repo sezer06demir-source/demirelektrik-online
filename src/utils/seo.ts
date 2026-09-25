@@ -13,9 +13,12 @@ export function absoluteUrl(path: string): string {
   return clean === '/' ? `${base}/` : `${base}${clean}`;
 }
 
-/** Canonical: sondaki slash'i kaldırır (ana sayfa hariç) */
+/**
+ * Canonical: sondaki slash'i ve `.html` ekini kaldırır (ana sayfa hariç).
+ * build.format 'file' pathname'i `.html` ile verir; cleanUrls bunu temiz adrese yönlendirir.
+ */
 export function canonicalUrl(pathname: string): string {
-  const p = pathname.replace(/\/+$/, '') || '/';
+  const p = pathname.replace(/\.html$/, '').replace(/\/index$/, '').replace(/\/+$/, '') || '/';
   return absoluteUrl(p);
 }
 
