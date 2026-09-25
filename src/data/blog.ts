@@ -200,6 +200,79 @@ export const posts: BlogPost[] = [
       { label: 'Etimesgut acil elektrikçi', href: '/hizmet-bolgeleri/etimesgut-elektrikci' },
     ],
   },
+  {
+    slug: 'eryaman-yeni-tasinilan-dairede-elektrik-kontrolu',
+    title: 'Eryaman’da Yeni Daireye Taşındınız: Elektrikte İlk Hafta Neye Bakmalı?',
+    description:
+      'Eryaman’da kiraya ya da yeni aldığınız daireye taşınırken elektrikte kontrol edilecekler: pano, kaçak akım rölesi, prizler, avize bağlantıları. Eryaman elektrikçi anlatıyor.',
+    keyword: 'Eryaman elektrikçi',
+    date: '2026-09-25',
+    readingMin: 7,
+    excerpt:
+      'Eşyalar geldi, kutular açılmadı bile, ilk akşam salonun avizesi yanmıyor. Eryaman’da taşınma dönemlerinde en çok bu tür çağrılar alıyoruz. Birkaç basit kontrolle çoğu sorun daha ortaya çıkmadan yakalanıyor.',
+    intro:
+      'Eryaman, Ankara’da en çok taşınma trafiği olan yerlerden biri. Site içindeki daireler sık el değiştiriyor; bir kiracı çıkıyor, bir hafta sonra başkası giriyor. Arada boya yapılıyor, avizeler sökülüyor, bazen önceki kiracının “ben hallederim” diye yaptığı bağlantılar olduğu gibi kalıyor. Yeni gelen için daire temiz ve bakımlı görünüyor ama elektrik tarafında ne bıraktığını kimse söylemiyor. Aşağıdaki kontrollerin büyük kısmını kendiniz, hiçbir alete ve riske girmeden yapabilirsiniz. Nerede durmanız gerektiğini de ayrıca yazdım.',
+    sections: [
+      {
+        h: 'İlk iş panoyu açıp bakın',
+        p: [
+          'Sigorta panosu genelde giriş kapısının yanında ya da vestiyer dolabının içinde olur. Kapağını açın ve sadece bakın. Sigortaların altında hangi hattın nereye gittiğini yazan etiket var mı? Yoksa bir akşam vakit ayırıp tek tek indirerek hangi odanın gittiğini not edin, bir kâğıda yazıp kapağın içine yapıştırın. Gece elektrik gittiğinde el fenerini tutarken bu kâğıt çok işinize yarayacak.',
+          'Panonun içinde kararma, erime izi, yanık kokusu varsa ya da kapak açıkken kablo uçları görünüyorsa oraya dokunmayın. Bu bir önceki dönemden kalmış bir ısınma sorununun işaretidir ve taşınmadan önce baktırılması gereken ilk şeydir.',
+        ],
+      },
+      {
+        h: 'Kaçak akım rölesinin test düğmesine basın',
+        p: [
+          'Panoda üzerinde “T” ya da “TEST” yazan düğmeli, diğerlerinden biraz geniş bir eleman olmalı. Bu kaçak akım rölesi. Düğmeye basın; röle anında atıp evin elektriğini kesmeli. Sonra kolunu kaldırıp tekrar açın. Basınca hiçbir şey olmuyorsa röle ya arızalı ya da yanlış bağlanmış demektir. Rölenin hiç olmaması da ayrı bir sorun.',
+          'Bu kontrol yirmi saniye sürüyor ve evdeki en önemli güvenlik elemanının çalışıp çalışmadığını gösteriyor. Ayda bir tekrarlamak da iyi bir alışkanlık.',
+        ],
+      },
+      {
+        h: 'Prizler: topraklı mı, gevşek mi, ısınıyor mu?',
+        p: [
+          'Eryaman’daki sitelerin çoğunda prizler topraklıdır ama tadilat görmüş dairelerde bazen topraksız eski tip prizlerle ya da toprak ucu bağlanmamış prizlerle karşılaşıyoruz. Dışarıdan bakınca iki yanda metal kulakçık görüyorsanız priz topraklı tiptir, ancak içeride toprak hattının bağlı olup olmadığını ancak ölçerek anlayabiliriz. Çamaşır makinesi, bulaşık makinesi ve buzdolabı için bu önemli.',
+          'Fişi taktığınızda gevşek oturan, kendiliğinden düşen prizleri not edin. İlk haftalarda ütü, su ısıtıcısı, fırın gibi yüksek akım çeken cihazları kullandıktan sonra prizin kapağına elinizin tersiyle dokunun. Ilık olabilir ama sıcak olmamalı. Sıcaksa, rengi değişmişse ya da hafif plastik kokusu varsa o prizi kullanmayı bırakın.',
+        ],
+      },
+      {
+        h: 'Tavandan sarkan kablolar ve avize bağlantıları',
+        p: [
+          'Önceki kiracı avizesini söküp götürdüyse tavanda iki üç kablo ucu kalmış olabilir. Bazen uçlar bantla sarılmış, bazen hiç sarılmamış. Avize takmadan önce o hattın sigortasını indirin ve uçlara çıplak elle dokunmayın. Kablo uçlarının kararmış ya da sertleşmiş olması, orada uzun süre gevşek bir bağlantı olduğunu gösterir.',
+          'Asma tavanlı salonlarda spot ve LED şerit bağlantıları ayrıca önemli. Trafoları tavanın içine sıkıştırılmış, havalanmayan spot sistemleri zamanla ısınıp arıza çıkarıyor. Yeni avize ya da spot takacaksanız bunu bir kerede ve düzgün yaptırmak, sonradan parça parça tamir ettirmekten hem ucuz hem güvenli.',
+        ],
+      },
+      {
+        h: 'Sayaç ve abonelik tarafını unutmayın',
+        p: [
+          'Taşındığınız gün sayacın fotoğrafını çekin, endeksin net okunduğundan emin olun. Abonelik devri sırasında önceki kullanıcının tüketimiyle karışıklık olmasın. Bir de şu: tüm cihazlar kapalıyken sayaç hâlâ dönüyor ya da ekrandaki değer artıyorsa, evde fark etmediğiniz bir tüketim ya da kaçak var demektir. Bu durumda panodan hatları tek tek kapatarak hangi hatta olduğunu daraltabilirsiniz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Kiracıyım, bu kontrolleri ev sahibine bildirmem gerekir mi?',
+        a: 'Kaçak akım rölesinin çalışmaması, panoda yanık izi ya da topraksız hatlar gibi sabit tesisata ait sorunları ev sahibine yazılı olarak ve fotoğrafla bildirmenizi öneririz. Bunlar genelde dairenin sabit tesisatına ait sorunlardır.',
+      },
+      {
+        q: 'Avizeyi kendim takabilir miyim?',
+        a: 'Sigortayı indirip kablo uçlarını doğru eşleştirebiliyorsanız basit bir avizeyi takmak mümkün. Ancak uçlar kararmışsa, hangi kablonun faz olduğu belli değilse ya da avize ağırsa ve tavandaki askı noktası sağlam değilse işi bir elektrikçiye bırakın.',
+      },
+      {
+        q: 'Taşınmadan önce tam bir elektrik kontrolü ne kadar sürer?',
+        a: 'Ortalama bir daire için yaklaşık bir iki saat. Pano, kaçak akım rölesi testi, prizlerde toprak ölçümü ve varsa sorunlu bağlantıların tespitini kapsar. Onarım gerekirse keşif sonrası net fiyatı söylüyoruz.',
+      },
+      {
+        q: 'Eryaman’a aynı gün gelebiliyor musunuz?',
+        a: 'Sincan’dan çıkan ekibimiz için Eryaman yakın bir bölge, 08:00–23:00 arasında çoğu zaman aynı gün geliyoruz. 0506 092 58 16’dan ulaşabilirsiniz.',
+      },
+    ],
+    related: [
+      { label: 'Eryaman Elektrikçi', href: '/hizmet-bolgeleri/eryaman-elektrikci' },
+      { label: 'Avize ve spot montajı', href: '/hizmetler/avize-spot-montaji' },
+      { label: 'Priz ve anahtar tamiri', href: '/hizmetler/priz-anahtar-tamiri' },
+      { label: 'Kaçak akım rölesi atıyor', href: '/hizmetler/kacak-akim-rolesi-atiyor' },
+    ],
+  },
 ];
 
 export const postsSorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
