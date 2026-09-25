@@ -117,6 +117,89 @@ export const posts: BlogPost[] = [
       { label: 'Hizmet verdiğimiz ilçeler', href: '/hizmet-bolgeleri' },
     ],
   },
+  {
+    slug: 'ana-salter-atti-etimesgut-gece-ariza',
+    title: 'Ana Şalter Attı, Bir Daha Kalkmıyor: Etimesgut’ta Gece Yarısı Ne Yapmalı?',
+    description:
+      'Ana şalter indi, elektrik tümden gitti, kaldırınca yeniden atıyor. Etimesgut’ta gece ya da hafta sonu bu durumla karşılaşınca ilk yapılacaklar ve kesinlikle dokunulmayacaklar. Demir Elektrik: 0506 092 58 16.',
+    keyword: 'ana şalter attı',
+    date: '2026-09-25',
+    readingMin: 7,
+    excerpt:
+      'Ana şalter bir kez daha inince ev toptan karanlıkta kalır. Etimesgut’ta gece geç saatte aldığımız bu tip çağrılarda neyin şalteri attırdığını, kaldırmayı ne zaman denemeniz gerektiğini ve ne zaman elimizi hiç sürmeden beklemeniz gerektiğini anlattık.',
+    intro:
+      'Sigorta kutusundaki en büyük kol, genelde en üstte ya da en solda duran ana şalterdir; evin tamamına gelen elektriği tek noktadan kesip açar. Bu kol indiğinde bütün ev birden karanlığa gömülür, tek bir priz bile çalışmaz. Etimesgut’ta özellikle gece geç saatte aldığımız çağrıların önemli bir kısmı tam olarak bu: “Şalter attı, kaldırıyoruz, iki saniye sonra tekrar iniyor.” Bu yazıda ana şalterin ne işe yaradığını, neden attığını ve siz elektrikçi yolda gelirken ne yapıp ne yapmamanız gerektiğini anlatıyoruz.',
+    sections: [
+      {
+        h: 'Ana şalter tam olarak ne yapar?',
+        p: [
+          'Ana şalter, sayaçtan sonra evin tüm tesisatının giriş noktasındaki kesme koludur. Altındaki sigortalar (salon, mutfak, banyo gibi) her biri ayrı bir hattı korurken, ana şalter hepsinin toplamını korur. Yani tek bir odadaki değil, evin genelindeki bir yüklenmeyi ya da kaçağı algılayıp bütün tesisatı bir seferde devre dışı bırakır.',
+          'Bazı panolarda ana şalterle kaçak akım rölesi aynı kolda birleşmiştir, bazılarında ayrıdır. İkisi de düştüğünde görüntü aynıdır: her yer karanlık. Ayrımı anlamak için panoya bakıp hangi kolun aşağı indiğini görmek gerekir; telefonda bunu bize tarif etmeniz bile arızayı yarı yarıya daraltır.',
+          'Etimesgut’un eski lojman tipi binalarında hâlâ buşonlu, topraksız tesisat ve tek başına çalışan basit bir ana şalter görüyoruz. Yeni sitelerde ise ana şalter genelde kaçak akım korumalı, otomat tipte. İkisinin attırma sebepleri de farklı seyrediyor.',
+        ],
+      },
+      {
+        h: 'Ana şalteri neler attırır?',
+        p: [
+          'En sık sebep aşırı yüklenme: aynı anda çalışan klima, elektrikli ısıtıcı, çamaşır ve bulaşık makinesi gibi güç isteyen cihazlar toplam akımı ana şalterin taşıyabileceği sınırın üstüne çıkarır. Kış aylarında ısıtıcıların devreye girdiği akşam saatlerinde bu tip çağrılar belirgin şekilde artıyor.',
+          'İkinci sebep gerçek bir kaçak: nemli bir duvar içindeki kablo, banyoya yakın bozuk bir priz ya da dış cephedeki bahçe aydınlatması suyla temas ettiğinde tesisattan toprağa akım kaçar, ana şalter bunu algılayıp düşer. Bu tip arızalarda şalter kendi başına, herhangi bir cihaz çalışmıyorken bile atabilir.',
+          'Üçüncü sebep, daha çok eski binalarda görüyoruz: ana şalterin ya da sayaç klemensinin kendisi yıpranmış, temas noktası gevşemiş, ısınıp zamanla arızalanmıştır. Bu durumda şalter yüklenmeden de, kaçak yokken de kendiliğinden düşebilir; sorun kolun kendisindedir.',
+          'Alsancak ve Şeyh Şamil taraflarındaki otuz-kırk yaşındaki binalarda dördüncü bir sebep daha var: kolon hattı, yani sayaçtan daireye gelen ana kablo ısınıp gevşiyor. Ana şalter bu durumda arızayı önlemek için değil, zaten oluşmuş ısınmaya tepki olarak düşüyor.',
+        ],
+      },
+      {
+        h: 'Kaldırmayı deneyebilir misiniz, denemeli misiniz?',
+        p: [
+          'Bir kez, evet. Ana şalteri bir kez yukarı kaldırmak makul bir denemedir. Kalkıp birkaç saniye ya da dakika sonra tekrar düşmüyorsa muhtemelen geçici bir aşırı yüklenmeydi; o anda çalışan büyük cihazlardan birkaçının fişini çekip rahatlıkla bekleyebilirsiniz.',
+          'Ama kalkar kalkmaz, hatta elinizi koldan çeker çekmez tekrar düşüyorsa ısrar etmeyin. Bu, tesisatta ya da bir cihazda gerçek ve sürekli bir kaçak olduğunun işaretidir. Şalteri art arda kaldırıp indirmek arızayı çözmez, sadece kontak noktalarını yorar ve kolun kendisini daha da hızlı bozar.',
+          'Kalkıyor ama birkaç dakika sonra yeniden düşüyorsa, o aralıkta hangi cihazı çalıştırdığınızı hatırlamaya çalışın. Bu bilgi bizim için değerli: telefonda "klimayı açar açmaz düştü" demeniz, arızanın büyük ölçüde nerede olduğunu gösterir.',
+        ],
+      },
+      {
+        h: 'Etimesgut’ta gece ya da hafta sonu çağrısı nasıl işliyor?',
+        p: [
+          'Merkezimiz Sincan’da; Etimesgut merkeze, Elvankent’e ve Ahimesut’a normal şartlarda 15-20 dakikada, Bağlıca ve Göksu tarafına yaklaşık 25 dakikada ulaşıyoruz. Gece saatlerinde trafik olmadığı için bu süre genelde kısalıyor, hafta sonu akşamlarında biraz uzayabiliyor.',
+          'Aradığınızda önce birkaç soru soruyoruz: hangi kol düştü, kaldırınca hemen mi tekrar attı yoksa bir süre mi durdu, o sırada hangi cihazlar çalışıyordu, yanık kokusu var mı. Bu bilgilerle çoğu zaman yola çıkmadan önce hangi parçayı yanımıza alacağımızı biliyoruz; ana şalter, sigorta ya da kaçak akım rölesi aracımızda standart olarak bulunuyor.',
+          'Hizmet saatimiz her gün 08:00-23:00 arası. Bu aralıkta, gece geç saatte de olsa, hafta sonu da olsa arayan herkese aynı gün içinde dönüyoruz; sadece yanık kokusu, kıvılcım ya da sürekli düşen şalter gibi gerçekten bekletilmemesi gereken durumları öne alıyoruz.',
+        ],
+      },
+      {
+        h: 'Biz gelene kadar dokunmayın dediğimiz yerler',
+        p: [
+          'Sayaç kapağını ve apartman giriş panosunu açmayın; buradaki bağlantılar dağıtım şirketine ait olabilir ve yüksek akım taşır. Şalteri ıslak elle ya da ıslak zeminde kaldırmayın, kaçak akım ihtimali varken bu ciddi bir risktir. Yanık kokusu geliyorsa o kola hiç dokunmadan, sadece diğer sigortaları güvenli bir şekilde kapatıp bekleyin.',
+          'Şalter attıktan sonra karanlıkta el yordamıyla kablo takip etmeyin; hangi telin nereye gittiğini görmeden yapılan her müdahale hem sizi hem tesisatı riske atar. Mum yerine telefon feneri kullanın, ısıtıcı ve ütü gibi büyük cihazların fişini çekin, buzdolabının kapağını gereksiz açmayın.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Ana şalter kaç kere kaldırılıp indirilebilir?',
+        a: 'Pratik olarak bir kez denemek yeterli. Tekrar düşüyorsa gerçek bir arıza var demektir; ısrarla kaldırıp indirmek kolun kontak noktalarını yıpratır ve sonraki müdahaleyi zorlaştırır.',
+      },
+      {
+        q: 'Ana şalter ile kaçak akım rölesi aynı şey mi?',
+        a: 'Hayır, ama bazı panolarda birleşik gelebiliyorlar. Ana şalter tüm tesisatın giriş kesicisidir, kaçak akım rölesi ise toprağa kaçan akımı algılayıp düşer. İkisi de düştüğünde görüntü aynı olduğu için panoya bakıp hangi kolun indiğini ayırt etmek gerekir.',
+      },
+      {
+        q: 'Gece yarısı ana şalter attı, sabahı bekleyebilir miyim?',
+        a: 'Yanık kokusu, kıvılcım ya da şalter kalkar kalkmaz tekrar düşüyorsa beklemeyin, arayın. Şalter kalkıp sorun tekrarlamıyorsa ve belirgin bir tehlike belirtisi yoksa sabahı bekleyip gün içinde arayabilirsiniz; biz her gün 08:00-23:00 arası çağrı alıyoruz.',
+      },
+      {
+        q: 'Etimesgut’a gece çağrısında ne kadar sürede geliyorsunuz?',
+        a: 'Sincan merkezden Etimesgut merkez, Elvankent ve Ahimesut’a 15-20 dakika, Bağlıca ve Göksu tarafına yaklaşık 25 dakika sürüyor. Gece trafik az olduğu için genelde bu sürenin altında kalıyoruz; aradığınızda net süreyi söylüyoruz.',
+      },
+      {
+        q: 'Ana şalter sürekli atıyor ama hiçbir cihaz çalışmıyor, nasıl olur?',
+        a: 'Bu genelde tesisattaki gizli bir kaçaktan kaynaklanır: nemli bir duvardaki kablo, dış mekan aydınlatması ya da eski bir bağlantı noktası olabilir. Cihaz çalışmadan da şalter atıyorsa aramayı geciktirmeyin, kaçak zamanla büyüyebilir.',
+      },
+    ],
+    related: [
+      { label: 'Sigorta atması', href: '/hizmetler/sigorta-atmasi' },
+      { label: 'Nöbetçi elektrikçi', href: '/hizmetler/nobetci-elektrikci' },
+      { label: 'Elektrik panosu yenileme', href: '/hizmetler/elektrik-panosu-yenileme' },
+      { label: 'Etimesgut acil elektrikçi', href: '/hizmet-bolgeleri/etimesgut-elektrikci' },
+    ],
+  },
 ];
 
 export const postsSorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
