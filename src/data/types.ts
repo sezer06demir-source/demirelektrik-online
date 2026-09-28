@@ -60,6 +60,10 @@ export interface DistrictContent {
   faq: Faq[];
   seoTitle: string;
   seoDescription: string;
+  /** "Ustanın notu" kutusu — ustanın ağzından, birinci tekil kişi (1–3 paragraf) */
+  ustaNote?: string[];
+  /** Notu imzalayan usta, örn. "Sezer Usta" (boşsa iki usta birlikte) */
+  ustaBy?: string;
 }
 
 export interface District {
@@ -88,6 +92,10 @@ export interface NeighborhoodContent {
   faq: Faq[];
   seoTitle: string;
   seoDescription: string;
+  /** "Ustanın notu" kutusu — ustanın ağzından, birinci tekil kişi (1–3 paragraf) */
+  ustaNote?: string[];
+  /** Notu imzalayan usta, örn. "Sezer Usta" (boşsa iki usta birlikte) */
+  ustaBy?: string;
 }
 
 export interface Neighborhood {

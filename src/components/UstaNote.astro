@@ -1,0 +1,53 @@
+---
+/**
+ * "Ustanın notu" — bölge/mahalle sayfalarında ustanın ağzından kısa tavsiye kutusu.
+ * Metin birinci tekil kişi; imza notu yazan usta (boşsa Recep Usta ve Sezer Usta).
+ */
+interface Props {
+  paragraphs: string[];
+  place: string;
+  by?: string;
+}
+const { paragraphs, place, by = 'Recep Usta ve Sezer Usta' } = Astro.props;
+---
+
+<aside class="usta" aria-label={`${place} için ustanın notu`}>
+  <p class="usta__label">Ustanın notu</p>
+  {paragraphs.map((p) => <p class="usta__text">{p}</p>)}
+  <p class="usta__sign">— {by}<span>Demir Elektrik · Yetkili elektrikçi, Ustalık ve Usta Öğreticilik belgeli</span></p>
+</aside>
+
+<style>
+  .usta {
+    position: relative;
+    margin: 1.75rem 0 0.5rem;
+    padding: 1.25rem 1.25rem 1.1rem 1.4rem;
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--amber);
+    border-radius: 0 var(--r) var(--r) 0;
+    background: var(--amber-tint);
+    max-width: 66ch;
+  }
+  .usta__label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8a5a00;
+    margin-bottom: 0.5rem;
+  }
+  .usta__text {
+    color: var(--ink-2);
+    margin-bottom: 0.7rem;
+  }
+  .usta__sign {
+    font-size: var(--fs-sm);
+    font-weight: 800;
+    color: var(--ink);
+  }
+  .usta__sign span {
+    display: block;
+    font-weight: 600;
+    color: var(--steel);
+  }
+</style>

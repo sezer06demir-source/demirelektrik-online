@@ -5,6 +5,7 @@ import CallPanel from '@components/CallPanel.astro';
 import PageHead from '@components/PageHead.astro';
 import StatusScript from '@components/StatusScript.astro';
 import RequestForm from '@components/RequestForm.astro';
+import UstaNote from '@components/UstaNote.astro';
 import { site } from '@data/site';
 import { landingDistricts } from '@data/districts';
 import type { District, DistrictContent } from '@data/types';
@@ -51,6 +52,7 @@ const others = landingDistricts.filter((x) => x.slug !== d.slug);
       <div>
         <p class="arrive"><Icon name="navigation" size={18} /> {c.arrival}</p>
         <div class="prose">{c.intro.map((p) => <p>{p}</p>)}</div>
+        {c.ustaNote && <UstaNote paragraphs={c.ustaNote} by={c.ustaBy} place={d.name} />}
 
         <section aria-labelledby="s1">
           <h2 id="s1" class="h">{inD} en çok gelen çağrılar</h2>

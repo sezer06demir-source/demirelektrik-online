@@ -8,28 +8,28 @@ export const etimesgutNeighborhoods: Neighborhood[] = [
     locative: 'Elvankent\'te',
     content: {
       h1: 'Elvankent Acil Elektrikçi',
-      subtitle: 'Toplu konut sitelerinde sigorta atması, kesinti ve daire tesisat arızalarına aynı gün müdahale.',
+      subtitle: 'Elvankent sitelerinde sigorta atması, elektrik kesintisi ve blok panosu arızalarına Sincan\'dan 15–20 dakikada, aynı gün.',
       intro: [
-        'Elvankent, Etimesgut\'un en kalabalık toplu konut bölgelerinden biri. 1990–2000 yılları arasında yapılan siteler bugün 25–30 yaşında. Bu yaştaki binalarda sigorta kutuları dolmuş, kablolar sertleşmiş, prizler gevşemiş oluyor. Elvankent acil elektrikçi çağrılarının büyük kısmı bu yıpranmadan geliyor.',
-        'Sincan Menderes\'ten Elvankent\'e 15–20 dakikada ulaşıyoruz. Telefonda arızayı dinliyor, gelmeden önce hangi sigortaya bakmanız gerektiğini söylüyoruz. Çoğu zaman sorun yerinde kısa sürede çözülüyor.',
-        'Site yönetimleriyle çalışmaya alışığız. Ortak alan panosu, asansör besleme hattı ya da blok girişi aydınlatması gibi işlerde yöneticiyle doğrudan konuşup işe başlamadan fiyat veriyoruz.',
+        'Elvankent\'te sitelerin çoğu 1990\'lı ve 2000\'li yıllarda yapıldı; bugün hepsi 25–30 yaşında. Bu yaşa gelmiş bir binada sigorta kutusu dolmuş, kablonun kılıfı sertleşmiş, priz yuvaları gevşemiş olur. Elvankent elektrikçi çağrılarımızın büyük kısmı bu yıpranmadan gelir; yani ani bir arıza değil, yılların birikimi.',
+        'Sincan\'daki merkezimizden Elvankent\'e 15–20 dakikada varıyoruz. Aradığınızda önce dinleriz: hangi sigorta attı, o sırada hangi cihaz çalışıyordu, koku var mı? Gelmeden önce neye bakmanız gerektiğini söyleriz; çoğu zaman kapıya geldiğimizde arızanın yerini biliyor oluruz.',
+        'Site yönetimleriyle çalışmaya alışığız. Blok panosu, asansör beslemesi, merdiven otomatiği ya da bodrum aydınlatması için yöneticiyle Recep Usta konuşur, işe başlamadan fiyatı söyleriz. Yetkili elektrikçi olduğumuz için yönetimin istediği belgeyi de hazırlarız.',
       ],
       highlightedServices: ['sigorta-atmasi', 'acil-elektrikci', 'bina-ortak-alan-elektrigi', 'elektrik-panosu-yenileme'],
       localNotes: [
         {
           title: 'Eski tip sigorta kutuları',
-          text: 'Elvankent sitelerinin çoğunda hâlâ ilk yapımdan kalma sigorta kutuları var. Kaçak akım rölesi olmayan ya da sık sık atan panoları modern otomat ve röle ile yeniliyoruz.',
+          text: 'Elvankent sitelerinin çoğunda ilk yapımdan kalma sigorta kutusu duruyor. Kaçak akım rölesi olmayan ya da yorulup sık atan panoları otomat sigorta ve röleyle yeniler, her sigortanın üstüne neyi beslediğini yazarak teslim ederiz.',
         },
         {
-          title: 'Aynı hatta yüklenen mutfaklar',
-          text: 'Bulaşık makinesi, fırın ve kettle aynı prizden çalışınca sigorta atıyor. Mutfak için ayrı hat çekerek bu sorunu kalıcı olarak kapatıyoruz.',
+          title: 'Mutfakta tek hatta yüklenen cihazlar',
+          text: 'Bulaşık makinesi, fırın, kettle ve mikrodalga aynı hattan çalışınca sigorta akşam yemeği saatinde atar. Mutfağa ayrı hat çeker, yükü paylaştırırız; sorun kalıcı olarak biter.',
         },
         {
           title: 'Blok ortak alanları',
-          text: 'Merdiven otomatiği, kapı zili paneli ve bodrum aydınlatması sık gelen çağrılar arasında. Yönetimle tek seferde birkaç bloğu birlikte planlayabiliyoruz.',
+          text: 'Merdiven otomatiği, kapı zili paneli ve bodrum aydınlatması sık gelen çağrılar arasında. Yönetimle konuşup birkaç bloğu tek seferde planlayabiliyoruz.',
         },
       ],
-      arrival: 'Sincan Menderes\'ten Elvankent\'e 15–20 dakikada varıyoruz.',
+      arrival: 'Sincan\'daki merkezimizden Elvankent\'e 15–20 dakikada varıyoruz.',
       landmarks: [
         'Elvankent Merkez',
         'Elvankent toplu konut siteleri',
@@ -42,7 +42,11 @@ export const etimesgutNeighborhoods: Neighborhood[] = [
       faq: [
         {
           q: 'Elvankent\'te sigorta sürekli atıyor, ne yapmalıyım?',
-          a: 'Önce hangi sigortanın attığına bakın. Aynı sigorta tekrar atıyorsa o hatta kaçak ya da aşırı yük var demektir. Bizi arayın, telefonda ön teşhis koyup aynı gün geliyoruz.',
+          a: 'Önce hangi sigortanın attığına bakın. Aynı sigorta tekrar tekrar atıyorsa o hatta kaçak ya da aşırı yük var demektir; zorlamayın. Bizi arayın, telefonda ön teşhis koyup aynı gün geliyoruz.',
+        },
+        {
+          q: 'Sadece bizim dairede elektrik yok, komşularda var. Neden?',
+          a: 'Sorun ya daire panonuzda ya da sayaçtan dairenize gelen hattadır. Önce daire panosundaki ana şalterin ve kaçak akım rölesinin kalkık olduğuna bakın. Kalkıksa ve yine elektrik yoksa sayaç panosundaki daire sigortanız atmış olabilir; bizi arayın, ikisine birlikte bakarız.',
         },
         {
           q: 'Site yönetimi olarak ortak alan için çağırabilir miyiz?',
@@ -53,8 +57,13 @@ export const etimesgutNeighborhoods: Neighborhood[] = [
           a: 'Sincan\'dan 15–20 dakika sürüyor. Haftanın 7 günü 08:00–23:00 arasında çağrı alıyoruz.',
         },
       ],
-      seoTitle: 'Elvankent Acil Elektrikçi | Aynı Gün Arıza Servisi | Demir Elektrik',
-      seoDescription: 'Elvankent acil elektrikçi: sigorta atması, kesinti ve daire tesisat arızalarına Sincan\'dan 15–20 dakikada geliyoruz. Her gün 08:00–23:00. 0506 092 58 16',
+      ustaNote: [
+        'Elvankent\'te bir daireye girdiğimde ilk baktığım yer sigorta kutusudur. Üstü kararmış, plastiği sararmış bir otomat varsa o sigorta ısınıyor demektir; atmasa bile değişmesi gerekir. Siz de kapağı açıp bir bakın, kararma görürseniz arayın.',
+        'Uzatma kablosuyla çalışan bir mutfak da gördüm, üç cihaz tek prizde. Priz yetmiyorsa çözüm çoklu priz değil, yeni hattır.',
+      ],
+      ustaBy: 'Sezer Usta',
+      seoTitle: 'Elvankent Elektrikçi | Acil Arıza, Aynı Gün Usta | Demir Elektrik',
+      seoDescription: 'Elvankent elektrikçi: sigorta atması, elektrik kesintisi, blok panosu ve daire tesisat arızalarına Sincan\'dan 15–20 dakikada usta. Her gün 08:00–23:00. ☎ 0506 092 58 16',
     },
   },
   {
@@ -85,7 +94,7 @@ export const etimesgutNeighborhoods: Neighborhood[] = [
           text: 'Bahçe spotları, duvar armatürleri ve giriş yolu aydınlatması için sızdırmaz buat ve doğru kesitte kablo kullanıyoruz. Yaz sonu ve kış başı çağrılar artıyor.',
         },
       ],
-      arrival: 'Sincan Menderes\'ten Bağlıca\'ya 20–25 dakikada ulaşıyoruz.',
+      arrival: 'Sincan\'daki merkezimizden Bağlıca\'ya 20–25 dakikada ulaşıyoruz.',
       landmarks: [
         'Bağlıca Merkez',
         'Bağlıca villa siteleri',
@@ -140,7 +149,7 @@ export const etimesgutNeighborhoods: Neighborhood[] = [
           text: 'Yeni taşınanlarda spot, avize ve LED şerit montajı en sık talep. Tavan kablosunu doğru bağlayıp anahtar gruplamasını isteğinize göre ayarlıyoruz.',
         },
       ],
-      arrival: 'Sincan Menderes\'ten Göksu\'ya 15–20 dakikada geliyoruz.',
+      arrival: 'Sincan\'daki merkezimizden Göksu\'ya 15–20 dakikada geliyoruz.',
       landmarks: [
         'Göksu Merkez',
         'Göksu Parkı çevresi',
@@ -195,7 +204,7 @@ export const etimesgutNeighborhoods: Neighborhood[] = [
           text: 'Dairenin yarısında elektrik var, yarısında yok. Bu genelde panoda gevşemiş bir klemens ya da nötr kopması. Yerinde hızla buluyor ve sabitliyoruz.',
         },
       ],
-      arrival: 'Sincan Menderes\'ten Şeyh Şamil\'e 15–20 dakikada ulaşıyoruz.',
+      arrival: 'Sincan\'daki merkezimizden Şeyh Şamil\'e 15–20 dakikada ulaşıyoruz.',
       landmarks: [
         'Şeyh Şamil Merkez',
         'Etimesgut merkez çarşı',
@@ -251,7 +260,7 @@ export const etimesgutNeighborhoods: Neighborhood[] = [
           text: 'Uzun süre oturulan dairelerde priz sayısı yetmiyor, uzatma kabloları çoğalıyor. Yeni priz noktası ekleyip yükü dengeliyoruz.',
         },
       ],
-      arrival: 'Sincan Menderes\'ten Atakent\'e 15–20 dakikada varıyoruz.',
+      arrival: 'Sincan\'daki merkezimizden Atakent\'e 15–20 dakikada varıyoruz.',
       landmarks: [
         'Atakent Merkez',
         'Atakent konut siteleri',
@@ -306,7 +315,7 @@ export const etimesgutNeighborhoods: Neighborhood[] = [
           text: 'Tek sigortaya bağlı birden çok soğutucu sık sık kesintiye yol açıyor. Hatları ayırıp her cihaza uygun koruma koyuyoruz.',
         },
       ],
-      arrival: 'Sincan Menderes\'ten Alsancak\'a 15–20 dakikada ulaşıyoruz.',
+      arrival: 'Sincan\'daki merkezimizden Alsancak\'a 15–20 dakikada ulaşıyoruz.',
       landmarks: [
         'Alsancak Merkez',
         'Etimesgut istasyonu çevresi',
@@ -361,7 +370,7 @@ export const etimesgutNeighborhoods: Neighborhood[] = [
           text: 'İş yerinde gündüz kesinti yapmak istemeyenler için akşam saatlerinde çalışıyoruz. 23:00\'e kadar çağrı alıyoruz, kapanıştan sonra planlayabiliyoruz.',
         },
       ],
-      arrival: 'Sincan Menderes\'ten Ahimesut\'a 15–20 dakikada varıyoruz.',
+      arrival: 'Sincan\'daki merkezimizden Ahimesut\'a 15–20 dakikada varıyoruz.',
       landmarks: [
         'Ahimesut Merkez',
         'Etimesgut Belediyesi çevresi',
@@ -417,7 +426,7 @@ export const etimesgutNeighborhoods: Neighborhood[] = [
           text: 'Taşınma günü avize takmak en sık istek. Tavan bağlantısını güvenli yapıp önceki kiracının bıraktığı açık uçları kapatıyoruz.',
         },
       ],
-      arrival: 'Sincan Menderes\'ten Piyade\'ye 15–20 dakikada ulaşıyoruz.',
+      arrival: 'Sincan\'daki merkezimizden Piyade\'ye 15–20 dakikada ulaşıyoruz.',
       landmarks: [
         'Piyade Merkez',
         'Piyade lojmanları',

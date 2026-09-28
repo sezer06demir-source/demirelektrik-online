@@ -14,11 +14,11 @@ export const districts: District[] = [
     featured: true,
     content: {
       h1: 'Sincan Acil Elektrikçi',
-      subtitle: 'Merkezimiz Melih Gökçek Bulvarı\'nda; Sincan içinde çoğu çağrıya 10–20 dakikada varıyoruz.',
+      subtitle: 'Sigorta attı, elektrik gitti, prizden koku mu geliyor? Merkezimiz Sincan\'da; çoğu çağrıya 10–20 dakikada varıyoruz.',
       intro: [
-        'Sincan\'da sigorta attı, evin yarısı karanlık kaldı ya da prizden yanık kokusu geliyorsa arayın. Aracımız Melih Gökçek Bulvarı\'ndan çıkıyor; Fatih, Törekent, Plevne ve Pınarbaşı tarafına çoğu zaman çeyrek saatte ulaşıyoruz. Trafik en yoğun saatte bile Sincan sınırları içinde yarım saati geçmiyoruz.',
-        'Sincan acil elektrikçi çağrılarının büyük kısmı akşam 18:00 sonrası geliyor: kombi devreye giriyor, fırın ve çamaşır makinesi aynı anda çalışıyor, eski apartmanlarda kolon sigortası dayanamıyor. Telefonda hangi sigortanın düştüğünü, hangi cihazın devrede olduğunu soruyoruz; bazen sorunu telefonda çözüyoruz, o zaman çıkış ücreti almıyoruz.',
-        'Sincan elektrik arıza servisimiz 08:00–23:00 arası haftanın her günü açık. 30 yılı aşkın süredir bu ilçedeyiz; mahallelerin hangi yıllarda yapıldığını, hangi sitelerde hangi pano tipinin olduğunu biliyoruz. Bu yüzden çoğu arıza tek gelişte bitiyor.',
+        'Sincan\'da akşam sigorta attı, evin yarısı karanlıkta kaldı ya da prizden yanık kokusu geliyorsa sabahı beklemeyin, arayın. Aracımız Melih Gökçek Bulvarı\'ndan çıkar; Fatih, Törekent, Plevne ve Pınarbaşı\'na çoğu zaman çeyrek saatte varırız. Trafiğin en kötü saatinde bile Sincan içinde yarım saati geçmeyiz.',
+        'Sincan acil elektrikçi çağrılarının çoğu akşam 18:00\'den sonra gelir. Kombi devreye girer, fırın ve çamaşır makinesi aynı anda çalışır, eski apartmanın kolon sigortası bu yüke dayanamaz. Telefonda hangi sigortanın attığını, o sırada hangi cihazın çalıştığını sorarız. Bazen sorunu telefonda birlikte çözeriz; o zaman çıkış ücreti de almayız.',
+        'Sincan elektrik arıza servisimiz haftanın yedi günü 08:00–23:00 arası açık. Recep Usta ve Sezer Usta otuz yılı aşkın süredir bu ilçede çalışıyor; hangi mahallenin hangi yıllarda yapıldığını, hangi sitede hangi pano tipinin olduğunu biliyorlar. Bu yüzden çoğu arıza tek gelişte biter.',
       ],
       highlightedServices: ['sigorta-atmasi', 'elektrik-kesintisi', 'kacak-akim-tespiti', 'fabrika-kumanda-panosu'],
       localNotes: [
@@ -43,16 +43,24 @@ export const districts: District[] = [
           a: 'Merkezimiz Sincan\'da olduğu için genellikle 10–20 dakika içinde kapınızdayız. Aradığınızda o anki konumumuza göre net bir süre söylüyoruz.',
         },
         {
+          q: 'Bütün sokakta elektrik yok, sizi mi aramalıyım?',
+          a: 'Sokakta herkes karanlıktaysa bu şebeke kesintisidir; önce 186 elektrik arıza hattını arayın. Komşularda elektrik var, sadece sizde yoksa sorun binanızda ya da dairenizdedir; o zaman bizi arayın.',
+        },
+        {
           q: 'Akşam geç saatte sigorta atarsa geliyor musunuz?',
           a: 'Evet. 23:00\'e kadar çağrı alıyoruz ve Sincan içindeki çağrılara aynı akşam çıkıyoruz. Yanık kokusu ya da kıvılcım varsa ana şalteri indirip bizi arayın.',
         },
         {
           q: 'Gelmeden önce fiyat söylüyor musunuz?',
-          a: 'Yerinde tespit yapmadan kesin rakam vermiyoruz; ama tespit sonrası ne yapılacağını ve ücretini söyleyip onayınızı alıyoruz. Onay olmadan işe başlamıyoruz.',
+          a: 'Görmeden kesin rakam vermiyoruz; ama tespitten sonra ne yapılacağını ve ücretini söyleyip onayınızı alıyoruz. Onay olmadan işe başlamıyoruz.',
         },
       ],
-      seoTitle: 'Sincan Acil Elektrikçi | Aynı Gün Arıza Servisi | Demir Elektrik',
-      seoDescription: 'Sincan acil elektrikçi: sigorta atması, elektrik kesintisi, kaçak akım ve priz arızasına 10–20 dakikada müdahale. 08:00–23:00, her gün. Tel: 0506 092 58 16',
+      ustaNote: [
+        'Sincan\'da akşam gelen çağrıların çoğu aynı hikâyedir: kış günü kombi, fırın ve çamaşır makinesi aynı anda çalışıyor, sigorta atıyor. Çözüm sigortayı büyütmek değildir; büyük sigorta takarsanız kablo yanana kadar atmaz. Doğru çözüm yükü hatlara bölmektir.',
+        'Bir şey daha: elektrik gidince önce komşuya bakın. Komşuda da yoksa şebekedir, bekleyin. Sadece sizde yoksa bizi arayın.',
+      ],
+      seoTitle: 'Sincan Acil Elektrikçi | Sigorta Attı, Elektrik Gitti | Demir Elektrik',
+      seoDescription: 'Sincan acil elektrikçi: sigorta attı, elektrik gitti, prizden koku mu geliyor? 10–20 dakikada kapınızdayız. Her gün 08:00–23:00, aynı gün. ☎ 0506 092 58 16',
     },
   },
 
@@ -65,11 +73,11 @@ export const districts: District[] = [
     featured: true,
     content: {
       h1: 'Yenikent Acil Elektrikçi',
-      subtitle: 'Sincan merkezden Ayaş Yolu üzerinden 15–20 dakikada Yenikent\'teyiz.',
+      subtitle: 'Yenikent\'te elektrik gitti, röle atıyor mu? Sincan\'dan Ayaş Yolu ile 15–20 dakikada, aynı gün geliyoruz.',
       intro: [
-        'Yenikent\'te elektrik arızası için Ankara merkezden ekip beklemenize gerek yok. Sincan\'daki merkezimizden Ayaş Yolu\'na çıkıp Yenikent Merkez\'e 15 dakikada varıyoruz. Sanayi sitesi ve Alcı yönüne 20 dakikayı geçmiyoruz.',
-        'Yenikent acil elektrikçi çağrılarında iki grup öne çıkıyor: müstakil ve bahçeli evlerde dış aydınlatma ile kuyu pompası hatlarındaki kaçak, sanayi sitesinde ise üç faz şalter ve kompanzasyon arızaları. İkisi için de gerekli malzeme aracımızda hazır.',
-        'Yenikent elektrik arıza servisimiz 08:00–23:00 arası açık. Aradığınızda önce telefonda sorunun nerede olduğunu daraltıyoruz; sonra aynı gün geliyoruz.',
+        'Yenikent\'te elektrik arızası için Ankara merkezden ekip beklemenize gerek yok. Sincan\'daki merkezimizden Ayaş Yolu\'na çıkar, Yenikent Merkez\'e 15 dakikada varırız. Sanayi sitesi ve Alcı tarafına 20 dakikayı geçmeyiz.',
+        'Yenikent acil elektrikçi çağrılarında iki şey öne çıkar. Bahçeli, müstakil evlerde yağmurdan sonra atan kaçak akım rölesi: toprak altından geçen bahçe, pompa ve garaj hattı su alınca röle bir türlü kalkmaz. Sanayi sitesinde ise faz kaybı, düşen termik, yanan kontaktör. İkisinin de malzemesi araçta hazır durur.',
+        'Yenikent elektrik arıza servisimiz her gün 08:00–23:00 arası açık. Çağrıya Recep Usta ya da Sezer Usta gelir; ikisi de yetkili elektrikçi. Önce telefonda arızanın yerini daraltır, sonra aynı gün geliriz. İşe başlamadan ne yapacağımızı ve ücretini söyleriz.',
       ],
       highlightedServices: ['acil-elektrikci', 'kacak-akim-tespiti', 'fabrika-kumanda-panosu', 'elektrik-kesintisi'],
       localNotes: [
@@ -91,19 +99,28 @@ export const districts: District[] = [
       faq: [
         {
           q: 'Yenikent\'e aynı gün geliyor musunuz?',
-          a: 'Evet. Sincan\'daki merkezimizden 15–20 dakikada Yenikent\'teyiz. Sabah 08:00 ile akşam 23:00 arasında aradığınızda aynı gün geliyoruz.',
+          a: 'Evet. Sincan\'daki merkezimizden 15–20 dakikada Yenikent\'teyiz. 08:00 ile 23:00 arasında aradığınızda aynı gün geliyoruz.',
         },
         {
-          q: 'Bahçe aydınlatmasında kaçak var, rölemiz atıyor. Bulabilir misiniz?',
-          a: 'Evet. Hatları teker teker ayırıp ölçüm yapıyoruz; kaçağın armatürde mi, toprak altındaki kabloda mı olduğunu tespit edip onarıyoruz.',
+          q: 'Yağmurdan sonra röle kalkmıyor, ne yapayım?',
+          a: 'Önce bahçe aydınlatması, pompa ve garaj gibi dış hatların sigortalarını indirin, sonra röleyi kaldırın. Röle kalkıyorsa kaçak dışarıdadır; dış hatları kapalı tutup bizi arayın. Yine kalkmıyorsa sorun evin içindedir; cihazları fişten çekip arayın.',
+        },
+        {
+          q: 'Bahçe aydınlatmasında kaçak var, bulabilir misiniz?',
+          a: 'Evet. Hatları teker teker ayırıp ölçüm yapıyoruz; kaçağın armatürde mi, toprak altındaki kabloda mı olduğunu bulup onarıyoruz.',
         },
         {
           q: 'Atölyemizde bir faz gitti, ne yapmalıyız?',
-          a: 'Üç fazlı cihazları hemen kapatın; tek fazla çalışan cihaz kısa sürede yanar. Bizi arayın, kumanda panosunu, şalteri ve sayaç girişini kontrol edip gün içinde hattı normale döndürüyoruz.',
+          a: 'Üç fazlı cihazları hemen kapatın; tek fazla çalışan motor kısa sürede yanar. Bizi arayın, kumanda panosunu, şalteri ve sayaç girişini kontrol edip gün içinde hattı normale döndürüyoruz.',
         },
       ],
-      seoTitle: 'Yenikent Acil Elektrikçi | Aynı Gün Arıza Servisi | Demir Elektrik',
-      seoDescription: 'Yenikent acil elektrikçi: kaçak akım, sigorta atması, bahçe hattı ve sanayi arızalarına Sincan\'dan 15–20 dakikada ulaşıyoruz. 08:00–23:00. Tel: 0506 092 58 16',
+      ustaNote: [
+        'Yenikent\'te yağmurlu bir günün ertesi telefon susmaz: "Röle atıyor, kaldırıyorum yine atıyor." Otuz yılda gördüğüm şu: kaçak çoğu zaman dışarıdadır; bahçe lambasının duyunda, toprağın altındaki ek yerinde, pompanın kutusunda. Dış hattı kapatın, evin içi çoğu zaman rahatlar.',
+        'Sanayide ise faz gittiğinde üç fazlı makineyi hemen kapatın. Tek fazla dönmeye çalışan motor yarım saatte yanar; motor sarımı, bizim gelişimizden çok daha pahalıya gelir.',
+      ],
+      ustaBy: 'Recep Usta',
+      seoTitle: 'Yenikent Acil Elektrikçi | Elektrik Gitti, Röle Atıyor | Demir Elektrik',
+      seoDescription: 'Yenikent acil elektrikçi: elektrik gitti, kaçak akım rölesi atıyor, faz mı gitti? Sincan\'dan 15–20 dakikada, her gün 08:00–23:00, aynı gün. ☎ 0506 092 58 16',
     },
   },
 
@@ -115,25 +132,25 @@ export const districts: District[] = [
     featured: true,
     content: {
       h1: 'Etimesgut Acil Elektrikçi',
-      subtitle: 'Sincan\'a komşuyuz; Elvankent, Bağlıca ve Etimesgut merkeze 15–25 dakikada varıyoruz.',
+      subtitle: 'Elvankent\'ten Bağlıca\'ya, Etimesgut merkezden Göksu\'ya 15–25 dakikada, aynı gün elektrik arıza servisi.',
       intro: [
-        'Etimesgut\'ta elektrik arızası için en yakın ekiplerden biriyiz. Merkezimiz Sincan Melih Gökçek Bulvarı\'nda; İstanbul Yolu ya da Eryaman hattı üzerinden Etimesgut merkez, Elvankent ve Ahimesut\'a 15–20 dakikada, Bağlıca ve Göksu tarafına 25 dakikada ulaşıyoruz.',
-        'Etimesgut acil elektrikçi çağrılarının çoğu yeni sitelerden geliyor: klima hattı olmayan daireler, teslimde eksik bırakılan ankastre hattı, ilk kışta düşen kaçak akım rölesi. Eski Etimesgut merkezde ise askeri lojman dönemi binalarının panoları ve kolon hatları öne çıkıyor.',
-        'Etimesgut elektrik arıza servisimiz 08:00–23:00 arası açık. Telefonda birkaç soruyla sorunu daraltıyor, aynı gün geliyor, standart parçayı aracımızdan takıyoruz.',
+        'Etimesgut\'ta elektrik arızası için uzaktan ekip beklemenize gerek yok. Merkezimiz komşu ilçe Sincan\'da, Melih Gökçek Bulvarı\'nda. Etimesgut merkez, Elvankent, Eryaman ve Ahimesut\'a 15–20 dakikada, Bağlıca, Göksu ve Alsancak tarafına 25 dakikada varıyoruz.',
+        'Otuz yıldır Etimesgut\'un hem eskisini hem yenisini gördük. Merkezde, İstasyon ve Şeyh Şamil tarafında hâlâ buşonlu sigorta, topraksız tesisat, eski lojman tipi binalar var. Bağlıca ve Göksu\'daki yeni sitelerde ise sorun yaş değil, yük: klima hattı çekilmemiş, ankastre ocak prize bağlanmış daireler. Etimesgut elektrikçi olarak ikisine de aynı araçla, aynı gün gidiyoruz.',
+        'Etimesgut acil elektrik servisimiz her gün 08:00–23:00 arası açık. İşin başında Recep Usta ve Sezer Usta var; ikisi de Ustalık ve Usta Öğreticilik belgeli, yetkili elektrikçi. Gelince önce tespit yapar, ne yapacağımızı ve ücretini söyler, onayınız olmadan işe başlamayız.',
       ],
       highlightedServices: ['sigorta-atmasi', 'ev-elektrik-tesisati', 'kacak-akim-tespiti', 'elektrik-panosu-yenileme'],
       localNotes: [
         {
           title: 'Bağlıca ve Göksu\'da yeni site daireleri',
-          text: 'Bu bölgedeki sitelerde en sık istek klima ve ankastre için panodan ayrı hat. Priz hattına bağlanan klima yaz sıcağında sigorta attırıyor. Daire panosuna uygun kesitte kablo ve sigortayla bağımsız hat çekiyoruz.',
+          text: 'Bu sitelerde en sık çağrı, klimanın priz hattına bağlanmasından gelir. Yaz sıcağında klima kalkış yapınca sigorta atar. Daire panosundan uygun kesitte kablo ve kendi sigortasıyla ayrı hat çekeriz; çoğu dairede iş aynı gün biter.',
         },
         {
-          title: 'Etimesgut merkezde eski lojman tipi binalar',
-          text: 'Merkez, İstasyon ve Şeyh Şamil taraflarındaki eski binalarda buşonlu sigorta ve topraksız tesisat hâlâ var. Sigortayı otomat ve kaçak akım röleli kompakt panoyla değiştirip binayı güvenli hale getiriyoruz.',
+          title: 'Etimesgut merkezde eski binalar',
+          text: 'Merkez, İstasyon ve Şeyh Şamil tarafındaki eski binalarda buşonlu sigorta ve topraksız priz hâlâ karşımıza çıkıyor. Buşonu telle sarıp kullananı bile gördük; bu, yangına davetiyedir. Otomat sigorta ve kaçak akım röleli kompakt panoyla değiştirip binayı güvenli hale getiririz.',
         },
         {
-          title: 'Site yönetimleri için ortak alan',
-          text: 'Etimesgut\'ta birçok site yönetimiyle çalışıyoruz: asansör besleme, hidrofor, otopark aydınlatması ve merdiven otomatiği arızalarına yöneticinin tek telefonuyla gün içinde bakıyoruz.',
+          title: 'Site yönetimleri ve ortak alan',
+          text: 'Etimesgut\'ta birçok site yönetimiyle çalışıyoruz. Asansör beslemesi, hidrofor, otopark ve merdiven aydınlatması arızalarında yöneticinin tek telefonu yeter; gün içinde gelir, yapılan işi yönetime yazılı bildiririz.',
         },
       ],
       arrival: 'Sincan merkezden Etimesgut merkez, Elvankent ve Ahimesut\'a 15–20 dakika; Bağlıca, Göksu ve Alsancak yönüne 25 dakika, İstanbul Yolu akşam trafiğinde biraz daha uzayabilir.',
@@ -144,16 +161,25 @@ export const districts: District[] = [
           a: 'Merkezimiz komşu ilçe Sincan\'da; Etimesgut\'un çoğu mahallesine 15–25 dakikada ulaşıyoruz. Aradığınızda o anki konuma göre net süre veriyoruz.',
         },
         {
+          q: 'Akşam elektrik giderse geliyor musunuz?',
+          a: 'Akşam 23:00\'e kadar çağrı alıyoruz ve Etimesgut içindeki çağrılara aynı akşam çıkıyoruz. Yanık kokusu ya da kıvılcım varsa ana şalteri indirin, prizlere dokunmayın ve hemen arayın.',
+        },
+        {
           q: 'Klima için ayrı hat çekiyor musunuz, aynı gün mü?',
-          a: 'Evet. Panodan klima konumuna kadar bağımsız hat çekiyoruz. Malzeme aracımızda olduğu için çoğu dairede aynı gün bitiyor.',
+          a: 'Evet. Panodan klimanın yerine kadar bağımsız hat çekiyoruz. Malzeme aracımızda olduğu için çoğu dairede iş aynı gün biter.',
         },
         {
           q: 'Site yönetimi olarak sürekli çalışabileceğimiz bir elektrikçi arıyoruz.',
-          a: 'Etimesgut\'ta birçok siteye bakıyoruz. Yöneticinin bizi araması yeterli; ortak alan arızalarına gün içinde geliyor, yapılan işi yazılı raporluyoruz.',
+          a: 'Etimesgut\'ta birçok siteye bakıyoruz. Yöneticinin araması yeterli; ortak alan arızalarına gün içinde gelir, yapılan işi yazılı raporlarız. Yetkili elektrikçi olduğumuz için gereken durumlarda belgeyle çalışırız.',
         },
       ],
-      seoTitle: 'Etimesgut Acil Elektrikçi | Aynı Gün Arıza Servisi | Demir Elektrik',
-      seoDescription: 'Etimesgut acil elektrikçi: sigorta atması, kaçak akım, klima hattı, pano yenileme. Sincan\'dan 15–25 dakikada, 08:00–23:00 her gün. Tel: 0506 092 58 16',
+      ustaNote: [
+        'Etimesgut\'ta yeni daireye taşınan herkese aynı şeyi söylerim: panonun kapağını açın, sigortaların üstünde ne yazdığına bakın. "Klima", "fırın" yazan ayrı bir sigorta yoksa o cihazlar prizden besleniyordur. Bugün atmasa da ilk sıcak günde atar.',
+        'Eski binalarda ise buşonun yanına tel sarılmışsa, priz duvarda sallanıyorsa, anahtara dokununca çıtırtı geliyorsa beklemeyin. Bunlar ufak arıza gibi görünür ama çoğu yangın böyle başlar.',
+      ],
+      ustaBy: 'Recep Usta',
+      seoTitle: 'Etimesgut Elektrikçi | Acil Arıza, Aynı Gün Usta | Demir Elektrik',
+      seoDescription: 'Etimesgut elektrikçi: sigorta atması, kaçak akım, klima hattı ve pano yenilemede Sincan\'dan 15–25 dakikada yetkili usta. Her gün 08:00–23:00. ☎ 0506 092 58 16',
     },
   },
 
@@ -166,45 +192,62 @@ export const districts: District[] = [
     featured: true,
     content: {
       h1: 'Eryaman Acil Elektrikçi',
-      subtitle: 'Eryaman\'ın tüm etaplarına Sincan\'dan 15–20 dakikada, aynı gün geliyoruz.',
+      subtitle: 'Sigorta attı, ışık gitti, prizden koku mu geliyor? Eryaman\'ın bütün etaplarına Sincan\'dan 15–20 dakikada, aynı gün geliyoruz.',
       intro: [
-        'Eryaman\'da elektrik gitti, sigorta kaldırınca yine atıyor ya da bir odada prizler çalışmıyor mu? Sincan\'dan Eryaman Bulvarı\'na çıkıp 1. Etap\'tan 7. Etap\'a kadar hepsine 15–20 dakikada varıyoruz. Göksu Parkı çevresi ve Güzelkent tarafı bize en yakın noktalar.',
-        'Eryaman acil elektrikçi çağrıları çoğunlukla toplu konut bloklarından geliyor. Aynı proje aynı panoyu kullandığı için hangi etapta hangi sigorta tipinin olduğunu biliyoruz; yedek parça araçta hazır, ikinci gelişe gerek kalmıyor.',
-        'Eryaman elektrik arıza servisimiz 08:00–23:00 arası, haftanın 7 günü açık. Hafta sonu Eryaman\'daki çağrı yoğunluğunu bildiğimiz için cumartesi ve pazar bölgeye ayrı zaman ayırıyoruz.',
+        'Eryaman\'da elektrik gitti, sigortayı kaldırıyorsunuz ama birkaç saniye sonra yine atıyor mu? Zorlamayın. Sigorta boşuna atmaz; o hatta ya bir kaçak ya aşırı yük ya da gevşemiş bir bağlantı vardır. Bizi arayın, Eryaman Bulvarı\'ndan girip 1. Etap\'tan 7. Etap\'a kadar hepsine 15–20 dakikada varıyoruz.',
+        'Eryaman elektrikçi çağrılarının çoğu toplu konut bloklarından gelir. Aynı proje, aynı pano, aynı tesisat. Recep Usta ile Sezer Usta otuz yıldır bu blokların içine girip çıkıyor; hangi etapta hangi sigortanın, hangi rölenin takılı olduğunu kapıyı açmadan tahmin ederler. Yedek otomat, röle ve priz araçta durur; parça için ikinci kez gelmeyiz.',
+        'Eryaman acil elektrik servisimiz haftanın yedi günü 08:00–23:00 arası açık. Önce telefonda dinleriz; bazen sorun daha biz yola çıkmadan çözülür, o zaman çıkış ücreti de istemeyiz. Gelmemiz gerekiyorsa işe başlamadan ne yapacağımızı ve ne tutacağını söyler, onayınızı alırız. Yetkili elektrikçi olarak yaptığımız işin arkasında dururuz.',
       ],
       highlightedServices: ['sigorta-atmasi', 'elektrik-kesintisi', 'priz-anahtar-tamiri', 'acil-elektrikci'],
       localNotes: [
         {
-          title: 'Etap bloklarında aynı tip pano',
-          text: 'Eryaman 1–4. etaplarda 90\'lı yıl blokları var; daire panolarındaki eski otomatlar yaşlandıkça ısınıp düşüyor. Sigortayı aynı akım değerinde yenisiyle değiştiriyor, panodaki gevşek klemensleri sıkıyoruz. Yirmi dakikalık iş.',
+          title: 'Eski etaplarda yorulmuş otomatlar',
+          text: 'Eryaman 1–4. etaplardaki 90\'lı yıl bloklarında daire panosundaki otomatlar ilk günden beri görevde. Yıllar içinde yayı yorulan otomat hiçbir yük yokken ısınıp düşer. Aynı akım değerinde yenisiyle değiştirir, gevşemiş klemensleri tek tek sıkarız; yirmi dakikalık iştir.',
         },
         {
           title: 'Kaçak akım rölesi olmayan daireler',
-          text: 'Eski etaplardaki bazı dairelerde hiç kaçak akım rölesi yok. Banyoda çarpma hissi ya da çamaşır makinesinin gövdesinde elektrik varsa röle takıp topraklamayı ölçüyoruz.',
+          text: 'Eski etaplarda hâlâ kaçak akım rölesi olmayan daireye rastlıyoruz. Banyoda musluğa dokununca karıncalanma varsa, çamaşır makinesinin gövdesi çarpıyorsa bu şakaya gelmez. Röleyi takar, topraklamayı ölçer, rölenin gerçekten attığını test ederek teslim ederiz.',
         },
         {
-          title: 'Hafta sonu çağrıları',
-          text: 'Eryaman\'da cumartesi ve pazar çağrıları hafta içinin iki katı. Avize montajı, priz değişimi, sigorta yenileme gibi işleri hafta sonuna alıyoruz; acil arızada öncelik her zaman kesinti ve kaçak akımda.',
+          title: 'Yeni etaplarda klima ve ankastre hattı',
+          text: '5–7. etaplarda ve Güzelkent tarafında sorun genelde yaş değil, yük. Klima, ankastre fırın ve ocak aynı priz hattına bağlanınca yazın ve bayram sofrasında sigorta atar. Panodan ayrı hat çekip her cihazı kendi sigortasına bağlarız; sorun bir daha dönmez.',
         },
       ],
       arrival: 'Sincan merkezden Eryaman Bulvarı üzerinden 1–4. etaplara 15 dakika, 5–7. etaplar ve Güzelkent\'e 20 dakika.',
       neighborhoods: ['Eryaman 1. Etap', 'Eryaman 2. Etap', 'Eryaman 3. Etap', 'Eryaman 4. Etap', 'Eryaman 5. Etap', 'Eryaman 6. Etap', 'Eryaman 7. Etap', 'Güzelkent', 'Ayyıldız', 'Fatih Sultan', 'Tunahan', 'Altay'],
       faq: [
         {
-          q: 'Eryaman\'a hafta sonu geliyor musunuz?',
-          a: 'Evet. Cumartesi ve pazar dahil 08:00–23:00 arası çalışıyoruz. Eryaman\'a hafta sonu Sincan\'dan 15–20 dakikada ulaşıyoruz.',
+          q: 'Eryaman\'da sigorta kaldırınca yine atıyor, ne yapayım?',
+          a: 'Üst üste kaldırmayın; her seferinde o hat biraz daha zorlanır. Çamaşır makinesi, bulaşık makinesi, şofben ve fırını fişten çekin, sigortayı bir kez kaldırın. Yine atıyorsa sorun tesisattadır, bizi arayın. Tutuyorsa cihazları tek tek takın; hangisinde atarsa arıza o cihazdadır.',
         },
         {
-          q: 'Sigorta kaldırınca birkaç saniye sonra yine atıyor, ne yapmalıyım?',
-          a: 'Tekrar kaldırmayın. Çamaşır makinesi, bulaşık makinesi ve şofben gibi cihazları fişten çekin, bizi arayın. Telefonda hangi hattın sorunlu olduğunu birlikte daraltıyoruz.',
+          q: 'Eryaman\'a ne kadar sürede geliyorsunuz?',
+          a: 'Sincan\'dan Eryaman Bulvarı üzerinden 1–4. etaplara 15, 5–7. etaplara ve Güzelkent\'e 20 dakikada varıyoruz. Aradığınızda o an nerede olduğumuza göre net süre söyleriz.',
         },
         {
-          q: 'Dairemizde kaçak akım rölesi yok, takılması ne kadar sürer?',
-          a: 'Daire panosunda yer varsa yaklaşık yarım saat. Röleyi taktıktan sonra topraklamayı ölçüp röle testini yapıyoruz.',
+          q: 'Hafta sonu ve akşam geliyor musunuz?',
+          a: 'Geliyoruz. Cumartesi ve pazar dahil her gün 08:00–23:00 arası çalışıyoruz. Eryaman\'da hafta sonu çağrısı çok olduğu için o günlere ayrıca zaman ayırıyoruz.',
+        },
+        {
+          q: 'Eve kim geliyor, işi kim yapıyor?',
+          a: 'İşi Recep Usta ya da Sezer Usta yapar; ikisi de Ustalık ve Usta Öğreticilik belgeli, yetkili elektrikçidir. Çırağa bırakıp giden bir düzenimiz yok, kapıyı çalan usta işi bitirip teslim eder.',
+        },
+        {
+          q: 'Dairemizde kaçak akım rölesi yok, şart mı?',
+          a: 'Şart. Röle, elektrik çarpmasına karşı evdeki tek korumanızdır. Panoda yer varsa yarım saatte takarız; takmadan önce topraklamayı ölçeriz, çünkü topraklaması olmayan evde röle de işini tam yapamaz.',
+        },
+        {
+          q: 'Prizden yanık kokusu geliyor, bekleyebilir mi?',
+          a: 'Beklemez. O prize bağlı ne varsa çekin, o hattın sigortasını indirin; koku sürüyorsa ana şalteri kapatın ve hemen arayın. Yanık kokusu genelde gevşek bir bağlantının ısındığını gösterir, yangın da çoğu zaman böyle başlar.',
         },
       ],
-      seoTitle: 'Eryaman Acil Elektrikçi | Aynı Gün Arıza Servisi | Demir Elektrik',
-      seoDescription: 'Eryaman acil elektrikçi: sigorta atması, elektrik kesintisi, priz ve kaçak akım arızasına etaplara 15–20 dk. Hafta sonu dahil 08:00–23:00. Tel: 0506 092 58 16',
+      ustaNote: [
+        'Eryaman\'dan gelen telefonların yarısında ilk sorum şudur: "Sigortayı kaç kere kaldırdınız?" Cevap çoğu zaman "beş altı kere" olur. Lütfen yapmayın. Sigorta atıyorsa bir şey onu attırıyordur; zorladıkça kabloyu ısıtır, sorunu büyütürsünüz.',
+        'Bir de şunu söyleyeyim: kaçak akım rölesi sık atıyor diye kimse size "köprüleyelim, geçsin" demesin. O röle bir gün evdeki çocuğun hayatını kurtarır. Atıyorsa kaçağı buluruz, röleye dokunmayız.',
+      ],
+      ustaBy: 'Sezer Usta',
+      seoTitle: 'Eryaman Elektrikçi | Acil Arıza, Aynı Gün Usta | Demir Elektrik',
+      seoDescription: 'Eryaman elektrikçi: sigorta atması, elektrik kesintisi, kaçak akım ve priz arızasına 15–20 dakikada yetkili usta. Hafta sonu dahil 08:00–23:00. ☎ 0506 092 58 16',
     },
   },
 

@@ -31,10 +31,9 @@ const nearest = landingDistricts.slice(0, 6);
     <div class="container hero__in">
       <div class="hero__main">
         <p class="hero__live"><span class="dot" data-status-dot></span><span data-status-text>Her gün {site.hours.display}</span></p>
-        <h1 class="hero__title">Sigorta attı, elektrik gitti. Aynı gün yanınızdayız.</h1>
+        <h1 class="hero__title"><span class="hero__kicker">Eryaman ve Etimesgut Acil Elektrikçi</span>Sigorta attı, elektrik gitti. Usta aynı gün kapınızda.</h1>
         <p class="hero__lead">
-          Eryaman, Etimesgut ve Sincan başta olmak üzere acil arıza ekibimiz Ankara'nın 25 ilçesine çıkıyor. Telefonda birkaç soruyla sorunu daraltır, gerekiyorsa hemen
-          yola çıkarız.
+          Recep Usta ve Sezer Usta otuz yılı aşkın süredir bu işin içinde; ikisi de ustalık belgeli, yetkili elektrikçi. Eryaman, Etimesgut, Elvankent ve Sincan başta olmak üzere Ankara'nın 25 ilçesine çıkıyoruz. Telefonda iki üç soru sorarız, arızanın yerini daraltırız; iş gelmeyi gerektiriyorsa aynı gün, yedek sigortası ve rölesi araçta, kapınızdayız.
         </p>
         <a href={site.phone.href} class="hero__phone metric">{site.phone.display}</a>
         <p class="hero__sub">Aramak için dokunun. WhatsApp'tan fotoğraf da gönderebilirsiniz.</p>
@@ -216,6 +215,14 @@ const nearest = landingDistricts.slice(0, 6);
     font-size: var(--fs-sm);
     font-weight: 700;
     color: var(--on-night);
+  }
+  .hero__kicker {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-size: var(--fs-md);
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    color: var(--amber);
   }
   .hero__title {
     font-size: var(--fs-hero);
