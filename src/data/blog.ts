@@ -273,6 +273,80 @@ export const posts: BlogPost[] = [
       { label: 'Kaçak akım rölesi atıyor', href: '/hizmetler/kacak-akim-rolesi-atiyor' },
     ],
   },
+  {
+    slug: 'elvankent-sigorta-kutusu-yenileme-ne-zaman-gerekir',
+    title: 'Elvankent’te Sigorta Kutusu Yenileme: Ne Zaman Gerekir, Ne Zaman Yetmez?',
+    description:
+      'Elvankent’te 25-30 yaşındaki sitelerde sigorta kutusu ne zaman tamir, ne zaman tam yenileme ister? Acil elektrikçi gözünden işaretler. Demir Elektrik: 0506 092 58 16.',
+    keyword: 'Elvankent elektrikçi',
+    date: '2026-10-02',
+    readingMin: 6,
+    excerpt:
+      'Elvankent’teki sitelerin çoğu artık 25-30 yaşında ve sigorta kutuları da o yaşta. Hangi işaretler tamirle geçer, hangisi tam yenileme ister; sahadan anlattık.',
+    intro:
+      'Elvankent elektrikçi olarak gittiğimiz çağrıların büyük kısmı aslında tek bir sigortadan ibaret değil; kapağı açınca karşımıza 25-30 yıllık bir sigorta kutusu çıkıyor. Bölgedeki siteler 1990’lı ve 2000’li yıllarda yapıldığı için bu kutular da aynı yaşta; bazısı hâlâ görevini yapıyor, bazısı artık güvenli değil. İkisini birbirinden ayırmak önemli, çünkü her ısınan sigorta kutuyu baştan yenilemeyi gerektirmiyor.',
+    sections: [
+      {
+        h: 'Tek sigorta değişimi ne zaman yeterli?',
+        p: [
+          'Kısa cevap: kutunun gövdesi, klemensleri ve ana hattı sağlamsa tek bir sigortayı değiştirmek genelde yeterlidir. Elvankent’te bazı dairelerde tek bir otomat yorulmuş, üstü kararmış oluyor; geri kalan kutu ve kablolar hâlâ iyi durumdaysa sadece o sigortayı değiştirip panoyu test ediyoruz.',
+          'Bu durumda iş kısa sürer ve maliyeti de düşüktür. Ama değiştirdiğimiz sigortanın etrafındaki diğer otomatları da kontrol ediyoruz; biri yorulmuşsa genelde yaşıtları da yakın zamanda sorun çıkarır.',
+        ],
+      },
+      {
+        h: 'Tam yenileme ne zaman gerekir?',
+        p: [
+          'Kısa cevap: kutunun gövdesi çatlamış, klemensler gevşemiş ya da kaçak akım rölesi hiç yoksa tam yenileme gerekir. Elvankent’teki en eski sitelerde ilk yapımdan kalma, kaçak akım rölesi bulunmayan panolarla sık karşılaşıyoruz; bu, bugünün standartlarına göre ciddi bir güvenlik açığıdır.',
+          'Bir diğer işaret, panoda tek bir sigortanın yarım evi beslemesi. Aydınlatma, priz ve ıslak hacimler ayrı gruplara bölünmemişse, tek arızada evin yarısı birden kararır. Böyle bir panoyu açıp tek sigorta değiştirmek geçici rahatlama verir ama kök sorunu çözmez; doğrusu grupları ayırıp kaçak akım rölesi ekleyerek baştan kurmaktır.',
+        ],
+      },
+      {
+        h: 'Mutfakta tek hatta yüklenen cihazlar panoyu nasıl zorluyor?',
+        p: [
+          'Elvankent’teki pek çok dairede bulaşık makinesi, fırın ve mikrodalga aynı hattan besleniyor; akşam yemeği saatinde hepsi birden çalışınca sigorta atıyor. Bu, panonun değil hat planlamasının sorunu; mutfağa ayrı ve yeterli kesitte bir hat çektiğimizde sigorta artık atmıyor.',
+          'Bu tür bir düzeltme bazen tam pano yenilemeyle birlikte, bazen de panoya dokunmadan tek başına yapılabiliyor; hangisinin gerektiğine mevcut kutunun boş kapasitesine bakarak karar veriyoruz.',
+        ],
+      },
+      {
+        h: 'Blok panosu ve ortak alan ne zaman devreye girer?',
+        p: [
+          'Daire içi panonun yanında, Elvankent sitelerinde blok panosu, merdiven otomatiği ve bodrum aydınlatması da zamanla yorulan parçalar. Bunlar daire sakininin değil yönetimin sorumluluğunda; biz yönetimle görüşüp birkaç bloğu aynı ziyarette planlayabiliyoruz.',
+          'Daire panonuz yeni olsa bile elektrik kesiliyorsa, sorun bazen sayaç panosunda ya da blok hattında olabilir; bu yüzden arıza tespitinde ikisine birlikte bakıyoruz.',
+        ],
+      },
+      {
+        h: 'Elvankent’te panoyu nasıl değerlendiriyoruz?',
+        p: [
+          'Önce kutunun gövdesini, klemensleri ve ana şalteri gözle ve ölçerek kontrol ediyoruz; kararma, çatlak ya da gevşek bağlantı var mı bakıyoruz. Kaçak akım rölesi yoksa ya da yorulmuşsa ekliyor, gruplar mantıksız dağılmışsa aydınlatma-priz-ıslak hacim olarak yeniden ayırıyoruz. Sonuçta panoya hangi sigortanın neyi beslediğini okunaklı etiketlerle yazıp teslim ediyoruz.',
+          'Sincan’daki merkezimizden Elvankent’e 15-20 dakikada geliyoruz; keşif sonrası tamir mi yenileme mi gerektiğini net olarak söylüyor, onay almadan işe başlamıyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Elvankent’te sigorta kutum eski ama hiç sorun çıkarmıyor, yine de baktırmalı mıyım?',
+        a: 'Sorun çıkarmasa bile 25-30 yaşındaki bir kutuda kaçak akım rölesi olup olmadığını kontrol ettirmek önemli; bu, can güvenliği açısından en kritik eksik. Bir kontrol genelde yeterli, zorunlu değişiklik çıkmayabilir.',
+      },
+      {
+        q: 'Tek sigorta mı değişsin, pano mu baştan yenilensin, nasıl karar veriyorsunuz?',
+        a: 'Kutunun gövdesi, klemensleri ve kaçak akım rölesi sağlamsa tek sigorta yeterli olur. Gövde çatlamış, röle yoksa ya da gruplar düzensizse tam yenileme öneriyoruz; kararı keşifte söylüyoruz.',
+      },
+      {
+        q: 'Blok panosu için site yönetimi olarak sizi çağırabilir miyiz?',
+        a: 'Evet. Blok panosu, merdiven otomatiği ve bodrum hatları için yönetimle görüşüp keşif yapıyor, işe başlamadan fiyatı yazılı veriyoruz.',
+      },
+      {
+        q: 'Elvankent’e ne kadar sürede geliyorsunuz?',
+        a: 'Sincan’daki merkezimizden 15-20 dakikada geliyoruz. Haftanın 7 günü 08:00-23:00 arasında çağrı alıyoruz, 0506 092 58 16’dan ulaşabilirsiniz.',
+      },
+    ],
+    related: [
+      { label: 'Elvankent Elektrikçi', href: '/hizmet-bolgeleri/etimesgut-elektrikci/elvankent-elektrikci' },
+      { label: 'Sigorta kutusu yenileme', href: '/hizmetler/elektrik-panosu-yenileme' },
+      { label: 'Apartman elektrikçisi', href: '/hizmetler/bina-ortak-alan-elektrigi' },
+      { label: 'Ana Şalter Attı, Bir Daha Kalkmıyor', href: '/rehber/ana-salter-atti-etimesgut-gece-ariza' },
+    ],
+  },
 ];
 
 export const postsSorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
