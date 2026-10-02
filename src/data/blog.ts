@@ -275,7 +275,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: 'elvankent-sigorta-kutusu-yenileme-ne-zaman-gerekir',
-    title: 'Elvankent’te Sigorta Kutusu Yenileme: Ne Zaman Gerekir, Ne Zaman Yetmez?',
+    title: 'Elvankent’te Sigorta Kutusu Yenileme: Ne Zaman Gerekir, Ne Zaman Gerekmez?',
     description:
       'Elvankent’te 25-30 yaşındaki sitelerde sigorta kutusu ne zaman tamir, ne zaman tam yenileme ister? Acil elektrikçi gözünden işaretler. Demir Elektrik: 0506 092 58 16.',
     keyword: 'Elvankent elektrikçi',
