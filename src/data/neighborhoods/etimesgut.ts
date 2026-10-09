@@ -453,4 +453,132 @@ export const etimesgutNeighborhoods: Neighborhood[] = [
       seoDescription: 'Piyade acil elektrikçi: lojman ve konutlarda sigorta atması, kesinti ve taşınma sonrası tesisat kontrolü. Sincan\'dan 15–20 dakikada geliyoruz. 0506 092 58 16',
     },
   },
+  {
+    name: 'Şeker',
+    slug: 'seker-elektrikci',
+    districtSlug: 'etimesgut-elektrikci',
+    locative: 'Şeker Mahallesi\'nde',
+    content: {
+      h1: 'Şeker Mahallesi Acil Elektrikçi',
+      subtitle: 'Eski apartmanda sık atan sigorta, yeni sitede yüklenen hat. Şeker Mahallesi\'ne Sincan\'dan 15–20 dakikada, aynı gün.',
+      intro: [
+        'Şeker Mahallesi\'nde iki ayrı bina tipiyle karşılaşıyoruz. Bir yanda yıllar önce yapılmış, tesisatına hiç dokunulmamış apartmanlar; öbür yanda son yıllarda yükselen siteler. İkisinin arızası da farklı. Eskisinde yorulmuş pano ve topraksız priz, yenisinde ise tek hatta toplanmış klima, fırın ve çamaşır makinesi.',
+        'Şeker Mahallesi elektrikçi çağrısı aldığımızda önce telefonda sorarız: hangi sigorta attı, o sırada ne çalışıyordu, kaldırınca tutuyor mu? Çoğu zaman cevaplar arızanın yerini gösterir. Araçta yedek otomat, röle ve priz olduğu için parça almaya geri dönmeyiz.',
+        'Sincan\'daki merkezimizden Şeker Mahallesi\'ne 15–20 dakikada geliyoruz. Haftanın yedi günü 08:00–23:00 arası çağrı alıyoruz. Tespitten sonra ne yapacağımızı ve ücretini söyleriz, onayınız olmadan işe başlamayız.',
+      ],
+      highlightedServices: ['sigorta-atmasi', 'kacak-akim-rolesi-atiyor', 'priz-anahtar-tamiri', 'elektrik-panosu-yenileme'],
+      localNotes: [
+        {
+          title: 'Eski apartmanlarda yorgun pano',
+          text: 'İlk yapımdan kalan panolarda sigortalar ısınıp kararmış, bazılarında kaçak akım rölesi hiç yok. Atmasa bile kararmış bir otomat değişmeli. Panoyu otomat sigorta ve 30 mA röleyle yenileyip her sigortanın neyi beslediğini yazarak teslim ederiz.',
+        },
+        {
+          title: 'Yeni sitelerde tek hatta yük',
+          text: 'Yeni dairelerde mutfak ve klima çoğu zaman ayrı hatta alınmamış oluyor. Kışın ısıtıcı, yazın klima devreye girince sigorta atıyor. Panodan uygun kesitte ayrı hat çekip yükü bölüyoruz.',
+        },
+        {
+          title: 'Topraksız prizler',
+          text: 'Eski dairelerde toprak hattı olmayan prizler hâlâ çok. Çamaşır makinesi ya da bilgisayar kasası çarpıyorsa sebep genelde budur. Önce ölçer, sonra tesisatın durumuna göre topraklama çözümünü söyleriz.',
+        },
+      ],
+      arrival: 'Sincan\'daki merkezimizden Şeker Mahallesi\'ne 15–20 dakikada varıyoruz.',
+      landmarks: [
+        'Şeker Mahallesi merkez',
+        'Şeker Mahallesi eski apartman bölgesi',
+        'Şeker Mahallesi yeni siteler',
+        'Şeker Mahallesi cadde üstü dükkanlar',
+        'Şeker Mahallesi–Eryaman yönü',
+        'Şeker Mahallesi okul ve park çevresi',
+      ],
+      faq: [
+        {
+          q: 'Şeker Mahallesi\'nde akşam sigorta attı, gelir misiniz?',
+          a: 'Gelir. 23:00\'e kadar çağrı alıyoruz ve aynı akşam çıkıyoruz. Biz gelene kadar sigortayı zorlamayın; yanık kokusu varsa ana şalteri indirin.',
+        },
+        {
+          q: 'Kaçak akım rölesi sürekli atıyor, rölede mi sorun var?',
+          a: 'Çoğu zaman röle değil, hatlardan biri kaçak yapıyor. Sigortaları tek tek indirip hangisinde röle tuttuğunu bulur, kaçağın kaynağına gideriz. Röle gerçekten arızalıysa aynı ziyarette değiştiririz.',
+        },
+        {
+          q: 'Eski binada panoyu komple yenilemek şart mı?',
+          a: 'Her zaman değil. Bazen birkaç sigortayı değiştirip röle eklemek yeter. Panoyu açıp gördükten sonra iki seçeneği de fiyatıyla söylüyoruz, karar sizin.',
+        },
+        {
+          q: 'Şeker Mahallesi\'ne ne kadar sürede geliyorsunuz?',
+          a: 'Sincan\'dan 15–20 dakika. Akşam trafiğinde birkaç dakika uzayabilir, aradığınızda net süre veriyoruz.',
+        },
+      ],
+      ustaNote: [
+        'Şeker Mahallesi\'nde eski bir dairede sigorta kutusunu açtığımda çoğu zaman aynı şeyi görüyorum: bir sigorta öbürlerinden koyu, üstünde hafif erime izi. O hat yıllardır kapasitesinin üstünde çalışıyor demek. Ev sahibi "hiç atmadı ki" diyor; atmaması iyi haber değil, bazen sigortanın kendisi yorulmuştur.',
+        'Kapağı açıp bakmak bir dakikanızı alır. Kararma ya da plastik kokusu görürseniz bekletmeyin.',
+      ],
+      ustaBy: 'Recep Usta',
+      seoTitle: 'Şeker Mahallesi Elektrikçi | Etimesgut Acil Arıza | Demir Elektrik',
+      seoDescription: 'Şeker Mahallesi elektrikçi: sigorta atması, kaçak akım rölesi ve eski pano arızalarına Sincan\'dan 15–20 dakikada geliyoruz. Her gün 08:00–23:00. ☎ 0506 092 58 16',
+    },
+  },
+  {
+    name: 'Devlet',
+    slug: 'devlet-elektrikci',
+    districtSlug: 'etimesgut-elektrikci',
+    locative: 'Devlet Mahallesi\'nde',
+    content: {
+      h1: 'Devlet Mahallesi Acil Elektrikçi',
+      subtitle: 'Eski binalarda buşon, topraksız tesisat ve dükkan arızalarına Sincan\'dan 15–20 dakikada, aynı gün.',
+      intro: [
+        'Devlet Mahallesi Etimesgut\'un eski dokusuna yakın, yerleşik bir mahalle. Apartmanların önemli bir kısmı yıllar önce yapıldı; bazılarında hâlâ buşonlu sigorta, iki damarlı kablo ve duvardan sallanan priz görüyoruz. Zemin katlarda ise dükkanlar var, onların da kendi dertleri: akşam kapanışa doğru atan sigorta, ısınan priz, yanmayan tabela.',
+        'Devlet Mahallesi elektrikçi ihtiyacınızda önce telefonda dinliyoruz. Bazen sorunu yola çıkmadan çözüyoruz; gerekmiyorsa gelmiyoruz. Gelmemiz gerekiyorsa Sincan\'dan 15–20 dakikada kapıdayız.',
+        'Dükkan sahipleri için mesaiyi bölmeden çalışmaya dikkat ediyoruz. İşi kapanış saatine ya da sabah açılış öncesine planlayabiliyoruz. Her gün 08:00–23:00 arası çağrı alıyoruz.',
+      ],
+      highlightedServices: ['elektrik-panosu-yenileme', 'isyeri-elektrik-servisi', 'ev-elektrik-tesisati', 'acil-elektrikci'],
+      localNotes: [
+        {
+          title: 'Buşonlu sigorta kalan binalar',
+          text: 'Buşonun yerine tel sarıldığını hâlâ görüyoruz. Tel, aşırı akımda kopmaz; kablo ısınır ve yangın oradan başlar. Buşonlu kutuyu otomat sigorta ve kaçak akım röleli kompakt panoyla değiştiriyoruz.',
+        },
+        {
+          title: 'Cadde üstü dükkanlar',
+          text: 'Vitrin aydınlatması, ısıtıcı ve kasa aynı hattan çalışınca akşam sigorta atar. Dükkanın yükünü ölçüp hatları ayırıyor, gerekirse panoyu büyütüyoruz.',
+        },
+        {
+          title: 'Bina ortak alanı',
+          text: 'Merdiven otomatiği, kapı otomatiği ve bodrum aydınlatması eski binalarda sık arızalanıyor. Yönetici ya da apartman sorumlusuyla konuşup işi tek seferde topluyoruz.',
+        },
+      ],
+      arrival: 'Sincan\'daki merkezimizden Devlet Mahallesi\'ne 15–20 dakikada ulaşıyoruz.',
+      landmarks: [
+        'Devlet Mahallesi merkez',
+        'Devlet Mahallesi eski apartmanlar',
+        'Devlet Mahallesi cadde üstü dükkanlar',
+        'Devlet Mahallesi–Etimesgut merkez bağlantısı',
+        'Devlet Mahallesi okul çevresi',
+        'Devlet Mahallesi market ve çarşı bölgesi',
+      ],
+      faq: [
+        {
+          q: 'Evde hâlâ buşonlu sigorta var, değiştirmek gerekir mi?',
+          a: 'Evet, öneriyoruz. Buşon kaçak akıma karşı koruma sağlamaz ve tel sarılınca hiç korumaz. Otomat sigorta ve kaçak akım röleli panoyla değiştiriyoruz; çoğu dairede iş aynı gün biter.',
+        },
+        {
+          q: 'Dükkanda akşam sigorta atıyor, mesai bitince gelebilir misiniz?',
+          a: 'Gelebiliriz. 23:00\'e kadar çalışıyoruz. Kapanıştan sonra ya da sabah açılıştan önce gelip işinizi aksatmadan bakarız.',
+        },
+        {
+          q: 'Prizden çıtırtı geliyor, tehlikeli mi?',
+          a: 'Tehlikeli olabilir. Çıtırtı genelde gevşek bağlantıdan ark olduğunu gösterir. O prizi kullanmayın, mümkünse ilgili sigortayı indirin ve bizi arayın.',
+        },
+        {
+          q: 'Devlet Mahallesi\'ne ne kadar sürede geliyorsunuz?',
+          a: 'Sincan\'dan 15–20 dakikada. Aradığınızda o anki yerimize göre net süre söylüyoruz.',
+        },
+      ],
+      ustaNote: [
+        'Devlet Mahallesi\'nde bir dükkanda sigortanın neden attığını sorduğumda sahibi "kış gelince hep böyle" demişti. Isıtıcı, vitrin ışığı ve kasa aynı sigortadaydı. Hattı ikiye ayırdık, o kış bir daha aramadı.',
+        'Eski binada oturuyorsanız prizlerin kapağına bir bakın. Sararma, erime ya da gevşeklik varsa o priz değişmeli; küçük iş, ama ihmal edilince küçük kalmıyor.',
+      ],
+      ustaBy: 'Sezer Usta',
+      seoTitle: 'Devlet Mahallesi Elektrikçi | Etimesgut Acil Arıza | Demir Elektrik',
+      seoDescription: 'Devlet Mahallesi elektrikçi: buşon değişimi, pano yenileme, dükkan ve konut arızalarına Sincan\'dan 15–20 dakikada geliyoruz. Her gün 08:00–23:00. ☎ 0506 092 58 16',
+    },
+  },
 ];

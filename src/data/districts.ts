@@ -154,7 +154,7 @@ export const districts: District[] = [
         },
       ],
       arrival: 'Sincan merkezden Etimesgut merkez, Elvankent ve Ahimesut\'a 15–20 dakika; Bağlıca, Göksu ve Alsancak yönüne 25 dakika, İstanbul Yolu akşam trafiğinde biraz daha uzayabilir.',
-      neighborhoods: ['Elvankent', 'Bağlıca', 'Göksu', 'Atakent', 'Ahimesut', 'Şeyh Şamil', 'Piyade', 'Süvari', 'Topçu', 'Yavuz Selim', 'Alsancak', 'Oğuzlar'],
+      neighborhoods: ['Elvankent', 'Bağlıca', 'Göksu', 'Atakent', 'Ahimesut', 'Şeyh Şamil', 'Piyade', 'Süvari', 'Topçu', 'Yavuz Selim', 'Alsancak', 'Oğuzlar', 'Şeker', 'Devlet'],
       faq: [
         {
           q: 'Etimesgut\'a ne kadar sürede geliyorsunuz?',
