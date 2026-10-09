@@ -421,6 +421,154 @@ export const posts: BlogPost[] = [
       { label: 'Elvankent’te Sigorta Kutusu Yenileme', href: '/rehber/elvankent-sigorta-kutusu-yenileme-ne-zaman-gerekir' },
     ],
   },
+  {
+    slug: 'torekent-blok-alti-dukkan-elektrik-gitti',
+    title: 'Törekent’te Blok Altı Dükkânda Elektrik Gitti: Usta Gelene Kadar Ne Yapmalı?',
+    description:
+      'Törekent’te blok altındaki market, berber ya da kafede elektrik gidince ilk 10 dakikada ne yapmalı? Dolap, kasa, pano ve 186. Demir Elektrik acil: 0506 092 58 16.',
+    keyword: 'Törekent acil elektrikçi',
+    date: '2026-10-09',
+    readingMin: 5,
+    excerpt:
+      'Törekent’te blok altındaki dükkânda elektrik gitti, müşteri içeride, dolaplar dolu. Panik yapmadan önce bakılacak üç yer, açılmaması gereken bir kapak ve bizi ararken söylemeniz gereken iki cümle.',
+    intro:
+      'Törekent’te blok altı dükkândan gelen çağrıların sesi farklıdır. Arayan esnaf telaşlıdır, arkadan müşteri sesi gelir, “dolaplar ne olacak” diye sorar. Haklıdır da. Elektriksiz geçen her dakika kasa kapalı demek. Biz bu çağrıları öne alıyoruz. Ama biz yoldayken sizin yapabileceğiniz birkaç şey var. Bunlar hem arızayı hızlı bulmamızı sağlıyor hem de malınızı koruyor.',
+    sections: [
+      {
+        h: 'İlk iş: sadece dükkân mı, bütün blok mu?',
+        p: [
+          'Kapıdan çıkıp bakın. Merdiven ışığı, yan dükkân, üst kattaki pencereler yanıyor mu? Hepsi karanlıksa sorun dükkânınızda değil, binada ya da şebekededir. Önce 186’yı arayın, bölgede kesinti var mı sorun.',
+          'Sadece sizin dükkân karanlıksa sorun içeridedir. O zaman panoya bakma sırası gelir. Bu ayrımı yapmak bir dakika sürer ve bizi aradığınızda ilk soracağımız şey zaten budur.',
+        ],
+      },
+      {
+        h: 'Panoda neye bakmalısınız?',
+        p: [
+          'Dükkân panosunu açın. Kolu aşağı inmiş bir sigorta ya da kaçak akım rölesi var mı, bakın. Bir tane inmişse bir kez kaldırmayı deneyebilirsiniz. Hemen tekrar atıyorsa bırakın, ikinci kez zorlamayın.',
+          'Tekrar atan sigorta size bir şey söylüyor. O hatta ya bir kaçak var ya da hat kaldırabileceğinden fazla yük taşıyor. Blok altı dükkânlarda en sık sebep, soğutucu dolap, çay ocağı ve ısıtıcının aynı hatta toplanması. Kış başında bu çağrılar artıyor.',
+        ],
+      },
+      {
+        h: 'Soğutucu dolaplar ne olacak?',
+        p: [
+          'Kapaklarını açmayın. Kapalı duran bir dolap, içindekini bir süre soğuk tutar. Müşteriye ürün vermek için tekrar tekrar açıldıkça içerisi hızla ısınır.',
+          'Elektrik geri geldiğinde dolapları hepsini aynı anda çalıştırmayın. Kompresörler aynı anda kalkınca çektikleri akım toplanır, sigorta yeniden atabilir. Birer dakika arayla tek tek açın. Bu küçük şey çoğu zaman ikinci arızayı önlüyor.',
+        ],
+      },
+      {
+        h: 'Kasa ve POS cihazı için ne yapmalı?',
+        p: [
+          'Elektrik giderken yazar kasa ve POS cihazı prizden çekilmese bile genelde zarar görmez. Ama elektrik gidip gelirken, yani ışıklar yanıp sönerken, hassas cihazları prizden çekmek iyi olur. Gidip gelen elektrik cihazı yorar.',
+          'Ödeme almanız gerekiyorsa telefonunuzdaki mobil ödeme ya da bataryalı POS’u kullanın. Biz geldiğimizde kasa prizini çoğu zaman ayrı bir sigortaya alıyoruz. Böylece dolap ya da ısıtıcı yüzünden sigorta atınca kasa kapanmıyor.',
+        ],
+      },
+      {
+        h: 'Bizi ararken ne söylemelisiniz?',
+        p: [
+          'İki cümle yeter: “Sadece dükkân karanlık, bina yanıyor.” ve “Şu sigorta atıyor, kaldırınca tekrar iniyor.” Bir de o sırada neyin çalıştığını söyleyin. Bu kadarla neye bakacağımızı yola çıkmadan biliyoruz.',
+          'Demir Elektrik olarak Törekent’e dükkânımızdan Ayaş Yolu üzerinden 10 dakikada varıyoruz. Haftanın 7 günü 08:00–23:00 arası 0506 092 58 16’dan bize ulaşabilirsiniz. Önce tespit yapıyoruz. Ne yapacağımızı ve ücretini işe başlamadan söylüyoruz. Kapanıştan sonra çalışmamızı isterseniz o saate göre geliyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Dükkânda sigorta sürekli atıyor, ne yapmalıyım?',
+        a: 'Zorlamayın. Hangi sigortanın attığını ve o sırada hangi cihazların çalıştığını not edin, bizi arayın. Genelde dolap, ısıtıcı ve çay ocağı aynı hatta toplanmıştır; hattı ayırınca sorun biter.',
+      },
+      {
+        q: 'Törekent’te akşam dükkân kapandıktan sonra gelir misiniz?',
+        a: 'Geliriz. 23:00’e kadar çalışıyoruz. Kapanış saatini söyleyin, işi müşteriniz yokken yapalım.',
+      },
+      {
+        q: 'Elektrik gelince dolaplar çalışmıyor, neden?',
+        a: 'Hepsi aynı anda kalkınca sigorta tekrar atmış olabilir. Önce panoya bakın, sonra dolapları birer dakika arayla tek tek açın. Yine çalışmıyorsa arayın.',
+      },
+      {
+        q: 'Bütün blok karanlık, sizi mi aramalıyım?',
+        a: 'Önce 186’yı arayın, şebeke kesintisi olabilir. Kesinti yoksa ve sadece sizin blok karanlıksa bina ana panosuna bakmak gerekir; o zaman yöneticiyle birlikte geliyoruz.',
+      },
+    ],
+    related: [
+      { label: 'Törekent Acil Elektrikçi', href: '/hizmet-bolgeleri/sincan-elektrikci/torekent-elektrikci' },
+      { label: 'İş yeri elektrik servisi', href: '/hizmetler/isyeri-elektrik-servisi' },
+      { label: 'Sigorta atması', href: '/hizmetler/sigorta-atmasi' },
+      { label: 'Elektrik Kesintisi mi, Evdeki Arıza mı?', href: '/rehber/elektrik-kesintisi-mi-ariza-mi' },
+    ],
+  },
+  {
+    slug: 'fatih-elektrik-yarim-geldi-faz-notr',
+    title: 'Fatih’te Elektrik Yarım Geldi: Bazı Odalar Var, Bazıları Yok. Faz mı Gitti, Nötr mü?',
+    description:
+      'Sincan Fatih’te evin bir kısmında elektrik var, bir kısmında yok mu? Lambalar aşırı parlak ya da sönük mü? Faz kaybı ve nötr kopmasında ilk yapılacaklar. Demir Elektrik: 0506 092 58 16.',
+    keyword: 'Fatih acil elektrikçi',
+    date: '2026-10-09',
+    readingMin: 5,
+    excerpt:
+      'Mutfakta elektrik var, salon karanlık. Ya da ışıklar bir parlıyor bir kısılıyor. Bu iki durum birbirine benzer görünür ama biri bekleyebilir, öbürü beklemez. Farkı ve ilk yapılacakları anlattık.',
+    intro:
+      'Sincan Fatih’ten gelen bir çağrı şöyle başladı: “Usta, elektrik yarım geliyor. Mutfak çalışıyor, salon yok.” Bu cümleyi sık duyuyoruz. Çoğu zaman basit bir sigorta. Ama bazen evde lambalar normalden parlak yanıyor, bir cihazdan koku geliyor. O zaman iş değişir. Fatih acil elektrikçi olarak bu iki durumu telefonda nasıl ayırdığımızı anlatalım.',
+    sections: [
+      {
+        h: 'Bazı odalarda elektrik yoksa önce neye bakmalı?',
+        p: [
+          'Önce daire panosuna bakın. Evdeki odalar farklı sigortalardan beslenir. Salonun sigortası inmiş, mutfağınki yukarıda duruyor olabilir. İnen sigortayı bir kez kaldırın. Tutarsa sorun çözülmüştür.',
+          'Tekrar atıyorsa o hatta bir kaçak ya da arızalı bir cihaz vardır. O odadaki cihazları prizden çekip tekrar deneyin. Tutuyorsa cihazlardan biri sorunludur. Yine atıyorsa sorun hattın kendisindedir, bizi arayın.',
+        ],
+      },
+      {
+        h: 'Bütün sigortalar yukarıdaysa ne olmuş olabilir?',
+        p: [
+          'Sigortaların hepsi yukarıda, ama yine de bazı odalar karanlıksa bina üç fazla besleniyor olabilir. Bazı binalarda ve müstakil evlerde daireye üç ayrı faz gelir, odalar bu fazlara bölünür. Fazlardan biri gelmezse ona bağlı odalar karanlıkta kalır.',
+          'Faz kaybı genelde sayaç panosunda ya da binaya gelen hatta olur. Bu durumda daire panosuyla uğraşmanın faydası yok. Komşulara sorun, onlarda da aynı şey var mı? Varsa 186’yı arayın. Yoksa sorun sizin sayacınızdan sonradır, bizi arayın.',
+        ],
+      },
+      {
+        h: 'Lambalar aşırı parlak ya da çok sönükse ne demek?',
+        p: [
+          'Bu tehlikeli bir belirti. Bir odada lambalar normalden parlak, başka bir odada sönük yanıyorsa nötr hattı kopmuş olabilir. Nötr kopunca prizlerdeki gerilim dengesini kaybeder. Bazı prizlere normalin çok üstünde gerilim gelir.',
+          'Bu durumda cihazlar yanar. Buzdolabı, televizyon, kombi kartı ilk gidenlerdir. Geçen yıl bir binada nötr kopmasından sonra üç dairede birden kombi kartı değişti. Belirtiyi gören biri ana şalteri hemen indirseydi bu masraf olmayacaktı.',
+        ],
+      },
+      {
+        h: 'Nötr kopmasından şüpheleniyorsanız ilk 5 dakikada ne yapmalı?',
+        p: [
+          'Ana şalteri indirin. Bekleyip gözlemlemeyin. Sonra pahalı cihazları prizden çekin: televizyon, bilgisayar, modem. Komşularınıza haber verin, onlarda da aynı belirti varsa sorun bina hattındadır ve 186 aranmalıdır.',
+          'Ana şalter inikken hiçbir cihazı “bir deneyelim” diye açmayın. Biz gelip hattı ölçmeden elektriği geri vermeyin. Nötr kopması, ölçü aleti olmadan yeri bulunacak bir arıza değil.',
+        ],
+      },
+      {
+        h: 'Fatih’e ne kadar sürede geliyoruz?',
+        p: [
+          'Demir Elektrik olarak Fatih’e dükkânımızdan 5–10 dakikada varıyoruz. Haftanın 7 günü 08:00–23:00 arası 0506 092 58 16’dan arayabilirsiniz. Telefonda önce belirtileri dinliyoruz. Lambalar parlıyor ya da koku varsa çağrınızı öne alıyoruz.',
+          'Gelince önce ölçüyoruz: hangi fazda gerilim var, nötr sağlam mı, sorun daire içinde mi sayaç tarafında mı? Sonra ne yapacağımızı ve ücretini söylüyoruz. Onayınız olmadan işe başlamıyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Evin yarısında elektrik yok, sigortalar yukarıda. Ne yapmalıyım?',
+        a: 'Komşulara sorun. Onlarda da aynı durum varsa faz kaybı olabilir, 186’yı arayın. Sadece sizde varsa sorun sayacınızdan sonradır; bizi arayın, ölçüp yerini bulalım.',
+      },
+      {
+        q: 'Lambalar bir parlayıp bir kısılıyor, tehlikeli mi?',
+        a: 'Evet, nötr kopmasının belirtisi olabilir. Ana şalteri indirin, pahalı cihazları prizden çekin ve bizi arayın. Ölçüm yapılmadan elektriği geri vermeyin.',
+      },
+      {
+        q: 'Fatih’te gece 22:00’de gelir misiniz?',
+        a: 'Geliriz. 23:00’e kadar çağrı alıyoruz. Koku, kıvılcım ya da aşırı parlak lamba varsa çağrınız önceliklidir.',
+      },
+      {
+        q: 'Nötr kopmasında yanan cihazların masrafını kim karşılar?',
+        a: 'Kopma bina hattında ya da şebekedeyse durum farklı, daire içindeyse farklı. Önce arızanın yerini ölçüp yazılı olarak söylüyoruz; bu bilgi sonraki adımlar için işinize yarar.',
+      },
+    ],
+    related: [
+      { label: 'Fatih Acil Elektrikçi', href: '/hizmet-bolgeleri/sincan-elektrikci/fatih-elektrikci' },
+      { label: 'Elektrik kesintisi', href: '/hizmetler/elektrik-kesintisi' },
+      { label: 'Acil elektrikçi', href: '/hizmetler/acil-elektrikci' },
+      { label: 'Ana Şalter Attı, Bir Daha Kalkmıyor', href: '/rehber/ana-salter-atti-etimesgut-gece-ariza' },
+    ],
+  },
 ];
 
 export const postsSorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
