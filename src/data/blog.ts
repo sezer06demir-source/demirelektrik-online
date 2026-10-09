@@ -569,6 +569,168 @@ export const posts: BlogPost[] = [
       { label: 'Ana Şalter Attı, Bir Daha Kalkmıyor', href: '/rehber/ana-salter-atti-etimesgut-gece-ariza' },
     ],
   },
+  {
+    slug: 'eryaman-led-avize-titriyor-kapaliyken-yaniyor',
+    title: 'Eryaman’da Yeni LED Avize Titriyor ya da Kapalıyken Hafif Yanıyor: Sebebi Ne?',
+    description:
+      'Eryaman’da yeni taktığınız LED avize ya da LED spot titriyor, kapatınca hafif yanıyor mu? Anahtar, dimmer ve bağlantı kaynaklı sebepler. Demir Elektrik: 0506 092 58 16.',
+    keyword: 'Eryaman avize montajı',
+    date: '2026-10-16',
+    readingMin: 5,
+    excerpt:
+      'Yeni LED avize aldınız, taktınız. Ama ışık titriyor ya da anahtarı kapatınca hafif hafif yanmaya devam ediyor. Avize bozuk değil. Çoğu zaman sorun anahtarda ya da bağlantıda. Ne olduğunu ve ne yapılacağını anlattık.',
+    intro:
+      'Eryaman’dan haftada birkaç kez aynı çağrı geliyor: “Usta, yeni LED avize taktık, kapatınca sönmüyor, hafif yanıyor.” Ya da: “Işık titriyor, göz yoruyor.” Çoğu kişi avizeyi bozuk sanıp mağazaya geri götürmeyi düşünüyor. Acele etmeyin. Bu belirtilerin büyük kısmı avizeden değil, anahtardan ve bağlantıdan geliyor. Eryaman avize montajı çağrılarında neye baktığımızı sırayla anlatalım.',
+    sections: [
+      {
+        h: 'LED avize kapalıyken neden hafif yanar?',
+        p: [
+          'En sık sebep anahtarın nötrü kesmesi. Doğru bağlantıda anahtar fazı keser. Ters bağlanmışsa avize kapalıyken bile içinde faz durur. LED çok az akımla bile ışık verdiği için hafifçe parlamaya devam eder.',
+          'Bu sadece görüntü sorunu değil. Kapalı sandığınız avizede faz vardır. Ampul ya da avize değiştirirken çarpılma riski doğar. Bu yüzden ertelemeyin. Anahtar bağlantısını düzeltmek kısa bir iş.',
+        ],
+      },
+      {
+        h: 'Işıklı anahtar da LED’i yakar mı?',
+        p: [
+          'Evet. Karanlıkta yeri görünsün diye içinde küçük ışık olan anahtarlar var. Bu ışık, kapalıyken bile avizenin üstünden çok küçük bir akım geçirir. Eski ampullerde fark edilmezdi. LED’de bu akım yetiyor, avize hafif yanıyor ya da birkaç saniyede bir göz kırpıyor.',
+          'Çözüm basit: ışıksız anahtar takmak ya da avizeye bu akımı emen küçük bir parça eklemek. Hangisinin uygun olduğuna yerinde bakıyoruz.',
+        ],
+      },
+      {
+        h: 'LED avize neden titrer?',
+        p: [
+          'Titremenin üç yaygın sebebi var. Birincisi uyumsuz dimmer. Eski tip dimmerler LED için yapılmamıştır, ışığı titretir. İkincisi gevşek bağlantı. Tavandaki buatta klemens iyi sıkılmamışsa ışık titrer, bazen çıtırtı da gelir. Üçüncüsü avizenin kendi sürücüsü. Çok ucuz sürücüler dengesiz çalışır.',
+          'Önce bağlantıyı ve anahtarı kontrol ediyoruz. Bunlar sağlamsa sorun avizenin içindedir. O zaman size açıkça söylüyoruz, garanti için satıcıya dönmeniz daha doğru olur.',
+        ],
+      },
+      {
+        h: 'Titreme tehlikeli mi?',
+        p: [
+          'Dimmer ya da sürücü kaynaklıysa tehlikeli değil, sadece göz yorar. Ama gevşek bağlantı kaynaklıysa durum farklı. Gevşek klemens ısınır. Tavanda yanık kokusu, çıtırtı ya da avize gövdesinde ısınma varsa sigortayı indirin, avizeyi kullanmayın ve bizi arayın.',
+          'Eryaman’daki toplu konut bloklarında tavan buatları yıllar önce yapılmış. Yeni avize takılırken eski ve sertleşmiş kablo uçlarına bağlanınca bu sorun sık çıkıyor. Biz bağlarken ucu kesip temiz bakırdan yeniden bağlıyoruz.',
+        ],
+      },
+      {
+        h: 'Avizeyi kendim taktım, sorun mu yaptım?',
+        p: [
+          'Olabilir, olmayabilir. En sık hata faz ile nötrün karıştırılması ve klemensin iyi sıkılmaması. Metal gövdeli avizelerde toprak kablosunun hiç bağlanmaması da sık gördüğümüz bir eksik.',
+          'Avize ağırsa askıya da bakın. Sadece kablosuna ya da plastik dübele asılmış ağır avize zamanla sarkar. Tavana uygun kanca ve dübel gerekir.',
+        ],
+      },
+      {
+        h: 'Eryaman’a ne kadar sürede geliyoruz?',
+        p: [
+          'Demir Elektrik olarak Eryaman’ın bütün etaplarına 15–20 dakikada varıyoruz. Haftanın 7 günü 08:00–23:00 arası 0506 092 58 16’dan arayabilirsiniz. Önce telefonda belirtiyi dinliyoruz. Koku ya da çıtırtı varsa çağrınızı öne alıyoruz.',
+          'Gelince anahtarı, buatı ve avize bağlantısını kontrol ediyoruz. Ne yapacağımızı ve ücretini işe başlamadan söylüyoruz. Onayınız olmadan başlamıyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Yeni LED avize kapatınca sönmüyor, bozuk mu?',
+        a: 'Çoğu zaman bozuk değil. Anahtar nötrü kesiyordur ya da ışıklı anahtar küçük bir akım geçiriyordur. Bağlantıyı düzeltmek ya da anahtarı değiştirmek yeterli olur.',
+      },
+      {
+        q: 'LED avize dimmerle kısılabilir mi?',
+        a: 'Avize dimmer destekliyorsa ve dimmer LED uyumluysa evet. Eski tip dimmer LED’i titretir. Kutusunda “dimmable” yazmayan LED kısılmaz.',
+      },
+      {
+        q: 'Eryaman’da avize montajına aynı gün gelir misiniz?',
+        a: 'Genelde evet. 23:00’e kadar çağrı alıyoruz. Tavanda hazır çıkış varsa montaj kısa sürer.',
+      },
+      {
+        q: 'Tavandan yanık kokusu geliyor, ne yapmalıyım?',
+        a: 'O lambanın sigortasını indirin, avizeyi kullanmayın ve hemen arayın. Gevşek bağlantı ısınıyor olabilir, beklenecek bir durum değil.',
+      },
+    ],
+    related: [
+      { label: 'Eryaman Acil Elektrikçi', href: '/hizmet-bolgeleri/eryaman-elektrikci' },
+      { label: 'Avize ve spot montajı', href: '/hizmetler/avize-spot-montaji' },
+      { label: 'Priz ve anahtar tamiri', href: '/hizmetler/priz-anahtar-tamiri' },
+      { label: 'Eryaman’da Yeni Daireye Taşınınca Elektrikte İlk Hafta', href: '/rehber/eryaman-yeni-tasinilan-dairede-elektrik-kontrolu' },
+    ],
+  },
+  {
+    slug: 'elvankent-koridor-gece-isigi-sensorlu-aydinlatma',
+    title: 'Elvankent’te Koridor ve Gece Işığı: Gece Kalkınca Göz Almayan Aydınlatma Nasıl Yapılır?',
+    description:
+      'Elvankent’te koridor, banyo yolu ve çocuk odası için gece ışığı: hareket sensörlü aydınlatma, süpürgelik LED ve doğru ışık rengi. Demir Elektrik: 0506 092 58 16.',
+    keyword: 'Elvankent elektrikçi',
+    date: '2026-10-16',
+    readingMin: 5,
+    excerpt:
+      'Gece kalkınca koridor lambasını yakmak göz alıyor, yakmamak da tökezletiyor. Hareket sensörlü, düşük ve sıcak bir gece ışığı ikisini de çözüyor. Elvankent’te nasıl yaptığımızı anlattık.',
+    intro:
+      'Elvankent’te bir müşterimiz koridor için bizi aradığında derdini şöyle anlattı: “Gece kalkıyorum, ışığı yakınca gözüm kamaşıyor, yakmayınca kapıya çarpıyorum.” Çok yaygın bir dert. Özellikle yaşlıların ve küçük çocukların olduğu evlerde gece koridoru önemli. Elvankent’teki dairelerin çoğu 25–30 yaşında ve koridorlarda genelde tek bir tavan lambası var. Bunu nasıl çözdüğümüzü kısaca anlatalım.',
+    sections: [
+      {
+        h: 'Gece ışığı nasıl olmalı?',
+        p: [
+          'Düşük, sıcak ve aşağıdan. Gece ışığı göze doğrudan vurmamalı. Tavandan değil, yerden 20–40 santim yukarıdan zemine doğru yansımalı. Işık rengi sıcak olmalı, 2700K civarı. Beyaz ışık gece uykuyu kaçırır.',
+          'Parlaklık da az olmalı. Amaç koridoru gündüz gibi aydınlatmak değil, yolu ve eşikleri göstermek. Göz alıştığında az bir ışık yeterli gelir.',
+        ],
+      },
+      {
+        h: 'Hareket sensörü mü, anahtar mı?',
+        p: [
+          'Gece için hareket sensörü daha pratik. Yataktan kalkıp koridora adım attığınızda yanar. Bir süre hareket olmayınca kendisi söner. Gece anahtar aramanız gerekmez.',
+          'Sensörü göz hizasına değil, aşağıya ve koridorun girişine bakacak şekilde koyuyoruz. Böylece kapının önünde durur durmaz yanar. Gündüz gereksiz yanmasın diye ortam ışığını algılayan modelleri tercih ediyoruz.',
+        ],
+      },
+      {
+        h: 'Süpürgelik üstü LED ya da duvar içi gece lambası',
+        p: [
+          'İki yaygın çözüm var. Birincisi duvara gömülen küçük gece lambaları. Süpürgeliğin biraz üstüne, priz yüksekliğine konur. İkincisi süpürgelik boyunca giden şerit LED. Koridoru baştan sona çizgi gibi aydınlatır, çok şık durur.',
+          'Duvar içi lamba için o noktaya kablo gerekir. Çoğu zaman yakındaki bir priz hattından alıyoruz. Şerit LED için ise sürücüyü ulaşılabilir bir yere koyuyoruz, dolabın ya da vestiyerin içine.',
+        ],
+      },
+      {
+        h: 'Prize takılan gece lambası yetmez mi?',
+        p: [
+          'Geçici çözüm olarak yeter. Ama prizi kapatır, çocuk eliyle çıkarabilir, ucuz olanlar ısınır. Kalıcı bir çözüm istiyorsanız sabit montaj daha güvenli.',
+          'Prize takılan lambalarda bir şeye dikkat edin: lamba ısınıyorsa ya da plastiği sararmışsa çıkarın. Gece boyu çalışan ucuz bir lamba fark edilmeden ısınabilir.',
+        ],
+      },
+      {
+        h: 'Banyo yolu ve çocuk odası',
+        p: [
+          'Gece en çok banyoya gidilir. Koridor ışığını banyo kapısına kadar götürmek, banyonun içine de düşük bir ışık koymak iyi olur. Banyo içinde kullanılacak lamba neme dayanıklı olmalı. Banyo hattının kaçak akım rölesi arkasında olduğundan emin oluyoruz.',
+          'Çocuk odasında gece ışığını yatağın göremeyeceği bir yere koyuyoruz. Işık odayı hafif gösterir ama çocuğun yüzüne vurmaz.',
+        ],
+      },
+      {
+        h: 'Elvankent’e ne kadar sürede geliyoruz?',
+        p: [
+          'Demir Elektrik olarak Elvankent’e 15–20 dakikada varıyoruz. Haftanın 7 günü 08:00–23:00 arası 0506 092 58 16’dan arayabilirsiniz. Koridoru görüp sensör ve lamba yerini sizinle birlikte belirliyoruz.',
+          'Ne yapacağımızı ve ücretini işe başlamadan söylüyoruz. Çoğu dairede iş aynı gün biter.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Hareket sensörlü gece ışığı gündüz de yanar mı?',
+        a: 'Ortam ışığını algılayan modeller gündüz yanmaz. Biz bu modelleri öneriyoruz; sadece karanlıkta ve hareket olunca yanar.',
+      },
+      {
+        q: 'Mevcut koridora sonradan gece ışığı yapılır mı?',
+        a: 'Yapılır. Kabloyu genelde yakındaki priz hattından alıyoruz. Çoğu dairede duvar kırmadan ya da çok az kırımla aynı gün bitiyor.',
+      },
+      {
+        q: 'Gece ışığı için hangi ışık rengi seçilmeli?',
+        a: 'Sıcak, sarıya yakın ışık. 2700K civarı. Beyaz ışık gece göz alır ve uykuyu kaçırır.',
+      },
+      {
+        q: 'Elvankent’te akşam gelir misiniz?',
+        a: 'Geliriz. 23:00’e kadar çağrı alıyoruz. Montaj işlerini de size uygun saate planlıyoruz.',
+      },
+    ],
+    related: [
+      { label: 'Elvankent Elektrikçi', href: '/hizmet-bolgeleri/etimesgut-elektrikci/elvankent-elektrikci' },
+      { label: 'Avize ve spot montajı', href: '/hizmetler/avize-spot-montaji' },
+      { label: 'Ev elektrik tesisatı', href: '/hizmetler/ev-elektrik-tesisati' },
+      { label: 'Elvankent’te Sigorta Kutusu Yenileme', href: '/rehber/elvankent-sigorta-kutusu-yenileme-ne-zaman-gerekir' },
+    ],
+  },
 ];
 
 export const postsSorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
