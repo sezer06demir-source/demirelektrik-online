@@ -347,6 +347,80 @@ export const posts: BlogPost[] = [
       { label: 'Ana Şalter Attı, Bir Daha Kalkmıyor', href: '/rehber/ana-salter-atti-etimesgut-gece-ariza' },
     ],
   },
+  {
+    slug: 'goksu-kacak-akim-rolesi-surekli-atiyor',
+    title: "Göksu'da Kaçak Akım Rölesi Sürekli Atıyor mu? Yeni Sitelerde Sık Görülen Sebepler",
+    description:
+      "Göksu'daki yeni sitelerde kaçak akım rölesi neden sık atıyor? Ankastre, klima ve banyo hatlarında en sık gördüğümüz sebepler. Demir Elektrik acil servis: 0506 092 58 16.",
+    keyword: 'Göksu elektrikçi',
+    date: '2026-10-09',
+    readingMin: 6,
+    excerpt:
+      "Göksu'da bina yeni olsun diye kaçak akım rölesi atmaz diye bir kural yok; aksine yeni sitelerde ilk yıl en çok bu çağrıyı alıyoruz. Sebepleri ve gece yarısı ne yapılacağını sahadan anlattık.",
+    intro:
+      "Göksu'da son yıllarda yükselen site ve rezidanslardan aldığımız çağrıların önemli bir kısmı kaçak akım rölesi. İnsanlar genelde \"bina yeni, röle neden atıyor\" diye soruyor; oysa biz tam tersini görüyoruz. Yeni binalarda ilk bir iki yıl, henüz oturmamış tesisat ve yeni kullanılan cihazlar yüzünden röle en sık bu dönemde atıyor. Göksu elektrikçi olarak akşam ya da gece gelen bu çağrılarda önce neyin atıp neyin atmadığına bakıyoruz, sebebi oradan daralıyoruz.",
+    sections: [
+      {
+        h: "Göksu'da röle en çok hangi saatte atıyor?",
+        p: [
+          'Doğrudan cevap: akşam saatlerinde, birden fazla cihaz aynı anda devreye girdiğinde. Klima, çamaşır makinesi ve ankastre ocak aynı akşam üst üste çalışınca, zaten sınırda olan bir hat kaçağı daha hızlı ortaya çıkarıyor.',
+          "Göksu'daki yeni dairelerde panoyu kontrol ettiğimizde çoğu zaman hat sayısı ve grup dağılımı doğru; ama bir hatta küçük bir kaçak varsa, yük arttığı akşam saatlerinde bu kaçak kendini daha belirgin gösteriyor.",
+        ],
+      },
+      {
+        h: 'Ankastre ve klima hattı neden ilk şüpheli?',
+        p: [
+          'Doğrudan cevap: bu iki cihaz yüksek akım çeker ve yeni dairelerde genelde son anda eklenmiş hatlardır. Ankastre ocak ya da fırın bağlantısı acele yapılmışsa, nem veya montaj sırasında ezilen bir kablo kaçağa yol açabilir.',
+          'Klima tarafında da benzer bir durum var; dış üniteye çekilen hat düzgün topraklanmamışsa ya da bağlantı kutusuna su sızıyorsa röle bunu küçük bir kaçak olarak algılayıp atıyor. Biz önce bu iki hattı ayrı ayrı test ederek şüpheyi daraltıyoruz.',
+        ],
+      },
+      {
+        h: 'Banyo ve balkon hattı da sık atan noktalar arasında',
+        p: [
+          'Doğrudan cevap: ıslak zeminli alanlardaki priz ve aydınlatma hatları, montaj sırasında küçük bir nem veya gevşek bağlantı bıraktıysa zamanla röleyi tetikler. Yeni bina olması bu riski azaltmaz, çünkü kaçak montaj hatasından da kaynaklanabilir.',
+          "Göksu'da bazı dairelerde balkon aydınlatması ya da dış priz, dışarıdan gelen yağmur sonrası röleyi attırmaya başlıyor. Bu durumda o hattı ayırıp ölçüm yapınca kaçağın kaynağını kısa sürede buluyoruz.",
+        ],
+      },
+      {
+        h: 'Röle attığında siz gelene kadar ne yapılmalı?',
+        p: [
+          'Doğrudan cevap: röleyi tekrar tekrar kaldırmayı denemek yerine, önce tüm sigortaları indirip röleyi kaldırmayı deneyin; röle bu durumda atmıyorsa kaçak bir hatta demektir ve telefonda bu bilgi bize büyük zaman kazandırır.',
+          'Gece yarısı röle atıp da evde karanlıkta kalındığında panikle her şeyi denemek yerine, hangi cihaz çalışırken attığını hatırlamaya çalışmak işimizi kolaylaştırıyor. Telefonda bu bilgiyi aldığımızda yola çıkmadan önce bile ön teşhis koyabiliyoruz.',
+        ],
+      },
+      {
+        h: "Göksu'da kaçak akım arızasına nasıl müdahale ediyoruz?",
+        p: [
+          "Sincan'daki merkezimizden Göksu'ya 15-20 dakikada geliyoruz. Panoyu ve rölenin kendisini kontrol ettikten sonra hatları tek tek ayırarak kaçağın hangi grupta olduğunu ölçüyoruz; sebep bir cihazsa söylüyoruz, hattaysa yerinde onarıyoruz.",
+          'Rezidans ve sitelerde teknik odaya erişim ya da kat panosu yetkisi gerekiyorsa yönetimle biz görüşüyoruz; siz sadece arızayı tarif ediyorsunuz. Haftanın 7 günü 08:00-23:00 arasında bu çağrılara çıkıyoruz, işe başlamadan fiyatı söylüyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Göksu'da bina yeni, röle neden atıyor?",
+        a: 'Yeni binalarda ilk yıl tesisat henüz oturmamış ve bazı hatlar (ankastre, klima) son anda eklenmiş olabilir. Küçük bir montaj hatası ya da nem, yeni bina olmasına bakmadan röleyi attırır.',
+      },
+      {
+        q: 'Röle sadece klima çalışırken atıyor, bu klimanın mı sorunu?',
+        a: 'Çoğunlukla klimanın kendisinden değil, dış üniteye çekilen hattın topraklama veya bağlantı kutusundan kaynaklanır. Hattı ölçüp kaynağı net olarak söyleyebiliyoruz.',
+      },
+      {
+        q: 'Gece yarısı röle attı, sabaha kadar bekleyebilir miyim?',
+        a: 'Kaçağın büyüklüğüne bağlı; küçükse sigortaları indirip röleyi kapalı tutarak sabahı bekleyebilirsiniz ama ıslak alan varsa önerimiz aynı gece aramanız. 08:00-23:00 arası çağrı alıyoruz.',
+      },
+      {
+        q: "Göksu'ya ne kadar sürede geliyorsunuz?",
+        a: "Sincan'daki merkezimizden Göksu'ya genellikle 15-20 dakikada ulaşıyoruz.",
+      },
+    ],
+    related: [
+      { label: 'Göksu Elektrikçi', href: '/hizmet-bolgeleri/etimesgut-elektrikci/goksu-elektrikci' },
+      { label: 'Kaçak akım tespiti', href: '/hizmetler/kacak-akim-tespiti' },
+      { label: 'Acil elektrikçi', href: '/hizmetler/acil-elektrikci' },
+      { label: 'Elvankent’te Sigorta Kutusu Yenileme', href: '/rehber/elvankent-sigorta-kutusu-yenileme-ne-zaman-gerekir' },
+    ],
+  },
 ];
 
 export const postsSorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
