@@ -731,6 +731,87 @@ export const posts: BlogPost[] = [
       { label: 'Elvankent’te Sigorta Kutusu Yenileme', href: '/rehber/elvankent-sigorta-kutusu-yenileme-ne-zaman-gerekir' },
     ],
   },
+  {
+    slug: 'seker-mahallesi-topraksiz-priz-carpiyor',
+    title: 'Şeker Mahallesi’nde Priz Çarpıyor: Topraksız Priz ve Doğru Çözüm',
+    description:
+      'Şeker Mahallesi’nin eski dairelerinde çamaşır makinesi ya da bilgisayar gövdesi hafif çarpıyorsa sebep çoğu zaman topraksız prizdir. Belirtileri ve doğru çözümü anlattık. Demir Elektrik: 0506 092 58 16.',
+    keyword: 'Şeker Mahallesi elektrikçi',
+    date: '2026-10-16',
+    readingMin: 6,
+    excerpt:
+      '“Çamaşır makinesine dokununca hafif karıncalanma hissediyorum” diyen müşterilerimizin çoğu Şeker Mahallesi’nin eski dairelerinden. Sebep neredeyse hep aynı: toprak hattı olmayan bir priz. Ne yapılması gerektiğini anlattık.',
+    intro:
+      'Şeker Mahallesi’nde eski apartman dairelerine gittiğimizde sık duyduğumuz bir cümle var: “Çamaşır makinesine ya da bilgisayar kasasına dokununca hafif bir karıncalanma oluyor, ama büyük bir şey değil, alışmışız.” Bu cümleyi her duyduğumuzda içimiz biraz sıkılır, çünkü alışılacak bir şey değildir. Neredeyse hepsinde sebep aynıdır: dairede toprak hattı olmayan bir priz.',
+    sections: [
+      {
+        h: 'Priz neden çarpar, bu normal mi?',
+        p: [
+          'Hayır, normal değildir. Metal gövdeli bir cihazda (çamaşır makinesi, bilgisayar kasası, fırın) gövdeye küçük bir kaçak oluştuğunda, bu kaçağın güvenli şekilde toprağa akması gerekir. Toprak hattı varsa akım oradan geçer, siz bir şey hissetmezsiniz. Toprak hattı yoksa kaçak akımın gidecek güvenli bir yolu kalmaz ve dokunduğunuzda o akımı vücudunuzdan hissedersiniz.',
+          'Yani çarpma hissi aslında cihazın değil, prizin ve hattın eksik olduğunu gösterir. Cihazı değiştirmek sorunu çözmez; aynı hatta takılan bir sonraki cihazda da aynı şey yaşanır.',
+        ],
+      },
+      {
+        h: 'Şeker Mahallesi’nde bu neden bu kadar sık görülüyor?',
+        p: [
+          'Mahallenin eski apartman bölgesinde tesisat, toprak hattının zorunlu olmadığı yıllarda çekilmiş. O dönemde priz iki kabloyla, faz ve nötrle bağlanmış; üçüncü, yani toprak kablosu hiç yok. Dışarıdan bakınca priz yeni ve topraklı görünebilir ama arkasında sadece iki uç bağlı olabilir.',
+          'Mahallenin yeni site tarafında bu sorunu neredeyse hiç görmüyoruz; oralarda tesisat zaten topraklı çekilmiş. Sorun büyük ölçüde eski apartman bölgesine özgü.',
+        ],
+      },
+      {
+        h: 'Hangi cihazlarda daha dikkatli olunmalı?',
+        p: [
+          'Metal gövdeli ve suyla teması olan cihazlar en riskli gruptur: çamaşır makinesi, bulaşık makinesi, şofben, fırın. Bilgisayar kasası da sık şikayet gelen bir diğer cihaz; özellikle elle kasaya dokunulduğunda hissedilen hafif karıncalanma genelde budur.',
+          'Plastik gövdeli küçük cihazlarda (televizyon kumandası, şarj aleti gibi) bu risk yoktur; mesele doğrudan gövdesi metal ve elektrikle teması olan cihazlardadır.',
+        ],
+      },
+      {
+        h: 'Topraksız prize topraklı fiş takmak çözer mi?',
+        p: [
+          'Hayır. Prizin kendisi topraklı görünse de arkasındaki hatta toprak kablosu yoksa o üçüncü uç hiçbir yere bağlı değildir, boşa durur. Fişi değiştirmek ya da yeni bir priz takmak, hat topraklanmadan sorunu çözmez.',
+          'Gerçek çözüm, o prizin beslendiği hatta toprak hattı çekmek ya da dairenin panosundan itibaren ilgili hatları topraklı olarak yenilemektir. Hangisi gerektiği, hattın güzergahına ve panonun durumuna göre değişir; bunu yerinde ölçerek söylüyoruz.',
+        ],
+      },
+      {
+        h: 'Kaçak akım rölesi bu durumda yeterli mi?',
+        p: [
+          'Kaçak akım rölesi önemli bir güvenlik katmanıdır ve varsa büyük bir kaçakta hattı keser. Ama toprak hattı olmadan röle tek başına "hiç çarpmama" garantisi vermez; küçük ve sabit bir kaçakta siz akımı hissedebilirsiniz, röle ise bu küçük farkı her zaman yakalamayabilir. İkisi birbirinin yerine geçmez, birlikte çalışır.',
+          'Bu yüzden Şeker Mahallesi’ndeki eski dairelerde hem rölenin varlığını hem de kritik prizlerin toprak durumunu ayrı ayrı kontrol ediyoruz.',
+        ],
+      },
+      {
+        h: 'Şeker Mahallesi’nde nasıl çözüyoruz?',
+        p: [
+          'Önce şikayet edilen prizleri ölçerek toprak hattının olup olmadığını tespit ediyoruz. Yoksa en pratik ve güvenli çözümü, panodan o hatta kadar olan mesafeye göre öneriyoruz: bazen tek bir priz için kısa bir toprak hattı çekmek yeterli, bazen mutfak ya da banyo gibi ıslak hacimdeki tüm prizleri aynı seferde topraklı hale getirmek daha mantıklı.',
+          'Demir Elektrik olarak Sincan’daki merkezimizden Şeker Mahallesi’ne 15–20 dakikada geliyoruz. Haftanın 7 günü 08:00–23:00 arası 0506 092 58 16’dan ulaşabilirsiniz. Önce ölçüp gösteriyor, ne yapacağımızı ve ücretini söylüyor, onayınızla işe başlıyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Çamaşır makinesine dokununca hafif çarpıyor, tehlikeli mi?',
+        a: 'Evet, ciddiye alınmalı. Genelde toprak hattı olmayan bir prizden kaynaklanır. Cihazı değiştirmek değil, hattı topraklamak kalıcı çözümdür.',
+      },
+      {
+        q: 'Priz yeni ve topraklı görünüyor ama yine de çarpıyor, nasıl olur?',
+        a: 'Prizin kendisi topraklı tipte olabilir ama arkasındaki hatta toprak kablosu çekilmemiş olabilir. Görünüşe değil, ölçüme bakmak gerekir.',
+      },
+      {
+        q: 'Kaçak akım rölem var, yine de topraklama gerekir mi?',
+        a: 'Evet. Röle büyük bir kaçakta hattı keser ama toprak hattının yerini tutmaz; ikisi birlikte güvenli bir kurulum oluşturur.',
+      },
+      {
+        q: 'Şeker Mahallesi’ne ne kadar sürede geliyorsunuz?',
+        a: 'Sincan’dan 15–20 dakikada varıyoruz. Akşam trafiğinde birkaç dakika uzayabilir, aradığınızda net süre veriyoruz.',
+      },
+    ],
+    related: [
+      { label: 'Şeker Mahallesi Elektrikçi', href: '/hizmet-bolgeleri/etimesgut-elektrikci/seker-elektrikci' },
+      { label: 'Kaçak akım rölesi atıyor', href: '/hizmetler/kacak-akim-rolesi-atiyor' },
+      { label: 'Priz ve anahtar tamiri', href: '/hizmetler/priz-anahtar-tamiri' },
+      { label: 'Elvankent’te Sigorta Kutusu Yenileme', href: '/rehber/elvankent-sigorta-kutusu-yenileme-ne-zaman-gerekir' },
+    ],
+  },
 ];
 
 export const postsSorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
