@@ -6,6 +6,8 @@ import SeoTags from '@components/SeoTags.astro';
 import Footer from '@components/Footer.astro';
 import MobileCallBar from '@components/MobileCallBar.astro';
 import IpBar from '@components/IpBar.astro';
+import GoogleAdsTag from '@components/GoogleAdsTag.astro';
+import CookieConsent from '@components/CookieConsent.astro';
 import { site } from '@data/site';
 import { buildTitle, canonicalUrl, localBusinessSchema, websiteSchema } from '@utils/seo';
 
@@ -32,6 +34,7 @@ const jsonLd = [localBusinessSchema(), websiteSchema(), ...schema];
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <GoogleAdsTag />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
@@ -68,5 +71,6 @@ const jsonLd = [localBusinessSchema(), websiteSchema(), ...schema];
     <SeoTags area={seoArea} />
     <Footer />
     <MobileCallBar />
+    <CookieConsent />
   </body>
 </html>

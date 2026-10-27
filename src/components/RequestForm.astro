@@ -157,6 +157,7 @@ const { title = 'Arızayı yazın, biz arayalım', presetDistrict } = Astro.prop
         `Telefon: ${v('phone')}`,
       ].filter((l) => l !== '');
       const url = `https://wa.me/${form.dataset.wa}?text=${encodeURIComponent(lines.join('\n'))}`;
+      (window as unknown as { deTrackWhatsApp?: () => void }).deTrackWhatsApp?.();
       window.open(url, '_blank', 'noopener');
       say('Mesajınız hazırlandı; açılan WhatsApp penceresinde Gönder’e basın.');
       form.reset();

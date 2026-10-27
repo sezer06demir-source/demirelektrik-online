@@ -28,6 +28,13 @@ export const site = {
     },
   },
 
+  /** Google Ads (Mr Volt hesabı) dönüşüm etiketi. id boşsa etiket ve çerez çubuğu hiç basılmaz. */
+  googleAds: {
+    id: 'AW-18322859148',
+    phoneLabel: 'cs-lCOyg2KsdEIzJgqFE',
+    whatsappLabel: 'ONXZCO-g2KsdEIzJgqFE',
+  },
+
   address: {
     street: 'Melih Gökçek Bulvarı No:19/A',
     district: 'Sincan',

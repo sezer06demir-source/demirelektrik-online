@@ -7,12 +7,14 @@ const crumbs = [
 ];
 ---
 
-<BaseLayout title="Çerez Politikası" description="Demir Elektrik acil servis web sitesinde kullanılan çerezler ve tarayıcı depolama alanları." schema={[breadcrumbSchema(crumbs)]}>
+<BaseLayout title="Çerez Politikası" description="Demir Elektrik acil servis web sitesinde kullanılan çerezler, Google Ads dönüşüm ölçümü ve tarayıcı depolama alanları." schema={[breadcrumbSchema(crumbs)]}>
   <section class="section">
     <div class="container prose legal">
       <ol class="crumbs">{crumbs.map((c) => <li><a href={c.href}>{c.name}</a></li>)}</ol>
       <h1>Çerez Politikası</h1>
-      <p>Bu site reklam, analitik ya da pazarlama amaçlı çerez kullanmaz. Kullanılanlar yalnızca sitenin çalışması ve güvenliği için gereklidir; bu nedenle onay kutusu gösterilmez.</p>
+      <p>Sitenin çalışması ve güvenliği için gerekli teknik çerezlerin yanında, yalnızca onay verirseniz Google Ads reklam çerezi kullanılır. İlk girişte çıkan çubukta "Reddet" ve "Kabul Et" seçenekleri eşit ağırlıktadır.</p>
+      <h2>Google Ads dönüşüm ölçümü</h2>
+      <p>Google reklamlarımızdan gelen ziyaretçilerin telefon veya WhatsApp düğmesine tıklayıp tıklamadığını ölçmek için kullanılır. Onay verirseniz Google tarayıcınıza reklam çerezi yazar. Onay vermezseniz çerez yazılmaz; Google'a yalnızca kimliğinizi içermeyen, çerezsiz bir sinyal gider. Seçiminiz tarayıcınızda <code>de_consent</code> adıyla saklanır; sayfa altındaki "Çerez tercihleri" bağlantısıyla değiştirebilirsiniz.</p>
       <h2>Kullanılan teknik çerezler ve depolama</h2>
       <table>
         <thead><tr><th>Ad</th><th>Amaç</th><th>Süre</th></tr></thead>

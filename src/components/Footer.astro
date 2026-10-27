@@ -50,6 +50,7 @@ const svc = servicesSorted.filter((s) => s.featured).slice(0, 6);
         <li><a href="/kvkk-aydinlatma-metni">KVKK</a></li>
         <li><a href="/gizlilik-politikasi">Gizlilik</a></li>
         <li><a href="/cerez-politikasi">Çerezler</a></li>
+        {site.googleAds.id && <li><button type="button" class="ftr__cookie" data-cookie-settings>Çerez tercihleri</button></li>}
       </ul>
       <div class="ftr__credit">
         <span class="ftr__credit-ic"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>
@@ -149,7 +150,17 @@ const svc = servicesSorted.filter((s) => s.featured).slice(0, 6);
   }
   .ftr__bottom ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+  }
+  .ftr__cookie {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
   }
   .ftr__credit {
     display: inline-flex;
