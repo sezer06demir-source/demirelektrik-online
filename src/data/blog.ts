@@ -812,6 +812,84 @@ export const posts: BlogPost[] = [
       { label: 'Elvankent’te Sigorta Kutusu Yenileme', href: '/rehber/elvankent-sigorta-kutusu-yenileme-ne-zaman-gerekir' },
     ],
   },
+  {
+    slug: 'devlet-mahallesi-busonlu-sigorta-ne-zaman-degismeli',
+    title: 'Devlet Mahallesi’nde Buşonlu Sigorta: Hangi İşaretlerde Artık Değiştirmek Gerekir?',
+    description:
+      'Devlet Mahallesi’nin eski apartmanlarında hâlâ buşonlu sigorta kutusu var mı? Tel sarılı buşon, kaçak akım rölesi eksikliği ve dükkan sigortasının sık atması. Demir Elektrik: 0506 092 58 16.',
+    keyword: 'Devlet Mahallesi elektrikçi',
+    date: '2026-10-30',
+    readingMin: 7,
+    excerpt:
+      'Devlet Mahallesi’ndeki eski apartmanların bir kısmında hâlâ buşonlu sigorta kutusu duruyor, bazısının içinde buşonun yerine sarılmış, kararmış bir tel bile var. Hangi işaretlerde bu artık tek sigorta değişimiyle geçmez, panoyu baştan kurmak gerekir; sahadan anlattık.',
+    intro:
+      'Devlet Mahallesi’nde bir daireye girdiğimde ilk işim sigorta kutusunun kapağını açmak oluyor. Bazı evlerde otomat sigorta ve kaçak akım rölesi düzgün duruyor, bazısında hâlâ eski tip buşon var; bir ikisinde de buşonun yerine sarılmış, biraz kararmış tel görüyoruz. Devlet Mahallesi elektrikçi çağrılarının önemli bir kısmı aslında tek bir sigortadan değil, bu yaşlı panonun kendisinden geliyor. Hangi durumda bir sigorta değişimi yeter, hangi durumda panoyu baştan kurmak gerekir; sahadan anlatalım.',
+    sections: [
+      {
+        h: 'Buşonlu sigorta neden artık güvenli sayılmıyor?',
+        p: [
+          'Kısa cevap: buşon aşırı akımı belirli bir ısıda eriyen bir tel üzerinden keser, ama kaçak akımı hiç algılamaz. Evde kaçak akım rölesi yoksa eski buşonlu bir panoda çarpılmaya karşı hiçbir koruma yoktur; buşon sadece kablo aşırı ısındığında devreyi keser, o kadar.',
+          'Devlet Mahallesi’nin eski apartmanlarında bu kutuları hâlâ görüyoruz. Bazı dairelerde buşon kendi haline bırakılmış, bazılarında ise -daha endişe verici olanı- buşonun içindeki tel koptuğunda yerine sıradan bir kablo teli sarılmış. O telin erime sıcaklığı buşondaki gibi hesaplı değildir; kablo, telden önce ısınıp yanabilir.',
+        ],
+      },
+      {
+        h: 'Tel sarılı buşonu nasıl ayırt edersiniz?',
+        p: [
+          'Panonun kapağını açın, buşonların üstüne bakın. Porselen gövdenin ortasında ince bir pencere vardır; buşon normalse içindeki tel düz ve ince görünür. Tel yerine kalın, bükülmüş bir parça duruyorsa ya da gövdenin dışından sarılmış bir kablo görüyorsanız, orada biri buşonu aşmış demektir.',
+          'Bunu gördüğünüzde hemen bir şey yapmanız gerekmez ama o hatta eskisi kadar güvenmeyin. Isıtıcı, ütü gibi yüksek akım çeken cihazları o hatta uzun süre çalıştırmayın, ilk fırsatta bize haber verin.',
+        ],
+      },
+      {
+        h: 'Kaçak akım rölesi yoksa gerçekte ne eksik kalıyor?',
+        p: [
+          'Kısa cevap: evdeki çarpılmaya karşı tek güvenlik katmanı eksik demektir. Buşon ya da otomat sigorta sadece kabloyu aşırı yükten korur; biri çamaşır makinesine dokunup çarpılırsa bunu hiçbiri algılamaz. Kaçak akım rölesi tam bu anı yakalayıp devreyi anında keser.',
+          'Devlet Mahallesi’ndeki bazı eski dairelerde panoda röle için yer bile ayrılmamış. Bu durumda genelde kompakt bir pano ile değiştiriyoruz; otomat sigortalar ve kaçak akım rölesi bir arada, hangi kolun neyi beslediği etikette yazılı oluyor.',
+        ],
+      },
+      {
+        h: 'Devlet Mahallesi’ndeki dükkanlarda sigorta neden akşam saatlerinde atıyor?',
+        p: [
+          'Kısa cevap: vitrin aydınlatması, ısıtıcı ve kasa genelde aynı hattan besleniyor, akşam hepsi birden çalışınca o hat yükü taşıyamıyor. Cadde üstündeki dükkanlarda bu tabloyla sık karşılaşıyoruz; sorun sigortanın kendisi değil, hat planı.',
+          'Çözüm genelde tek: vitrin ve tabela hattını ayrı bir sigortaya almak, ısıtıcıyı farklı bir koldan beslemek. Bunu yaparken dükkanın açık olduğu saatlere dokunmadan, kapanıştan sonra ya da açılıştan önce çalışmayı tercih ediyoruz.',
+        ],
+      },
+      {
+        h: 'Devlet Mahallesi’nde panoyu nasıl değerlendiriyoruz?',
+        p: [
+          'Önce kapağı açıp gözle bakıyoruz: buşon mu otomat mı, tel sarılı mı, kaçak akım rölesi var mı. Sonra klemensleri kontrol ediyoruz; gevşek bağlantı genelde ısınmanın ilk sebebidir. Durum ağırsa tek sigorta değişimi yetmiyor, panoyu komple otomat ve röleli hale getiriyoruz.',
+          'Devlet Mahallesi’nde en yakın elektrikçiyi ararken genelde ilk soru “ne kadar sürede gelirsiniz” oluyor; bizim telefonda sorduğumuz ilk soru ise panonun yaşı ve kapaktaki görüntü. Sincan’daki merkezimizden Devlet Mahallesi’ne 15–20 dakikada geliyoruz. Haftanın yedi günü 08:00–23:00 arası 0506 092 58 16’dan ulaşabilirsiniz. Tespit sonrası ne yapacağımızı ve ücretini söylüyoruz, onay vermeden işe başlamıyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Buşonlu sigorta hiç atmıyor, yine de değiştirmeli miyim?',
+        a: 'Atmaması güvenli olduğu anlamına gelmez; buşon sadece aşırı akımı keser, kaçak akımı hiç algılamaz. Evde kaçak akım rölesi yoksa önce onu eklemenizi öneririz, buşonu da birlikte değerlendiririz.',
+      },
+      {
+        q: 'Buşonun yerine tel sarılmış, bu ne kadar riskli?',
+        a: 'Ciddi bir risktir. Sıradan telin erime sıcaklığı hesaplı değildir, kablo telden önce ısınıp yanabilir. Bunu gördüğümüz her evde ilk önerimiz o buşonu gerçek bir otomat sigortayla değiştirmektir.',
+      },
+      {
+        q: 'Dükkanımda akşam sigorta atıyor, kapanıştan sonra gelir misiniz?',
+        a: 'Geliriz. 23:00’e kadar çağrı alıyoruz; işinizi aksatmadan kapanıştan sonra ya da sabah açılıştan önce bakabiliriz.',
+      },
+      {
+        q: 'Devlet Mahallesi’ne ne kadar sürede geliyorsunuz?',
+        a: 'Sincan’daki merkezimizden 15–20 dakikada geliyoruz. Aradığınızda o anki konumumuza göre net süre söylüyoruz.',
+      },
+      {
+        q: 'Panoyu komple yenilemek şart mı, tek sigorta yeter mi?',
+        a: 'Her zaman değil. Gövde ve klemensler sağlamsa, kaçak akım rölesi varsa tek sigorta değişimi yeterli olabilir. Buşon, tel sarma ya da röle eksikliği varsa komple yenilemeyi öneririz; kararı yerinde bakıp söylüyoruz.',
+      },
+    ],
+    related: [
+      { label: 'Devlet Mahallesi Elektrikçi', href: '/hizmet-bolgeleri/etimesgut-elektrikci/devlet-elektrikci' },
+      { label: 'Elektrik panosu yenileme', href: '/hizmetler/elektrik-panosu-yenileme' },
+      { label: 'Kaçak akım rölesi montajı', href: '/hizmetler/kacak-akim-rolesi-montaji' },
+      { label: 'Elvankent’te Sigorta Kutusu Yenileme', href: '/rehber/elvankent-sigorta-kutusu-yenileme-ne-zaman-gerekir' },
+    ],
+  },
 ];
 
 export const postsSorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
