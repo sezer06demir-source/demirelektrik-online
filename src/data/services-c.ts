@@ -58,7 +58,7 @@ export const servicesC: Service[] = [
         a: 'Ayda bir yeterli. Tuşa bastığınızda röle hemen atmalı. Atmıyorsa koruma çalışmıyor demektir ve rölenin değişmesi gerekir.',
       },
     ],
-    seoTitle: 'Kaçak Akım Rölesi Montajı ve Değişimi | Ankara | Demir Elektrik',
+    seoTitle: 'Kaçak Akım Rölesi Montajı ve Değişimi | Ankara | Demir Elektrik Ankara',
     seoDescription:
       'Ankara\'da kaçak akım rölesi montajı, arızalı rölenin değişimi ve sürekli atan röle sorunları. Ölçümle teşhis, aynı gün müdahale, 08:00–23:00. 0506 092 58 16',
     featured: true,
@@ -117,7 +117,7 @@ export const servicesC: Service[] = [
         a: 'Panonun kurulumuna göre değişir. Tek röle tüm daireyi besliyorsa hepsi gider. Pano yenilemesinde hatları ayırıp mutfak, banyo ve genel prizleri ayrı rölelere bölebiliyoruz; o zaman bir kaçak tüm evi karartmıyor.',
       },
     ],
-    seoTitle: 'Kaçak Akım Rölesi Atıyor | Ankara Acil Elektrikçi | Demir Elektrik',
+    seoTitle: 'Kaçak Akım Rölesi Atıyor | Ankara Acil Elektrikçi | Demir Elektrik Ankara',
     seoDescription:
       'Kaçak akım rölesi sürekli atıyor ya da kalkmıyorsa kaçağın kaynağını ölçerek buluyoruz. Ankara geneli aynı gün servis, 08:00–23:00. 0506 092 58 16',
     featured: true,
@@ -176,7 +176,7 @@ export const servicesC: Service[] = [
         a: 'Cumartesi ve pazar dahil her gün açığız. Akşam ve hafta sonu için bir fiyat farkı uygulanacaksa bunu siz gelmemizi istemeden önce telefonda söyleriz.',
       },
     ],
-    seoTitle: 'Nöbetçi Elektrikçi Ankara | En Yakın Acil Elektrikçi | Demir Elektrik',
+    seoTitle: 'Nöbetçi Elektrikçi Ankara | En Yakın Acil Elektrikçi | Demir Elektrik Ankara',
     seoDescription:
       'Ankara\'da nöbetçi elektrikçi mi arıyorsunuz? Haftanın 7 günü 08:00–23:00 arası açığız, en yakın ekiple aynı gün geliyoruz. Gece için de yol gösteriyoruz. 0506 092 58 16',
     featured: true,

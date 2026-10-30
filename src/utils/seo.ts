@@ -24,7 +24,7 @@ export function canonicalUrl(pathname: string): string {
 
 export function buildTitle(title: string, withBrand = true): string {
   if (!withBrand) return title;
-  return title.includes(site.name) ? title : `${title} | ${site.name}`;
+  return title.includes(site.legalName) ? title : `${title} | ${site.name}`;
 }
 
 const openingHours = {

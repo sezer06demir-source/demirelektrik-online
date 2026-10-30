@@ -5,8 +5,8 @@ import { SITE_URL } from './site-url.mjs';
  * bu site Ankara'da acil elektrik arıza servisine odaklanır.
  */
 export const site = {
-  name: 'Demir Elektrik',
-  brand: 'Demir Elektrik',
+  name: 'Demir Elektrik Ankara',
+  brand: 'Demir Elektrik Ankara',
   legalName: 'Demir Elektrik',
   url: SITE_URL,
   tagline: 'Ankara Acil Elektrik Arıza Servisi',

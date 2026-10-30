@@ -56,7 +56,7 @@ export const keciorenNeighborhoods: Neighborhood[] = [
           a: 'Telefonda arızayı dinledikten sonra tahmini bir aralık söylüyoruz. Yerinde kesin bilgiyi verip onayınızı aldıktan sonra işe başlıyoruz.',
         },
       ],
-      seoTitle: 'Etlik Acil Elektrikçi | Hastaneler Bölgesi Aynı Gün | Demir Elektrik',
+      seoTitle: 'Etlik Acil Elektrikçi | Hastaneler Bölgesi Aynı Gün | Demir Elektrik Ankara',
       seoDescription:
         'Etlik acil elektrikçi: sigorta atması, elektrik kesintisi, iş yeri ve apartman arızalarına aynı gün müdahale. 08:00–23:00, 7 gün. Hemen arayın: 0506 092 58 16',
     },
@@ -112,7 +112,7 @@ export const keciorenNeighborhoods: Neighborhood[] = [
           a: 'Ovacık için evet. 08:00–23:00 arası arayın; çevre yolu üzerinden yaklaşık 35–45 dakikada oradayız. Kesin saati yola çıkarken bildiririz.',
         },
       ],
-      seoTitle: 'Ovacık Acil Elektrikçi | Site ve Müstakil Ev Servisi | Demir Elektrik',
+      seoTitle: 'Ovacık Acil Elektrikçi | Site ve Müstakil Ev Servisi | Demir Elektrik Ankara',
       seoDescription:
         'Ovacık acil elektrikçi: yeni site daireleri ve müstakil evlerde sigorta atması, kaçak akım, avize montajı. Aynı gün, 08:00–23:00. Arayın: 0506 092 58 16',
     },
@@ -168,7 +168,7 @@ export const keciorenNeighborhoods: Neighborhood[] = [
           a: 'Önce mevcut durumu ölçüyoruz. Toprak hattı eksik ya da zayıfsa güvenlik için bir çözüm öneriyor, ücretini söyleyip onayınızla uyguluyoruz.',
         },
       ],
-      seoTitle: 'Bağlum Acil Elektrikçi | Bağ Evi ve Kaçak Akım | Demir Elektrik',
+      seoTitle: 'Bağlum Acil Elektrikçi | Bağ Evi ve Kaçak Akım | Demir Elektrik Ankara',
       seoDescription:
         'Bağlum acil elektrikçi: bağ evi, müstakil ev ve bahçe tesisatında kaçak akım, sigorta atması, arıza tespiti. Aynı gün, 08:00–23:00. Arayın: 0506 092 58 16',
     },
@@ -224,7 +224,7 @@ export const keciorenNeighborhoods: Neighborhood[] = [
           a: 'Bir kez kaldırabilirsiniz. Tekrar atarsa zorlamayın; arıza devam ediyor demektir. Bizi arayın, telefonda kısaca ne olduğunu anlayıp geliriz.',
         },
       ],
-      seoTitle: 'Ayvalı Acil Elektrikçi | Çarşı ve Apartman Aynı Gün | Demir Elektrik',
+      seoTitle: 'Ayvalı Acil Elektrikçi | Çarşı ve Apartman Aynı Gün | Demir Elektrik Ankara',
       seoDescription:
         'Ayvalı acil elektrikçi: apartman dairesi ve çarşı esnafına sigorta atması, priz-anahtar, iş yeri arızasında aynı gün servis. 08:00–23:00. Arayın: 0506 092 58 16',
     },
@@ -280,7 +280,7 @@ export const keciorenNeighborhoods: Neighborhood[] = [
           a: 'Evet, 23:00\'e kadar çıkıyoruz. Esnaf için kapanış sonrası saatler bizim için de uygun; işi müşteri olmadan rahatça bitiriyoruz.',
         },
       ],
-      seoTitle: 'Kalaba Acil Elektrikçi | Merkez Esnaf ve Apartman | Demir Elektrik',
+      seoTitle: 'Kalaba Acil Elektrikçi | Merkez Esnaf ve Apartman | Demir Elektrik Ankara',
       seoDescription:
         'Kalaba acil elektrikçi: Keçiören merkezde iş yeri arızası, elektrik kesintisi, pano yenileme ve sigorta atmasına aynı gün servis. 08:00–23:00. Arayın: 0506 092 58 16',
     },
@@ -336,7 +336,7 @@ export const keciorenNeighborhoods: Neighborhood[] = [
           a: 'Daire panosu genellikle aynı gün içinde birkaç saatte yenileniyor. Gelmeden önce mevcut panonun fotoğrafını WhatsApp\'tan gönderirseniz süreyi ve ücreti daha net söyleriz.',
         },
       ],
-      seoTitle: 'Kuşcağız Acil Elektrikçi | Eski Apartman ve Kolon Hattı | Demir Elektrik',
+      seoTitle: 'Kuşcağız Acil Elektrikçi | Eski Apartman ve Kolon Hattı | Demir Elektrik Ankara',
       seoDescription:
         'Kuşcağız acil elektrikçi: eski apartmanlarda nötr kopması, kolon hattı, sigorta atması ve ortak alan arızalarına aynı gün servis. 08:00–23:00. Arayın: 0506 092 58 16',
     },
@@ -392,7 +392,7 @@ export const keciorenNeighborhoods: Neighborhood[] = [
           a: 'Evet. Yıkılacak binada büyük yenileme mantıklı değil; güvenli ve ekonomik geçici çözüm uyguluyoruz. Durumu gösterip seçenekleri anlatıyoruz.',
         },
       ],
-      seoTitle: 'Aktepe Acil Elektrikçi | Yeni Site ve Yamaç Konut | Demir Elektrik',
+      seoTitle: 'Aktepe Acil Elektrikçi | Yeni Site ve Yamaç Konut | Demir Elektrik Ankara',
       seoDescription:
         'Aktepe acil elektrikçi: kentsel dönüşüm sitelerinde avize montajı, tesisat; eski evlerde sigorta atması ve arıza. Aynı gün, 08:00–23:00. Arayın: 0506 092 58 16',
     },
@@ -449,7 +449,7 @@ export const keciorenNeighborhoods: Neighborhood[] = [
           a: 'Fark etmez; siz de arayabilirsiniz. Ortak alan işlerinde yöneticiyle iletişime geçip işi ve ücreti onunla netleştiriyor, sonra geliyoruz.',
         },
       ],
-      seoTitle: 'Subayevleri Acil Elektrikçi | Lojman ve Apartman Servisi | Demir Elektrik',
+      seoTitle: 'Subayevleri Acil Elektrikçi | Lojman ve Apartman Servisi | Demir Elektrik Ankara',
       seoDescription:
         'Subayevleri acil elektrikçi: lojman ve apartman dairelerinde sigorta atması, priz-anahtar, pano yenileme ve ortak alan arızası. Aynı gün, 08:00–23:00. Arayın: 0506 092 58 16',
     },
