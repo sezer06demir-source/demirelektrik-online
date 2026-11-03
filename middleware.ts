@@ -881,7 +881,9 @@ export default async function middleware(req: Request, ctx?: { waitUntil?: (p: P
 
   // 7) Saldırı modu: JS doğrulama çerezi olmayan istemciye meydan okuma sayfası.
   //    Çerezi yazamayan tarayıcılar (çerez kapalı) JS'in eklediği __chk=1 işaretiyle döngüye girmeden geçer.
-  if (FIGHT_MODE && req.method === 'GET') {
+  //    Reklam tıklaması (gclid/gbraid/wbraid) doğrulama sayfası görmez: 503 ara sayfası Google'ın açılış sayfası
+  //    deneyimi puanını düşürüyordu. Tıklama zaten ücretlenmiş olur; IP kaydı ve engel listesi yukarıda çalışmaya devam eder.
+  if (FIGHT_MODE && req.method === 'GET' && !adClick) {
     const token = await challengeToken();
     if (!hasCookie(req, 'de_chk', token) && url.searchParams.get('__chk') !== '1') {
       return challengePage(token);
