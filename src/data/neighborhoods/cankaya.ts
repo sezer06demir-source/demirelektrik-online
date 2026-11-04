@@ -118,9 +118,9 @@ export const cankayaNeighborhoods: Neighborhood[] = [
     hideBase: true,
     content: {
       h1: 'Çayyolu Acil Elektrikçi',
-      subtitle: 'Çayyolu, Ümitköy, Angora Evleri ve Alacaatlı\'da villa, site ve dairelere aynı gün elektrik servisi.',
+      subtitle: 'Çayyolu, Ümitköy, Yaşamkent, Angora Evleri ve Alacaatlı\'da villa, site ve dairelere aynı gün elektrik servisi.',
       intro: [
-        'Çayyolu ve çevresinde evlerin çoğu site içinde ya da villa. Angora Evleri\'nde bahçeli müstakil evler, Alacaatlı\'da yeni yapılan siteler, Ümitköy\'de dubleks ve bahçe katları var. Gelen çağrıların büyük kısmı sigorta atması, kaçak akım rölesinin sürekli kapanması ve bahçe hattı arızaları.',
+        'Çayyolu ve çevresinde evlerin çoğu site içinde ya da villa. Angora Evleri\'nde bahçeli müstakil evler, Alacaatlı ve Yaşamkent\'te yeni yapılan siteler, Ümitköy\'de dubleks ve bahçe katları var. Gelen çağrıların büyük kısmı sigorta atması, kaçak akım rölesinin sürekli kapanması ve bahçe hattı arızaları.',
         'Aradığınızda telefonda birkaç soruyla arızayı daraltıyoruz. Sorun dairenin içindeyse usta aynı gün adresinize geliyor; site ortak panosundan kaynaklanıyorsa bunu da söylüyor, yönetimle konuşmanız gereken noktayı gösteriyoruz.',
         'Fiyatı işe başlamadan söylüyoruz. Kaçak akım, sigorta, ana şalter, avize ve spot montajı gibi işleri yerinde yapıyoruz.',
       ],
@@ -131,7 +131,7 @@ export const cankayaNeighborhoods: Neighborhood[] = [
           text: 'Bahçe aydınlatması, dış cephe prizleri ve havuz ya da sulama hattı yağmurdan sonra nem alıp kaçak akım rölesini attırabiliyor. Hattı ayırıp kaçağın yerini buluyoruz.',
         },
         {
-          title: 'Alacaatlı ve yeni siteler',
+          title: 'Yaşamkent, Alacaatlı ve yeni siteler',
           text: 'Yeni sitelerde ankastre, klima ve elektrikli ocak aynı anda çalışınca sigorta atabiliyor. Hat dağılımına bakıp yükü dengeliyoruz.',
         },
         {
@@ -139,12 +139,13 @@ export const cankayaNeighborhoods: Neighborhood[] = [
           text: 'Ortak alan panosu ile daire içi tesisat karışabiliyor. İkisini ayrı ayrı ölçüp sorunun hangi taraftan geldiğini yerinde gösteriyoruz.',
         },
       ],
-      arrival: 'Çayyolu, Ümitköy, Angora Evleri ve Alacaatlı\'ya genellikle 25-30 dakikada ulaşıyoruz.',
+      arrival: 'Çayyolu, Ümitköy, Yaşamkent, Angora Evleri ve Alacaatlı\'ya genellikle 25-30 dakikada ulaşıyoruz.',
       landmarks: [
         'Çayyolu Merkez',
         'Ümitköy',
         'Angora Evleri',
         'Alacaatlı',
+        'Yaşamkent',
         'Beysukent',
         'Konutkent',
         'Prof. Dr. Ahmet Taner Kışlalı',
@@ -160,12 +161,12 @@ export const cankayaNeighborhoods: Neighborhood[] = [
           a: 'Önce rölenin altındaki sigortaları tek tek indirip hangisinde attığına bakın. Bulamazsanız arayın, kaçağın yerini yerinde ölçüp buluyoruz.',
         },
         {
-          q: 'Çayyolu ve Alacaatlı\'ya ne kadar sürede gelirsiniz?',
+          q: 'Çayyolu, Yaşamkent ve Alacaatlı\'ya ne kadar sürede gelirsiniz?',
           a: 'Genellikle 25-30 dakikada geliyoruz. Aradığınızda yol durumuna göre net süreyi söylüyoruz.',
         },
       ],
-      seoTitle: 'Çayyolu Elektrikçi | Ümitköy, Angora Evleri, Alacaatlı | Demir Elektrik Ankara',
-      seoDescription: 'Çayyolu, Ümitköy, Angora Evleri ve Alacaatlı\'da sigorta atması, kaçak akım ve pano arızalarına aynı gün servis. Fiyat işe başlamadan söylenir. 0506 092 58 16',
+      seoTitle: 'Çayyolu Elektrikçi | Ümitköy, Yaşamkent, Angora Evleri, Alacaatlı | Demir Elektrik Ankara',
+      seoDescription: 'Çayyolu, Ümitköy, Yaşamkent, Angora Evleri ve Alacaatlı\'da sigorta atması, kaçak akım ve pano arızalarına aynı gün servis. Fiyat işe başlamadan söylenir. 0506 092 58 16',
     },
   },
   {
