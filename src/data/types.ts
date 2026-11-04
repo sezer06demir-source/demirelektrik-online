@@ -103,5 +103,7 @@ export interface Neighborhood {
   slug: string;
   districtSlug: string;
   locative?: string;
+  /** true ise sayfada merkez/ilçe adresi ve "merkezli" ifadeleri gösterilmez (uzak reklam bölgeleri) */
+  hideBase?: boolean;
   content: NeighborhoodContent;
 }

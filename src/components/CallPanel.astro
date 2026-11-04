@@ -9,8 +9,10 @@ interface Props {
   /** Panelin üstündeki kısa bağlam cümlesi */
   note?: string;
   compact?: boolean;
+  /** true ise "Sincan merkezli" yerine genel ifade */
+  hideBase?: boolean;
 }
-const { note = 'Telefonda birkaç soruyla sorunu daraltır, gerekiyorsa aynı gün geliriz.', compact = false } = Astro.props;
+const { note = 'Telefonda birkaç soruyla sorunu daraltır, gerekiyorsa aynı gün geliriz.', compact = false, hideBase = false } = Astro.props;
 ---
 
 <aside class:list={['cp', { 'cp--compact': compact }]} aria-label="Hemen ulaşın">
@@ -25,7 +27,7 @@ const { note = 'Telefonda birkaç soruyla sorunu daraltır, gerekiyorsa aynı g�
     !compact && (
       <ul class="cp__facts">
         <li><Icon name="clock" size={16} /> {site.hours.daysText} {site.hours.display}</li>
-        <li><Icon name="map-pin" size={16} /> Sincan merkezli, 25 ilçenin tamamı</li>
+        <li><Icon name="map-pin" size={16} /> {hideBase ? "Ankara'nın 25 ilçesine servis" : 'Sincan merkezli, 25 ilçenin tamamı'}</li>
         <li><Icon name="check-circle" size={16} /> Fiyat işe başlamadan söylenir</li>
       </ul>
     )

@@ -36,7 +36,7 @@ const svc = c.highlightedServices.map(getService).filter((s): s is NonNullable<t
 const siblings = getNeighborhoodsOf(d.slug).filter((x) => x.slug !== n.slug);
 ---
 
-<BaseLayout title={c.seoTitle} rawTitle seoArea={n.name} description={c.seoDescription} schema={[breadcrumbSchema(crumbs), serviceSchema({ name: `${n.name} Acil Elektrikçi`, description: c.seoDescription, path, areaName: `${n.name}, ${d.name}` }), faqSchema(c.faq)]}>
+<BaseLayout title={c.seoTitle} rawTitle hideBase={n.hideBase} seoArea={n.name} description={c.seoDescription} schema={[breadcrumbSchema(crumbs), serviceSchema({ name: `${n.name} Acil Elektrikçi`, description: c.seoDescription, path, areaName: `${n.name}, ${d.name}` }), faqSchema(c.faq)]}>
   <StatusScript />
   <PageHead
     crumbs={crumbs}
@@ -94,7 +94,7 @@ const siblings = getNeighborhoodsOf(d.slug).filter((x) => x.slug !== n.slug);
           </ul>
         </section>
       </div>
-      <div class="ledger__rail"><CallPanel note={`${inH} elektrik arızası için arayın; ${c.arrival.toLocaleLowerCase('tr')}.`} /></div>
+      <div class="ledger__rail"><CallPanel hideBase={n.hideBase} note={n.hideBase ? `${inH} elektrik arızası için arayın. ${c.arrival}` : `${inH} elektrik arızası için arayın; ${c.arrival.toLocaleLowerCase('tr')}.`} /></div>
     </div>
   </article>
 </BaseLayout>

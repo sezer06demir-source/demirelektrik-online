@@ -21,9 +21,12 @@ interface Props {
   noindex?: boolean;
   /** Sayfa altındaki arama ifadeleri bloğu için bölge adı. Boş bırakılırsa Ankara. */
   seoArea?: string;
+  /** true ise merkez adresi ve "merkezli" ifadeleri gizlenir */
+  hideBase?: boolean;
 }
 const { title, description, rawTitle = false, schema = [], noindex = false,
   seoArea = 'Ankara',
+  hideBase = false,
 } = Astro.props;
 const fullTitle = buildTitle(title, !rawTitle);
 const canonical = canonicalUrl(Astro.url.pathname);
@@ -69,8 +72,8 @@ const jsonLd = [localBusinessSchema(), websiteSchema(), ...schema];
     <main id="main">
       <slot />
     </main>
-    <SeoTags area={seoArea} />
-    <Footer />
+    <SeoTags area={seoArea} hideBase={hideBase} />
+    <Footer hideBase={hideBase} />
     <MobileCallBar />
     <CookieConsent />
     <AdVisitBeacon />
