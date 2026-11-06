@@ -964,6 +964,161 @@ export const posts: BlogPost[] = [
       { label: 'Devlet Mahallesi’nde Buşonlu Sigorta', href: '/rehber/devlet-mahallesi-busonlu-sigorta-ne-zaman-degismeli' },
     ],
   },
+  {
+    slug: 'sincan-kacak-akim-rolesi-montaji',
+    title: 'Sincan’da Kaçak Akım Rölesi Montajı: 30 mA mı 300 mA mı, Takınca Neden Atar?',
+    description:
+      'Sincan’da kaçak akım rölesi montajı: evde hangi röle takılır, takar takmaz atıyorsa sebep ne, topraklama yoksa işe yarar mı? Usta anlatıyor. Demir Elektrik: 0506 092 58 16.',
+    keyword: 'Sincan kaçak akım rölesi montajı',
+    date: '2026-11-06',
+    readingMin: 7,
+    excerpt:
+      'Kaçak akım rölesi panodaki en küçük parçalardan biri ama evdeki en önemli koruma. Sincan’da röle takarken en çok gördüğüm hataları, yanlış seçilen röleyi ve takar takmaz atan rölenin gerçek sebebini anlattım.',
+    intro:
+      'Atatürk Mahallesi’nde bir dairede pano açtım, kaçak akım rölesi var, müşteri de rahat: "Rölemiz var usta, korunuyoruz" diyor. Rölenin üstüne baktım, 300 mA yazıyor. Yani o röle bir insanın çarpılmasını değil, ancak büyük bir yangın riskini fark ediyordu. Çocuğu olan bir evde yıllarca bu röleyle yaşamışlar. Ben otuz yılı aşkın süredir Sincan’da pano açıyorum ve kaçak akım rölesi konusunda en çok yanlış bilineni bu yazıda anlatmak istiyorum: hangi röle takılır, nereye takılır ve takar takmaz atıyorsa sorun nerededir.',
+    sections: [
+      {
+        h: 'Kaçak akım rölesi ne işe yarar, sigortadan farkı ne?',
+        p: [
+          'Doğrudan cevap: sigorta kabloyu korur, kaçak akım rölesi insanı korur. Sigorta, hatta aşırı yük ya da kısa devre olduğunda atar. Röle ise hattan giden akımla dönen akım arasında küçük bir fark gördüğünde, yani akımın bir kısmı başka bir yoldan, mesela sizin vücudunuzdan toprağa gidiyorsa, saniyenin bir bölümünde elektriği keser.',
+          'Bu yüzden ikisi birbirinin yerini tutmaz. Islak elle bir prize dokunduğunuzda sigorta bunu fark etmez, çünkü geçen akım sigortanın atma sınırının çok altındadır. Sizi o anda kurtaracak olan tek şey düzgün çalışan bir kaçak akım rölesidir.',
+        ],
+      },
+      {
+        h: 'Evde 30 mA mı, 300 mA mı takılır?',
+        p: [
+          'Doğrudan cevap: konutlarda can güvenliği için 30 mA’lik röle takılır. 300 mA’lik röle yangın koruması içindir ve genelde büyük binaların, işyerlerinin giriş panosunda kullanılır; tek başına bir dairede insanı korumaz.',
+          'Sincan’daki eski panolarda 300 mA rölenin daireye takıldığını hâlâ görüyorum. Çoğu zaman "30 mA çok atıyordu, büyüğünü taktık" denmiş. Oysa röle sık atıyorsa çözüm daha az hassas röle değil, kaçağın kendisini bulmaktır. Montaja gittiğim her evde rölenin değerine bakar, 300 mA ise 30 mA ile değiştiririm.',
+        ],
+      },
+      {
+        h: 'Takar takmaz atıyorsa: nötr meselesi',
+        p: [
+          'Doğrudan cevap: yeni takılan bir röle hiçbir cihaz çalışmazken bile atıyorsa, en sık sebep panodaki nötrlerin karışık bağlanmasıdır. Röle, kendisinden geçen faz ile nötrü karşılaştırır. Bir hattın fazı röleden geçip nötrü rölenin önündeki baraya bağlanmışsa, röle bunu kaçak sanar ve atar.',
+          'Pınarbaşı ve Plevne taraflarındaki eski panolarda bütün nötrler tek bir baraya toplanmış olur; röle sonradan eklenince bu karışıklık ortaya çıkar. Ben röleyi takmadan önce her hattın nötrünü tek tek bulup doğru baraya bağlarım. Sonra rölenin arkasındaki hatların yalıtımını megerle ölçerim. Gerçek bir kaçak varsa, rölenin tam olarak bunun için attığını müşterime gösteririm.',
+        ],
+      },
+      {
+        h: 'Evde topraklama yoksa röle işe yarar mı?',
+        p: [
+          'Doğrudan cevap: yarar, ama yarım yarar. Topraklama yoksa röle kaçağı ancak akım bir yoldan, çoğu zaman da insanın vücudundan toprağa gitmeye başladığında görür ve keser. Topraklama varsa, cihazın gövdesi gerilim aldığı anda kaçak toprak hattından gider ve röle siz dokunmadan elektriği keser.',
+          'Bu yüzden Sincan’da röle montajına gittiğimde topraklamayı da ölçerim. Toprak hattı yoksa ya da çok yüksek dirençli çıkıyorsa bunu müşterime söyler, ne yapılabileceğini anlatırım. Önce röleyi takarız, toprağı da ayrıca yaparız; ikisi birlikte olunca gerçek koruma sağlanır.',
+        ],
+      },
+      {
+        h: 'Montajdan sonra ne yapıyorum, siz ne yapmalısınız?',
+        p: [
+          'Doğrudan cevap: röleyi taktıktan sonra test butonuna basarak çalıştığını, ölçü aletiyle de belirlenen kaçak değerinde ve sürede açtığını kontrol ederim. Sadece "takıldı, ışıklar yanıyor" diyerek teslim etmem.',
+          'Sizin yapmanız gereken tek şey ayda bir kez rölenin üstündeki "T" yazan test butonuna basmaktır. Röle atmalı, sonra kolu kaldırırsınız. Basınca atmıyorsa röle arızalıdır ve sizi korumuyordur; o zaman beni arayın.',
+        ],
+      },
+      {
+        h: 'Sincan’da kaçak akım rölesi montajına nasıl geliyorum?',
+        p: [
+          'Telefonda panonuzda röle olup olmadığını, varsa sık atıp atmadığını sorarım. Aracımda 30 mA’lik iki ve dört kutuplu röle hep bulunur; montajı, nötr düzenlemesini ve testi genelde tek gelişte bitiririm. Hatta gerçek bir kaçak çıkarsa önce yerini bulur, ne yapılacağını ve fiyatını söyleyip onayınızla onarırım.',
+          'Merkezimiz Sincan Melih Gökçek Bulvarı No:19/A’da. Atatürk, Pınarbaşı, Plevne, Fatih ve Törekent’e çoğu zaman 15-20 dakikada gelirim. Haftanın her günü 08:00-23:00 arası 0506 092 58 16’dan ulaşabilirsiniz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Sincan’da kaçak akım rölesi montajı ne kadar sürer?',
+        a: 'Panodaki nötrler düzgünse montaj ve test yaklaşık bir saat sürer. Eski panolarda nötr düzenlemesi gerekirse biraz uzar, yine çoğu zaman tek gelişte biter.',
+      },
+      {
+        q: 'Yeni taktırdığım röle sürekli atıyor, röle mi bozuk?',
+        a: 'Genelde değil. Ya panoda nötrler karışık bağlanmıştır ya da hatlardan birinde daha önce fark edilmeyen bir kaçak vardır. Hatları ölçüp sebebi buluyoruz.',
+      },
+      {
+        q: '30 mA röle çok atıyor, 300 mA takabilir miyim?',
+        a: 'Evde takmayın. 300 mA röle insanı korumaz. Röle sık atıyorsa kaçağın kaynağı bulunmalı, röle değil sorun çözülmeli.',
+      },
+      {
+        q: 'Rölenin çalıştığını nasıl anlarım?',
+        a: 'Ayda bir test butonuna basın. Röle atıyorsa çalışıyordur. Basınca atmıyorsa arızalıdır ve değiştirilmelidir.',
+      },
+    ],
+    related: [
+      { label: 'Kaçak akım rölesi montajı', href: '/hizmetler/kacak-akim-rolesi-montaji' },
+      { label: 'Kaçak akım rölesi atıyor', href: '/hizmetler/kacak-akim-rolesi-atiyor' },
+      { label: 'Sincan Elektrikçi', href: '/hizmet-bolgeleri/sincan-elektrikci' },
+      { label: 'Göksu’da Kaçak Akım Rölesi Sürekli Atıyor mu?', href: '/rehber/goksu-kacak-akim-rolesi-surekli-atiyor' },
+    ],
+  },
+  {
+    slug: 'yenikent-avize-montaji-asma-tavan-cift-anahtar',
+    title: 'Yenikent’te Avize Montajı: Ağır Avize, Asma Tavan ve "Yarısı Yansın" Bağlantısı',
+    description:
+      'Yenikent’te avize montajı: asma tavana ağır avize nasıl asılır, avizenin yarısını ayrı yakmak için ne gerekir, kumandalı avize ve doğru yükseklik. Usta anlatıyor. Demir Elektrik: 0506 092 58 16.',
+    keyword: 'Yenikent avize montajı',
+    date: '2026-11-06',
+    readingMin: 6,
+    excerpt:
+      'Yeni avizeyi alırken kimse tavana bakmaz, ama montajı belirleyen tavandır. Yenikent’te avize asarken en çok sorulan üç soruyu cevapladım: asma tavan taşır mı, yarısı ayrı yanar mı, ne kadar aşağıda durmalı?',
+    intro:
+      'Fevzi Çakmak Mahallesi’nde bir aile salonu yeniletmiş, asma tavan yaptırmış, üstüne de on iki kollu büyük bir avize almışlar. Beni aradıklarında iki istekleri vardı: avize asma tavana asılsın ve akşamları sadece yarısı yansın. İkisi de yapılabilir bir iş, ama ikisi de avizeyi kutudan çıkarmadan önce düşünülmesi gereken şeyler. Ben Yenikent’te yıllardır avize asıyorum ve en çok bu iki soruyla karşılaşıyorum. Bu yazıda ikisini de, bir de doğru yükseklik meselesini usta gözüyle anlatıyorum.',
+    sections: [
+      {
+        h: 'Asma tavan ağır avizeyi taşır mı?',
+        p: [
+          'Doğrudan cevap: taşımaz. Alçıpan asma tavan kendi ağırlığını taşımak için yapılır; sekiz on kiloluk bir avizeyi alçıpana vidalarsanız zamanla tavan çöker ya da avize sarkar. Ağır avize için askı, alçıpanın üstündeki beton tavana kadar inen bir tij ya da çelik askıyla yapılmalıdır.',
+          'Yenikent’te asma tavanlı evlerde montaja gittiğimde önce avizenin yerine bakarım. Tam o noktada asma tavanın profili varsa yerini birkaç santim kaydırırım. Betona çelik dübel atıp tij indiririm, avizeyi o tije asarım. Alçıpan sadece kapağı kapatır, yükü taşımaz. Asma tavan yapılırken bunu baştan söylerseniz ustası o noktaya bir ara taşıyıcı koyar, iş daha da kolaylaşır.',
+        ],
+      },
+      {
+        h: 'Avizenin yarısı ayrı yansın istiyorsanız tavandan kaç kablo iniyor?',
+        p: [
+          'Doğrudan cevap: avizenin bir kısmını ayrı, tamamını ayrı yakmak için duvarda iki düğmeli bir anahtar (komütatör) ve tavana da iki ayrı anahtarlı faz ucu inmesi gerekir. Tavanda sadece iki kablo varsa avize tek parça yanar; ayrı yakmak için ya bir kablo daha çekilir ya da kumandalı bir alıcı kullanılır.',
+          'Fevzi Çakmak’taki evde tavana tek anahtarlı hat iniyordu. Asma tavan yeni yapıldığı için içinden boru geçirip anahtara bir kablo daha çekebildim, duvarda da tek düğmeli anahtarı iki düğmeliyle değiştirdim. Asma tavan olmayan ve sıvası yeni yapılmış bir evde ise duvarı kırmak yerine kumandalı çözümü öneririm.',
+        ],
+      },
+      {
+        h: 'Kumandalı avize: kolay ama bilmeniz gereken bir şey var',
+        p: [
+          'Doğrudan cevap: kumandalı avizelerde avizenin içinde küçük bir alıcı modül olur, kumandayla kolların bir kısmını ya da tamamını yakarsınız. Ama bunun çalışması için duvardaki anahtarın sürekli açık durması gerekir. Anahtarı kapatırsanız alıcıya da elektrik gitmez, kumanda çalışmaz.',
+          'Evdekilere bunu mutlaka anlatırım, yoksa ilk akşam "kumanda bozuk" diye ararlar. Alıcı modülün de ısınmayacağı bir yere, avizenin kapağının içine düzgünce yerleşmesi gerekir. Sıkıştırılmış bir modül birkaç ayda bozulur.',
+        ],
+      },
+      {
+        h: 'Avize ne kadar aşağıda durmalı?',
+        p: [
+          'Doğrudan cevap: yemek masasının üstündeki avizenin alt ucu, masadan 75-80 santim kadar yukarıda iyi durur. İnsanların altından geçtiği bir yerde ise avizenin alt ucu yerden en az 2,10 metre yukarıda kalmalıdır, yoksa başınızı çarparsınız.',
+          'Zincirli ya da sarkıtlı avizelerde zinciri kısaltmayı montaj sırasında yaparım; yanına durup "biraz daha yukarı" dediğiniz yere göre ayarlarım. Yenikent’teki dairelerin çoğunda tavan yüksekliği 2,60-2,70 metre civarında. Asma tavan bunu biraz düşürdüğü için büyük avizelerde bu ölçü daha da önemli hale geliyor.',
+        ],
+      },
+      {
+        h: 'Yenikent’te avize montajına nasıl geliyorum?',
+        p: [
+          'Telefonda avizenin ağırlığını ya da kol sayısını, tavanın asma tavan olup olmadığını ve ayrı yakma isteyip istemediğinizi sorarım. Ona göre tij, çelik dübel ve gerekirse anahtarla gelirim. Eski avizeyi söker, faz-nötr ve toprak kontrolünü yapar, yeni avizeyi asıp her bölümünü yakarak teslim ederim.',
+          'Merkezimiz Sincan Melih Gökçek Bulvarı No:19/A’da; Menderes, 29 Ekim, Fevzi Çakmak ve Ahi Evran mahallelerine çoğu zaman 10-15 dakikada gelirim. Haftanın her günü 08:00-23:00 arası 0506 092 58 16’dan ulaşabilirsiniz. Fiyatı avizeyi ve tavanı görünce net söylerim.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Yenikent’te avize montajı aynı gün yapılır mı?',
+        a: 'Çoğu zaman yapılır. Avizenin ağırlığını ve tavanın tipini telefonda söylerseniz doğru askıyla gelir, aynı gün asarım.',
+      },
+      {
+        q: 'Asma tavana avizeyi doğrudan vidalayabilir miyim?',
+        a: 'Hafif bir plafonyerde olabilir, ama ağır avizede olmaz. Ağır avize alçıpanın üstündeki beton tavana inen bir tij ya da çelik askıyla asılmalı.',
+      },
+      {
+        q: 'Avizenin yarısını ayrı yakmak için duvarı kırmak gerekir mi?',
+        a: 'Her zaman değil. Tavana iki anahtarlı hat inmiyorsa ve kablo çekmek mümkün değilse kumandalı bir alıcı modülle aynı sonucu duvarı kırmadan alabilirsiniz.',
+      },
+      {
+        q: 'Kumandalı avizem anahtarı kapatınca çalışmıyor, arızalı mı?',
+        a: 'Hayır. Kumandalı avizede duvardaki anahtarın açık kalması gerekir. Anahtar kapalıyken alıcıya elektrik gitmez, kumanda da çalışmaz.',
+      },
+    ],
+    related: [
+      { label: 'Avize ve spot montajı', href: '/hizmetler/avize-spot-montaji' },
+      { label: 'Yenikent Elektrikçi', href: '/hizmet-bolgeleri/yenikent-elektrikci' },
+      { label: 'Fevzi Çakmak Elektrikçi', href: '/hizmet-bolgeleri/sincan-elektrikci/fevzi-cakmak-elektrikci' },
+      { label: 'Eryaman’da LED Avize Titriyor mu?', href: '/rehber/eryaman-led-avize-titriyor-kapaliyken-yaniyor' },
+    ],
+  },
 ];
 
 export const postsSorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
