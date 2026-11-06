@@ -890,6 +890,80 @@ export const posts: BlogPost[] = [
       { label: 'Elvankent’te Sigorta Kutusu Yenileme', href: '/rehber/elvankent-sigorta-kutusu-yenileme-ne-zaman-gerekir' },
     ],
   },
+  {
+    slug: 'baglica-villa-bahce-kacak-akim-sulama-pompasi',
+    title: 'Bağlıca’da Villa Bahçesinde Kaçak Akım: Sulama Pompası, Garaj Motoru ve Dış Aydınlatma',
+    description:
+      'Bağlıca’da villa bahçesindeki kaçak akım rölesi neden sulama pompası veya garaj kapısı motoru çalışırken atar? Dış hatları güvenli bağlamanın yolu. Demir Elektrik: 0506 092 58 16.',
+    keyword: 'Bağlıca elektrikçi',
+    date: '2026-11-06',
+    readingMin: 7,
+    excerpt:
+      'Bağlıca’da bir villa sahibi, bahçe sulamasını açtığı anda evin tamamının elektriksiz kaldığını anlattı. Sorun sulama pompasında değil, pompaya giden toprak altı hattın nemden kaçak vermesindeydi. Villa bahçelerindeki dış hatları nasıl güvenli bağladığımızı anlatıyoruz.',
+    intro:
+      'Bağlıca acil elektrikçi çağrılarının önemli bir kısmı evin içinden değil, bahçesinden geliyor. Geçen hafta bir villa sahibi, sulama pompasını çalıştırdığı anda kaçak akım rölesinin attığını ve evin tamamının karardığını söyledi. Bağlıca’nın villa ve bahçeli ev dokusunda bu çok sık gördüğümüz bir tablo: sulama pompası, garaj kapısı motoru, havuz hattı ve bahçe aydınlatması gibi dış tesisatlar toprak ve yağmurla sürekli temas ediyor. Bu yazıda bu hatların neden kaçak verdiğini ve güvenli bağlantının nasıl olması gerektiğini sahadan anlatıyoruz.',
+    sections: [
+      {
+        h: 'Sulama pompası çalışınca röle neden atıyor?',
+        p: [
+          'Doğrudan cevap: pompanın kendisi değil, ona giden toprak altı kablonun eklemesi ya da bağlantı kutusu zamanla su almış oluyor; pompa çalışıp akım çekince o nemli nokta kaçak akım rölesini tetikliyor. Pompa çoğu zaman tamamen sağlamdır, suçlu hattır.',
+          'Bağlıca’daki villa bahçelerinde sulama hattı genelde ev yapılırken çekilmiş, üstü toprakla kapatılmış tek bir kabloda ilerliyor. Yıllar içinde o kablonun eklendiği noktalarda yalıtım gevşiyor, yağmur suyu sızıyor ve pompa devreye her girdiğinde kaçak akım orada beliriyor.',
+        ],
+      },
+      {
+        h: 'Garaj kapısı motoru ve bahçe aydınlatması aynı riski taşır mı?',
+        p: [
+          'Doğrudan cevap: evet, aynı mantıkla çalışan her dış hat aynı riski taşır. Garaj kapısı motoru, havuz filtre pompası ve bahçe spotları da toprağa yakın ya da dışarıda duran kablolarla besleniyor; bağlantı kutusu sızdırmaz değilse ya da kablo doğru kesit ve tipte değilse aynı kaçak sorunuyla karşılaşırsınız.',
+          'Bağlıca’da gördüğümüz sık bir hata, bahçe spotlarının ev içi kullanılan sıradan bir kabloyla, standart bir buatla dışarıya çıkarılmış olması. Bu tip malzeme dışarıda kısa sürede bozuluyor; dış mekân için IP korumalı buat ve doğru tipte kablo kullanmak bu arızaların önüne geçiyor.',
+        ],
+      },
+      {
+        h: 'Röle attığında evin tamamı neden karanlıkta kalıyor?',
+        p: [
+          'Doğrudan cevap: çoğu villa panosunda tüm ev ve bahçe tek bir kaçak akım rölesinden besleniyor, bu yüzden bahçedeki küçük bir kaçak evin tamamını karartıyor. Doğru çözüm, dış hatları (sulama, garaj motoru, bahçe aydınlatması) ayrı bir rölenin altına almak.',
+          'Böyle bir ayrım yapıldığında bahçede bir kaçak olsa bile sadece o kol düşer, evin içindeki aydınlatma ve prizler çalışmaya devam eder. Bağlıca’da yeni kurduğumuz panolarda bu ayrımı standart olarak öneriyoruz, çünkü dış hatların arıza riski ev içine göre her zaman daha yüksek.',
+        ],
+      },
+      {
+        h: 'Kaçağın nerede olduğunu nasıl buluyoruz?',
+        p: [
+          'Doğrudan cevap: önce hangi cihaz devreye girince rölenin attığını sorup hattı daraltıyor, sonra o hattı ayırıp megerle (yalıtım direnci ölçer) toprağa karşı ölçüyoruz; ölçüm değeri düşükse kablo üzerinde yürüyerek eklenti noktalarını ve bağlantı kutularını kontrol ediyoruz.',
+          'Toprak altı bir kabloyu baştan sona kazmadan, ölçümle bölgeyi daraltarak çalışıyoruz; çoğu zaman sorun tek bir eklenti kutusunda çıkıyor, kabloyu baştan çekmek gerekmiyor.',
+        ],
+      },
+      {
+        h: 'Bağlıca’da villa bahçesi işlerine nasıl bakıyoruz?',
+        p: [
+          'Telefonda hangi cihaz çalışırken rölenin attığını sorup önce evin içini geri açmanızı söylüyoruz, sonra geliyoruz. Yerinde dış hattı ölçüp kaçağın yerini buluyor, gerekirse o bölümü sızdırmaz bağlantıyla yeniliyor ve dış hatları ayrı bir röleye alıyoruz. Tespit sonrası ne yapacağımızı ve ücretini söylüyoruz, onay vermeden işe başlamıyoruz.',
+          'Sincan’daki merkezimizden Bağlıca’ya 20–25 dakikada geliyoruz. Haftanın yedi günü 08:00–23:00 arası 0506 092 58 16’dan ulaşabilirsiniz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Bağlıca’da sulama pompasını çalıştırınca kaçak akım rölesi atıyor, pompa mı bozuk?',
+        a: 'Genelde değil; sorun pompaya giden toprak altı kablonun eklenti noktasında biriken nemdir. Hattı ölçüp kaçağın yerini buluyor, o noktayı sızdırmaz şekilde yeniliyoruz.',
+      },
+      {
+        q: 'Bahçe aydınlatmasını kendim kurabilir miyim?',
+        a: 'Basit bir priz işi değil; dış mekân için IP korumalı buat ve uygun kesitte kablo gerekir. Yanlış malzemeyle yapılan kurulum kısa sürede kaçak akım sorununa dönüşür.',
+      },
+      {
+        q: 'Bahçedeki arıza yüzünden evin tamamı neden karanlıkta kalıyor?',
+        a: 'Çoğu villa panosunda ev ve bahçe aynı kaçak akım rölesinden besleniyor. Dış hatları ayrı bir röleye aldığımızda bahçedeki bir arıza evin içini etkilemiyor.',
+      },
+      {
+        q: 'Bağlıca’ya ne kadar sürede geliyorsunuz?',
+        a: 'Sincan’daki merkezimizden 20–25 dakikada geliyoruz. Aradığınızda o anki konumumuza göre net süre söylüyoruz.',
+      },
+    ],
+    related: [
+      { label: 'Bağlıca Acil Elektrikçi', href: '/hizmet-bolgeleri/etimesgut-elektrikci/baglica-elektrikci' },
+      { label: 'Kaçak akım tespiti', href: '/hizmetler/kacak-akim-tespiti' },
+      { label: 'Villa elektrik servisi', href: '/hizmetler/villa-elektrik-servisi' },
+      { label: 'Devlet Mahallesi’nde Buşonlu Sigorta', href: '/rehber/devlet-mahallesi-busonlu-sigorta-ne-zaman-degismeli' },
+    ],
+  },
 ];
 
 export const postsSorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
