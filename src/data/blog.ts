@@ -1119,6 +1119,87 @@ export const posts: BlogPost[] = [
       { label: 'Eryaman’da LED Avize Titriyor mu?', href: '/rehber/eryaman-led-avize-titriyor-kapaliyken-yaniyor' },
     ],
   },
+  {
+    slug: 'seker-mahallesi-kis-oncesi-isitici-sigorta-atmasi',
+    title: 'Şeker Mahallesi’nde Kış Geldi: Isıtıcıyı Takınca Sigorta mı Atıyor, Kaçak Akım Rölesi mi?',
+    description:
+      'Şeker Mahallesi’nde kış aylarında elektrikli ısıtıcı kullanımıyla artan sigorta ve kaçak akım rölesi atması çağrıları: eski apartman, yeni site ve cadde üstü dükkanlarda sebepler. Demir Elektrik: 0506 092 58 16.',
+    keyword: 'Şeker Mahallesi elektrikçi',
+    date: '2026-11-13',
+    readingMin: 7,
+    excerpt:
+      'Hava soğuyunca Şeker Mahallesi’nden aldığımız çağrı sayısı belirgin artıyor; sebep hep aynı değil. Eski apartmanda sigorta, yeni sitede kaçak akım rölesi, dükkanda ikisi birden atıyor. Isıtıcı mevsiminde panonun neden zorlandığını anlattık.',
+    intro:
+      'Şeker Mahallesi elektrikçi olarak telefonumuz kasımın ilk haftasından itibaren daha sık çalmaya başlıyor. Sebebi basit: evler ısınmak için elektrikli ısıtıcıya, yağlı radyatöre, bazı dükkanlar ise vitrin önüne koydukları fanlı sobaya yöneliyor. Mahallenin bir yanında yıllanmış apartmanlar, öbür yanında son on yılda yapılmış siteler var; ikisi de ısıtıcı yükünü farklı şekilde karşılıyor ve farklı şekilde arıza veriyor. Bu yazıda ikisini de, bir de cadde üstündeki dükkanların durumunu anlatıyorum.',
+    sections: [
+      {
+        h: 'Isıtıcıyı prize takınca sigorta hemen atıyorsa sebep ne?',
+        p: [
+          'Doğrudan cevap: hat, ısıtıcının çektiği akımı taşıyamıyor demektir. 2000 vatlık bir ısıtıcı yaklaşık 9 amper çeker; eski bir dairede o prizin bağlı olduğu hat 1,5 mm² kesitte ve eski tip 10 amperlik bir sigortaya bağlıysa, ısıtıcı tek başına bile hattı sınırına getirir. Aynı prizden bir de televizyon ya da şarj cihazı çalışıyorsa sigorta sabırsızlanır.',
+          'Şeker Mahallesi’nin eski apartmanlarında salon prizlerinin çoğu aynı tek hattan gidiyor; ev bu kadar yük düşünülerek döşenmemiş. Kısa vadede çözüm ısıtıcıyı farklı bir odanın, yani farklı bir sigortanın prizine almak; kalıcı çözüm ise o hatta 2,5 mm² kablo ile ayrı bir priz çekmek.',
+        ],
+      },
+      {
+        h: 'Şeker Mahallesi’nde kaçak akım rölesi ısıtıcı yüzünden mi atıyor?',
+        p: [
+          'Doğrudan cevap: bazen evet, ama ısıtıcının kendisinden çok rezistansın yıpranmasından. Eski bir yağlı radyatörün ya da fanlı sobanın içindeki rezistans zamanla gövdeye çok küçük bir akım sızdırmaya başlar; 30 mA’lik kaçak akım rölesi bunu algılayıp düşer. Isıtıcı çalışırken röle atıyor, çekince atmıyorsa şüphe büyük ölçüde cihazdadır.',
+          'Yeni sitelerde durum biraz farklı. Burada hat kesiti ve röle genelde yeterli; sorun çoğunlukla ısıtıcının kendisinde ya da aynı anda çalışan klima, kurutmalı çamaşır makinesi gibi başka yüksek güçlü bir cihazla üst üste binmesinde çıkıyor. İkisini aynı anda çalıştırmayı bir hafta bırakıp deneyin; röle bir daha atmıyorsa sebep budur.',
+        ],
+      },
+      {
+        h: 'Şeker Mahallesi’nde eski apartman ile yeni site aynı tepkiyi vermiyor',
+        p: [
+          'Doğrudan cevap: eski apartmanlarda sorun genelde sigorta, yeni sitelerde genelde kaçak akım rölesi. Eski binalarda hat kesiti ve sigorta amperi kısıtlı olduğu için ısıtıcı devreye girince klasik sigorta devre dışı kalır. Yeni sitelerde hat daha güçlüdür ama röle hassasiyeti de daha ince ayarlanmıştır; küçük bir kaçağı bile hemen yakalar.',
+          'Bu ayrım telefonda bize büyük ipucu veriyor. Hangi bölgede ve kaç yaşındaki bir binada olduğunuzu söylediğinizde, hangi parçayı yanımıza alacağımızı çoğu zaman önceden biliyoruz.',
+        ],
+      },
+      {
+        h: 'Cadde üstü dükkanlarda ısıtıcı neden akşam saatlerinde sigorta attırıyor?',
+        p: [
+          'Doğrudan cevap: gündüz vitrin ışığı ve soğutucu dolap çalışırken akşam bir de ısıtıcı devreye girince aynı hat üst üste yükleniyor. Şeker Mahallesi’ndeki cadde üstü dükkanların çoğunda ısıtıcı en son eklenen cihaz; pano kurulurken bu yük hesaba katılmamış.',
+          'Isıtıcıyı ayrı bir sigortaya, mümkünse soğutucu dolaptan uzak bir hatta almak çoğu zaman yeterli oluyor. Dükkan kapanırken ısıtıcıyı prizden çekmek de küçük ama işe yarayan bir alışkanlık; gece boşuna çalışan bir ısıtıcı hem elektrik hem risk demek.',
+        ],
+      },
+      {
+        h: 'Kış öncesi kontrol: Şeker Mahallesi elektrik tamircisi ya da en yakın elektrikçiyi ne zaman aramalı?',
+        p: [
+          'Doğrudan cevap: ısıtıcıyı ilk kez taktığınızda on-on beş dakika sonra prizin ve kablonun ısınıp ısınmadığına elinizin tersiyle bakın; ılık olabilir ama sıcak olmamalı. Kaçak akım rölesinin test düğmesine basıp çalıştığını doğrulayın. Bunlar beş dakikanızı alır ve kışın ortasında soğukta kalmanızı önler.',
+          'Priz ısınıyorsa, kablo kılıfı yumuşamışsa ya da röle test düğmesine basınca atmıyorsa beklemeyin; o parça değişmeden ısıtıcıyı kullanmak riski büyütür. Şeker Mahallesi elektrik ustası olarak bu kontrolleri telefonda da adım adım anlatabiliyoruz, çoğu zaman yola çıkmadan önce neyin değişeceğini söylüyoruz.',
+        ],
+      },
+      {
+        h: 'Şeker Mahallesi’ne nasıl geliyoruz',
+        p: [
+          'Sincan’daki merkezimizden Şeker Mahallesi’ne 15–20 dakikada varıyoruz. Isıtıcı mevsiminde sigorta ve kaçak akım rölesi çağrıları dışında Şeker Mahallesi avize montajı, priz değişimi gibi daha sakin işler için de arayabilirsiniz; aynı ziyarette ikisini birlikte de yapıyoruz.',
+          'Haftanın yedi günü 08:00–23:00 arası 0506 092 58 16’dan ulaşabilirsiniz. Tespit sonrası ne yapacağımızı ve ücretini söylüyoruz, onay vermeden işe başlamıyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Isıtıcıyı takınca sigorta her seferinde atıyor, ısıtıcı mı bozuk?',
+        a: 'Her zaman değil. Çoğu zaman hat, ısıtıcının çektiği akımı taşıyamıyor demektir. Isıtıcıyı başka bir sigortanın prizinde deneyin; orada da atıyorsa ısıtıcıdan şüphelenebiliriz, ama genelde hattadır.',
+      },
+      {
+        q: 'Kaçak akım rölesi sadece ısıtıcı çalışırken atıyor, bu normal mi?',
+        a: 'Normal değil ama acil de değil. Rezistansın gövdeye küçük bir akım sızdırdığını gösterir. Isıtıcıyı bir süre kullanmayıp röle bir daha atmıyorsa şüphe net olarak cihazdadır; değiştirmenizi öneririz.',
+      },
+      {
+        q: 'Eski apartmanda ısıtıcı için ayrı priz çektirmek gerekli mi?',
+        a: 'Salon ve yatak odasında aynı hattan birden fazla yüksek güçlü cihaz çalışıyorsa evet. Mevcut hattı ayrı bir sigortaya bölüp 2,5 mm² kesitte yeni bir priz çekmek, her kış tekrar eden sigorta atmasını kalıcı olarak çözüyor.',
+      },
+      {
+        q: 'Şeker Mahallesi’nde dükkanıma akşam gelebilir misiniz?',
+        a: 'Gelebiliriz. 23:00’e kadar çağrı alıyoruz, kapanış saatinize göre planlayabiliyoruz. Isıtıcı hattını ayırmak genelde yarım saati bulmayan bir iş.',
+      },
+    ],
+    related: [
+      { label: 'Şeker Mahallesi Elektrikçi', href: '/hizmet-bolgeleri/etimesgut-elektrikci/seker-elektrikci' },
+      { label: 'Sigorta atması', href: '/hizmetler/sigorta-atmasi' },
+      { label: 'Kaçak akım rölesi atıyor', href: '/hizmetler/kacak-akim-rolesi-atiyor' },
+      { label: 'Elvankent’te Sigorta Kutusu Yenileme', href: '/rehber/elvankent-sigorta-kutusu-yenileme-ne-zaman-gerekir' },
+    ],
+  },
 ];
 
 export const postsSorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
