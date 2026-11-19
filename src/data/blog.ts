@@ -24,6 +24,8 @@ export interface BlogPost {
   sections: BlogSection[];
   faq: { q: string; a: string }[];
   related: { label: string; href: string }[];
+  /** true ise Sincan adresi/ifadesi gizlenir (Çankaya bölgesi yazıları) */
+  hideBase?: boolean;
 }
 
 export const posts: BlogPost[] = [
@@ -1199,6 +1201,548 @@ export const posts: BlogPost[] = [
       { label: 'Kaçak akım rölesi atıyor', href: '/hizmetler/kacak-akim-rolesi-atiyor' },
       { label: 'Elvankent’te Sigorta Kutusu Yenileme', href: '/rehber/elvankent-sigorta-kutusu-yenileme-ne-zaman-gerekir' },
     ],
+  },
+  {
+    slug: 'sincan-fatih-elektrikci-prizden-yanik-kokusu-kivilcim',
+    title: 'Sincan Fatih Elektrikçi 0506 092 58 16 | Prizden Yanık Kokusu ya da Kıvılcım Geliyorsa',
+    description:
+      'Sincan Fatih’te fişi takarken prizden kıvılcım çıktı ya da odada yanık plastik kokusu var. İlk beş dakikada ne yapmalı, neye dokunmamalı? Acil arızaya çıkan usta anlatıyor. Sincan Fatih elektrikçi: 0506 092 58 16.',
+    keyword: 'Sincan Fatih elektrikçi',
+    date: '2026-11-19',
+    readingMin: 5,
+    image: '/images/rehber/sincan-fatih-elektrikci-prizden-yanik-kokusu-kivilcim.webp',
+    imageAlt: 'Sincan Fatih elektrikçi: usta merdivende tavan aydınlatması üzerinde çalışırken',
+    excerpt:
+      'Fişi takarken küçük bir çakma, ardından hafif bir plastik kokusu… Fatih’te en çok “önemsiz sandım” diye başlayan çağrılar bunlar. Kokunun ve kıvılcımın ne anlattığını, ilk beş dakikada yapılacakları yazdım.',
+    intro:
+      'Geçen hafta Fatih Mahallesi’nde bir öğrenci evinden aradılar. Telefonun şarj aletini her takışta prizden “çıt” diye bir kıvılcım çıkıyormuş, birkaç gündür de odada hafif bir yanık plastik kokusu varmış. Gittiğimde prizin arkasındaki kablo ucu erimiş, yanındaki buat kapağı kahverengiye dönmüştü. Biraz daha beklenseydi o duvar içinden yanmaya başlayacaktı. Kıvılcım ve koku, elektriğin size verdiği en açık iki uyarıdır; bu yazıda ikisini nasıl okuyacağınızı anlatıyorum.',
+    sections: [
+      {
+        h: 'Her kıvılcım tehlikeli mi?',
+        p: [
+          'Kısa cevap: güçlü bir cihazın fişini çalışırken çekerken çok kısa, küçük bir çakma görülebilir. Ama fişi takarken her seferinde kıvılcım çıkıyorsa, ses geliyorsa ya da priz kararmışsa bu normal değildir.',
+          'Tekrarlayan kıvılcımın sebebi neredeyse her zaman gevşek temastır: ya prizin yayları açılmış, fişi sıkı tutmuyor ya da prizin arkasındaki vida gevşemiş. Temas zayıflayınca akım küçük bir yüzeyden geçer, orası ısınır ve her takışta kıvılcım çakar.',
+        ],
+      },
+      {
+        h: 'Yanık kokusu nereden geliyor, nasıl bulunur?',
+        p: [
+          'Kısa cevap: kokuyu bulmak için prizlerin, anahtarların ve sigorta kutusunun kapağına elinizin tersiyle yaklaşın. Normalden sıcak olan nokta çoğu zaman kaynağın kendisidir. Kapakları açmayın, sadece sıcaklığa bakın.',
+          'Elektrikten gelen koku tipik olarak keskin, balık ya da yanık plastik kokusudur. Fatih’teki eski bloklarda bu kokunun en sık çıktığı yerler mutfak prizi, banyo aspiratörünün anahtarı ve çamaşır makinesinin takılı olduğu prizdir. Kaynağı bulamıyorsanız kokunun en yoğun olduğu odanın sigortasını indirin.',
+        ],
+      },
+      {
+        h: 'İlk beş dakikada yapılacaklar',
+        p: [
+          'Kısa cevap: o prize takılı cihazın fişini, prize dokunmadan, kablosundan değil fişin gövdesinden tutarak çekin. Ardından panodan o hattın sigortasını indirin. Koku sürüyorsa ana şalteri de indirip beni arayın.',
+          'Yapılmayacaklar da önemli: prizin kapağını sökmeyin, kararmış prize su ya da ıslak bez değdirmeyin, “bir şey olmaz” diye aynı prize başka bir cihaz takmayın. Duman görüyorsanız önce ana şalteri indirin ve 112’yi arayın.',
+        ],
+      },
+      {
+        h: 'Gelince ne yapıyorum?',
+        p: [
+          'Kısa cevap: önce sorunlu noktayı açar, kablonun ne kadar etkilendiğine bakarım. Sadece priz bağlantısı yanmışsa kablo ucunu temiz bakıra kadar keser, prizi yenilerim. Isı kabloya yayıldıysa o bölümü değiştiririm.',
+          'Aynı hattaki diğer prizleri ve buatı da kontrol ederim; bir noktada gevşeyen bağlantı çoğu zaman yanındakilerde de başlamıştır. İş bitince sigortayı kaldırır, ölçüm yapar, kokunun gittiğinden emin olurum. Fiyatı açmadan önce söylerim.',
+        ],
+      },
+      {
+        h: 'Fatih’e ne kadar sürede geliyoruz?',
+        p: [
+          'Demir Elektrik acil servis olarak Sincan merkezli çalışıyoruz; Fatih, Mareşal Çakmak ve Pınarbaşı tarafına çoğu zaman yarım saat içinde varıyoruz. Haftanın her günü 08:00–23:00 arası 0506 092 58 16’dan ulaşabilirsiniz.',
+          'Acil arızanın dışında ev ve işyeri elektrik tesisatı hizmeti de veriyoruz. Fatih’te eskiyen bir dairenin hatlarını yenilemek ya da yeni açılan bir dükkâna priz, aydınlatma ve pano kurmak için keşfe geliyor, fiyatı işe başlamadan söylüyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Prizden yanık kokusu geliyor ama cihaz çalışıyor, bekleyebilir miyim?',
+        a: 'Beklemeyin. Cihazın çalışıyor olması bağlantının sağlam olduğunu göstermez. O prizin sigortasını indirin ve kontrol ettirin.',
+      },
+      {
+        q: 'Fiş prize gevşek oturuyor, sorun olur mu?',
+        a: 'Olur. Gevşek fiş az temas demektir; az temas ısınma ve kıvılcım yapar. Prizin yayları açılmışsa priz yenilenmelidir.',
+      },
+      {
+        q: 'Elektrik kokusu nasıl bir kokudur?',
+        a: 'Genelde keskin, yanık plastik ya da balığa benzeyen bir kokudur. Kaynağı çoğu zaman ısınan bir priz, anahtar ya da sigorta bağlantısıdır.',
+      },
+      {
+        q: 'Sincan Fatih’te akşam acil elektrikçi bulunur mu?',
+        a: 'Evet. Her gün 23:00’e kadar çağrı alıyoruz. Koku, kıvılcım ya da duman gibi belirtilerde sırayı öne alıyoruz.',
+      },
+    ],
+    related: [
+      { label: 'Sincan Fatih Elektrikçi', href: '/hizmet-bolgeleri/sincan-elektrikci/fatih-elektrikci' },
+      { label: 'Priz ve Anahtar Tamiri', href: '/hizmetler/priz-anahtar-tamiri' },
+      { label: 'Acil Elektrikçi', href: '/hizmetler/acil-elektrikci' },
+      { label: 'Fatih’te Elektrik Yarım Geldi', href: '/rehber/fatih-elektrik-yarim-geldi-faz-notr' },
+      { label: 'Ev Elektrik Tesisatı', href: '/hizmetler/ev-elektrik-tesisati' },
+    ],
+  },
+  {
+    slug: 'sincan-yenikent-elektrikci-camasir-makinesi-elektrik-atiyor',
+    title: 'Sincan Yenikent Elektrikçi 0506 092 58 16 | Çamaşır Makinesi Çalışınca Elektrik Atıyorsa',
+    description:
+      'Sincan Yenikent’te çamaşır ya da bulaşık makinesi ısıtmaya geçince kaçak akım rölesi mi atıyor? Sorun makinede mi, prizde mi, tesisatta mı? Nasıl ayırt edileceğini usta anlatıyor. Yenikent elektrikçi: 0506 092 58 16.',
+    keyword: 'Sincan Yenikent elektrikçi',
+    date: '2026-11-19',
+    readingMin: 6,
+    image: '/images/rehber/sincan-yenikent-elektrikci-camasir-makinesi-elektrik-atiyor.webp',
+    imageAlt: 'Sincan Yenikent elektrikçi: mutfakta tezgah ve dolap LED aydınlatması',
+    excerpt:
+      'Makine yıkamaya başlıyor, on dakika sonra ev karanlık. Yenikent’te bu çağrı haftada birkaç kez geliyor. Suçlu bazen makine, bazen arkasındaki priz. Hangisi olduğunu evde nasıl anlayacağınızı anlattım.',
+    intro:
+      'Yenikent’te Ahi Evran tarafında bir aile aradı: “Çamaşır makinesi suyu ısıtmaya başlayınca bütün evin elektriği gidiyor, sonra kaldırıyoruz, durulamada bir daha gidiyor.” Telefonda birkaç soru sordum; makineyi başka bir odadaki prize uzatma kablosu olmadan takıp denemelerini istedim. Yine attı. Sorun prizde değil makinedeydi: ısıtıcı rezistansın gövdesine kaçak yapıyordu. Bu ayrımı yapmak, hem doğru kişiyi çağırmanızı hem de gereksiz masraftan kaçınmanızı sağlar.',
+    sections: [
+      {
+        h: 'Atan şey sigorta mı, kaçak akım rölesi mi?',
+        p: [
+          'Kısa cevap: panoya bakın. Test düğmesi olan, diğerlerinden geniş eleman kaçak akım rölesidir. Makine çalışırken düşen buysa bir yerde akım toprağa kaçıyor demektir. Düşen yalnızca makinenin hattındaki sigortaysa sorun aşırı yük ya da kısa devredir.',
+          'Bu fark önemli: kaçak akımda makinenin rezistansı, motoru ya da prizdeki nem şüphelidir. Sigorta atıyorsa aynı hatta çalışan başka bir büyük cihaz, örneğin fırın veya kurutma makinesi, yükü aşıyor olabilir.',
+        ],
+      },
+      {
+        h: 'Evde yapabileceğiniz basit deneme',
+        p: [
+          'Kısa cevap: makineyi başka bir odadaki duvar prizine, uzatma kablosu kullanmadan takın ve aynı programı çalıştırın. Yine atıyorsa sorun büyük ihtimalle makinededir. Atmıyorsa sorun eski prizde ya da o hatta.',
+          'Bu denemeyi yalnızca zemin kuruysa ve makinenin altında su yoksa yapın. Makinenin altından su sızıyorsa ya da gövdesine dokunduğunuzda karıncalanma hissediyorsanız denemeyin; fişini çekip bizi arayın.',
+        ],
+      },
+      {
+        h: 'Sorun prizdeyse: banyo ve mutfakta nem',
+        p: [
+          'Kısa cevap: banyodaki ya da mutfak tezgahının altındaki prizler nem alır. İçine su buharı ya da sızıntı girmiş bir priz, makine güç çektiğinde kaçak yapar.',
+          'Yenikent’teki eski dairelerde çamaşır makinesi çoğu zaman banyoda, lavabonun hemen yanında duruyor. Bu tür yerlerde kapaklı, neme dayanıklı ve topraklı priz kullanırım; prizi mümkünse su kaynağından uzağa, biraz daha yükseğe taşırım. Toprak hattının gerçekten bağlı olup olmadığını da ölçerim.',
+        ],
+      },
+      {
+        h: 'Sorun makinedeyse ne olacak?',
+        p: [
+          'Kısa cevap: makinenin içindeki arızayı beyaz eşya servisi giderir; biz makinenin iç parçalarını değiştirmiyoruz. Ama hattın, prizin ve rölenin sağlam olduğunu ölçüp size yazılı olarak söyleyebiliriz.',
+          'Bu da işe yarar: servis geldiğinde “tesisatınızda sorun var” derse elinizde ölçüm sonucu olur. Arıza makinedeyse bunu açıkça söyler, gereksiz işçilik çıkarmayız.',
+        ],
+      },
+      {
+        h: 'Yenikent’e ne kadar sürede geliyoruz?',
+        p: [
+          'Demir Elektrik acil servis olarak Yenikent’in tüm mahallelerine, Menderes, 29 Ekim, Fevzi Çakmak, Ahi Evran ve Malazgirt’e çoğu zaman yarım saat içinde varıyoruz. Haftanın her günü 08:00–23:00 arası 0506 092 58 16.',
+          'Yenikent’te ev ve işyeri elektrik tesisatı işlerini de üstleniyoruz: banyo ve mutfakta topraklı yeni hat, çamaşır makinesi için ayrı sigorta, dükkân ve ofislerde baştan tesisat. Tadilat yapacaksanız sıva öncesinde haber vermeniz yeterli.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Çamaşır makinesi çalışınca neden kaçak akım rölesi atar?',
+        a: 'En sık sebepler makinenin ısıtıcı rezistansındaki kaçak, motorda nem ve prizin içine giren sudur. Röle bu kaçağı algılayıp sizi korumak için atar.',
+      },
+      {
+        q: 'Röle atmasın diye makineyi başka hatta bağlatabilir miyim?',
+        a: 'Kaçak makinedeyse hattı değiştirmek sorunu çözmez, sadece başka bir röleyi attırır. Röleyi devre dışı bırakmak ise kesinlikle yapılmamalıdır.',
+      },
+      {
+        q: 'Makinenin gövdesine dokununca karıncalanma oluyor, ne yapmalıyım?',
+        a: 'Makineye dokunmayın, fişini çekin ve kullanmayın. Bu, gövdeye kaçak olduğunu ve topraklamanın çalışmadığını gösterebilir. Hemen kontrol ettirin.',
+      },
+      {
+        q: 'Yenikent’te bugün gelebilir misiniz?',
+        a: 'Evet, Yenikent’e her gün çıkıyoruz. Evde elektrik tamamen gittiyse ya da karıncalanma varsa sırayı öne alıyoruz.',
+      },
+    ],
+    related: [
+      { label: 'Yenikent Elektrikçi', href: '/hizmet-bolgeleri/yenikent-elektrikci' },
+      { label: 'Kaçak Akım Rölesi Atıyor', href: '/hizmetler/kacak-akim-rolesi-atiyor' },
+      { label: 'Kaçak Akım Tespiti', href: '/hizmetler/kacak-akim-tespiti' },
+      { label: 'Yenikent’te Avize Montajı', href: '/rehber/yenikent-avize-montaji-asma-tavan-cift-anahtar' },
+      { label: 'İşyeri Elektrik Servisi', href: '/hizmetler/isyeri-elektrik-servisi' },
+    ],
+  },
+  {
+    slug: 'eryaman-elektrikci-kombi-klima-prizi-isiniyor',
+    title: 'Etimesgut Eryaman Elektrikçi 0506 092 58 16 | Kombi ve Klima Prizi Isınıyor, Fiş Eriyorsa',
+    description:
+      'Etimesgut Eryaman’da kombi ya da klima prizi ısınıyor, fişin kenarı erimiş mi? Neden olur, cihaz mı bozuk, priz mi? Kışın en sık gelen arızayı acil servis ustası anlatıyor. Eryaman elektrikçi: 0506 092 58 16.',
+    keyword: 'Etimesgut Eryaman elektrikçi',
+    date: '2026-11-19',
+    readingMin: 5,
+    image: '/images/rehber/eryaman-elektrikci-kombi-klima-prizi-isiniyor.webp',
+    imageAlt: 'Etimesgut Eryaman elektrikçi: klima ve avize hattı çekilmiş, LED aydınlatmalı tavan',
+    excerpt:
+      'Kombi gece yarısı arıza verdi, fişi çekince kenarının eridiğini gördünüz. Eryaman’da kışın en çok gittiğimiz arızalardan biri bu. Sebebini ve kalıcı çözümü anlattım.',
+    intro:
+      'Eryaman’da 3. Etap’taki bir daireden sabaha karşı değil, neyse ki akşam dokuz gibi aradılar: “Kombi kapandı, fişini çektim, fişin bir ucu erimiş, priz de kararmış.” Kombinin kendisi çok fazla akım çekmez; ama günün yirmi dört saati, aylarca prizde takılı kalır. Gevşek bir temas yavaş yavaş ısınır ve bir gün fişi eritir. Klimada da aynı şey olur, üstelik klima çok daha fazla güç çeker. Bu yazıda neden olduğunu ve ne yapılması gerektiğini anlatıyorum.',
+    sections: [
+      {
+        h: 'Kombi az çekiyor, priz neden ısınıyor?',
+        p: [
+          'Kısa cevap: ısınmanın sebebi cihazın çektiği güç değil, temasın kalitesidir. Kombi prizi yıllarca hiç çıkarılmaz; bu sürede priz yayları gevşer, vida gevşer, temas yüzeyi oksitlenir. Az akım bile kötü temasta ısı üretir.',
+          'Eryaman’daki sitelerde kombi genelde mutfak balkonunda ya da dolap içinde, nemli bir yerde durur. Nem oksitlenmeyi hızlandırır. Çoğu zaman fişi çektiğinizde metal uçlarda kararma ya da yeşilimsi bir tabaka görürsünüz.',
+        ],
+      },
+      {
+        h: 'Klimada durum daha ciddi',
+        p: [
+          'Kısa cevap: klima, özellikle ısıtma modunda, yüksek akım çeker. Ortak bir priz hattına, çoklu prize ya da uzatma kablosuna takılı klima prizi kısa sürede ısınır.',
+          'Klimayı ayrı sigortalı, uygun kesitte kabloyla çekilmiş bir hatta bağlamak gerekir. Eryaman’da klimayı sonradan taktıran pek çok evde klimanın salon priz hattına eklendiğini görüyoruz. Bu durumda sadece prizi değiştirmek yetmez; hattın kendisi de yük altındadır.',
+        ],
+      },
+      {
+        h: 'Erimiş fişi görünce ne yapmalı?',
+        p: [
+          'Kısa cevap: o prizin sigortasını indirin ve cihazı başka bir prize takmayın. Erimiş fişi prize geri takmak, yeni prizi de bozar. Kombi için bu kış gecesi demek; o yüzden bekletmeden arayın.',
+          'Geldiğimizde prizi ve kablo ucunu yeniliyoruz, ısı kabloya yayıldıysa o kısmı değiştiriyoruz. Kombi ya da klimanın fişi de erimişse fişi yeniliyoruz; cihazın içine müdahale etmiyoruz, o iş cihazın servisinin.',
+        ],
+      },
+      {
+        h: 'Kalıcı çözüm: doğru priz, gerekirse ayrı hat',
+        p: [
+          'Kısa cevap: kombi için kaliteli, topraklı ve nemli yerdeyse kapaklı bir priz yeterlidir. Klima için ayrı sigortalı bir hat en doğrusudur. Mümkünse cihazı fişle değil sabit bağlantıyla, bir şalterli buat üzerinden beslemek de iyi bir seçenektir.',
+          'Kış başında kombi ve klima prizini bir kez kontrol ettirmek, gece yarısı ısınmadan kalmaktan çok daha ucuzdur. Gelip baktığımızda hattın yeterli olup olmadığını ölçüp söylüyoruz.',
+        ],
+      },
+      {
+        h: 'Eryaman’a ne kadar sürede geliyoruz?',
+        p: [
+          'Demir Elektrik acil servis olarak Eryaman’ın bütün etaplarına, Güzelkent, Tunahan ve Göksu’ya her gün çıkıyoruz. Haftanın her günü 08:00–23:00 arası 0506 092 58 16’dan ulaşabilirsiniz. Fiyat işe başlamadan söylenir.',
+          'Klima için ayrı hat çekmek gibi işler, verdiğimiz elektrik tesisatı hizmetinin bir parçası. Eryaman’da evlerin yanında ofis, kafe ve mağaza gibi işyerlerinde de yeni hat, pano ve priz tesisatı yapıyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Kombi prizi ılık oluyor, normal mi?',
+        a: 'Hafif ılıklık bazen olabilir; ama elinizi rahatsız edecek kadar sıcaksa, kararma ya da koku varsa normal değildir. Prizi kontrol ettirin.',
+      },
+      {
+        q: 'Klimayı çoklu prize takabilir miyim?',
+        a: 'Takmayın. Klima yüksek akım çeker; çoklu priz ve uzatma kabloları bu yükte ısınır. Klima doğrudan duvar prizine, tercihen ayrı bir hatta bağlanmalıdır.',
+      },
+      {
+        q: 'Fiş erimiş, kombi tamir edilmeli mi?',
+        a: 'Çoğu zaman sorun prizdedir, kombide değil. Prizi ve fişi yenilemek yeterli olur. Kombi yine arıza veriyorsa kombi servisine haber vermek gerekir.',
+      },
+      {
+        q: 'Eryaman’da gece kombi arızasında gelir misiniz?',
+        a: '23:00’e kadar çağrı alıyoruz. Elektrik kaynaklı kombi arızasında, örneğin eriyen priz ya da atan sigortada, aynı akşam geliyoruz.',
+      },
+    ],
+    related: [
+      { label: 'Eryaman Elektrikçi', href: '/hizmet-bolgeleri/eryaman-elektrikci' },
+      { label: 'Priz ve Anahtar Tamiri', href: '/hizmetler/priz-anahtar-tamiri' },
+      { label: 'Sigorta Atması', href: '/hizmetler/sigorta-atmasi' },
+      { label: 'Eryaman’da Yeni Dairede Elektrik Kontrolü', href: '/rehber/eryaman-yeni-tasinilan-dairede-elektrik-kontrolu' },
+      { label: 'İşyeri Elektrik Servisi', href: '/hizmetler/isyeri-elektrik-servisi' },
+    ],
+  },
+  {
+    slug: 'eryaman-elektrik-ustasi-ariza-tespiti-adim-adim',
+    title: 'Etimesgut Eryaman Elektrik Ustası 0506 092 58 16 | Arıza Tespiti Adım Adım Nasıl Yapılır?',
+    description:
+      'Etimesgut Eryaman’da elektrik ustası evinize gelince arızayı nasıl bulur? Pano, ölçüm, hat ayırma ve onarım adımlarını acil servis ustası sırasıyla anlatıyor. Eryaman elektrik ustası: 0506 092 58 16.',
+    keyword: 'Etimesgut Eryaman elektrik ustası',
+    date: '2026-11-19',
+    readingMin: 6,
+    image: '/images/rehber/eryaman-elektrik-ustasi-ariza-tespiti-adim-adim.webp',
+    imageAlt: 'Etimesgut Eryaman elektrik ustası: sigorta panosunda kontrol kalemiyle arıza tespiti',
+    excerpt:
+      'Usta gelir, panoya bakar, bir şeyler ölçer ve bir saat sonra arıza bulunur. Arada ne olduğunu çoğu kişi bilmez. Eryaman’da bir arıza tespitini baştan sona, adım adım anlattım.',
+    intro:
+      'Eryaman’da Şehit Osman Avcı tarafında bir daireye çağrıldık. Şikâyet belirsizdi: “Bazen mutfağın ışıkları gidiyor, bazen gelmiyor, bazen de kaçak akım atıyor.” Bu tür aralıklı arızalar en zor olanlardır, çünkü usta geldiğinde her şey çalışıyor olabilir. O gün arızayı kırk dakikada bulduk: tezgah üstündeki prizin arkasındaki buatta nem almış bir ek. Elektrik ustasının bir arızayı nasıl bulduğunu bilirseniz hem ne için para ödediğinizi anlarsınız hem de doğru bilgiyi vererek işi kısaltırsınız.',
+    sections: [
+      {
+        h: '1. adım: dinlemek ve not almak',
+        p: [
+          'Kısa cevap: arıza ne zaman başladı, hangi saatte, hangi cihaz çalışırken oluyor, yağmurla ilgisi var mı? Bu soruların cevabı, ölçü aletinden önce gelen ilk ipucudur.',
+          'Aralıklı arızalarda en değerli bilgi tekrar eden durumdur. “Bulaşık makinesi çalışınca” ya da “sabah duş alınca” gibi bir bağlantı varsa arıza o hatta aranır. Aradığınızda bu bilgileri söylemeniz işi çoğu zaman yarı yarıya kısaltır.',
+        ],
+      },
+      {
+        h: '2. adım: panoyu okumak',
+        p: [
+          'Kısa cevap: panoda hangi sigortanın hangi hattı beslediğini, bağlantılarda ısınma izi olup olmadığını ve kaçak akım rölesinin test düğmesiyle çalışıp çalışmadığını kontrol ederiz.',
+          'Eryaman’daki sitelerde panolar genelde düzenlidir ama etiketsizdir. Hatları tek tek indirip kaldırarak hangisinin neyi beslediğini buluruz. Arıza belirli bir odadaysa bu adımda hangi hatta olduğu belli olur.',
+        ],
+      },
+      {
+        h: '3. adım: ölçmek',
+        p: [
+          'Kısa cevap: gerilim, süreklilik ve yalıtım ölçümü yaparız. Yalıtım ölçümü, kablonun bir yerinde akımın toprağa kaçıp kaçmadığını gösterir. Kaçak akım arızalarında en çok bu ölçüm işe yarar.',
+          'Bu ölçümleri hattaki bütün cihazların fişi çekilmiş halde yaparız. Hat temiz çıkarsa arıza bir cihazdadır; cihazları tek tek takarak hangisinin kaçak yaptığını buluruz. Hat kaçak gösteriyorsa sorun tesisattadır ve bir sonraki adıma geçeriz.',
+        ],
+      },
+      {
+        h: '4. adım: hattı bölüp arızayı daraltmak',
+        p: [
+          'Kısa cevap: arızalı hattaki buat ve prizleri sırayla açıp hattı parçalara ayırırız. Her parçayı ayrı ölçeriz; arıza hangi parçada kalırsa oraya odaklanırız.',
+          'Bu yöntemle duvar kırmadan, çoğu zaman bir iki kapak açarak arızanın yerini buluruz. Mutfakta ve banyoda arıza genelde nem almış bir ek, ezilmiş bir kablo ya da içi su toplamış bir buattır. Onarımdan sonra aynı ölçümü tekrar yapar, değerin düzeldiğini size gösteririz.',
+        ],
+      },
+      {
+        h: '5. adım: söylemek, onaylatmak, onarmak',
+        p: [
+          'Kısa cevap: arızanın ne olduğunu, ne yapılacağını ve ücreti işe başlamadan söyleriz. Onaylarsanız onarır, sonra son ölçümü yaparız. Demir Elektrik acil servis olarak Eryaman’a her gün 08:00–23:00 arası çıkıyoruz: 0506 092 58 16.',
+          'Ölçüm sonunda hattın artık onarılmaya değmeyecek kadar yıprandığı çıkarsa bunu da söylüyoruz. Ev ve işyeri için elektrik tesisatı yenilemeyi Eryaman’da aynı ekip, aynı düzenle yapıyor; hangi hattın kalıp hangisinin değişeceğini ölçüme göre belirliyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Eryaman’da arıza tespiti ne kadar sürer?',
+        a: 'Basit arızalar çoğu zaman yarım saatte bulunur. Aralıklı ya da birden fazla hatta yayılmış arızalar bir iki saat sürebilir.',
+      },
+      {
+        q: 'Usta geldiğinde arıza yoksa ne olur?',
+        a: 'Aralıklı arızalarda bu olabilir. Yalıtım ölçümü, arıza o anda kendini göstermese bile hattaki zayıf noktayı çoğu zaman ortaya çıkarır.',
+      },
+      {
+        q: 'Arıza tespiti için duvar kırılır mı?',
+        a: 'Çoğu zaman hayır. Hattı buat ve prizlerden bölerek ölçeriz. Duvar açmak gerekirse önceden söyler, onayınızı alırız.',
+      },
+      {
+        q: 'Arıza cihazdaysa siz mi tamir edersiniz?',
+        a: 'Cihazın iç tamirini yapmıyoruz; o işi cihazın servisi yapar. Hangi cihazın kaçak yaptığını bulup söylüyoruz, tesisatın sağlam olduğunu ölçümle gösteriyoruz.',
+      },
+    ],
+    related: [
+      { label: 'Eryaman Elektrikçi', href: '/hizmet-bolgeleri/eryaman-elektrikci' },
+      { label: 'Kaçak Akım Tespiti', href: '/hizmetler/kacak-akim-tespiti' },
+      { label: 'Acil Elektrikçi', href: '/hizmetler/acil-elektrikci' },
+      { label: 'Elektrik Kesintisi ve Arıza Tespiti', href: '/hizmetler/elektrik-kesintisi' },
+      { label: 'Ev Elektrik Tesisatı', href: '/hizmetler/ev-elektrik-tesisati' },
+    ],
+  },
+  {
+    slug: 'umitkoy-elektrikci-panodan-vizilti-citirti-sesi',
+    title: 'Çankaya Ümitköy Elektrikçi 0506 092 58 16 | Panodan Vızıltı ya da Çıtırtı Sesi Geliyorsa',
+    description:
+      'Çankaya Ümitköy’de sigorta panosundan vızıltı, cızırtı ya da çıtırtı sesi mi geliyor? Hangi ses normal, hangisi tehlikeli? Ses geldiğinde ne yapmalı, acil servis ustası anlatıyor. Ümitköy elektrikçi: 0506 092 58 16.',
+    keyword: 'Çankaya Ümitköy elektrikçi',
+    date: '2026-11-19',
+    readingMin: 5,
+    image: '/images/rehber/umitkoy-elektrikci-panodan-vizilti-citirti-sesi.webp',
+    imageAlt: 'Çankaya Ümitköy elektrikçi: kablolaması düzenlenmiş sigorta panosu',
+    excerpt:
+      'Gece ev sessizken sigorta kutusundan gelen ince bir vızıltı ya da ara ara bir çıtırtı… Ümitköy’de bu sesle aranan çağrıların bir kısmı zararsız çıkıyor, bir kısmı yangının bir adım öncesi. Farkını anlattım.',
+    intro:
+      'Ümitköy’de bir sitede gece on bire doğru bir bey aradı: “Koridordaki sigorta kutusundan çıtır çıtır bir ses geliyor, arada bir de ışıklar göz kırpıyor.” Ana şalteri indirmesini söyledik ve yola çıktık. Panoyu açtığımızda aydınlatma sigortasının klemensi gevşemiş, kablo ucuyla arasında küçük ark yapıyordu; sesin kaynağı buydu. Panodan gelen her ses tehlikeli değildir ama bazıları kesinlikle beklemeye gelmez. Bu yazıda sesleri ayırt etmeyi anlatıyoruz.',
+    sections: [
+      {
+        h: 'Sabit, hafif bir uğultu: çoğu zaman zararsız',
+        p: [
+          'Kısa cevap: bazı panolarda zil trafosu, kontaktör ya da zaman rölesi gibi elemanlar sürekli, düşük ve sabit bir uğultu çıkarabilir. Ses değişmiyorsa, koku ve ısınma yoksa genelde tehlikeli değildir.',
+          'Ümitköy’deki eski sitelerde kapı zili trafosu hâlâ panonun içinde olan evler var; bu trafo yıllarca vızıldar. Yine de sesin yeni başladığını fark ettiyseniz bir kez baktırmakta fayda var.',
+        ],
+      },
+      {
+        h: 'Çıtırtı, cızırtı ya da patlama sesi: hemen ana şalter',
+        p: [
+          'Kısa cevap: düzensiz, çıtırtılı, cızırtılı bir ses ark demektir: akım gevşek bir bağlantının üzerinden atlıyordur. Ark yüksek ısı üretir ve plastiği, kablo kılıfını eritebilir. Ana şalteri indirin ve bekletmeden arayın.',
+          'Işıkların göz kırpması, panonun kapağının ılık olması ya da yanık kokusu bu sese eşlik ediyorsa durum daha da acildir. Panonun kapağını açıp içine bakmayın; ışık tutmak için bile elinizi yaklaştırmayın.',
+        ],
+      },
+      {
+        h: 'Sigortadan gelen ses ne anlatır?',
+        p: [
+          'Kısa cevap: tek bir sigortadan geliyorsa o sigortanın bağlantısı gevşemiş ya da sigortanın kendisi yorulmuştur. Ses yük arttıkça, örneğin fırın ya da klima çalışınca artıyorsa bağlantı ısınıyordur.',
+          'Ümitköy’de panolar çoğu zaman ilk yapıldığı günden beri hiç bakım görmemiş oluyor. Yıllar içinde ısınıp soğuyan vidalar gevşer. Geldiğimizde sesin geldiği bağlantıyı açar, kararmış kablo ucunu temizler, gerekirse sigortayı yeniler ve bütün panodaki vidaları kontrol ederiz.',
+        ],
+      },
+      {
+        h: 'Pano tamamen yenilenmeli mi?',
+        p: [
+          'Kısa cevap: tek bir gevşek bağlantı varsa hayır; onu onarmak yeterli. Ama bara yanmışsa, sigortalar eskiyse, kaçak akım rölesi yoksa ya da birden fazla noktada ısınma izi varsa yenilemek daha doğrudur.',
+          'Karar vermeden önce panonun içini size gösterir, neyin onarılabilir neyin değişmesi gerektiğini anlatırız. Fiyat işe başlamadan söylenir.',
+        ],
+      },
+      {
+        h: 'Ümitköy’e ne kadar sürede geliyoruz?',
+        p: [
+          'Demir Elektrik acil servis olarak Ümitköy, Çayyolu, Yaşamkent ve Konutkent’e her gün çıkıyoruz. Haftanın her günü 08:00–23:00 arası 0506 092 58 16’dan ulaşabilirsiniz.',
+          'Pano onarımının yanında ev ve işyeri elektrik tesisatı da yapıyoruz. Ümitköy’de eski bir sitede tesisatı yenilemek ya da bir ofisin, dükkânın hatlarını baştan kurmak gerekiyorsa keşifle başlıyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Sigorta kutusundan vızıltı gelmesi normal mi?',
+        a: 'Sabit ve hafif bir uğultu, panodaki trafo ya da kontaktörden geliyorsa genelde normaldir. Çıtırtı, cızırtı ya da düzensiz ses ise normal değildir.',
+      },
+      {
+        q: 'Panodan çıtırtı geliyor, ne yapmalıyım?',
+        a: 'Ana şalteri indirin, panonun kapağını açmayın ve hemen bir elektrikçi çağırın. Çıtırtı gevşek bağlantıda ark oluştuğunu gösterir.',
+      },
+      {
+        q: 'Ses sadece fırın açıkken geliyor, neden?',
+        a: 'Yük artınca gevşek bağlantı daha çok ısınır ve ark yapar. O hattın bağlantısının ve sigortasının kontrol edilmesi gerekir.',
+      },
+      {
+        q: 'Ümitköy’de akşam acil elektrikçi gelir mi?',
+        a: 'Evet, 23:00’e kadar çağrı alıyoruz. Panodan ses, koku ya da ışık titremesi gibi durumlarda aynı akşam geliyoruz.',
+      },
+    ],
+    related: [
+      { label: 'Ümitköy Elektrikçi', href: '/hizmet-bolgeleri/cankaya-elektrikci/umitkoy-elektrikci' },
+      { label: 'Elektrik Panosu Yenileme', href: '/hizmetler/elektrik-panosu-yenileme' },
+      { label: 'Sigorta Atması', href: '/hizmetler/sigorta-atmasi' },
+      { label: 'Acil Elektrikçi', href: '/hizmetler/acil-elektrikci' },
+      { label: 'İşyeri Elektrik Servisi', href: '/hizmetler/isyeri-elektrik-servisi' },
+    ],
+    hideBase: true,
+  },
+  {
+    slug: 'yasamkent-elektrikci-teras-bahce-prizi-yagmurda-attiriyor',
+    title: 'Çankaya Yaşamkent Elektrikçi 0506 092 58 16 | Teras ve Bahçe Prizi Yağmurda Attırıyorsa',
+    description:
+      'Çankaya Yaşamkent’te yağmur yağınca kaçak akım rölesi mi atıyor? Teras prizi, bahçe aydınlatması ve dış armatürlerde nem sorunu ve kalıcı çözüm. Acil servis ustası anlatıyor. Yaşamkent elektrikçi: 0506 092 58 16.',
+    keyword: 'Çankaya Yaşamkent elektrikçi',
+    date: '2026-11-19',
+    readingMin: 5,
+    image: '/images/rehber/yasamkent-elektrikci-teras-bahce-prizi-yagmurda-attiriyor.webp',
+    imageAlt: 'Çankaya Yaşamkent elektrikçi: merdiven basamaklarına döşenmiş LED aydınlatma',
+    excerpt:
+      'Yaşamkent’in bahçeli ve teraslı evlerinde yağmurun ilk gecesi telefonlarımız susmuyor. Sebep çoğu zaman aynı: içine su giren bir dış priz ya da armatür. Nasıl bulunur, nasıl kalıcı çözülür anlattım.',
+    intro:
+      'Yaşamkent’te teraslı bir dairenin sahibi, sonbaharın ilk sağanağında aradı: “Yağmur başladı, beş dakika sonra evin elektriği gitti. Kaldırıyorum, hemen atıyor.” Ona önce bütün sigortaları indirip kaçak akım rölesini kaldırmasını, sonra sigortaları tek tek açmasını söyledik. Teras hattının sigortasını kaldırınca röle düştü. Gittiğimizde terastaki prizin kapağı kırık, içi su doluydu. Yaşamkent’teki dış mekân elektriğinde en sık gördüğümüz sorunları anlatıyoruz.',
+    sections: [
+      {
+        h: 'Yağmurda neden röle atar?',
+        p: [
+          'Kısa cevap: su elektriği iletir. Dış prize, bahçe armatürüne ya da toprağa gömülü bir buata su girerse akımın bir kısmı toprağa kaçar. Kaçak akım rölesi bu kaçağı algılar ve sizi korumak için elektriği keser.',
+          'Yani röle bozuk değildir, görevini yapıyordur. Rölenin attığı her yağmurlu gece aslında dışarıda birinin çarpılmasının önlendiği gecedir. Çözüm röleyi değil, suyu giren noktayı düzeltmektir.',
+        ],
+      },
+      {
+        h: 'Arızalı hattı evde nasıl bulursunuz?',
+        p: [
+          'Kısa cevap: tüm sigortaları indirin, kaçak akım rölesini kaldırın, sonra sigortaları birer birer kaldırın. Röleyi hangi sigorta düşürüyorsa arıza o hattadır. O sigortayı indirili bırakıp evin geri kalanını kullanabilirsiniz.',
+          'Bunu yalnızca kuru elle, kuru zeminde yapın. Panonuz terasta ya da dışarıdaysa, yağmur yağarken denemeyin; bizi arayın.',
+        ],
+      },
+      {
+        h: 'En sık suçlular',
+        p: [
+          'Kısa cevap: kapağı kırık ya da kapaksız teras prizi, bahçede yerden yükselen kazık armatürler, duvar aplikleri ve toprağın içine sarılıp bırakılmış ek yerleri.',
+          'Yaşamkent’te sonradan yapılan bahçe aydınlatmalarında kablonun boru içine alınmadan toprağa gömüldüğünü, eklerin bantla yapılıp toprağa bırakıldığını sık görüyoruz. Birkaç yıl idare eder, sonra her yağmurda röle atmaya başlar.',
+        ],
+      },
+      {
+        h: 'Kalıcı çözüm nasıl yapılır?',
+        p: [
+          'Kısa cevap: dış mekânda su geçirmez kapaklı priz, dış ortama uygun koruma sınıfında armatür, sızdırmaz buat ve toprak altında boru içinden geçen kablo. Dış hatlar için ayrı bir kaçak akım rölesi de evin içini korur.',
+          'Ayrı röle sayesinde bahçede bir sorun olduğunda yalnızca bahçe hattı kapanır; salonunuz, buzdolabınız, kombiniz çalışmaya devam eder. Gelip baktığımızda hangi noktaların yenilenmesi gerektiğini ve fiyatı işe başlamadan söylüyoruz.',
+        ],
+      },
+      {
+        h: 'Yaşamkent’e ne kadar sürede geliyoruz?',
+        p: [
+          'Demir Elektrik acil servis olarak Yaşamkent, Çayyolu, Ümitköy ve Alacaatlı tarafına her gün çıkıyoruz. Haftanın her günü 08:00–23:00 arası 0506 092 58 16’dan ulaşabilirsiniz.',
+          'Dış mekân hatlarının yanında ev ve işyeri elektrik tesisatı hizmeti de veriyoruz. Yaşamkent’te bahçe ve teras hattını yeniden döşerken iç tesisata, sitelerin altındaki dükkân ve ofislerde de baştan kuruluma geliyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Yağmurda kaçak akım rölesi atıyor, röle mi bozuk?',
+        a: 'Genellikle hayır. Dışarıdaki bir priz, armatür ya da buata su girmiştir ve röle bu kaçağı algılayıp elektriği keser. Suyun girdiği noktanın onarılması gerekir.',
+      },
+      {
+        q: 'Bahçe hattını iptal etsem olur mu?',
+        a: 'Geçici olarak o hattın sigortasını indirili bırakabilirsiniz. Ama kalıcı çözüm, suyun girdiği noktayı onarmak ve dış hatları ayrı bir röleye almaktır.',
+      },
+      {
+        q: 'Teras prizi nasıl olmalı?',
+        a: 'Kapaklı, dış ortama uygun koruma sınıfında ve yağmurun doğrudan değmeyeceği bir yükseklikte olmalı. Kapağı kırık bir dış priz hemen değiştirilmelidir.',
+      },
+      {
+        q: 'Yağmur yağarken gelir misiniz?',
+        a: 'Evet. Gelince önce arızalı hattı ayırıp evin geri kalanını çalışır hale getiriyoruz; dış mekândaki onarımı güvenli olunca tamamlıyoruz.',
+      },
+    ],
+    related: [
+      { label: 'Çayyolu ve Yaşamkent Elektrikçi', href: '/hizmet-bolgeleri/cankaya-elektrikci/cayyolu-elektrikci' },
+      { label: 'Kaçak Akım Rölesi Atıyor', href: '/hizmetler/kacak-akim-rolesi-atiyor' },
+      { label: 'Kaçak Akım Tespiti', href: '/hizmetler/kacak-akim-tespiti' },
+      { label: 'Villa Elektrik Servisi', href: '/hizmetler/villa-elektrik-servisi' },
+      { label: 'Ev Elektrik Tesisatı', href: '/hizmetler/ev-elektrik-tesisati' },
+    ],
+    hideBase: true,
+  },
+  {
+    slug: 'cayyolu-elektrikci-aksam-hafta-sonu-hangi-ariza-beklemez',
+    title: 'Çankaya Çayyolu Elektrikçi 0506 092 58 16 | Akşam ve Hafta Sonu Hangi Arıza Beklemez?',
+    description:
+      'Çankaya Çayyolu’nda akşam ya da pazar günü elektrik arızası çıktı: sabahı beklemek mi, hemen elektrikçi çağırmak mı? Bekleyebilecek ve bekleyemeyecek arızaları acil servis ustası anlatıyor. Çayyolu elektrikçi: 0506 092 58 16.',
+    keyword: 'Çankaya Çayyolu elektrikçi',
+    date: '2026-11-19',
+    readingMin: 5,
+    image: '/images/rehber/cayyolu-elektrikci-aksam-hafta-sonu-hangi-ariza-beklemez.webp',
+    imageAlt: 'Çankaya Çayyolu elektrikçi: tavanda lineer LED ve spot aydınlatma',
+    excerpt:
+      'Pazar akşamı bir odanın ışığı gitti. Hemen mi aramalı, pazartesiyi mi beklemeli? Çayyolu’nda gittiğimiz akşam çağrılarından yola çıkarak hangi arızanın beklemeye gelmediğini anlattık.',
+    intro:
+      'Çayyolu’nda bir pazar akşamı iki çağrı arka arkaya geldi. İlkinde yatak odasındaki tavan lambası yanmıyordu; telefonda birkaç soruyla ampulün ve duyun sorunlu olduğunu anladık, ertesi güne bıraktık. İkincisinde ise mutfakta bir prizin üstü kararmış, hafif koku geliyordu; yarım saat içinde oradaydık. İki arıza da “elektrik sorunu” ama biri beklemeye gelir, diğeri gelmez. Bu yazıda ayrımı nasıl yapacağınızı anlatıyoruz.',
+    sections: [
+      {
+        h: 'Beklemeyin: koku, duman, kıvılcım, sıcaklık',
+        p: [
+          'Kısa cevap: yanık kokusu, duman, prizden ya da anahtardan kıvılcım, elinizi rahatsız eden sıcaklıkta bir priz, sigorta veya pano kapağı varsa saat kaç olursa olsun ana şalteri indirip arayın.',
+          'Bunların hepsi bir bağlantının aşırı ısındığını gösterir. Isınan bağlantı kendiliğinden soğumaz, aksine her geçen saat kötüleşir. Bu tür arızalarda biz de sırayı öne alıyoruz.',
+        ],
+      },
+      {
+        h: 'Beklemeyin: çarpılma ve karıncalanma',
+        p: [
+          'Kısa cevap: bir cihaza, musluğa ya da metal bir yüzeye dokununca karıncalanma hissediyorsanız, ya da biri hafif de olsa çarpıldıysa, o hattı kapatın ve beklemeden haber verin.',
+          'Bu, bir yerde akımın kaçtığını ve topraklamanın ya da kaçak akım rölesinin işini yapmadığını gösterebilir. Çocuklu evlerde özellikle bekletilmemesi gereken bir durumdur. Çarpılan kişide bir rahatsızlık varsa önce 112’yi arayın.',
+        ],
+      },
+      {
+        h: 'Beklemeyin: ışıkların kısılıp parlaması',
+        p: [
+          'Kısa cevap: evin ışıkları bir kısılıyor bir parlıyorsa, bazı cihazlar garip davranıyorsa nötr bağlantısında bir sorun olabilir. Bu durumda cihazlara gelen gerilim dengesizleşir; buzdolabı, kombi kartı ve televizyon zarar görebilir.',
+          'Ana şalteri indirin ve hemen arayın. Çayyolu’ndaki villalarda ve büyük dairelerde bu tür bir arıza, birkaç saat içinde birden fazla cihazı bozabilir.',
+        ],
+      },
+      {
+        h: 'Bekleyebilir: tek lamba, tek priz, tek sigorta',
+        p: [
+          'Kısa cevap: tek bir lamba yanmıyorsa, bir priz çalışmıyorsa ama koku ve iz yoksa, ya da bir sigorta atmış ve bir kez kaldırınca tutuyorsa sabahı bekleyebilirsiniz.',
+          'Bu durumda o hattı kullanmamanız, atan sigortayı tekrar tekrar zorlamamanız yeterli. Kararsız kaldığınızda arayın; telefonda durumu birlikte değerlendirir, gerçekten beklenebilecek bir şeyse bunu açıkça söyleriz. Gereksiz yere akşam ücreti ödemenizi istemeyiz.',
+        ],
+      },
+      {
+        h: 'Çayyolu’na akşam ve hafta sonu da geliyoruz',
+        p: [
+          'Demir Elektrik acil servis olarak Çayyolu, Ümitköy, Yaşamkent, Alacaatlı ve Angora Evleri tarafına hafta sonu dahil her gün 08:00–23:00 arası çıkıyoruz. Fiyat işe başlamadan söylenir: 0506 092 58 16.',
+          'Acil çağrıların dışında, planlı işler için de buradayız: Çayyolu’nda ev, villa ve işyeri elektrik tesisatı, pano yenileme ve yeni hat çekimi. Bu tür işleri hafta içi uygun bir güne, keşiften sonra planlıyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Çayyolu’nda pazar günü elektrikçi bulunur mu?',
+        a: 'Evet, hafta sonu dahil her gün 08:00–23:00 arası çağrı alıyoruz. Acil arızalarda aynı gün geliyoruz.',
+      },
+      {
+        q: 'Gece bir oda karanlık kaldı, sabahı bekleyebilir miyim?',
+        a: 'Koku, kıvılcım, ısınma ya da çarpılma yoksa ve sigorta bir kez kaldırınca tutuyorsa bekleyebilirsiniz. Emin değilseniz arayın, telefonda birlikte değerlendirelim.',
+      },
+      {
+        q: 'Işıklar kısılıp parlıyor, ne yapmalıyım?',
+        a: 'Ana şalteri hemen indirin ve elektrikçi çağırın. Bu nötr bağlantısında bir sorun olabileceğini gösterir ve cihazlarınıza zarar verebilir.',
+      },
+      {
+        q: 'Akşam gelen ustada fiyat ne zaman belli olur?',
+        a: 'Arızayı gördükten sonra, işe başlamadan söylüyoruz. Onayınız olmadan işe başlamıyoruz.',
+      },
+    ],
+    related: [
+      { label: 'Çayyolu Elektrikçi', href: '/hizmet-bolgeleri/cankaya-elektrikci/cayyolu-elektrikci' },
+      { label: 'Nöbetçi Elektrikçi', href: '/hizmetler/nobetci-elektrikci' },
+      { label: 'Acil Elektrikçi', href: '/hizmetler/acil-elektrikci' },
+      { label: 'Sigorta Atması', href: '/hizmetler/sigorta-atmasi' },
+      { label: 'İşyeri Elektrik Servisi', href: '/hizmetler/isyeri-elektrik-servisi' },
+    ],
+    hideBase: true,
   },
 ];
 
