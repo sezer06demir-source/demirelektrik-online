@@ -1744,6 +1744,68 @@ export const posts: BlogPost[] = [
     ],
     hideBase: true,
   },
+  {
+    slug: 'devlet-mahallesi-elektrik-faturasi-neden-yukseldi',
+    title: 'Devlet Mahallesi’nde Elektrik Faturası Birden Yükseldi: Görünmeyen Kaçak Nasıl Bulunur?',
+    description:
+      'Devlet Mahallesi’nde kullanım alışkanlığı değişmediği halde fatura birden yükseliyorsa sebep genelde gözle görülmeyen bir kaçak akımdır. Nasıl bulunur, nasıl ölçülür? Demir Elektrik acil servis: 0506 092 58 16.',
+    keyword: 'Devlet Mahallesi elektrikçi',
+    date: '2026-11-20',
+    readingMin: 6,
+    excerpt:
+      'Devlet Mahallesi’nden gelen çağrıların bir kısmı arıza değil, fatura şikâyeti. Kimse ışığı fazla yakmamış ama sayaç hep daha hızlı dönüyor; sebep çoğu zaman gözle görülmeyen bir kaçak.',
+    intro:
+      'Devlet Mahallesi’nden bu ay birkaç ev aradı, hepsi aynı cümleyle başladı: “Hiçbir şey değişmedi ama fatura iki katına çıktı.” İnsanlar önce dağıtım şirketini, sonra sayacı suçluyor; oysa sayaç nadiren yalan söyler, çoğu zaman evin bir yerinde fark edilmeyen bir akım sürekli akıyordur. Bu akımı bulmak tahminle değil, ölçümle olur.',
+    sections: [
+      {
+        h: 'Fatura birden yükselirse ilk bakılması gereken ne?',
+        p: [
+          'Önce basit bir kontrolle başlıyoruz: evdeki tüm cihazları kapatıp sayacın diskini ya da dijital göstergeyi izliyoruz. Her şey kapalıyken sayaç hâlâ hareket ediyorsa, bu evde sürekli akan bir yük ya da bir kaçak olduğunun en net işaretidir.',
+          'Devlet Mahallesi’ndeki bir apartman dairesinde geçen ay tam bu testi yaptık; mutfaktaki tüm prizler boştu ama sayaç yine de yavaşça dönüyordu. Panoya gidip hat hat kapatarak suçlu grubu bulduk, sorun eski bir su ısıtıcısının içten yapmaya başladığı kaçaktı.',
+        ],
+      },
+      {
+        h: 'Kaçak akım faturayı nasıl bu kadar etkiler?',
+        p: [
+          'Kaçak akım, normalde cihaza gidip işini yapıp geri dönmesi gereken elektriğin bir kısmının yoldan çıkıp topraklamaya ya da nemli bir yüzeye sızmasıdır. Bu sızıntı sayaç tarafından hâlâ "çekilen" enerji olarak sayılır, yani siz kullanmadığınız halde ödersiniz.',
+          'Küçük bir kaçak bile gün boyunca, ay boyunca sürekli aktığı için toplamda hiç küçük kalmaz. Bir ampulün ya da küçük bir cihazın sürekli açık kalması gibi, fark etmeden aylık faturaya ciddi bir kalem eklenir.',
+        ],
+      },
+      {
+        h: 'Kaçağı hangi cihazlarda daha sık görüyoruz?',
+        p: [
+          'Su ile teması olan ve ısıtıcı direnci bulunan cihazlar listenin başında gelir: şofben, çamaşır makinesi, bulaşık makinesi, elektrikli süpürge şarj istasyonu. Direnç yıllar içinde nemlendiğinde ya da kabloda bir izolasyon zayıfladığında akımın bir kısmı gövdeye sızmaya başlar.',
+          'Dış mekâna çıkan hatlar da sık suçludur; Devlet Mahallesi’nde bahçeli evlerde dış aydınlatma ya da sulama pompası hattının yağmur suyuyla temas ettiği noktalarda bu tür kaçaklara sık rastlıyoruz.',
+        ],
+      },
+      {
+        h: 'Kaçak akım rölesi varsa fatura kaçağını yakalar mı?',
+        p: [
+          'Kısmen. Röle büyük ve ani kaçakları yakalayıp hattı keser ama çok küçük, yavaş sızan bir kaçak röleyi tetiklemeden de sürekli akabilir. Bu yüzden "rölem hiç atmıyor, demek ki kaçak yok" demek doğru bir sonuç değildir.',
+          'Gerçek kaçağı bulmak için pens ampermetreyle hat hat ölçüm yapıyoruz; hangi grupta beklenenden fazla akım çekildiğini görünce suçlu cihazı ya da hattı daraltıyoruz.',
+        ],
+      },
+      {
+        h: 'Devlet Mahallesi’nde akşam saatinde ölçüm yapılabilir mi?',
+        p: [
+          'Evet, 0506 092 58 16 numarasından 08:00–23:00 arası ulaşabilirsiniz. Fatura şikâyeti acil bir elektrik kesintisi gibi görünmese de ölçüm aynı gün yapılabilir, çünkü sayaç her an aynı hızda dönmeye devam ediyor.',
+          'Telefonda son iki faturanızın tutarını ve varsa hangi cihazları yeni aldığınızı sorarız; bu bilgi yola çıkmadan önce hangi ölçüm aletini hazırlayacağımızı belirlememize yardımcı olur.',
+        ],
+      },
+    ],
+    faq: [
+      { q: 'Devlet Mahallesi’nde akşam elektrikçi bulunur mu?', a: 'Evet, 0506 092 58 16 numarasından 08:00–23:00 arası ulaşabilirsiniz. Fatura ya da kaçak şikâyeti için de aynı gün ölçüm yapıyoruz.' },
+      { q: 'Faturam neden birden bu kadar yükseldi?', a: 'Kullanım alışkanlığı değişmediği halde fatura yükseliyorsa genelde gözle görülmeyen bir kaçak akım vardır. Tüm cihazları kapatıp sayacın hâlâ dönüp dönmediğine bakmak ilk basit testtir.' },
+      { q: 'Kaçak akım rölem hiç atmıyor, demek ki kaçak yok mu?', a: 'Hayır, bu kesin bir güvence değil. Çok küçük ve yavaş sızan kaçaklar röleyi tetiklemeden sürekli akabilir; gerçek kaçağı bulmak için hat hat ölçüm yapmak gerekir.' },
+      { q: 'Kaçağı bulmak evi dağıtmayı mı gerektiriyor?', a: 'Hayır. Panodan hat hat kapatıp sayacı izleyerek önce suçlu grubu daraltıyoruz, sonra o gruptaki cihazları tek tek kontrol ediyoruz; ev dağıtılmaz.' },
+    ],
+    related: [
+      { label: 'Devlet Mahallesi Elektrikçi', href: '/hizmet-bolgeleri/etimesgut-elektrikci/devlet-elektrikci' },
+      { label: 'Etimesgut Elektrikçi', href: '/hizmet-bolgeleri/etimesgut-elektrikci' },
+      { label: 'Kaçak Akım Tespiti', href: '/hizmetler/kacak-akim-tespiti' },
+      { label: 'Devlet Mahallesi’nde Büsonlu Sigorta Ne Zaman Değişmeli?', href: '/rehber/devlet-mahallesi-busonlu-sigorta-ne-zaman-degismeli' },
+    ],
+  },
 ];
 
 export const postsSorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
