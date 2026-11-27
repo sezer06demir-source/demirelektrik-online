@@ -1806,6 +1806,75 @@ export const posts: BlogPost[] = [
       { label: 'Devlet Mahallesi’nde Büsonlu Sigorta Ne Zaman Değişmeli?', href: '/rehber/devlet-mahallesi-busonlu-sigorta-ne-zaman-degismeli' },
     ],
   },
+  {
+    slug: 'elvankent-kacak-akim-rolesi-site-dairesi',
+    title: 'Elvankent’te Kaçak Akım Rölesi Sürekli Atıyorsa: Site Dairesinde Nereye Bakılır?',
+    description:
+      'Elvankent’teki toplu konut sitelerinde kaçak akım rölesi sürekli atıyorsa sebep genelde daire içinde, bazen de ortak alan hattındadır. Ustanın sırasıyla kontrol ettiği adımlar. Demir Elektrik acil servis: 0506 092 58 16.',
+    keyword: 'Elvankent kaçak akım rölesi',
+    date: '2026-11-27',
+    readingMin: 6,
+    excerpt:
+      'Elvankent’in site dairelerinde röle attığında herkes önce komşuyu ya da yönetimi suçluyor; oysa kaçağın kaynağı çoğu zaman dairenin kendi içinde. Nasıl ayırt edilir, anlattık.',
+    intro:
+      'Elvankent’teki sitelerden aldığımız çağrıların çoğu benzer başlıyor: “Rölemiz durmadan atıyor, ama komşular şikâyet etmiyor, bizim dairede mi sorun?” Site tipi yapılarda daire ile ortak alan hatları birbirine yakın geçtiği için insanlar sorunu önce bina geneline, sonra komşuya bağlıyor. Oysa kaçak akım rölesi sadece kendi dairenizin hattını izler; attığında aradığı kaçak, çoğu zaman o dairenin içindedir.',
+    sections: [
+      {
+        h: 'Elvankent’teki site dairelerinde röle neden sık atıyor?',
+        p: [
+          'En sık rastladığımız sebep, banyo ya da mutfaktaki nemli bir hattır. Site dairelerinde bu hatlar genelde duvar içinden kısa ve düz geçer ama yıllar içinde fayans arkasında biriken bir nem, bağlantı noktasına ulaştığında küçük bir kaçak başlatır ve röle bunu hemen yakalar.',
+          'İkinci sık sebep, balkonu kapatılmış dairelerdeki priz hattıdır. Elvankent’te çok görülen kapalı balkon tadilatlarında dış cepheden içeri alınan priz hattı, ek yapılan noktada zamanla nem çekip kaçağa dönüşebiliyor.',
+        ],
+      },
+      {
+        h: 'Röle attığında ilk ne yapmalı?',
+        p: [
+          'Önce dairedeki tüm sigortaları indirin, sonra röleyi kaldırın. Röle bu haliyle atmıyorsa sorun bir hatta veya cihazdadır; sigortaları tek tek kaldırarak hangisinde röle sakinleştiğini görebilirsiniz. Röle hâlâ atıyorsa, kaçak sigorta hattının dışında bir yerdedir ve ölçüm gerekir.',
+          'Daire dışına, ortak alana bakmadan önce bu basit testi yapmak çoğu zaman sorunu dairenin kendi içine indiriyor; Elvankent’teki çağrıların büyük kısmında kaçak gerçekten dairenin kendi hattında çıkıyor.',
+        ],
+      },
+      {
+        h: 'Toplu konut dairelerinde en sık rastladığımız kaçak kaynakları',
+        p: [
+          'Geçen ay Elvankent’te bir sitede üst üste iki daireden aynı şikâyetle arandık; ikisinde de sebep farklıydı. Birinde banyodaki şofbenin gövdesi hafif elektriklenmişti, diğerinde ise kapalı balkondaki priz hattı yağmur sonrası nem almıştı. İkisi de görünüşte aynı belirtiyi veriyordu ama kaynakları bambaşkaydı.',
+          'Çamaşır makinesi ve bulaşık makinesi gibi su ile çalışan cihazlar da listenin başında yer alıyor; içindeki rezistans ya da motor yıllar içinde kaçak yapmaya başlayabiliyor. Cihazı prizden çektiğinizde röle atmayı kesiyorsa, sorun o cihazdadır.',
+        ],
+      },
+      {
+        h: 'Ortak alan hattı ile daire hattı birbirine karışabilir mi?',
+        p: [
+          'Çok nadiren. Site dairelerinde genelde her bağımsız bölümün kendi kaçak akım rölesi ve sigortaları vardır, ortak alan aydınlatması ve asansör ayrı bir hattan beslenir. Bu yüzden sizin röleniz atıyorsa, neredeyse her zaman kendi dairenizin içinde bir sebep vardır; yönetimi veya komşuyu suçlamadan önce kendi panonuzu kontrol etmek en hızlı yoldur.',
+          'Gerçekten ortak alan kaynaklı bir sorun varsa (örneğin ortak pano üzerinden yanlış bir bağlantı), bunu da ölçümle ayırt ediyor ve site yönetimine bu durumu bildiriyoruz.',
+        ],
+      },
+      {
+        h: 'Röleyi iptal etmek ya da daha geç atan bir röle takmak çözüm mü?',
+        p: [
+          'Hayır. Sürekli atan röleden bıkıp onu iptal etmek ya da daha yüksek amperli bir röleyle değiştirmek, kaçağı ortadan kaldırmaz, sadece sizi korumasız bırakır. Ev tipi tesisatlarda 30 miliamperlik tip A röle standarttır; bu değer insan için tehlikeli sınırın altında kalsın diye belirlenmiştir.',
+          'Doğru olan, röleyi attıran gerçek kaçağı bulup gidermektir. Kaçak giderildiğinde röle kendiliğinden atmayı bırakır; rölenin kendisi arızalıysa bunu da ölçümden sonra anlayıp uygun olanıyla değiştiriyoruz.',
+        ],
+      },
+      {
+        h: 'Elvankent’e geldiğimizde nasıl çalışıyoruz?',
+        p: [
+          'Önce panoyu ve röleyi kontrol ediyor, sonra hattı bölerek kaçağın kaynağını ölçüyoruz. Sebep bir cihazsa söylüyoruz, bir hatsa onu onarıyoruz; sorun gerçekten ortak alandan geliyorsa site yönetimiyle birlikte ilerliyoruz. 0506 092 58 16 numarasından 08:00–23:00 arası ulaşabilirsiniz, aynı gün ölçüme geliyoruz.',
+          'Telefonda kesin sebep söylemiyoruz, çünkü aynı belirtinin arkasında tamamen farklı kaynaklar çıkabiliyor. Gelince ölçüp net fiyatı söylüyor, onayınızla işe başlıyoruz.',
+        ],
+      },
+    ],
+    faq: [
+      { q: 'Elvankent’te kaçak akım rölesi attığında önce kime bakmalı, yönetime mi?', a: 'Hayır, önce kendi dairenizin panosunu kontrol etmek en hızlı yol. Site dairelerinde her bağımsız bölümün kendi rölesi olduğu için kaçak neredeyse her zaman dairenin kendi hattındadır.' },
+      { q: 'Röle her attığında yangın riski mi var?', a: 'Röle sizi tam olarak bu riske karşı koruyor; attığında bir kaçağı yakalayıp hattı milisaniyeler içinde kesiyor demektir. Tehlikeli olan, rölenin hiç olmaması ya da sürekli atmasına rağmen iptal edilmesidir.' },
+      { q: 'Komşumun dairesindeki arıza bizim röleyi atırır mı?', a: 'Site dairelerinde hatlar ayrı olduğu için genelde atmaz. Çok nadir durumlarda ortak panodaki yanlış bir bağlantı etkili olabilir, bunu da ölçümle ayırt ediyoruz.' },
+      { q: 'Elvankent’e akşam saatinde elektrikçi gelir mi?', a: '0506 092 58 16 numarasından 08:00–23:00 arası ulaşabilirsiniz. Arızayı kısaca anlatırsanız yanımıza doğru aleti alıp geliyoruz.' },
+    ],
+    related: [
+      { label: 'Elvankent Elektrikçi', href: '/hizmet-bolgeleri/etimesgut-elektrikci/elvankent-elektrikci' },
+      { label: 'Etimesgut Elektrikçi', href: '/hizmet-bolgeleri/etimesgut-elektrikci' },
+      { label: 'Kaçak Akım Rölesi Atıyor', href: '/hizmetler/kacak-akim-rolesi-atiyor' },
+      { label: 'Göksu’da Kaçak Akım Rölesi Sürekli Atıyorsa', href: '/rehber/goksu-kacak-akim-rolesi-surekli-atiyor' },
+    ],
+  },
 ];
 
 export const postsSorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
